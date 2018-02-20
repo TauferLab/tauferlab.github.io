@@ -2,7 +2,22 @@ import bs4
 from bs4 import BeautifulSoup
 import urllib.request
 import re
-    
+
+# John Bounds
+# GCLab
+# Feb 8 2018
+# ---------------------------------------
+# Script objective:
+# Parse through every element in contents.
+# From the elements, we gather
+#     - Publication Type
+#     - Year of Publication
+#     - Full citation
+#          - Authors
+#          - Title (w/ optional url)
+#          - Journal (conference)
+#          - Additional info
+
 def parse_publication_type(a, dict_list, manual_citations):
     for element in a.contents:
         if element.name == "a":
@@ -34,6 +49,7 @@ def parse_publication_type(a, dict_list, manual_citations):
                     article_dict['journal_conf'] = journal_conf
                     dict_list.append(article_dict)
                 else:
+                    # Some li elements are just a newline
                     if(str(li) != "\n"):
                         manual_citations.append(str(li))
 
@@ -58,34 +74,7 @@ def parse_page():
     print("------------------------------------")
     for citation in manual_citations:
         print(citation, "\n")
-
-    # a = soup.find("a",{"name":"BookChapters"})    
-    # parse_publication_type(a, "BookChapters")
-
-    # a = soup.find("a",{"name":"Conferences"})    
-    # parse_publication_type(a, "Conferences")
-
-    # a = soup.find("a",{"name":"EducationalPapers"})
-    # parse_publication_type(a, "EducationPapers")
-
-    # a = soup.find("a",{"name":"Posters"})
-    # parse_publication_type(a, "Posters")
-
-    # a = soup.find("a",{"name":"TecnicalReports"})
-    # parse_publication_type(a, "TechnicalReports")
-
-    # a = soup.find("a",{"name":"Thesis"})
-    # parse_publication_type(a, "Thesis")
     
-    # Parse through every element in contents.
-    # From the elements, we gather
-    #     - Publication Type
-    #     - Year of Publication
-    #     - Full citation
-    #          - Authors
-    #          - Title (w/ optional url)
-    #          - Journal (conference)
-    #          - Additional info
 
 def main():
     parse_page()
