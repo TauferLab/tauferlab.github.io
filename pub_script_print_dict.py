@@ -2,9 +2,8 @@ import bs4
 from bs4 import BeautifulSoup
 import urllib.request
 import re
-import jinja2
+from jinja2 import Template
 import argparse
-import os
 
 # John Bounds
 # GCLab
@@ -55,12 +54,6 @@ def parse_publication_type(a, dict_list, manual_citations):
                     # Some li elements are just a newline
                     if(str(li) != "\n"):
                         manual_citations.append(str(li))
-                        
-def render(tpl_path, dict_list):
-            path, filename = os.path.split(tpl_path)
-            return jinja2.Environment(
-                loader=jinja2.FileSystemLoader(path or './')
-            ).get_template(filename).render(dict_list=dict_list)
 
 def parse_page():
     dict_list = []
@@ -79,13 +72,19 @@ def parse_page():
     
     a = soup.find("a",{"name":"JournalPapers"}).parent
     parse_publication_type(a, dict_list, manual_citations)
-    # print(dict_list)
-    # print("------------------------------------")
-    # for citation in manual_citations:
-    #     print(citation, "\n")
-    new_webpage = render("./publications.html", dict_list)
-    with open("./new_publications.html", 'w') as f:
-        f.write(new_webpage)
+    print(dict_list)
+    print("------------------------------------")
+    for citation in manual_citations:
+        print(citation, "\n")
+
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('-d', '--html', required=True,
+    #                     help='html file to load')
+    # args = parser.parse_args()
+    # template = Template(args.html)
+    # new_webpage = open('./new_publications.html', 'w')
+    # new_webpage.write(template.render(dict_list))
+    
 def main():
     parse_page()
     
