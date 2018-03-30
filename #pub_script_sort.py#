@@ -48,7 +48,7 @@ def parse_publication_type(a, dict_list, manual_citations):
                     article_dict['pub_type'] = pub_type
                     article_dict['year'] = year
                     article_dict['authors'] = authors
-                    article_dict['href'] = a_href.lstrip("[").rstrip("[")
+                    article_dict['href'] = a_nhref.lstrip("[").rstrip("[")
                     article_dict['journal_conf'] = journal_conf
                     dict_list.append(article_dict)
                 else:

@@ -163,21 +163,19 @@ http://themeforest.net/user/owwwlab/
 		{% endif %}
 		{% if item['new_year'] != 'skip' %} 
                 <div class="tl-item pub-item with-thumb"><span class="item-section">{{item['new_year']}}</span> {# div 3 #}
-		  {% endif %}
-                <div class="tl-item pub-item with-thumb"><span class="item-section">{{item['new_year']}}</span> {# div 4 #}
+		{% else %}
+                <div class="tl-item pub-item with-thumb"> {# div 4 #}
+		{% endif %}
 		  
                     <div class="elem-wrapper"><img src="assets/img/publications/07.jpg" alt="item thumbnail" class="pub-thumbnail"></div>
                     <div class="content-wrapper"> {# div 5 #}
-                      <h3 class="title"><a href="#">{{ item.href}}</a></h3>
+                      <h3 class="title">{{item['href']}}</h3>
                       <div class="description"> {# div 6 #}
-                        <div class="citation"><span> <a href="#">{{item.journal_conf}}</a><span class="block-elem">{{item.authors}}</span></span></div>
+                        <div class="citation"><span> <a href="#">{{item['journal_conf']}}</a><span class="block-elem">{{item['authors']}}</span></span></div>
                       </div> {# /div 6 #}
                     </div> {# /div 5 #}
-                  </div> {# /div 4 #}
-		  {% endif %}  
-		  {% endfor %}
+		</div> {# /div 4/3 #}
 		{% endfor %}
-		</div> {# /div 3 #}
                 </div> {# /div 2 #}
               </div> {# /div 1 #}
             </section>
