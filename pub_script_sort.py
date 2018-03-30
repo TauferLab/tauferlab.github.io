@@ -25,7 +25,7 @@ def parse_publication_type(a, dict_list, manual_citations):
     for element in a.contents:
         if element.name == "a":
             print(str(element.contents))
-            pub_type = str(element.contents)
+            pub_type = str(element.contents).replace('[<h2>','').replace('</h2>]','')
         elif element.name == "h3":
             year = str(element.contents[0])
         elif element.name == "ol":
@@ -56,11 +56,11 @@ def parse_publication_type(a, dict_list, manual_citations):
                     if(str(li) != "\n"):
                         manual_citations.append(str(li))
                         
-def render(tpl_path, dict_list):
+def render(tpl_path, render_variables):
             path, filename = os.path.split(tpl_path)
             return jinja2.Environment(
                 loader=jinja2.FileSystemLoader(path or './')
-            ).get_template(filename).render(dict_list=dict_list)
+            ).get_template(filename).render(render_variables=render_variables)
 
 def parse_page():
     dict_list = []
@@ -83,9 +83,31 @@ def parse_page():
     # print("------------------------------------")
     # for citation in manual_citations:
     #     print(citation, "\n")
-    new_webpage = render("./publications.html", dict_list)
+
+    years, pub_types = sort_years_and_pub_type(dict_list)
+    render_variables = [dict_list, years, pub_types]
+    new_webpage = render("./publications.html", render_variables)
     with open("./new_publications.html", 'w') as f:
         f.write(new_webpage)
+
+    
+
+def sort_years_and_pub_type(dict_list):
+    years=[]
+    for item in dict_list:
+        if item['year'] not in years:
+            years.append(item['year'])
+
+    print(years)
+
+    pub_types=[]
+    for item in dict_list:
+       if item['pub_type'] not in pub_types:
+           pub_types.append(item['pub_type'])
+    print(pub_types)
+
+    return(years, pub_types)
+    
 def main():
     parse_page()
     

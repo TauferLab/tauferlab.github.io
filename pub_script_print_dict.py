@@ -24,7 +24,7 @@ def parse_publication_type(a, dict_list, manual_citations):
     for element in a.contents:
         if element.name == "a":
             print(str(element.contents))
-            pub_type = str(element.contents)
+            pub_type = str(element.contents).replace('[<h2>','').replace('</h2>]','')
         elif element.name == "h3":
             year = str(element.contents[0])
         elif element.name == "ol":

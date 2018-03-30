@@ -157,10 +157,15 @@ http://themeforest.net/user/owwwlab/
             <section class="slim-container">
               <div class="container">
                 <div class="ol-timeline scrollable-timeline">
-		<h2> Journal Papers </h2>
-		{% for item in dict_list %}
-		  
-                  <div class="tl-item pub-item with-thumb"><span class="item-section">{{item.year}}</span>
+		{# render_variables index: 0=dict_list, 1=years, 2=pub_types #}
+		{% for pub_type in render_variables[2] %}
+		<h2>{{pub_type}} </h2>
+		{% set year = '0' %}
+		{% for item in render_variables[0] %}
+		  {% if item.pub_type == pub_type %}
+		    {% if item.year != year %} 
+                  <div class="tl-item pub-item with-thumb"><span class="item-section">{{year}}</span>
+		    {% set year = item.year %} {% endif %}   
                     <div class="elem-wrapper"><img src="assets/img/publications/07.jpg" alt="item thumbnail" class="pub-thumbnail"></div>
                     <div class="content-wrapper">
                       <h3 class="title"><a href="#">{{ item.href}}</a></h3>
@@ -169,7 +174,9 @@ http://themeforest.net/user/owwwlab/
                       </div>
                     </div>
                   </div>
-		{% endfor %}
+		  {% endif %}  
+		  {% endfor %}
+		{% endfor %}  
                 </div>
               </div>
             </section>
