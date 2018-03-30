@@ -155,30 +155,31 @@ http://themeforest.net/user/owwwlab/
               </div>
             </section>
             <section class="slim-container">
-              <div class="container">
-                <div class="ol-timeline scrollable-timeline">
-		{# render_variables index: 0=dict_list, 1=years, 2=pub_types #}
-		{% for pub_type in render_variables[2] %}
-		<h2>{{pub_type}} </h2>
-		{% set year = '0' %}
-		{% for item in render_variables[0] %}
-		  {% if item.pub_type == pub_type %}
-		    {% if item.year != year %} 
-                  <div class="tl-item pub-item with-thumb"><span class="item-section">{{year}}</span>
-		    {% set year = item.year %} {% endif %}   
+              <div class="container"> {# div 1 #}
+                <div class="ol-timeline scrollable-timeline"> {# /div 2 #}
+		{% for item in dict_list %}
+		{% if item['new_pub'] != 'skip' %}
+		<h2>{{item['new_pub']}} </h2>
+		{% endif %}
+		{% if item['new_year'] != 'skip' %} 
+                <div class="tl-item pub-item with-thumb"><span class="item-section">{{item['new_year']}}</span> {# div 3 #}
+		  {% endif %}
+                <div class="tl-item pub-item with-thumb"><span class="item-section">{{item['new_year']}}</span> {# div 4 #}
+		  
                     <div class="elem-wrapper"><img src="assets/img/publications/07.jpg" alt="item thumbnail" class="pub-thumbnail"></div>
-                    <div class="content-wrapper">
+                    <div class="content-wrapper"> {# div 5 #}
                       <h3 class="title"><a href="#">{{ item.href}}</a></h3>
-                      <div class="description">
-                        <div class="citation"><span> <a href="#">{{item.journal_conf}}</a><span class="block-elem">{{item.authors}}</span></span></div>n
-                      </div>
-                    </div>
-                  </div>
+                      <div class="description"> {# div 6 #}
+                        <div class="citation"><span> <a href="#">{{item.journal_conf}}</a><span class="block-elem">{{item.authors}}</span></span></div>
+                      </div> {# /div 6 #}
+                    </div> {# /div 5 #}
+                  </div> {# /div 4 #}
 		  {% endif %}  
 		  {% endfor %}
-		{% endfor %}  
-                </div>
-              </div>
+		{% endfor %}
+		</div> {# /div 3 #}
+                </div> {# /div 2 #}
+              </div> {# /div 1 #}
             </section>
           </section>
           <!-- #####End main area
