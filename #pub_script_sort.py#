@@ -93,22 +93,33 @@ def parse_page():
     
 
 def sort_years_and_pub_type(dict_list):
-    year='0'
-    #Item is a citation from publications
-    for item in dict_list:
-        if item['year'] != year:
-            year = item['year']
-            item['new_year'] = year
-        else:
-            item['new_year'] = 'skip'
+    # year='0'
+    # #Item is a citation from publications
+    # for item in dict_list:
+    #     if item['year'] != year:
+    #         year = item['year']
+    #         item['new_year'] = year
+    #     else:
+    #         item['new_year'] = 'skip'
             
+    # pub_type=['0']
+    # for item in dict_list:
+    #     if item['pub_type'] != pub_type:
+    #         pub_type = item['pub_type']
+    #         item['new_pub'] = pub_type
+    #     else:
+    #         item['new_pub'] = 'skip'
+
+    year='0'
     pub_type=['0']
     for item in dict_list:
-        if item['pub_type'] != pub_type:
+        if item['year'] != year or item['pub_type'] != pub_type:
+            year = item['year']
+            item['new_year'] = year
             pub_type = item['pub_type']
             item['new_pub'] = pub_type
-            item['new_year'] = year
         else:
+            item['new_year'] = 'skip'
             item['new_pub'] = 'skip'
 
     # for item in dict_list:
