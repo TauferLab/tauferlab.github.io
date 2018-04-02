@@ -85,6 +85,7 @@ def parse_page():
     #     print(citation, "\n")
 
     dict_list = sort_years_and_pub_type(dict_list)
+    print(dict_list)
     new_webpage = render("./publications.html", dict_list)
     with open("./new_publications.html", 'w') as f:
         f.write(new_webpage)
