@@ -66,8 +66,9 @@ def parse_page():
     dict_list = []
     manual_citations = []
     
-    page = urllib.request.urlopen("https://gcl.cis.udel.edu/publications.php")
-    html_source = page.read()
+    # page = urllib.request.urlopen("https://gcl.cis.udel.edu/publications.php")
+    # html_source = page.read()
+    html_source = open("./gcl_publications.php", 'r')
     #journal_papers=
     #Book_chapters=
     #Conferences, Symposiums, Workshops
@@ -107,6 +108,7 @@ def sort_years_and_pub_type(dict_list):
         if item['pub_type'] != pub_type:
             pub_type = item['pub_type']
             item['new_pub'] = pub_type
+            year = item['year']
             item['new_year'] = year
         else:
             item['new_pub'] = 'skip'
