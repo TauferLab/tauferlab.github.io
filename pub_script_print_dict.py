@@ -59,8 +59,7 @@ def parse_page():
     dict_list = []
     manual_citations = []
     
-    page = urllib.request.urlopen("https://gcl.cis.udel.edu/publications.php")
-    html_source = page.read()
+    html_source = open("./gcl_publications.php", 'r')
     #journal_papers=
     #Book_chapters=
     #Conferences, Symposiums, Workshops
@@ -72,7 +71,7 @@ def parse_page():
     
     a = soup.find("a",{"name":"JournalPapers"}).parent
     parse_publication_type(a, dict_list, manual_citations)
-    print(dict_list)
+    # print(dict_list)
     print("------------------------------------")
     for citation in manual_citations:
         print(citation, "\n")

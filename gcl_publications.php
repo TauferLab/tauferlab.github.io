@@ -170,9 +170,9 @@ Chemistry, 36(16): 1196 - 1212, 2015.</li>
 
    <li>J. F. Lawrence, E.S. Cochran, A. Chung, A. Kaiser,
    C.M. Christensen, R. Allen, D. Anderson, J.W. Baker, B. Fry,
-   T. Heaton, D. Kilb, M.D. Kohler, and M. Taufer. MEMS Accelerometers
+   T. Heaton, D. Kilb, M.D. Kohler, and M. Taufer. <a href='#'>MEMS Accelerometers
    and Distributed Sensing for Rapid Earthquake
-   Characterization. Bulletin of the Seismological Society of America
+   Characterization.</a> Bulletin of the Seismological Society of America
    (BSSA), January 7, 2014 </li>
 </ol>
 
@@ -250,7 +250,7 @@ Parallel Kinetic Monte Carlo Algorithms.</a> J. Comput. Physics,
 <h3>2006</h3>
 <ol>															    
 
-<li>K. Bhatia, M. Taufer, B. Stearn, R. Zamudio, D.  Catarino:  Integrate GridFTP into Firefox - Build grid protocols into Mozilla-based tools. IBM developerWorks, 10 Oct 2006.  </li>
+<li>K. Bhatia, M. Taufer, B. Stearn, R. Zamudio, D.  Catarino:<a href='#'>  Integrate GridFTP into Firefox - Build grid protocols into Mozilla-based tools.</a> IBM developerWorks, 10 Oct 2006.  </li>
 
 <li>M. Taufer, C. An, A. Kerstens , and C.L. Brooks III: <a href = "http://ieeexplore.ieee.org/Xplore/login.jsp?url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F71%2F34644%2F01652942.pdf%3Farnumber%3D1652942&authDecision=-203">Predictor@Home: A Protein Structure Prediction Supercomputer Based on Global Computing.</a> IEEE Transactions on Parallel and Distributed Systems. (17)8:  786 - 796, August 2006.  </li> 
 
@@ -260,7 +260,7 @@ Parallel Kinetic Monte Carlo Algorithms.</a> J. Comput. Physics,
 
 <li>M. Taufer, M. Crowley, D. Price, A.A. Chien, and C.L. Brooks III: <a href ="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1303203">Study of an Accurate and Fast Protein-Ligand Docking Algorithm based on Molecular Dynamics.</a> Concurrency and Computation: Practice and Experience. (17)14: 1627-1641, December 2005.  </li> 
 
-<li>P. Cicotti, M. Taufer, and A.A. Chien: DGMonitor: a Performance Monitoring Tool for Sandbox-based Desktop Grid Platforms. The Journal of Supercomputing. Springer Science+Business Media B.V., Formerly Kluwer Academic Publishers B.V. (34)2: 113 - 133, November 2005.  </li> 
+<li>P. Cicotti, M. Taufer, and A.A. Chien: DGMonitor:<a href='#'> a Performance Monitoring Tool for Sandbox-based Desktop Grid Platforms.</a> The Journal of Supercomputing. Springer Science+Business Media B.V., Formerly Kluwer Academic Publishers B.V. (34)2: 113 - 133, November 2005.  </li> 
 
 <li>K. Baldridge, J.P. Greenberg, W. Sudholt, K. Bhatia, S. Mock, C. Amoreira, Y. Potier, and M. Taufer: <a href ="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1398007">The Computational Chemistry Prototyping Environment.</a> Proceedings of the IEEE Special Issue on Grid Computing. (93)3: 512 - 521, March 2005.  </li>
 
@@ -268,24 +268,33 @@ Parallel Kinetic Monte Carlo Algorithms.</a> J. Comput. Physics,
 
 <A NAME="BookChapters"><h2>Book Chapters</h2></a>
 <ol>
+</ol>
+<h3>2016</h3>
+<ol>										
 <li> P. Cicotti, S. Oral, G. Kestor, R. Gioiosa, S. Strande,
-M. Taufer, J. H. Rogers, H. Abbasi, J. Hill, and L. Carrington. Data
-Movement in Data-Intensive High Performance Computing. Conquering Big
+M. Taufer, J. H. Rogers, H. Abbasi, J. Hill, and L. Carrington.<a href='#'> Data
+Movement in Data-Intensive High Performance Computing.</a> Conquering Big
 Data with High Performance Computing. Springer International
 Publishing AG. ISBN 9783319337401. 2016.</li>
-
-<li>T. Estrada and M. Taufer: Scheduling on Large Scale Volatile
+</ol>
+<h3>2012</h3>
+<ol>										
+<li>T. Estrada and M. Taufer:<a href='#'> Scheduling on Large Scale Volatile
 Desktop Grids, from Greedy and Naive to Intelligent and Adaptive
-Policies. Chapter in "Desktop Grid Computing", Christophe Cerin and
+Policies.</a> Chapter in "Desktop Grid Computing", Christophe Cerin and
 Gilles Fedak (Eds.), Chapman and Hall/CRC, 2012.</li>
-
-<li> R.S. Armen, E.R. May, and M. Taufer: Protein Docking. In
+</ol>
+<h3>2011</h3>
+<ol>										
+<li> R.S. Armen, E.R. May, and M. Taufer:<a href='#'> Protein Docking.</a> In
 Encyclopedia of Parallel Computing, Padua, David (Ed.),1st Edition.,
 2011, 2500 p. In 4 volumes, not available separately. Hardcover. ISBN:
 978-0-387-09765-7.</li>
-
-<li>M. Taufer and C.L. Brooks III, Predictor@Home: A Protein Structure
-Prediction Supercomputer Based on Volunteer Computing. (2008). In:
+</ol>
+<h3>2008</h3>
+<ol>										
+<li>M. Taufer and C.L. Brooks III, Predictor@Home:<a href='#'> A Protein Structure
+Prediction Supercomputer Based on Volunteer Computing.</a> (2008). In:
 Distributed & Grid Computing – Science Made Transparent for
 Everyone. Principles, Applications and Supporting Communities (Weber,
 M.H.W., ed). Rechenkraft.net, Marburg.</li>
@@ -342,7 +351,7 @@ Parallel and Distributed Computing (HPDC), pp. 1 - 10. Kyoto,
 Japan. May 30 – Jun 4, 2016.</li>
 <li>S. Herbein, A. Dusia, A. Landwehr, S. McDaniel, J. Monsalve,
 Y. Yang, S. R. Seelam, and
-M. Taufer. <a href="http://link.springer.com/chapter/10.1007/978-3-319-41321-1_14"Resource
+M. Taufer. <a href="http://link.springer.com/chapter/10.1007/978-3-319-41321-1_14">Resource
 Management for Running HPC Applications in Container Clouds</a>. In
 Proceedings of the International Supercomputing Conference (ISC),
 pp. 1 – 19. Frankfurt, Germany. June 19 - 23, 2016.</li>
@@ -352,7 +361,7 @@ pp. 1 – 19. Frankfurt, Germany. June 19 - 23, 2016.</li>
 <ol>
 
 <li> T. Estrada, M. R. Wyatt, and
-M. Taufer. <a href="http://ieeexplore.ieee.org/document/7384317/?reload=true"A
+M. Taufer. <a href="http://ieeexplore.ieee.org/document/7384317/?reload=true">A
 Genetic Programming Approach to Design Resource Allocation Policies
 for Heterogeneous Workflows in the Cloud</a>. In Proceedings of the
 21th IEEE International Conference on Parallel and Distributed Systems
@@ -724,7 +733,9 @@ October 1996, Munich, Germany.</li>
 <A NAME="EducationalPapers"><h2>Educational Papers</h2></a> 
 
 <ol> 
-
+</ol>
+<h3>2006</h3>
+<ol>										
 <li>M. Taufer, P.J. Teller, A. Kerstens, R. Romero: <a
 href="http://gcl.cis.udel.edu/publications/conferences/006sun-utep_mtaufer.pdf"
 target="_target">Collaborative Research Tools for Students, Staff, and
@@ -736,51 +747,84 @@ Teaching and Learning, March 2006, El Paso, Texas.</li>
 <A NAME="Posters"><h2>Posters</h2></a>
 
 <ol> 
+</ol>
+<h3>2012</h3>
+<ol>										
+<li> D.T. Yehdego, V. K. R. Kodimala, S. Viswakula, B. Zhang, R. Vegesna, K. L. Johnson, M. Taufer and M.-Y. Leung:<a href='#'> Secondary Structure Predictions for Long RNA Sequences Based on Inversion Excursions.</a> Poster in Proceedings of the ACM Conference on Bioinformatics, Computational Biology and Biomedicine (ACM-BCB), Orlando, FL, October 7-10, 2012. </li>
 
-<li> D.T. Yehdego, V. K. R. Kodimala, S. Viswakula, B. Zhang, R. Vegesna, K. L. Johnson, M. Taufer and M.-Y. Leung: Secondary Structure Predictions for Long RNA Sequences Based on Inversion Excursions. Poster in Proceedings of the ACM Conference on Bioinformatics, Computational Biology and Biomedicine (ACM-BCB), Orlando, FL, October 7-10, 2012. </li>
+<li>T. Estrada, K. Pusecker, M. Torres, J. Cohoon, and M. Taufer:<a href='#'> Benchmarking Gender Differences in Voluntary Computer Projects.</a> Poster in Proceedings of the 2012 Grace Hopper Celebration of Women in Computing (GHC12), October 2012, Baltimore, Maryland, USA. </li>
+</ol>
+<h3>2011</h3>
+<ol>										
+<li>T. Estrada, B. Zhang, R.S. Armen, and M. Taufer:<a href='#'> Study of Protein-ligand Binding Geometries using a Scalable and Accurate Octree-based Algorithm in MapReduce.</a> Poster in Proceedings of the ACM/IEEE International Conference for High Performance Computing and Communications conference (SC), November 2011, Seattle, Washington, USA.</li>
+</ol>
+<h3>2010</h3>
+<ol>										
+<li> Narayan Ganesan, Sandeep Patel, and Michela Taufer:<a href='#'> Simulations of Large Membrane Regions using GPU-enabled Computations - Preliminary Results.</a> 2010 Symposium on Application Accelerators in High Performance Computing (SAAHPC10). July 13-15, 2010. University of Tennessee Conference Center, Knoxville, Tennessee, USA.</li>
+</ol>
+<h3>2009</h3>
+<ol>										
+<li> Lifan Xu, S. Collins, M. Taufer, and D.G. Vlachos:<a href='#'> Parallelization of Tau-Leaping Coarse-Grained Monte Carlo Method for Efficient and Accurate Simulations on GPUs.</a> Poster in Proceedings of the ACM/IEEE International Conference for High Performance Computing and Communications conference (SC’09), November 2009, Portland, Washington, USA. </li>
 
-<li>T. Estrada, K. Pusecker, M. Torres, J. Cohoon, and M. Taufer: Benchmarking Gender Differences in Voluntary Computer Projects. Poster in Proceedings of the 2012 Grace Hopper Celebration of Women in Computing (GHC12), October 2012, Baltimore, Maryland, USA. </li>
+<li>M. Taufer, P. Saponaro, and O. Padron:<a href='#'>Improving Reproducibility and Stability of Numerically Intensive Applications on Graphics Processing Units.</a> Poster at the NVIDIA Research Summit,Sep 30- Oct 2, 2009, San Jose, CA.</li>
 
-<li>T. Estrada, B. Zhang, R.S. Armen, and M. Taufer: Study of Protein-ligand Binding Geometries using a Scalable and Accurate Octree-based Algorithm in MapReduce. Poster in Proceedings of the ACM/IEEE International Conference for High Performance Computing and Communications conference (SC), November 2011, Seattle, Washington, USA.</li>
+<li>T. Estrada, M. Taufer:<a href='#'>Docking@Home: Searching for New Drugs using Volunteer’s Computers.</a> In Proceedings of The Grace Hopper Celebration of Women in Computing 2009, September 30 – October 3, 2009, Tucson, AZ.</li>
 
-<li> Narayan Ganesan, Sandeep Patel, and Michela Taufer: Simulations of Large Membrane Regions using GPU-enabled Computations - Preliminary Results. 2010 Symposium on Application Accelerators in High Performance Computing (SAAHPC10). July 13-15, 2010. University of Tennessee Conference Center, Knoxville, Tennessee, USA.</li>
-
-<li> Lifan Xu, S. Collins, M. Taufer, and D.G. Vlachos: Parallelization of Tau-Leaping Coarse-Grained Monte Carlo Method for Efficient and Accurate Simulations on GPUs. Poster in Proceedings of the ACM/IEEE International Conference for High Performance Computing and Communications conference (SC’09), November 2009, Portland, Washington, USA. </li>
-
-<li>M. Taufer, P. Saponaro, and O. Padron:Improving Reproducibility and Stability of Numerically Intensive Applications on Graphics Processing Units. Poster at the NVIDIA Research Summit,Sep 30- Oct 2, San Jose, CA.</li>
-
-<li>T. Estrada, M. Taufer:Docking@Home: Searching for New Drugs using Volunteer’s Computers. In Proceedings of The Grace Hopper Celebration of Women in Computing 2009, September 30 – October 3, 2009, Tucson, AZ.</li>
-
-<li>K.S. Hogle, J.H. Upton, A. Licon, M.-Y. Leung, and K.L. Johnson: Role of RNA secondary structure in replication of Nodamura virus RNA2. Poster at the American Society for Virology, Twenty-seventh Annual Meeting, 2009, Cornell University, Ithaca, NY.</li>
-
-<li> T. Estrada, M. Taufer, and K. Reed: Performance Analysis of Volunteer Computing Traces. In Proceedings of the ACM/IEEE International Conference for High Performance Computing, Network, torage, and Analysis conference (SC07), November 2007, Reno, Nevada, USA. </li>
-
-<li>D. Flores, T. Estrada, M. Taufer, P. Teller, and A. Kerstens: SimBA: a Discrete Event Simulator for Performance Prediction of Volunteer Computing Projects. In In Proceedings of the ACM/IEEE International Conference for High Performance Computing, Network, Storage, and Analysis conference (SC06), November 2006, Tampa, Florida.</li>
-
-<li>C. An, M. Taufer, and C.L. Brooks III: Predictor@home: A Multiscale, Distributed Approach for Protein Structure Prediction. Poster presented at the 229th ACM National Meeting, March 2005, San Diego, California, USA.</li>
-
-<li>C. An, M. Taufer, and C.L. Brooks III: Predictor@home: A Multiscale, Distributed Approach for Protein Structure Prediction. Poster presented at the 6th Community Wide Experiment on the Critical Assessment of Techniques for Protein Structure Prediction (CASP6), December 2004, Gaeta, Italy.</li>
+<li>K.S. Hogle, J.H. Upton, A. Licon, M.-Y. Leung, and K.L. Johnson:<a href='#'> Role of RNA secondary structure in replication of Nodamura virus RNA2.</a> Poster at the American Society for Virology, Twenty-seventh Annual Meeting, 2009, Cornell University, Ithaca, NY.</li>
+</ol>
+<h3>2007</h3>
+<ol>										
+<li> T. Estrada, M. Taufer, and K. Reed:<a href='#'> Performance Analysis of Volunteer Computing Traces.</a> In Proceedings of the ACM/IEEE International Conference for High Performance Computing, Network, torage, and Analysis conference (SC07), November 2007, Reno, Nevada, USA. </li>
+</ol>
+<h3>2006</h3>
+<ol>										
+<li>D. Flores, T. Estrada, M. Taufer, P. Teller, and A. Kerstens:<a href='#'> SimBA: a Discrete Event Simulator for Performance Prediction of Volunteer Computing Projects.</a> In In Proceedings of the ACM/IEEE International Conference for High Performance Computing, Network, Storage, and Analysis conference (SC06), November 2006, Tampa, Florida.</li>
+</ol>
+<h3>2005</h3>
+<ol>										
+<li>C. An, M. Taufer, and C.L. Brooks III:<a href='#'> Predictor@home: A Multiscale, Distributed Approach for Protein Structure Prediction.</a> Poster presented at the 229th ACM National Meeting, March 2005, San Diego, California, USA.</li>
+</ol>
+<h3>2004</h3>
+<ol>										
+<li>C. An, M. Taufer, and C.L. Brooks III:<a href='#'> Predictor@home: A Multiscale, Distributed Approach for Protein Structure Prediction.</a> Poster presented at the 6th Community Wide Experiment on the Critical Assessment of Techniques for Protein Structure Prediction (CASP6), December 2004, Gaeta, Italy.</li>
 
 </ol>
 
 <A NAME="TechnicalReports"><h2>Technical Reports</h2></A>
 
-<ol> 
-<li>Lifan Xu, Michela Taufer, Stuart Collins, and Dionisios G. Vlachos: Parallelization of Tau-Leap Coarse-Grained Monte Carlo Simulations on GPUs. Technical Report No. 2009/338, Dept. of Computer and Information Sciences, University of Delaware, Newark, DE (November 2009).</li> 
-<li>Michela Taufer, Omar Padron, Philip Saponaro, Sandeep Patel: Improving Numerical Reproducibility and Stability in Large-Scale Numerical Simulations on GPUs. Technical Report No. 2009/339, Dept. of Computer and Information Sciences, University of Delaware, Newark, DE (November 2009).</li>
-<li>R. Zamudio, D. Catarino, M. Taufer, B. Stearn, and K. Bhatia: Topaz: a Firefox Protocol Extension for GridFTP based on Data Flow Diagrams. Technical Report UTEP-CS-06-18, University of Texas, El Paso, April 2006. </li>
-<li>D. Kondo, M. Taufer, J. Karanicolas, C. L. Brooks III, H. Casanova, and A. Chien: Characterizing and Evaluating Desktop Grids: An Empirical Study. Technical Report CS2003-069. University of California, San Diego, November 2003, La Jolla, California. </li>
-<li>P. Cicotti, M. Taufer, and A. Chien: DGMonitor: a Performance Monitoring Tool for Sandbox-based Desktop Grid Platforms. Technical Report CS2003-070, University of California, San Diego, November 2003, La Jolla, California. </li>
-<li>B. Uk, M. Taufer, T. Stricker, G. Settanni, A. Cavalli, and A. Caflisch: Combining Task- and Data Parallelism to Speed up Protein Folding on a Desktop Grid Platform - Is efficient protein folding possible with CHARMM on the United Devices MetaProcessor? Technical Report 386, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), November 2002, Zurich, Switzerland. </li>
-<li>B. Uk, M. Taufer, T. Stricker, G. Settanni, and A. Cavalli: Implementation and Characterization of Protein Folding on a Desktop Computational Grid – Is CHARMM a suitable candidate for the United Devices MetaProcessor? Technical Report 385, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), October 2002, Zurich, Switzerland. </li>
-<li>M. Taufer, T. Stricker, and R. Weber: Inverting Middleware Framework: Framework for Performance Analysis of Distributed OLAP Benchmarks on Clusters of PCs by Filtering and Abstracting Low Level Resource Usage. Technical Report 367, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), March 2002, Zurich, Switzerland. </li>
-<li>P. Arbenz, T. Stricker, M. Taufer, and U. von Matt: Performance Characterization and Modeling of the Molecular Simulation Code OPAL. Technical Report 310, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), November 1998, Zurich, Switzerland.</li>
+<ol>
+</ol>
+<h3>2009</h3>
+<ol>										
+<li>Lifan Xu, Michela Taufer, Stuart Collins, and Dionisios G. Vlachos:<a href='#'> Parallelization of Tau-Leap Coarse-Grained Monte Carlo Simulations on GPUs.</a> Technical Report No. 2009/338, Dept. of Computer and Information Sciences, University of Delaware, Newark, DE (November 2009).</li> 
+<li>Michela Taufer, Omar Padron, Philip Saponaro, Sandeep Patel:<a href='#'> Improving Numerical Reproducibility and Stability in Large-Scale Numerical Simulations on GPUs.</a> Technical Report No. 2009/339, Dept. of Computer and Information Sciences, University of Delaware, Newark, DE (November 2009).</li>
+</ol>
+<h3>2006</h3>
+<ol>									
+<li>R. Zamudio, D. Catarino, M. Taufer, B. Stearn, and K. Bhatia:<a href='#'> Topaz: a Firefox Protocol Extension for GridFTP based on Data Flow Diagrams.</a> Technical Report UTEP-CS-06-18, University of Texas, El Paso, April 2006. </li>
+</ol>
+<h3>2003</h3>
+<ol>										  
+<li>D. Kondo, M. Taufer, J. Karanicolas, C. L. Brooks III, H. Casanova, and A. Chien:<a href='#'> Characterizing and Evaluating Desktop Grids: An Empirical Study.</a> Technical Report CS2003-069. University of California, San Diego, November 2003, La Jolla, California. </li>
+<li>P. Cicotti, M. Taufer, and A. Chien: DGMonitor:<a href='#'> a Performance Monitoring Tool for Sandbox-based Desktop Grid Platforms.</a> Technical Report CS2003-070, University of California, San Diego, November 2003, La Jolla, California. </li>
+</ol>
+<h3>2002</h3>
+<ol>										
+<li>B. Uk, M. Taufer, T. Stricker, G. Settanni, A. Cavalli, and A. Caflisch:<a href='#'> Combining Task- and Data Parallelism to Speed up Protein Folding on a Desktop Grid Platform - Is efficient protein folding possible with CHARMM on the United Devices MetaProcessor?</a> Technical Report 386, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), November 2002, Zurich, Switzerland. </li>
+<li>B. Uk, M. Taufer, T. Stricker, G. Settanni, and A. Cavalli:<a href='#'> Implementation and Characterization of Protein Folding on a Desktop Computational Grid – Is CHARMM a suitable candidate for the United Devices MetaProcessor?</a> Technical Report 385, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), October 2002, Zurich, Switzerland. </li>
+<li>M. Taufer, T. Stricker, and R. Weber:<a href='#'> Inverting Middleware Framework: Framework for Performance Analysis of Distributed OLAP Benchmarks on Clusters of PCs by Filtering and Abstracting Low Level Resource Usage.</a> Technical Report 367, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), March 2002, Zurich, Switzerland. </li>
+</ol>
+<h3>1998</h3>
+<ol>										
+<li>P. Arbenz, T. Stricker, M. Taufer, and U. von Matt:<a href='#'> Performance Characterization and Modeling of the Molecular Simulation Code OPAL.</a> Technical Report 310, Department of Computer Science, Swiss Federal Institute of Technology Zurich (ETHZ), November 1998, Zurich, Switzerland.</li>
 </ol>
 
 <A NAME="Thesis"><h2>Thesis</h2></A>
 
 <ol> 
-
+</ol>
+<h3>2002</h3>
+<ol>										
 <li>M. Taufer: <a
 href="http://gcl.cis.udel.edu/publications/PhD110402"
 target="_blank">Inverting Middleware: Performance Analysis of Layered
@@ -789,10 +833,12 @@ Computing. </a>Dissertation ETH No. 14845, Institute for Computer Systems,
 Swiss Federal Institute of Technology Zurich (ETHZ), December 2002,
 Zurich, Switzerland. Published by Hartung Gorre Verlag Konstanz,
 Germany, ISBN 3-89649-821-5 ISSN 1611-0943. </li>
-
-<li>M. Taufer: Development of the Parallelization of the Software
+</ol>
+<h3>1996</h3>
+<ol>										
+<li>M. Taufer:<a href='#'> Development of the Parallelization of the Software
 Package OPAL for the Simulation of Dynamic Molecules on
-Supercomputers. Master Thesis, Department of Computer Science,
+Supercomputers.</a> Master Thesis, Department of Computer Science,
 University of Padova, December 1996, Padova, Italy.</li>
 </ol>
 
