@@ -66,8 +66,9 @@ def parse_page():
     dict_list = []
     manual_citations = []
     
-    page = urllib.request.urlopen("https://gcl.cis.udel.edu/publications.php")
-    html_source = page.read()
+    # page = urllib.request.urlopen("https://gcl.cis.udel.edu/publications.php")
+    # html_source = page.read()
+    html_source = open("./gcl_publications.php", 'r')
     #journal_papers=
     #Book_chapters=
     #Conferences, Symposiums, Workshops

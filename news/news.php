@@ -81,7 +81,7 @@ ga('send', 'pageview');
 
 <h3>2017</h3>
 
-<p><b>July 10, 2017: Dr. Taufer promoted to full professor</b>
+<p><b>July 10, 2017: Dr. Taufer promoted to full professor</b><br>
 Dr. Taufer is among the nineteen faculty members at UD who were
 promoted to professor this year. Congratulations Dr. Taufer! Read more
 in

@@ -21,7 +21,7 @@ def parse_page():
     soup = BeautifulSoup(html_source, "lxml")
     
     div = soup.find("div",{"id":"content"})
-    parse_publication_type(div, news_items)
+    parse_news_items(div, news_items)
 
     # dict_list = sort_years_and_pub_type(dict_list)
     # print(dict_list)
@@ -30,40 +30,36 @@ def parse_page():
     #     f.write(new_webpage)
 
 def parse_news_items(div, news_items):
+    # div is all the html within the div tags. It containts all the news entries
     for element in div.contents:
+        # p containts the news title and date (the <b> tag) and the description (<br> tag)
         if element.name == "p":
-            element = element.child
-            print(str(element.contents))
-             = str(element.contents).replace('[<h2>','').replace('</h2>]','')
-        elif element.name == "h3":
-            year = str(element.contents[0])
-        elif element.name == "ol":
-            for li in element.find_all("li"):
-                href = li.find_all("a")
-                # If there is one "<a>" tag and there are 3 elements in the li tag,
-                # we have a standard citation. Other entries will be updated manually
-                li = list(li)
-                if(len(href)==1 and len(li) == 3):
-                    # get authors
-                    authors = str(li[0])
-
-                    # get href tag
-                    a_href = str(li[1])
-
-                    # get journal/conference name
-                    journal_conf = str(li[2]).lstrip(". ")
-                    
-                    article_dict = {}
-                    article_dict['pub_type'] = pub_type
-                    article_dict['year'] = year
-                    article_dict['authors'] = authors
-                    article_dict['href'] = a_href.lstrip("[").rstrip("[")
-                    article_dict['journal_conf'] = journal_conf
-                    dict_list.append(article_dict)
-                else:
-                    # Some li elements are just a newline
-                    if(str(li) != "\n"):
-                        manual_citations.append(str(li))
+            # The two
+            element = element.decode_contents()
+            element = element.replace("\n", " ")
+            print(element)
+            # print(str(element).replace('<p>','').replace('</p>',''))
+            # content = re.search("<b>(.*)<\/b><br>(.*)", str(element).replace('[<p>','').replace('</p>]','').replace('\n',' '))
+            content = re.search("<b>(.*)</b>(<br/?>)?(.*)", element)
+            print(content)
+            file = open("test", 'w')
+            file.write(element)
+            news_date_and_title = content.group(1)
+            news_info = content.group(2)
+            date_groups = re.search(' ?(\w*) (.*,)? *(\d*). (.*)', news_date_and_title)
+            entry_dict ={}
+            # print(child)
+            # print(date_groups.group(2))
+            entry_dict['month'] = date_groups.group(1)
+            if date_groups.group(2) != None:
+                entry_dict['date'] = date_groups.group(2)
+            entry_dict['year'] = date_groups.group(3)
+            entry_dict['title'] = date_groups.group(4)
+            entry_dict['content'] = str(news_info)
+        # else:
+        # # Some li elements are just a newline
+        #     if(str(li) != "\n"):
+        #         manual_citations.append(str(li))
 
 
         
