@@ -21,7 +21,7 @@ def parse_page():
     soup = BeautifulSoup(html_source, "lxml")
     
     div = soup.find("div",{"id":"content"})
-    parse_news_items(div, news_items)
+    news_items = parse_news_items(div, news_items)
 
     # dict_list = sort_years_and_pub_type(dict_list)
     # print(dict_list)
@@ -34,16 +34,15 @@ def parse_news_items(div, news_items):
     for element in div.contents:
         # p containts the news title and date (the <b> tag) and the description (<br> tag)
         if element.name == "p":
+            if element.decode_contents() == "\n":
+                continue
             # The two
-            element = element.decode_contents()
-            element = element.replace("\n", " ")
-            print(element)
-            # print(str(element).replace('<p>','').replace('</p>',''))
-            # content = re.search("<b>(.*)<\/b><br>(.*)", str(element).replace('[<p>','').replace('</p>]','').replace('\n',' '))
-            content = re.search("<b>(.*)</b>(<br/?>)?(.*)", element)
-            print(content)
-            file = open("test", 'w')
-            file.write(element)
+            element = element.decode_contents().replace("\n", " ")
+            # print(element)
+            content = re.search("<b>(.*)</b>(?:<br/?>)?(.*)", element)
+            # print(content)
+            # file = open("test", 'w')
+            # file.write(element)
             news_date_and_title = content.group(1)
             news_info = content.group(2)
             date_groups = re.search(' ?(\w*) (.*,)? *(\d*). (.*)', news_date_and_title)
@@ -56,11 +55,15 @@ def parse_news_items(div, news_items):
             entry_dict['year'] = date_groups.group(3)
             entry_dict['title'] = date_groups.group(4)
             entry_dict['content'] = str(news_info)
+        elif element.name == "table":
+            print('test')
+        news_items.append(entry_dict)
+            
         # else:
         # # Some li elements are just a newline
         #     if(str(li) != "\n"):
         #         manual_citations.append(str(li))
-
+    return news_items
 
         
 def main():
