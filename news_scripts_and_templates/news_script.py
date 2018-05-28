@@ -12,6 +12,11 @@ import os
 # ---------------------------------------
 # Script objective:
 
+def render(tpl_path, news_items):
+            path, filename = os.path.split(tpl_path)
+            return jinja2.Environment(
+                loader=jinja2.FileSystemLoader(path or './')
+            ).get_template(filename).render(news_items=news_items)
 
 
 def parse_page():
@@ -23,17 +28,17 @@ def parse_page():
     div = soup.find("div",{"id":"content"})
     news_items = parse_news_items(div, news_items)
 
-    # dict_list = sort_years_and_pub_type(dict_list)
-    # print(dict_list)
-    # new_webpage = render("./publications.html", dict_list)
-    # with open("./new_publications.html", 'w') as f:
-    #     f.write(new_webpage)
+    new_webpage = render("./news_template.html", news_items)
+    with open("../new_news.html", 'w') as f:
+        f.write(new_webpage)
 
 def parse_news_items(div, news_items):
     # div is all the html within the div tags. It containts all the news entries
     for element in div.contents:
         # p containts the news title and date (the <b> tag) and the description (<br> tag)
+        entry_dict = {}        
         if element.name == "p":
+            first_image = 0
             if element.decode_contents() == "\n":
                 continue
             # The two
@@ -46,18 +51,22 @@ def parse_news_items(div, news_items):
             news_date_and_title = content.group(1)
             news_info = content.group(2)
             date_groups = re.search(' ?(\w*) (.*,)? *(\d*). (.*)', news_date_and_title)
-            entry_dict ={}
-            # print(child)
-            # print(date_groups.group(2))
             entry_dict['month'] = date_groups.group(1)
             if date_groups.group(2) != None:
-                entry_dict['date'] = date_groups.group(2)
+                entry_dict['date'] = date_groups.group(2).replace(',','')
+            else:
+                entry_dict['date'] = 'skip'
+                
             entry_dict['year'] = date_groups.group(3)
             entry_dict['title'] = date_groups.group(4)
             entry_dict['content'] = str(news_info)
         elif element.name == "table":
-            print('test')
-        news_items.append(entry_dict)
+            first_image += 1
+            if first_image == 1:
+                image = str(element.img).replace('src="images/','src="assets/gcl-images/')
+                news_items[-1]['image'] = image
+        if entry_dict != {}:
+            news_items.append(entry_dict)
             
         # else:
         # # Some li elements are just a newline
