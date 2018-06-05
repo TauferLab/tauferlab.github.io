@@ -155,21 +155,28 @@ http://themeforest.net/user/owwwlab/
               </div>
             </section>
             <section class="slim-container">
-              <div class="container">
-                <div class="ol-timeline scrollable-timeline">
+              <div class="container"> {# div 1 #}
+                <div class="ol-timeline scrollable-timeline"> {# /div 2 #}
 		{% for item in dict_list %}
-                  <div class="tl-item pub-item with-thumb"><span class="item-section">"{{item.year}}"</span>
-                    <div class="elem-wrapper"><img src="assets/img/publications/07.jpg" alt="item thumbnail" class="pub-thumbnail"></div>
-                    <div class="content-wrapper">
-                      <h3 class="title"><a href="#">"{{ item.href}}"</a></h3>
-                      <div class="description">
-                        <div class="citation"><span> <a href="#"> "{{item.journal_conf}}" </a><span class="block-elem">"{{item.authors}}"</span></span></div>
-                      </div>
-                    </div>
-                  </div>
+		{% if item['new_pub'] != 'skip' %}
+		<h2>{{item['new_pub']}} </h2>
+		{% endif %}
+		{% if item['new_year'] != 'skip' %} 
+                <div class="tl-item pub-item with-thumb"><span class="item-section">{{item['new_year']}}</span> {# div 3 #}
+		{% else %}
+                <div class="tl-item pub-item with-thumb"> {# div 4 #}
+		{% endif %}
+		  
+                    <div class="content-wrapper"> {# div 5 #}
+                      <h3 class="title">{{item['href']}}</h3>
+                      <div class="description"> {# div 6 #}
+                        <div class="citation"><span> <a href="#">{{item['journal_conf']}}</a><span class="block-elem">{{item['authors']}}</span></span></div>
+                      </div> {# /div 6 #}
+                    </div> {# /div 5 #}
+		</div> {# /div 4/3 #}
 		{% endfor %}
-                </div>
-              </div>
+                </div> {# /div 2 #}
+              </div> {# /div 1 #}
             </section>
           </section>
           <!-- #####End main area
