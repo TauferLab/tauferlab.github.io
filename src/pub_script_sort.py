@@ -43,7 +43,7 @@ def parse_publication_type(a, dict_list, manual_citations):
 
                     # get journal/conference name
                     journal_conf = str(li[2]).lstrip(". ")
-                    
+
                     article_dict = {}
                     article_dict['pub_type'] = pub_type
                     article_dict['year'] = year
@@ -55,7 +55,7 @@ def parse_publication_type(a, dict_list, manual_citations):
                     # Some li elements are just a newline
                     if(str(li) != "\n"):
                         manual_citations.append(str(li))
-                        
+
 def render(tpl_path, dict_list):
             path, filename = os.path.split(tpl_path)
             return jinja2.Environment(
@@ -65,7 +65,7 @@ def render(tpl_path, dict_list):
 def parse_page():
     dict_list = []
     manual_citations = []
-    
+
     # page = urllib.request.urlopen("https://gcl.cis.udel.edu/publications.php")
     # html_source = page.read()
     html_source = open("./gcl_publications.php", 'r')
@@ -77,7 +77,7 @@ def parse_page():
     #Thesis=
     soup = BeautifulSoup(html_source, "lxml")
     # soup = BeautifulSoup(open("./publications.php"), "lxml")
-    
+
     a = soup.find("a",{"name":"JournalPapers"}).parent
     parse_publication_type(a, dict_list, manual_citations)
     # print(dict_list)
@@ -91,9 +91,11 @@ def parse_page():
     with open("./new_publications.html", 'w') as f:
         f.write(new_webpage)
 
-    
+
 
 def sort_years_and_pub_type(dict_list):
+    dict_list.sort(key=lambda x: x['year'], reverse=True)
+
     year='0'
     #Item is a citation from publications
     for item in dict_list:
@@ -102,26 +104,28 @@ def sort_years_and_pub_type(dict_list):
             item['new_year'] = year
         else:
             item['new_year'] = 'skip'
-            
-    pub_type=['0']
+
     for item in dict_list:
-        if item['pub_type'] != pub_type:
-            pub_type = item['pub_type']
-            item['new_pub'] = pub_type
-            year = item['year']
-            item['new_year'] = year
-        else:
-            item['new_pub'] = 'skip'
+        item['new_pub'] = 'skip'
+    # pub_type=['0']
+    # for item in dict_list:
+    #     if item['pub_type'] != pub_type:
+    #         pub_type = item['pub_type']
+    #         item['new_pub'] = pub_type
+    #         year = item['year']
+    #         item['new_year'] = year
+    #     else:
+    #         item['new_pub'] = 'skip'
 
     # for item in dict_list:
     #     print(item['new_year'])
     #     print(item['new_pub'])
-        
+
     return(dict_list)
-    
+
 def main():
     parse_page()
-    
+
 if __name__== "__main__":
     main()
 
