@@ -4785,7 +4785,7 @@ p.highlight {
 }
 .section {
     background-color: #fff;
-    padding: 120px 0;
+    padding: 80px 0;
 }
 .section.section-narrow {
     padding: 80px 0;
@@ -13994,7 +13994,7 @@ iframe {
         padding: 60px 0;
     }
     .section, .section.section-narrow {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     .page-head .breadcrumb-wrapper {
         text-align: left;
@@ -14158,7 +14158,7 @@ iframe {
         padding: 20px 0;
     }
     .section, .section.section-narrow {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     .large-text {
         font-size: 30px;
