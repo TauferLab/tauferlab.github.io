@@ -12843,6 +12843,14 @@ ul.comments .comment-body .comment-content p {
     line-height: 30px !important;
 }
 
+.slider-bg {
+    /* background-color: #343434; */
+    background: rgba(52, 52, 52, .75);
+    border-bottom: none;
+    color: #e8e8e8;
+    opacity: .8;
+}
+
 
 /*	General css
  *	===================================================
