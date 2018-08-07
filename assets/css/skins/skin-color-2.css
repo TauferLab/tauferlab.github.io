@@ -1,5 +1,6 @@
 a{
 }
+
 a:focus{
 	color:#ccc;
 }
@@ -61,14 +62,14 @@ a:focus{
 }
 
 .book-el, .course-el{
-	border-bottom: 4px solid #ccc
+	border-bottom: 40px solid #ccc
 }
 
 .book-el:hover, .book-el:focus, .course-el:hover, .course-el:focus{
 	background-color:#ccc;
 }
 .journal-el{
-	border-bottom: 4px solid #ccc
+	border-bottom: 40px solid #ccc
 }
 .journal-el:before{
 	background-color:#ccc;
@@ -241,6 +242,7 @@ a:focus{
 	background-color:#ccc;
 	border-color:#ccc;
 }
+
 
 .chaos-table a{
 }
