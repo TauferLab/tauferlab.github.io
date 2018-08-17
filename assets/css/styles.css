@@ -4451,7 +4451,7 @@ h1.with-sideline:before, h2.with-sideline:before, h3.with-sideline:before, h4.wi
 }
 h1.with-underline, h2.with-underline, h3.with-underline, h4.with-underline, h5.with-underline, h6.with-underline {
     font-size: 14px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     margin-bottom: 30px;
     position: relative;
     border-bottom: 1px solid #dedede;
@@ -5349,7 +5349,7 @@ margin:-100px 0 0; /* negative fixed header height */
     color: rgba(0, 0, 0, 0.53);
     font-family: "Play",sans-serif;
     text-decoration: none;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 #header .cart > a i {
     font-size: 15px;
@@ -5694,7 +5694,7 @@ margin:-100px 0 0; /* negative fixed header height */
     .side-header #header ul#primary-menu >li >a {
         font-size: 13px;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         padding-left: 30px;
         overflow: hidden;
         position: relative;
@@ -6356,7 +6356,7 @@ ul#primary-menu li.mega-menu .megamenu-wrapper:after {
 .page-head h1.title {
     font-size: 26px;
     font-weight: 700;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     letter-spacing: 1px;
 }
 .page-head h1.title.alt {
@@ -8347,7 +8347,7 @@ ul#primary-menu li.mega-menu .megamenu-wrapper:after {
 .fact-item .fact-title {
     font-size: 16px;
     margin-bottom: 2px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
 }
 .fact-item .fact-sub-title {
@@ -8753,10 +8753,10 @@ ul#primary-menu li.mega-menu .megamenu-wrapper:after {
     opacity: 0.9;
 }
 .vc-card .vc-card-wrapper {
-    min-height: 120px;
+    min-height: 100px;
     font-size: 13px;
     color: #636363;
-    padding: 30px 20px 20px;
+    padding: 28px 10px 10px;
 }
 .vc-card .vc-card-wrapper .title {
     font-weight: bold;
@@ -8770,7 +8770,7 @@ ul#primary-menu li.mega-menu .megamenu-wrapper:after {
 }
 .vc-card .vc-card-wrapper .subtitle {
     padding-top: 10px;
-    line-height: 20px;
+    line-height: 10px;
     color: #707070;
 }
 .vc-card .links {
