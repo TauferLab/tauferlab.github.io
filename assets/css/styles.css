@@ -10437,6 +10437,17 @@ a.nav-box:hover .widget-heading.right .sub-title, .nav-box a .widget-heading.rig
     height: 100%;
 }
 
+div.image-gallery {
+  display: block;
+  background-color: #cccccc;
+}
+
+div.image-gallery img {
+  display: block;
+  float: left;
+}
+
+
 /*	list styles
  *	===================================================
  */
