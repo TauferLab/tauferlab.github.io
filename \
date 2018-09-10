@@ -152,24 +152,6 @@ http://themeforest.net/user/owwwlab/
 		      <br>
 		      <br>
 		      <br>
-          <div class="sp-line-75"></div>
-
-                      <div class="post">
-                        <div class="post-contents">
-                          <div class="published_date">
-
-                            <div class="day">7</div>
-
-                            <div class="month">Sep</div>
-          <div class="year">2018</div>
-                          </div>
-                          <div class="aside">
-                            <div id="new15"><h3 class="title">Our work accepted at the IEEE ICPADS 2018</a></h3></div>
-                            <div class="post-excerpt"> Our work "On the Power of Combiner Optimizations in MapReduce over MPI Workflows" was accepted at IEEE 24th International Conference on Parallel and Distributed Systems (IEEE ICPADS 2018). This is work with <a href="http://www.mcs.anl.gov/~balaji/" target="_blank"> Dr. Pavan Balaji </a> and <a href="https://www.anl.gov/" target="_blank"> Argonne National Laboratory </a> </div>
-                          </div>
-                        </div>
-                      </div>
-          <div class="sp-line-75"></div>
 
                       <div class="post">
                         <div class="post-header"><a class="post-thumb"><img a border="0" height="300" src="assets/img/news/CCDSCLyon.jpg"/></a></div>
@@ -179,15 +161,17 @@ http://themeforest.net/user/owwwlab/
                             <div class="day">7</div>
 
                             <div class="month">Sep</div>
-          <div class="year">2018</div>
+          <div class="year">2017</div>
                           </div>
                           <div class="aside">
                             <div id="new14"><h3 class="title">Dr. Taufer at the 2018 CCDSC workshop in Lyon</a></h3></div>
-                            <div class="post-excerpt"> Dr. Taufer presents "Modeling Record-and-Replay for Nondeterministic Applications on Exascale Systems" at the 2018 CCDSC workshop <a href="https://www.icl.utk.edu/" target="_blank"> (ICL) </a>in Lyon. </div>
+                            <div class="post-excerpt"> Dr. Taufer presents "Modeling Record-and-Replay for Nondeterministic Applications on Exascale Systems" at the 2018 CCDSC workshop in Lyon. </div>
                           </div>
                         </div>
                       </div>
           <div class="sp-line-75"></div>
+
+<div class="sp-line-75"></div>
 <div class="post">
 <div class="post-header"><a class="post-thumb"><img a border="0" height=300 src="assets/img/news/ICL.jpg"/></a></div>
                         <div class="post-contents">
