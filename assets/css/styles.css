@@ -4412,32 +4412,32 @@ h1, h2, h3, h4, h5, h6 {
     color: #4b4b4b;
 }
 h1, .h1 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 30px;
 }
 h2, .h2 {
-    font-size: 24px;
+    font-size: 35px;
     margin-bottom: 25px;
 }
 h3, .h3 {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 h4, .h4 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 h5, .h5 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 15px;
 }
 h6, .h6 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 15px;
 }
 h1, h2, h3, h4, h5, h6 {}
 h1.with-sideline, h2.with-sideline, h3.with-sideline, h4.with-sideline, h5.with-sideline, h6.with-sideline {
-    position: relative;
+    position: fixed;
     padding-left: 70px;
 }
 h1.with-sideline:before, h2.with-sideline:before, h3.with-sideline:before, h4.with-sideline:before, h5.with-sideline:before, h6.with-sideline:before {
@@ -6455,7 +6455,7 @@ ul#primary-menu li.mega-menu .megamenu-wrapper:after {
     padding: 0 25%;
 }
 .page-head.center-it.boxed .wrapper .title-wrapper .boxed {
-    position: relative;
+    position: fixed;
     padding: 50px 10px;
     background-color: rgba(245,245,245, 0.7);
 }
@@ -10591,7 +10591,7 @@ div.image-gallery img {
     margin-right: 145px;
 }
 dl.description-item {
-    font-size: 12px;
+    font-size: 18px;
     margin-bottom: 0;
 }
 dl.description-item dt {
@@ -10602,15 +10602,16 @@ dl.description-item dd {
     margin-bottom: 20px;
 }
 dl.description-item.dl-horizontal {
-    font-size: 13px;
+    font-size: 20px;
     font-family: 'Sintony',sans-serif;
 }
 dl.description-item.dl-horizontal dt {
     text-align: left;
-    width: 100px;
+    width: 100;
     padding-bottom: 5px;
 }
 dl.description-item.dl-horizontal dd {
+    font-size=30px;
     margin-left: 100px;
     padding-bottom: 5px;
 }
@@ -10701,7 +10702,7 @@ ol.with-shaded-label.ol-upper-roman li:before {
     color: #c9c9c9;
 }
 .dl-horizontal {
-    font-size: 13px;
+    font-size: 15px;
 }
 .dl-horizontal dt {
     font-family: "Play",sans-serif;
