@@ -4821,8 +4821,8 @@ p.highlight {
     padding-left: 0;
 }
 @media (min-width: 992px) {
-    .slim-container .container {
-        width: 800px;
+    .slim-container .container {       
+	width: 800px;
     }
 }
 @media (min-width: 1200px) {
@@ -13879,7 +13879,7 @@ iframe {
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 35px;
+    padding-top: 15px;
     height: 0;
     overflow: hidden;
 }
@@ -14074,7 +14074,7 @@ iframe {
         height: 310px;
     }
     .journal-el .header {
-        padding: 20px 30px 15px 30px;
+        padding: 15px 15px 15px 15px;
     }
     .journal-el .footer {
         top: 150px;
