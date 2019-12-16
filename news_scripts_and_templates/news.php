@@ -1287,7 +1287,7 @@ Meeting of The American Chemical Society that will take place in October 15-18
 A Protein Structure Prediction Supercomputer Based on Volunteer Computing.
 <p>
 <b>August 12, 2006: Topaz 1.0 Beta</b>
-<br>Join us to test our new version of Topaz, the GridFTP protocol extensions
+<br>Positions to test our new version of Topaz, the GridFTP protocol extensions
 for Firefox browser. To download Topaz <a href="projects/topaz/download.php"><span>click here</span></a>.  
 <p>
 <b>July 12, 2006: Daniel Catarino awarded a Google HSF Scholarship.</b> 
