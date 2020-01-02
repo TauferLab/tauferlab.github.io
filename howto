@@ -1,0 +1,13 @@
+##########################################################
+This is documentation on how to do things on the webpage:
+
+##How to curate tweets for an specific topic (eg. sc)
+1.  Go to https://tweetdeck.twitter.com/
+2.  Click the + (add column) located on the left bar
+3.  Click on collection
+4.  Click Create Collection
+5.  Find tweets to Add to the collection
+6.  Click on the arrows on the bottom-right of the desired tweet, hold, and drag into the Collection column
+7.  Click on 'Share'
+8.  Click on 'Embed Collection'
+9.  Copy that html code line (Modify depending on your preferences. eg size, tweets limit, etc)
