@@ -7,7 +7,7 @@ function load_bibtex(filename) {
     xhr.responseType = "text";
     xhr.send();
     console.debug("Fetching external content '" + xhr.url + '; alt. text will be presented if resource is unreachable');
-    return (xhr.status == 200 ? xhr.response : "[citation not available]";
+    return (xhr.status == 200 ? xhr.response : "[citation not available]");
 }
 
 function create_container(filename, bibtex) {
