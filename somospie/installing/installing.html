@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 18px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            font-size: 18px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+        }
+     
+     code{
+         padding-top: 40px;
+         font-family: 'Lucida Console';
+     }
+    </style>
+</head>
+<body>
+
+    <div class="sidenav">
+        <a href="#VirtualMachine">XSEDE Virtual Machine</a>
+        <a href="#ubuntu">UBUNTU</a>
+        <!--
+     <a href="#mac">Machintosh</a>
+     <a href="#windows">Windows</a>
+        -->
+    </div>
+
+    <div class="main">
+        <h1> Installing SOMOSPIE </h1>
+    </div>
+
+    <div class="main">
+        <h2 id="VirtualMachine">Installing SOMOSPIE on XSEDE virtual Machine</h2>
+        <p>
+            To get started with SOMOSPIE Engine on an XSEDE virtual machine, make sure you meet the <a href="#prerequisites"> prerequisites</a>, then clone SOMOSPIE.
+            <h3 id="prerequisites"> Prerequisites </h3>
+            <h4 id="createvm"> Set a XSEDE virtual machine</h4>
+            <ol>
+                <li> Launch the following XSEDE UBUNTU <a href=https://use.jetstream-cloud.org/application/images/946 target="_blank"> image. </a></li>
+                <li>
+                    Click on Launch <br>
+                    <img src="images/launch.png">
+                </li>
+                <li>
+                    You can leave the default values in "Basic Info" section, but make sure to select m1.medium (CPU:6, Mem: 16 GB, Disk: 60GB) on "Instance Size" <br>
+                    <img src="images/instance.png">
+                </li>
+                <li>
+                    Click on Launch Instance
+                </li>
+                <li>
+                    Wait until the status of your virtual machine is <b><font color="green"> Active </font> </b>  with a <b> <font color="green"> green dot </font> </b>
+                </li>
+                <li>
+                    You are ready to clone and run SOMOSPIE <br>
+                    <img src="images/active.png">
+                </li>
+            </ol>
+            <h3 id="cloning"> Cloning and running SOMOSPIE </h3>
+            <ol>
+                <li>
+                    Clone SOMOSPIE <br><br>
+                    <code>
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$git clone --recursive https://github.com/TauferLab/SOMOSPIE <br>
+
+                        Cloning into 'SOMOSPIE'...<br>
+                        remote: Enumerating objects: 127, done.<br>
+                        remote: Counting objects: 100% (127/127), done.<br>
+                        remote: Compressing objects: 100% (108/108), done.<br>
+                        remote: Total 296 (delta 31), reused 92 (delta 17), pack-reused 169<br>
+                        Receiving objects: 100% (296/296), 3.63 MiB | 19.05 MiB/s, done.<br>
+                        Resolving deltas: 100% (108/108), done.<br>
+                        Submodule 'code/ipywe' (https://github.com/scikit-beam/ipywe.git) registered for path 'code/ipywe'<br>
+                        Cloning into '/home/lvalera/SOMOSPIE/code/ipywe'...<br>
+                        remote: Enumerating objects: 7, done.<br>
+                        remote: Counting objects: 100% (7/7), done.<br>
+                        remote: Compressing objects: 100% (7/7), done.<br>
+                        remote: Total 1457 (delta 1), reused 1 (delta 0), pack-reused 1450<br>
+                        Receiving objects: 100% (1457/1457), 17.03 MiB | 18.84 MiB/s, done.<br>
+                        Resolving deltas: 100% (992/992), done.<br>
+                        Submodule path 'code/ipywe': checked out '5375ce66cd6cb21dcac1dce21d0f6311b4a8df8f
+                    </code>
+
+                </li>
+                <br>
+                <li>
+                    To continue setup, we need to activate the anaconda evironment that will be used for SOMOSPIE.ipynb. On Jetstream, use the built-in "ez" method: <br>
+                    <br>
+                    <code>
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$ezj <br>
+
+                        /usr/bin/python3<br>
+                        DEBUG: using python version 3<br>
+                        DEBUG: downloading anaconda binary, may take a few minutes<br>
+                        DEBUG: Anaconda already installed to /opt/anaconda3<br>
+                        /usr/bin/python3<br>
+                        DEBUG: using python version 3<br>
+                        [I 16:23:42.944 NotebookApp] JupyterLab beta preview extension loaded from /opt/anaconda3/lib/python3.6/site-packages/jupyterlab<br>
+                        [I 16:23:42.944 NotebookApp] JupyterLab application directory is /opt/anaconda3/share/jupyter/lab<br>
+                        [I 16:23:42.965 NotebookApp] Serving notebooks from local directory: /home/lvalera<br>
+                        [I 16:23:42.965 NotebookApp] 0 active kernels<br>
+                        [I 16:23:42.965 NotebookApp] The Jupyter Notebook is running at:<br>
+                        [I 16:23:42.965 NotebookApp] http://149.165.169.84:8888/?token=a4826f02d8e96a266d5adee3599e9312cc736586ee8a50b9<br>
+                        [I 16:23:42.965 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).<br>
+                        [C 16:23:42.966 NotebookApp]<br>
+
+                        Copy/paste this URL into your browser when you connect for the first time,<br>
+                        to login with a token:<br>
+                        http://149.165.169.84:8888/?token=a4826f02d8e96a266d5adee3599e9312cc736586ee8a50b9
+                    </code>
+                    <br>
+                </li>
+                <br>
+                <li>
+                    Once you see URL for accessing Jupyter Notebook, return to the command-line: force exit by pressing Ctrl+C twice.
+                </li>
+                <li>
+                    The final setup step is simple:<br>
+                    <br>
+                    <code>
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$make bash <br>
+                    </code>
+                    <br>
+                </li>
+                <li>
+                    You are now ready to start using SOMOSPIE! Launch Jupyter Notebooks with ezj, click the link provided, and open SOMOSPIE.ipynb.<br>
+                    <br>
+                    <code>
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$ezj <br>
+                    </code>
+                </li>
+            </ol>
+        </p>
+    </div>
+    <div class="main">
+        <h2 id="ubuntu">Installing SOMOSPIE on UBUNTU</h2>
+        <p>
+            <h3 id="cloning"> Cloning and running SOMOSPIE </h3>
+            <ol>
+                <li>
+                    Clone SOMOSPIE <br><br>
+                    <code>
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$git clone --recursive https://github.com/TauferLab/SOMOSPIE <br>
+
+                        Cloning into 'SOMOSPIE'...<br>
+                        remote: Enumerating objects: 127, done.<br>
+                        remote: Counting objects: 100% (127/127), done.<br>
+                        remote: Compressing objects: 100% (108/108), done.<br>
+                        remote: Total 296 (delta 31), reused 92 (delta 17), pack-reused 169<br>
+                        Receiving objects: 100% (296/296), 3.63 MiB | 19.05 MiB/s, done.<br>
+                        Resolving deltas: 100% (108/108), done.<br>
+                        Submodule 'code/ipywe' (https://github.com/scikit-beam/ipywe.git) registered for path 'code/ipywe'<br>
+                        Cloning into '/home/lvalera/SOMOSPIE/code/ipywe'...<br>
+                        remote: Enumerating objects: 7, done.<br>
+                        remote: Counting objects: 100% (7/7), done.<br>
+                        remote: Compressing objects: 100% (7/7), done.<br>
+                        remote: Total 1457 (delta 1), reused 1 (delta 0), pack-reused 1450<br>
+                        Receiving objects: 100% (1457/1457), 17.03 MiB | 18.84 MiB/s, done.<br>
+                        Resolving deltas: 100% (992/992), done.<br>
+                        Submodule path 'code/ipywe': checked out '5375ce66cd6cb21dcac1dce21d0f6311b4a8df8f
+                    </code>
+
+                </li>
+                <br>
+                <li>
+                    Install the required libraries:<br>
+
+                    <br>
+                    <code>
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$make jetstream <br>
+                    </code> <br>
+                </li>
+
+                <br>
+                <li>
+                    Run Jupyter notebook:<br>
+
+                    <br>
+                    <code>
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$jupyter-notebook <br>
+                    </code>
+                </li>
+            </ol>
+        </p>
+    </div>
+
+    <!--
+    <div class="main">
+        <h2  id="mac">Installing SOMOSPIE on Machintosh</h2>
+        <p>
+            Thh installation of SOMOSPIE on Machintosh
+        </p>
+    </div>
+
+
+    <div class="main">
+        <h2  id="windows">Installing SOMOSPIE on Windows</h2>
+        <p>
+            This sidebar Windows.
+        </p>
+    </div>
+
+    -->
+</body>
+</html>
