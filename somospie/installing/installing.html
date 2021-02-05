@@ -22,13 +22,14 @@
             .sidenav a {
                 padding: 6px 8px 6px 16px;
                 text-decoration: none;
-                font-size: 18px;
+                font-size: 16px;
                 color: #818181;
                 display: block;
             }
 
                 .sidenav a:hover {
                     color: #f1f1f1;
+                    font-family: 'Lucida Console'
                 }
 
         .main {
@@ -47,15 +48,17 @@
                 }
         }
 
-        img {
-            max-width: 70%;
-            height: auto;
+
+        .terminal {
+            width: 100%;
+            margin: 10px;
+            background-color: black;
+            color: #f1f1f1;
+            padding: 15px;
+            font-family:'Lucida Console';
+            font-size:medium;
+            
         }
-     
-     code{
-         padding-top: 40px;
-         font-family: 'Lucida Console';
-     }
     </style>
 </head>
 <body>
@@ -83,11 +86,11 @@
                 <li> Launch the following XSEDE UBUNTU <a href=https://use.jetstream-cloud.org/application/images/946 target="_blank"> image. </a></li>
                 <li>
                     Click on Launch <br>
-                    <img src="images/launch.png">
+                    <img src="images/launch.png" width="30%">
                 </li>
                 <li>
                     You can leave the default values in "Basic Info" section, but make sure to select m1.medium (CPU:6, Mem: 16 GB, Disk: 60GB) on "Instance Size" <br>
-                    <img src="images/instance.png">
+                    <img src="images/instance.png" width="60%">
                 </li>
                 <li>
                     Click on Launch Instance
@@ -104,33 +107,33 @@
             <ol>
                 <li>
                     Clone SOMOSPIE <br><br>
-                    <code>
+                    <div class="terminal">
                         <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$git clone --recursive https://github.com/TauferLab/SOMOSPIE <br>
 
-                        Cloning into 'SOMOSPIE'...<br>
+                        Cloning into 'SOMOSPIE'...
                         remote: Enumerating objects: 127, done.<br>
                         remote: Counting objects: 100% (127/127), done.<br>
                         remote: Compressing objects: 100% (108/108), done.<br>
                         remote: Total 296 (delta 31), reused 92 (delta 17), pack-reused 169<br>
                         Receiving objects: 100% (296/296), 3.63 MiB | 19.05 MiB/s, done.<br>
                         Resolving deltas: 100% (108/108), done.<br>
-                        Submodule 'code/ipywe' (https://github.com/scikit-beam/ipywe.git) registered for path 'code/ipywe'<br>
-                        Cloning into '/home/lvalera/SOMOSPIE/code/ipywe'...<br>
+                        Submodule 'terminal/ipywe' (https://github.com/scikit-beam/ipywe.git) registered for path 'terminal/ipywe'<br>
+                        Cloning into '/home/lvalera/SOMOSPIE/terminal/ipywe'...<br>
                         remote: Enumerating objects: 7, done.<br>
                         remote: Counting objects: 100% (7/7), done.<br>
                         remote: Compressing objects: 100% (7/7), done.<br>
                         remote: Total 1457 (delta 1), reused 1 (delta 0), pack-reused 1450<br>
                         Receiving objects: 100% (1457/1457), 17.03 MiB | 18.84 MiB/s, done.<br>
                         Resolving deltas: 100% (992/992), done.<br>
-                        Submodule path 'code/ipywe': checked out '5375ce66cd6cb21dcac1dce21d0f6311b4a8df8f
-                    </code>
+                        Submodule path 'terminal/ipywe': checked out '5375ce66cd6cb21dcac1dce21d0f6311b4a8df8f
+                    </div>
 
                 </li>
                 <br>
                 <li>
                     To continue setup, we need to activate the anaconda evironment that will be used for SOMOSPIE.ipynb. On Jetstream, use the built-in "ez" method: <br>
                     <br>
-                    <code>
+                    <div class="terminal">
                         <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$ezj <br>
 
                         /usr/bin/python3<br>
@@ -151,7 +154,7 @@
                         Copy/paste this URL into your browser when you connect for the first time,<br>
                         to login with a token:<br>
                         http://149.165.169.84:8888/?token=a4826f02d8e96a266d5adee3599e9312cc736586ee8a50b9
-                    </code>
+                    </div>
                     <br>
                 </li>
                 <br>
@@ -161,17 +164,17 @@
                 <li>
                     The final setup step is simple:<br>
                     <br>
-                    <code>
+                    <div class="terminal">
                         <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$make bash <br>
-                    </code>
+                    </div>
                     <br>
                 </li>
                 <li>
                     You are now ready to start using SOMOSPIE! Launch Jupyter Notebooks with ezj, click the link provided, and open SOMOSPIE.ipynb.<br>
                     <br>
-                    <code>
+                    <div class="terminal">
                         <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$ezj <br>
-                    </code>
+                    </div>
                 </li>
             </ol>
         </p>
@@ -183,7 +186,7 @@
             <ol>
                 <li>
                     Clone SOMOSPIE <br><br>
-                    <code>
+                    <div class="terminal">
                         <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$git clone --recursive https://github.com/TauferLab/SOMOSPIE <br>
 
                         Cloning into 'SOMOSPIE'...<br>
@@ -193,16 +196,16 @@
                         remote: Total 296 (delta 31), reused 92 (delta 17), pack-reused 169<br>
                         Receiving objects: 100% (296/296), 3.63 MiB | 19.05 MiB/s, done.<br>
                         Resolving deltas: 100% (108/108), done.<br>
-                        Submodule 'code/ipywe' (https://github.com/scikit-beam/ipywe.git) registered for path 'code/ipywe'<br>
-                        Cloning into '/home/lvalera/SOMOSPIE/code/ipywe'...<br>
+                        Submodule 'terminal/ipywe' (https://github.com/scikit-beam/ipywe.git) registered for path 'terminal/ipywe'<br>
+                        Cloning into '/home/lvalera/SOMOSPIE/terminal/ipywe'...<br>
                         remote: Enumerating objects: 7, done.<br>
                         remote: Counting objects: 100% (7/7), done.<br>
                         remote: Compressing objects: 100% (7/7), done.<br>
                         remote: Total 1457 (delta 1), reused 1 (delta 0), pack-reused 1450<br>
                         Receiving objects: 100% (1457/1457), 17.03 MiB | 18.84 MiB/s, done.<br>
                         Resolving deltas: 100% (992/992), done.<br>
-                        Submodule path 'code/ipywe': checked out '5375ce66cd6cb21dcac1dce21d0f6311b4a8df8f
-                    </code>
+                        Submodule path 'terminal/ipywe': checked out '5375ce66cd6cb21dcac1dce21d0f6311b4a8df8f
+                    </div>
 
                 </li>
                 <br>
@@ -210,9 +213,9 @@
                     Install the required libraries:<br>
 
                     <br>
-                    <code>
+                    <div class="terminal">
                         <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$make jetstream <br>
-                    </code> <br>
+                    </div> <br>
                 </li>
 
                 <br>
@@ -220,9 +223,9 @@
                     Run Jupyter notebook:<br>
 
                     <br>
-                    <code>
+                    <div class="terminal">
                         <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$jupyter-notebook <br>
-                    </code>
+                    </div>
                 </li>
             </ol>
         </p>
@@ -232,7 +235,7 @@
     <div class="main">
         <h2  id="mac">Installing SOMOSPIE on Machintosh</h2>
         <p>
-            Thh installation of SOMOSPIE on Machintosh
+            The installation of SOMOSPIE on Machintosh
         </p>
     </div>
 
