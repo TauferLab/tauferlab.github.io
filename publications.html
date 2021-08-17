@@ -13,6 +13,33 @@ http://themeforest.net/user/owwwlab/
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
   <!-- #####Begin head-->
   <head>
+    <style>
+        .accordion 
+        {
+            cursor: pointer;
+            padding: 0px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 12px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover 
+            {
+                background-color: gray;
+            }
+
+        .panel 
+        {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            outline: 1px dashed gray;
+            font-family: "Courier New"; "monospace";
+        }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -198,7 +225,22 @@ http://themeforest.net/user/owwwlab/
                       <div class="description">
 			      <div class="citation"><span>Remote Sensing, 2020.<span class="block-elem">R. Llamas , M. Guevara , D. Rorabaugh, <b>M. Taufer</b>, and R. Vargas.</span></span></div>
                       </div>
-                    </div>
+		       <button class="accordion">[Bibtex]</button>
+                            <div class="panel">
+				<p>
+                                    @article{llamas2020spatial,<br>
+                                    title={Spatial gap-filling of ESA CCI satellite-derived soil moisture based on geostatistical techniques and multiple regression},<br>
+                                    author={Llamas, Ricardo M and Guevara, Mario and Rorabaugh, Danny and Taufer, Michela and Vargas, Rodrigo},<br>
+                                    journal={Remote Sensing},<br>
+                                    volume={12},<br>
+                                    number={4},<br>
+                                    pages={665},<br>
+                                    year={2020},<br>
+                                    publisher={Multidisciplinary Digital Publishing Institute}<br>
+                                    }
+                                </p>
+                            </div>
+               	</div>
                 </div>
 
                 <div class="tl-item pub-item with-thumb">
@@ -2449,6 +2491,23 @@ University of Padova, December 1996, Padova, Italy.<span class="block-elem"><b>M
     <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
     <!-- #####End scripts-->
   </body>
 </html>
