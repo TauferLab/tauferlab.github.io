@@ -4198,6 +4198,16 @@ button, button:active, button:focus, button:hover, .btn, .btn:active, .btn:focus
 .set-bg img.set-me {
     display: none;
 }
+img.selected-projects{
+    display: none;
+    padding: 15px;
+}
+.round-box{
+    border-radius: 20px;
+}
+.owwwlab-theme.nav-top-center{
+    padding: 35px 0px 0px !important;
+}
 .chaos-icons-list {
     margin: 0;
     padding: 0;
@@ -4472,8 +4482,9 @@ h4, .h4 {
     margin-bottom: 15px;
 }
 h5, .h5 {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 15px;
+    text-align: center;
 }
 h6, .h6 {
     font-size: 16px;
@@ -14214,6 +14225,14 @@ iframe {
     h2, .h2 {
         font-size: 20px;
         margin-bottom: 25px;
+    }
+    .heading-with-sub .title {
+        margin-bottom: 10px;
+    }
+    .heading-with-sub h2.subtitle {
+        font-size: 15px;
+        padding-bottom: 20px;
+        text-align: justify;
     }
     h3, .h3 {
         font-size: 16px;
