@@ -4201,6 +4201,62 @@ button, button:active, button:focus, button:hover, .btn, .btn:active, .btn:focus
 img.selected-projects{
     display: none;
     padding: 15px;
+    width: 100;
+}
+@media (min-width: 30px) {
+    img.selected-projects{
+        margin: auto;
+        width: 210px !important;
+        text-align: center;
+    }
+    h5, .h5 {
+        font-size: 13px !important;
+        text-align: center;
+    }
+}
+@media (min-width: 768px) {
+    img.selected-projects{
+        margin: auto;
+        width: 210px !important;
+        text-align: center;
+    }
+    h5, .h5 {
+        font-size: 13px !important;
+        text-align: center;
+    }
+}
+@media (min-width: 992px) {
+    img.selected-projects{
+        margin: auto;
+        width: 210px !important;
+        text-align: center;
+    }
+    h5, .h5 {
+        font-size: 13px !important;
+        text-align: center;
+    }
+}
+@media (min-width: 1220px) {
+    img.selected-projects{
+        margin: auto;
+        width: 250px !important;
+        text-align: center;
+    }
+    h5, .h5 {
+        font-size: 14px !important;
+        text-align: center;
+    }
+}
+@media (min-width: 1300px) {
+    img.selected-projects{
+        margin: auto;
+        width: 230px !important;
+        text-align: center;
+    }
+    h5, .h5 {
+        font-size: 14px !important;
+        text-align: center;
+    }
 }
 .round-box{
     border-radius: 20px;
@@ -14548,6 +14604,7 @@ iframe {
         padding-right: 0;
     }
 }
+
 /* small mobile devices */
 @media (max-width: 480px) {
     .testimonial-item .texts {
