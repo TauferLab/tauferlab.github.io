@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MPI and Non-Determinism</title>
+  <title>Benchmarks </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
@@ -63,12 +63,18 @@
             </ul>
               <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and Non-Determinism</a><ul>
-  <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">Message Passing Interface </a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">Non-Determinism in MPI Applications </a></li>
-  <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Impacts of Non-Determinism</a></li>
-</ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a><ul>
+    <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">Introducing ANACIN-X </a>
+        <ul>
+        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">Why ANACIN-X? </a></li>
+        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">ANACIN-X Steps </a></li>
+        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">How to use ANACIN-X?</a></li>
+         </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">Event Graphs </a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Demonstration of ANACIN-X</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Results Interpretation</a></li>
+  </ul>
+<li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and Non-Determinism</a>
   <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
@@ -97,7 +103,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Running ANACIN-X</li>
+      <li class="breadcrumb-item active">Tutorial Objectives</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/helloaashish/helloaashish.github.io/blob/main/content/index.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -108,7 +114,7 @@
            <div itemprop="articleBody">
              
   <section id="lesson-name">
-<h1>MPI and Non-Determinism<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
+<h1>Tutorial Objectives<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <p>
   In this chapter, we will introduce MPI and how Non-determinism occurs in MPI applications. We will discuss about this phenomenan with examples. And finally we will discuss about the 
   impact of this phenomenan on scientific applications.
@@ -148,7 +154,7 @@
     <section>
         <h3> Example 2</h3>
         <figure class="align-center" id="id4">
-            <img alt="../_images/E01-pack_unpack.svg" src="../_images/example2.png" /><figcaption>
+            <img alt="../_images/E01-pack_unpack.svg" src="../_images/example1.png" /><figcaption>
             <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
             </figcaption>
             </figure>
@@ -184,7 +190,7 @@
         <section>
         <h3> Example 2</h3>
         <figure class="align-center" id="id4">
-            <img alt="../_images/E01-pack_unpack.svg" src="../_images/example2.png" /><figcaption>
+            <img alt="../_images/E01-pack_unpack.svg" src="../_images/example1.png" /><figcaption>
             <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
             </figcaption>
             </figure>
