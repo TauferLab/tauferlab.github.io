@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search &mdash; ANACIN-X </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Quick Reference" href="quick-reference/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> ANACIN-X
+              <img src="_images/anacin-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+    <input type="text" name="q" placeholder="Search " />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="system_setup/">System Setup</a></li>
+            </ul>
+              <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/">Tutorial Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mpi_and_nondeterminism/">MPI and Non-Determinism</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="graphs/">Graphs</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="anacin-x/">ANACIN-X</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="benchmarks/">Benchmarks</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="installation/">Installation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="running_anacinx/">Running ANACIN-X</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="results_interpretation/">Results Interpretation </a></li>
+</ul>
+
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor’s guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ANACIN-X Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">ANACIN-X Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/helloaashish/helloaashish.github.io/blob/main/content/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lesson-name">
+<h1>ANACIN-X Tutorial<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
+<p>Non-deterministic results often arise unexpectedly in High Performance Computing (HPC) applications. 
+  These events can have a negative impact on  the debugging process, and correctness of HPC and
+   scientific simulations. 
+  ANACIN-X is a software framework specifically designed to measure the degree of non-determinism 
+  in point-to-point communication within MPI applications, utilizing graph kernel distances. 
+  This tutorial aims to assist developers and scientists in understanding and investigating the origins of non-determinism using ANACIN-X.</p>
+<div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
+<p class="admonition-title">Prerequisites</p>
+
+<p> To make most of this tutorial, it it s recommended to have a basic understanding of the following prerequisites:
+  <blockquote>
+    <div><ul class="simple">
+      <li> Understanding of High Performance Computing (HPC) concepts, including parallel computing, message passing interfaces (MPI), and scientific simulations.</li>
+    <li>Proficiency in programming languages commonly used in HPC, such as C, C++, or Fortran.</li>
+    <li>Familiarity with MPI programming, including point-to-point communication, collective operations, and MPI functions.</li>
+    <li>Basic knowledge of graph theory concepts, such as vertices, edges, and graph connectivity</li>
+    <li>Familiarity with data visualization techniques, as the tutorial includes visualizing non-deterministic behavior and graph kernel distances.</li>
+    <li>Knowledge of Jupyter Notebook, including the ability to set up and run applications within the Jupyter environment, as the tutorial involves running ANACIN-X on Jupyter Notebook.</li>
+
+
+    </ul>
+    </div></blockquote>
+
+</p>
+
+</div>
+<table class="colwidths-auto docutils align-default">
+
+<tbody>
+  <tr class="row-odd"><td><p>40 min</p></td>
+  <td><p><a class="reference internal" href="communicators-groups/"><span class="doc">Tutorial Objectives</span></a></p></td>
+  </tr>
+
+  <tr class="row-odd"><td><p>40 min</p></td>
+    <td><p><a class="reference internal" href="communicators-groups/"><span class="doc">MPI-Introduction</span></a></p></td>
+    </tr>
+
+    <tr class="row-odd"><td><p>40 min</p></td>
+      <td><p><a class="reference internal" href="communicators-groups/"><span class="doc">Graphs-Introduction</span></a></p></td>
+      </tr>
+      <tr class="row-odd"><td><p>40 min</p></td>
+        <td><p><a class="reference internal" href="communicators-groups/"><span class="doc">ANACIN-X</span></a></p></td>
+        </tr>
+        <tr class="row-odd"><td><p>40 min</p></td>
+          <td><p><a class="reference internal" href="communicators-groups/"><span class="doc">ANACIN-X Steps</span></a></p></td>
+          </tr>
+
+          <tr class="row-odd"><td><p>40 min</p></td>
+            <td><p><a class="reference internal" href="communicators-groups/"><span class="doc">Running ANACIN-X</span></a></p></td>
+            </tr>
+            <tr class="row-odd"><td><p>40 min</p></td>
+              <td><p><a class="reference internal" href="communicators-groups/"><span class="doc">Results Interpretation</span></a></p></td>
+              </tr>
+</tbody>  
+
+
+</table>
+<div class="toctree-wrapper compound">
+</div>
+
+<section id="who-is-the-course-for">
+
+
+<span id="learner-personas"></span><h2>Who is the course for?<a class="headerlink" href="#who-is-the-course-for" title="Permalink to this heading"></a></h2>
+<p>
+  This course is designed for students, professionals and researchers in data science community.
+  Computer science courses introduce data science students to parallel programming,
+   but an in-depth understanding of executions on large scale HPC systems is usually not explored. 
+   Consequently, data scientists are not sufficiently trained in recognizing and addressing 
+   non-determinism when it appears in the data generation stage.
+ Through this course, we aim to bridge the knowledge gap between the data science and HPC-enabled domain science. 
+
+</p>
+</section>
+<section id="about-the-course">
+  <section id="about-the-course">
+
+
+    <h2>About the course<a class="headerlink" href="#about-the-course" title="Permalink to this heading"></a></h2>
+    <p>This project is a joint effort between two southern academic institutions: University of Tennesse-Knoxville
+      (UTK) and the University of North Texas (UNT).</p>
+</section>
+
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading"></a></h2>
+</section>
+<section id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this heading"></a></h2>
+</section>
+<div class="toctree-wrapper compound">
+  <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+  <ul>
+  <li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick  Reference</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="guide/">Instructor’s  guide</a></li>
+  </ul>
+  </div>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quick-reference/" class="btn btn-neutral float-right" title="Quick Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, The contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
