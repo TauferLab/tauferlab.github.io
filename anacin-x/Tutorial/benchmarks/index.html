@@ -103,7 +103,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Tutorial Objectives</li>
+      <li class="breadcrumb-item active">Benchmarks</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/TauferLab/ANACIN-X" class="fa fa-github">  GitHub</a>
       </li>
@@ -114,55 +114,224 @@
            <div itemprop="articleBody">
              
   <section id="lesson-name">
-<h1>Tutorial Objectives<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
+<h1>Benchmarks<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <p>
-  In this chapter, we will introduce MPI and how Non-determinism occurs in MPI applications. We will discuss about this phenomenan with examples. And finally we will discuss about the 
-  impact of this phenomenan on scientific applications.
+  ANACIN-X provides users with four application benchmarks for testing its ability to characterize non-determinism.
+  Each benchmark application employs a unique combination of a non-determinism source and non-determinism type. These Benchmarks 
+  patterns are common in scientific applications and thus are used in ANACIN-X as testing benchmarks.
  </p> 
 </div>
+
+
+<table class="colwidths-auto docutils align-default">
+  <caption>
+    Communication patterns available in the ANACIN-X application benchmarks. A "&#x2714;" indicates
+    if a communication pattern expressing the non-determinism of a given type is present, and "&#x2718;" shows that the type of non-determinism is absent.
+    In the table, "Recv" stands for receiver-side non-determinism; "Send" stands for the sender-side non-determinism; and "Topo" stands for process topology
+    non-determiniwm; and RNG stands for random number generation used to randomize process neighborhoods.
+  </caption>
+
+  <tbody>
+    <tr class="row-odd"><td><h4>Communication Pattern</h4></td>
+    <td><span class="doc"><h6>Recv</h6></span></a></p></td>
+    <td><span class="doc"><h6>Send</h6></span></a></p></td>
+    <td><span class="doc"><h6>Topology</h6></span></a></p></td>
+    <td><span class="doc"><h6>Source</h6></span></a></p></td>
+    </tr>
+
+    <tr class="row-odd"><td><h4>Message Race</h4></td> 
+      <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+      <td><span class="doc"><h6>&#x2718;</h6></span></a></p></td>
+      <td><span class="doc"><h6>&#x2718;</h6></span></a></p></td>
+      <td><span class="doc"><h6>MPI_ANY_SOURCE</h6></span></a></p></td>
+      </tr>
+
+      <tr class="row-odd"><td><h4>AMG2013</h4></td> 
+        <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+        <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+        <td><span class="doc"><h6>&#x2718;</h6></span></a></p></td>
+        <td><span class="doc"><h6>MPI_ANY_SOURCE</h6></span></a></p></td>
+        </tr>
+
+        <tr class="row-odd"><td><h4>MCB Grid</h4></td> 
+          <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+          <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+          <td><span class="doc"><h6>&#x2718;</h6></span></a></p></td>
+          <td><span class="doc"><h6>MPI_Testsome</h6></span></a></p></td>
+          </tr>
+
+        <tr class="row-odd"><td><h4>Unstructured Mesh</h4></td> 
+          <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+          <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+          <td><span class="doc"><h6>&#x2714;</h6></span></a></p></td>
+          <td><span class="doc"><h6>MPI_Waitany + RNG</h6></span></a></p></td>
+          </tr>
+  </tbody>    
+  </table>
+
+
+<p>
+  For a given benchark application, a user may generate an input set of trace data by defining the following parameters: </p>
+  <blockquote>
+    <div><ul class="simple">
+      <li><b>MPI Processes:</b> number of MPI processes <i>(integer)</i> used for the benchmark execution </li>
+      <li><b>Compute Nodes:</b>number of compute nodes <i>(integer)</i> used for the benchmark execution</li>
+      <li><b>Message Size (bytes)</b> size of messages being passed (integer value)</li>
+      <li><b>Pattern Iterations:</b> number of times a communication pattern iterates within an application execution (integer value)</li>
+      <li><b>Message Non-determinism Percentage</b> peak amount of message non- determinism enabled in an application by its non-determinism source (percentage); due to messages that can be received by or sent by a process in a variable order </li>
+      <li><b>Topological Non-determinism Percentage:</b> amount of topological non-determinism (percentage); due to applications where the set of processes a given process communicates with can vary from run to run — this is unique to the Unstructured Mesh benchmark</li>
+      <li><b>Application Executions:</b>number of times to run the application (integer value of 2 or larger). 
+      </li>
+    </ul>
+    </div></blockquote>
+
+
 
 <div class="toctree-wrapper compound">
 </div>
 
-<section id="message-passing-interface">
+<section id="message-race">
 
-
-<span id="learner-personas"></span><h2>Message Passing Interface <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
+<span id="learner-personas"></span><h2>Message Race <a class="headerlink" href="#message_Race" title="Permalink to this heading"></a></h2>
 <p>
- In this section we introduce MPI.
-
+Message Race refers to a situation where multiple processes attempt to send messages to a common recipient, and the order in which these
+messages are received is not guranteed. This lack of ordering can create unpredictability in the behaviour of the system. 
+It is simple but ubiquitious cause of non determinsim in MPI applications. 
 </p>
 
+
+<p>The pseudocode below demonstrate the non-determinism percentage controlled by parameters <em>N<sub>DET</sub></em> and  <em>N<sub>ND</sub></em> parameters</p>
+
+<div class="highlight-c notranslate"><div class="highlight"><pre>
+  <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+    <span class="w">  </span><span class="k"> for</span><span class="p">(</span> i = 0; i <span class="o"><</span> num_DET; ++i)</span> <span class="p">{</span>
+    <span class="w">    </span><span class="n">MPI_Recv</span><span class="p">(</span>... , i , ... <span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k"> for</span> <span class="p">(</span> i = 0; i &lt num_ND; ++i)</span><span class="p">{</span>
+        <span class="w">    </span><span class="n">MPI_Recv</span><span class="p">(</span>... , MPI_ANY_SOURCE , ... <span class="p">);</span>
+      <span class="p">}</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="p">MPI_Send(... , 0 , ...);</span>
+  <span class="p">}</span>
+
+  </pre></div>
+  </div>
+
+  <figure class="align-center" id="id4">
+    <img alt="../images/E01-pack_unpack.svg" src="../images/benchmarks_images/message_race_event_graph.png" /><figcaption>
+    <p><span class="caption-text">Event Graph of Message Race</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+    </figcaption>
+    </figure>
+ <p>Figure above shows the non determinism due to message race. Here, the process 0 receives messages from 4 fixed sources followed by 4 wildcard receives. This is a controlled message race by 50 % ND configuration.</p>
 </section>
 
-<section id="non-determinism-in-mpi-applications">
+
+<section id="amg_2013">
 
 
-    <span id="learner-personas"></span><h2>Non-Determinism in MPI applications.<a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
+  <span id="learner-personas"></span><h2>AMG2013 <a class="headerlink" href="#amg2013" title="Permalink to this heading"></a></h2>
+  <p>
+    Algebric Multigrid 2013 is selected as our benchmark as it can demonstrate both receiver-side and sender side non-determinism, as highlighted in [32]. 
+    It achieves non-determinism through the use of non-blocking wildcard probes.
+    <br>
+    When a probe matches with a message, a receive is posted, and upon completion of the recieve, a send is issued to the rprocess whose message was matched.
+    The source parameter's value in the receive call is non-deterministic due to the wildcard probes' non-determinism, making the propagation of non-determinism 
+    from probe to receive and send not immediately apparent from a simple inspection of the code.
+    <br> <br>
+    The pseudocode below shwos the communication pattern in AMG2013.
+  </p>
+
+
+  <div class="highlight-c notranslate"><div class="highlight"><pre>
+
+  <span class="w">  </span><span class="k"> for</span><span class="p">(</span> i = 0; i <span class="o"><</span> num_neighbors; ++i)</span> <span class="p">{</span>
+    <span class="w">    </span><span class="n">MPI_Irecv</span><span class="p">(</span>... , <em>tag_2</em>  , ... <span class="p">);</span>
+      <span class="p">}</span>
+
+  <span class="w">  </span><span class="k"> for</span><span class="p">(</span> i = 0; i <span class="o"><</span> num_neighbors; ++i)</span> <span class="p">{</span>
+    <span class="w">    </span><span class="n">MPI_Irecv</span><span class="p">(</span>... , <em>tag_1</em> , ... <span class="p">);</span>
+      <span class="p">}</span>
+    <span class ="p">...</span>
+    <span class="w"> </span><span class="k">while</span><span class = "p">() {</span>
+        <span class ="p">MPI_Iprobe( <em>MPI_ANY_SOURCE, tag_1, ... flag, status</em> );</span>
+        <span class="k">if </span><span class = "p">(<em>flag</em>) {</span>
+          <span class="p"> neighbor = &<em>status.MPI_Source</em>;</span> 
+           <span class="c1">// Non-determinism from probe</span>
+           <span class="c1">// propagates to receive ...</span>
+          <span class="p"> MPI_Recv(<em>x, ..., neighbor , tag_1, ... </em>);</span>
+           <span class="c1">// ... and then propagates</span>
+           <span class="c1">// to send</span>
+          <span class="p"> MPI_Send(<em>x, ..., neighbor , tag_2, ... </em>);</span>
+        <span class = "p">}</span>
+     <span class = "p">}</span>
+    </pre></div>
+    </div>
+
+  <figure class="align-center" id="id4">
+    <img alt="../images/E01-pack_unpack.svg" src="../images/benchmarks_images/amg_event_graph.png" /><figcaption>
+    <p><span class="caption-text">Event Graph of AMG2013</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+    </figcaption>
+    </figure>
+ <p>Figure above shows the event graph generated by from non-determinastic order of message passing in AMG 2013.</p>
+
+  
+  </section>
+
+
+  <section id="mcb_grid">
+
+
+    <span id="learner-personas"></span><h2>MCB Grid <a class="headerlink" href="#mcb_grid" title="Permalink to this heading"></a></h2>
     <p>
-        Non-determinism refers to the situation where the outcome of a program execution is not uniquely predictable. In the context of MPI, non-determinism can occur due to factors such as message ordering, synchronization, and race conditions between processes. When a parallel program exhibits non-deterministic behavior, it means that multiple executions of the same program with the same inputs can produce different results.
-    
+      MCB is a proxy application for Monte Carlo simulations based on three main types of particle exchange patterns: a particle exchange on a 2-dimensional grid, a non-blocking gather of particles, and a non-blocking scatter of particles. 
+      The latter two serve as bookkeeping for the particle exchange. 
     </p>
-    <section>
-        <h3> Example 1</h3>
-        <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/example1.png" /><figcaption>
-            <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
-    </section>
-    <section>
-        <h3> Example 2</h3>
-        <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/example1.png" /><figcaption>
-            <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
-    </section>
+    
+
+    <figure class="align-center" id="id4">
+      <img alt="../images/E01-pack_unpack.svg" src="../images/benchmarks_images/mcb.png" /><figcaption>
+      <p><span class="caption-text">Particle exchange patterns in MCB</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+      </figcaption>
+      </figure>
+
+    <p>MCB primarily uses MPI’s non-blocking point-to-point communication primitives, heavily relying on functions like  <code class="docutils literal notranslate"><span class="pre">MPI_Testsome</span></code>   during particle exchange.</p>
+    
+    <p>Communication buffers are shared between neighbor processes. Varying buffer size affects communication rates, leading to changes in non-determinism levels. Users often lack awareness of the buffer size used during compilation, making it challenging to link observed numerical non-determinism to buffer size.
+    <br><br>
+    ANACIN-X
+     quantifies how changes in buffer size influence non-determinism in MCB communication patterns. It dissects executions, establishing the relationship between application configuration parameters, especially buffer size, and non-determinism in communication patterns. This non-determinism can cause numerical output differences between runs.
+    </p>
+
     </section>
 
 
-    <section id="impacts-of-non-determinism">
+    <section id="unstructured_mesh">
+
+
+      <span id="learner-personas"></span><h2>Unstructured Mesh Patterns <a class="headerlink" href="#unstructured_mesh" title="Permalink to this heading"></a></h2>
+      <p>
+        The communication pattern, derived from the Chatterbug Communication Pattern Suite, displays non-determinism due to a randomized process topology. This randomness leads to variations in which processes communicate with each other from run to run, setting it apart from the other three patterns where only the message order differs between runs.
+      
+        Additionally, there are three distinct forms of non-determinism observed in the described communication patterns:
+        <ul>
+          <li><strong>Receiver-side non-determinism (Recv)</strong> Messages can be received by a process in variable orders.</li>
+          <li><strong>Sender-side non-determinism (Send)</strong> Processes can send messages in variable orders.</li>
+          <li><strong>Process topology non-determinism (Topo)</strong> Applications may have varying sets of processes that a given process communicates with in different runs.</li>
+        </ul>
+      
+        The first two types are termed message non-determinism, while the third type is referred to as topology non-determinism. 
+        The MPI features contributing to non-determinism in these patterns are <code class="docutils literal notranslate"><span class="pre">MPI_ANY_SOURCE</span></code>
+         (in Message Race and AMG2013), <code class="docutils literal notranslate"><span class="pre">MPI_Testsome</span></code> (in MCB Grid),
+         and <code class="docutils literal notranslate"><span class="pre">MPI_Waitany</span></code> (in Unstructured Mesh). The specifics of these communication patterns are summarized in Table.
+      </p>
+
+      
+      </section>
+
+
+
+    <!-- <section id="impacts-of-non-determinism">
 
 
         <span id="learner-personas"></span><h2>Impact of Non-Determinism <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
@@ -194,7 +363,7 @@
             <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
             </figcaption>
             </figure>
-    </section>
+    </section> -->
     
 
 
@@ -203,14 +372,14 @@
 
 
 <section id="running-benchmark-application">
-  <section id="running-benchmark-application">
+  <!-- <section id="running-benchmark-application">
 
 
     <h2>Being aware of this impact<a class="headerlink" href="#running-benchmark-application" title="Permalink to this heading"></a></h2>
     <p>Tn this section we show how to configure the jupyter notebook.</p>
    
   
-</section>
+</section> -->
 
 </section>
 
