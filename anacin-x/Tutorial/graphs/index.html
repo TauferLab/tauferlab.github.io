@@ -13,6 +13,7 @@
       <link rel="stylesheet" href="../static/sphinx_lesson.css" type="text/css" />
       <link rel="stylesheet" href="../static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
       <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+      <link rel="shortcut icon" href="../../favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -63,19 +64,17 @@
             </ul>
               <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a><ul>
-    <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">Introducing ANACIN-X </a>
-        <ul>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">Why ANACIN-X? </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">ANACIN-X Steps </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">How to use ANACIN-X?</a></li>
-         </ul>
-    <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">Event Graphs </a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Demonstration of ANACIN-X</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Results Interpretation</a></li>
-  </ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and Non-Determinism</a>
-  <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a>
+  <ul>
+    <li class="toctree-l2"><a class="reference internal" href="#lesson-name">Graphs </a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#event_graphs">Event Graphs </a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#similarity_quantification">Similarity Quantification </a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#graph_kernels">Graph Kernel </a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#event_graph_labeling">Event Graph Labeling </a></li>
+  </ul>
+  </li>
   <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation </a></li>
@@ -177,16 +176,95 @@ When it comes to representing MPI (Message Passing Interface) communications usi
 
 <section id="similarity_quantification">
   <span id="learner-personas"></span><h2>Graph Similarity Quantification<a class="headerlink" href="#similarity_quantification" title="Permalink to this heading"></a></h2>
-  <figure class="align-center" id="id4">
-    <img alt="../images/E01-pack_unpack.svg" src="../images/graph_images/similarity_quantificatin.png" /><figcaption>
-    <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-    </figcaption>
-    </figure>
+
+
 </section>
 
 
-<section id="event_graphs">
-  <span id="learner-personas"></span><h2>Event Graphs <a class="headerlink" href="#event_graphs" title="Permalink to this heading"></a></h2>
+<section id="graph_kernels">
+  <span id="learner-personas"></span><h2>Graph Kernels <a class="headerlink" href="#graph_kernels" title="Permalink to this heading"></a></h2>
+  <p>Graph Kernels are a family of methods for measuring the structural similarity of graphs. ANACINX leverages Graph kernels to quantify (dis)similarity of event graphs that model multiple runs of a target application, Thereby quantifying the degree to which non-determinism manifests in the application.</p>
+  
+  <figure class="align-center" id="id4">
+    <img alt="../images/graph_images/similarity_quantificatin.png" src="../images/graph_images/similarity_quantificatin.png" /><figcaption>
+    <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+    </figcaption>
+    </figure>
+
+  <div id="graph_kernels_overview">
+
+      <p>
+      Formally, a Graph Kernel is a function:<br>
+      <em>K: G x G &#x2192; &#8477;<sup>+</sup></em> U {0} where <em>G</em> denotes a set of graphs.<br>
+      ANACIN-X uses graph kernel defined as:<br>
+      <em>K (G,G&prime;) = &lt; &Phi;(G), &Phi;(G&prime;) &gt;</em>
+      </p>
+      <div class="dmonition-solution solution important dropdown admonition" id="parameters-0">
+        <p class="admonition-title">Notations</p>
+        <dl class="simple">
+        <dt><code class="docutils literal notranslate"><span class="pre">G</span></code></dt><dd><p>A set of graphs.</p>
+        </dd>
+        <dt><code class="docutils literal notranslate"><span class="pre">&Phi;(G)</span></code></dt><dd><p>The embedding of G in a specific kind of vector space.</p>
+        </dd>
+        <dt><code class="docutils literal notranslate"><span class="pre">K(G,G&prime;)</span></code></dt><dd><p>Kernel Similarity, value of the inner product of the embeddings of G and G&prime; in the vector space.</p>
+        </dd>
+        </dl>
+        </div>
+  
+        <div class="admonition-objectives objectives admonition" id="parameters">
+          <p class="admonition-title">Also</p>
+          <p> The Kernel Similarity, K, suffices to treat a graph kernel as a function that counts matching substructures of some kind (e.g., subtrees) of two graph to quantify how similar they are.
+          <br>
+          <br>
+          We use positive difinite graph kernel metric called <code class="docutils literal notranslate"><span class="pre">Graph Kernel Distance</span></code> that describes how far apart a pair of graphs are from each other and is given by:<br>
+          <em></em>
+          <p><em>d<sub>K</sub> (G,G&prime;)</em>  = <span>&#8730;</span><span  style="border-top: 1px solid black"> <em>K(G,G&prime;) + K(G&prime;,G&prime;) - 2K(G,G&prime;)</em>
+          </span>
+         <br><br> Here, K(G&prime;,G&prime;) and K(G,G) represent the self-similarites of G and G&prime; respectively, and K(G;,G&prime;) represents their cross-similarity.  </p>
+          </p>
+          </div>
+  </div>
+
+
+</section>
+
+<section id="event_graph_labeling">
+  <h2>Event Graph Labeling</h2>
+  <p>We enrich our event graph construction by associating labels to vertices that have
+     semantic relevance for communication non-determinism, as shown in Figure. 
+     </p>
+     <figure class="align-center" id="id4">
+      <img alt="../images/graph_images/similarity_quantificatin.png" src="../images/graph_images/graph_labeling.png" /><figcaption>
+      <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+      </figcaption>
+      </figure>
+     <p>
+     ANACIN-X uses two types of labeling that serve different functions: 
+     <ol>
+      <li><strong>Labels to Identify Type of non-determinism: </strong>
+         <br>Vertex labels enhance the WLST kernel's ability to differentiate event graphs with similar structures
+         but different non-deterministic behaviors. They offer vital information, 
+         especially when subtle differences in message order occur between runs. 
+         <br> <br>ANACIN-X supports three types of vertex labels: 
+         <ul>
+          <li><strong>Process IDs</strong>  help detect variations in a process's neighbors across runs caused by non-determinism.
+          </li>
+          <li><strong>Logical Timestamps</strong> enables the WLST kernel to take into account the history of data flow from one process to another over the course of execution.</li>
+          <li><strong>Logical Ticks</strong> help WLST kernel to detect run-t-run difference in terms of patterns of message lateness</li>
+         </ul>
+         <strong>process IDs</strong> (representing MPI ranks),
+          logical timestamps, and logical ticks. Process ID labels help detect variations in
+           a process's neighbors across runs caused by non-determinism.</li>
+           <br>
+      <li><strong>Labels to Identify Causes of non-determinism: </strong> <br>
+        ANACIN-X uses vertex labeling in the graph model to link runtime 
+        non-determinism to specific causes in the application source code.
+         This is done by analyzing callstack labels, representing paths in the function call graph. 
+         Aggregating these callstacks in regions of interest identifies the "hot paths" of non-deterministic communication patterns.
+
+      </li>
+     </ol>
+    </p>
 </section>
 
 
@@ -209,8 +287,8 @@ When it comes to representing MPI (Message Passing Interface) communications usi
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-            <a href="../one-sided-sync/" class="btn btn-neutral float-left" title="One-sided communication: synchronization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-            <a href="../mpi-and-threads-pt2/" class="btn btn-neutral float-right" title="MPI and threads in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>    </div>
+            <a href="../mpi_and_nondeterminism/" class="btn btn-neutral float-left" title="One-sided communication: synchronization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+            <a href="../anacin-x/" class="btn btn-neutral float-right" title="MPI and threads in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>    </div>
 
     </div>
 

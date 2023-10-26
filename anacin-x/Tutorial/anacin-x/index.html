@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../static/sphinx_lesson.css" type="text/css" />
     <link rel="stylesheet" href="../static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
     <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico"/>
     <!--[if lt IE 9]>
     <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -287,16 +288,18 @@
                             <h2>Event Graph Analysis <a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
 <p>
-    • ANACIN-X quantifies the differences between event graphs, and thus executions, via the Weisfeiler–Lehmann Subtree (WLST) graph kernel [22]. 
-	• ANACIN-X calculates the WLST kernel distance between two graphs using the GraphKernels [23] software package.
-	•  The WLST graph kernel encodes graph structure into node labels by iteratively refining each node label with a hash of its neighbors’ labels. 
-	•  While many graph kernels exist [24], we select the WLST kernel primarily due to its performance characteristics. The asymptotic time complexity of the WLST kernel algorithm is 𝑂(𝑁h), where 𝑁 is the node count in the largest input graph and h is the vertex label refinement iteration count, where typically h ≪ 𝑁.  Because the MPI executions targeted for study are both highly parallel and long-running, 𝑁 is very large in practice, which in turn prohibits use of graph kernels with superlinear time complexity. 
-
-
-	• For each pair of graphs (i.e., those corresponding to a pair of executions) ANACIN-X provides an API for defining a sliding window over the graphs for which a series of pairwise kernel distances are computed — in effect, a kernel distance time series (KDTS). 
-	• . The KDTS of a pair of executions quantifies how the difference between the two executions’ message orders varies over time. When the KDTS is low, the executions’ message orders are similar, and vise-versa. 
- The collection of KDTSs obtained from all pairs of executions in an ensemble quantifies an application’s non-determinism as a whole. In effect, the individual KDTSs (i.e., those corresponding to pairs of executions) are merged into a time series of kernel distance distributions (i.e., corresponding to the entire ensemble of executions) 
-</p>
+    Event graph analysis module uses the created event graphs and quantify the difference between each graph. This step introduces three key concepts:
+    <ul>
+        <li><strong>WLST Graph Kernel Selection</strong> <br> ANACIN-X utilizes the Weisfeiler-Lehmann Subtree (WLST) graph kernel
+             to quantify differences between event graphs. The choice of WLST is based on its 
+             performance characteristics, with an asymptotic time complexity of complexity of <em>O(Nh)</em>, where N is the node count
+              in the largest input graph and h is the vertex label refinement iteration count.</li>
+            <br>
+        <li><strong>Kernel Distance Time Series (KDTS)</strong><br> ANACIN-X provides an API for defining a sliding window over pairs of graphs (corresponding to executions) to compute pairwise kernel distances. This results in a Kernel Distance Time Series (KDTS) which measures how differences in message orders between executions vary over time. Low KDTS values indicate similar message orders, while high values indicate dissimilarity.</li>
+        <br>
+        <li><strong>Quantifiying Non-Determinism</strong><br> The collection of KDTSs obtained from all pairs of executions in an ensemble provides a comprehensive view of an application's non-determinism. These individual KDTSs are merged into a time series of kernel distance distributions, effectively quantifying the non-deterministic behavior of the entire ensemble of executions. </li>
+    </ul>
+    </p>
                         </section>
 
                         <section id="visualization">
@@ -305,10 +308,20 @@
                             <span id="learner-personas"></span>
                             <h2>Visualization<a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
-<p>To view the relationship between kernel distance and non-determinism percentage (ND%) in an application, ANACIN-X sup- ports two types of visualizations for a KDTS file: (i) a violin plot showing the distribution of pairwise kernel distances for multiple configurations of the same application and (ii) a bar plot showing the relative frequency of call-paths in high-non-determinism areas of execution. An example of the first type of visualization is provided in Figure below.</p>
-<p>These visualizations can be obtained via (i) a Jupyter notebook, which guides the user through the visualization process and displays each generated figure within it, or (ii) a set of Python scripts im- plementing a command line interface, which allow users to generate figures from the same place they submit jobs. </p>                       
+<p>To view the relationship between kernel distance and non-determinism percentage (ND%) in an application, 
+    ANACIN-X supports two types of visualizations for a KDTS file: 
+    <ul>
+        <li>A violin plot showing the distribution of pairwise kernel distances for multiple configurations of the same application. (as shown infigure below)</li>
+        <li>A bar plot showing the relative frequency of call-paths in high-non-determinism areas of execution.</li>
+    </ul>
+</p>
+<p>These visualizations can be obtained via 
+    <ul>
+        <li>Jupyter notebook, which guides the user through the visualization process and displays each generated figure within it</li>
+        <li>a set of Python scripts implementing a command line interface, which allow users to generate figures from the same place they submit jobs.</li>
+    </ul>  </p>                       
 <figure class="align-center" id="id4">
-    <img alt="..images/E01-pack_unpack.svg"
+    <img alt="../images/anacinx_images/visualization.png"
         src="../images/anacinx_images/visualization.png" />
     <figcaption>
         <p><span class="caption-text">visualization</span><a class="headerlink" href="#id4"
@@ -322,10 +335,10 @@
                 </div>
                 <footer>
                     <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-                        <a href="../one-sided-sync/" class="btn btn-neutral float-left"
+                        <a href="../graphs/" class="btn btn-neutral float-left"
                             title="One-sided communication: synchronization" accesskey="p" rel="prev"><span
                                 class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-                        <a href="../mpi-and-threads-pt2/" class="btn btn-neutral float-right"
+                        <a href="../benchmarks/" class="btn btn-neutral float-right"
                             title="MPI and threads in practice" accesskey="n" rel="next">Next <span
                                 class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
                     </div>
