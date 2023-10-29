@@ -112,8 +112,9 @@
   <section id="lesson-name">
 <h1>RUNNING ANACIN-X<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <p>
-  In this chapter we will provide step by step instructions on installing the ANACIN-X software in your system. 
-  We will aslo provde the necessary commands and demonestrate the process.
+In this chapter, we will provide step-by-step instructions for installing the 
+ANACIN-X software on your system. Additionally, we will supply the essential 
+commands and offer a hands-on demonstration of the entire process.
  </p> 
 </div>
 
@@ -125,16 +126,17 @@
 
 <span id="learner-personas"></span><h2>Pulling Existing Repository from Docker Hub <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
 <p>
- In this section we provide commands and show how to pull the ANACIN-X software form Docker Hub.
+ We can retrive ANACIN-X image from the Global Computing Lab Docker Hub.
+We may simply load the <code class="docutils literal notranslate"><span class="pre">apptainer</span></code> module and run the <code class="docutils literal notranslate"><span class="pre">apptainer pull</span></code> command.
+We must create a result directory to store traces from each run and to enable further computations.
  <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $ mkdir results
   $ module load apptainer
-  $ apptainer pull --disable-cache oras://docker.io/yejashi/anacinx_prod:ppc64le
-  $ apptainer build --sandbox dir_anacinx anacinx_prod_ppc64le.sif
+  $ apptainer pull oras://docker.io/globalcomputinglab/anacinx_prod:v4_1_ppc64le
         </pre></div>
         </div>
 </p>
 <figure class="align-center" id="id4">
-  <img alt="../images/E01-pack_unpack.svg" src="../images/GetAnacinxImage.gif" /><figcaption>
+  <img alt="../images/E01-pack_unpack.svg" src="../images/running_images/getting.gif" /><figcaption>
   <p> </p>
   </figcaption>
   </figure>
@@ -146,11 +148,12 @@
 
 
     <h2>Getting Jupyter Notebook<a class="headerlink" href="#getting-jupyter-notebook" title="Permalink to this heading"></a></h2>
-    <p>The jupyter notebook file and other supporting python scripts are available in GCLAB GitHub repository.In order to clone the reoository, you can follow the following steps:
+    <p>The jupyter notebook file and other supporting python scripts are available in GCLAB GitHub repository. 
+      In order to clone the repository, you can follow the following steps:
       <ul>
         <li> Navigate to the directory where you want to clone the repository.</li>
         <li> Run following command: </li>
-        <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> $ git clone https://github.com/Yejashi/anacin_jupyter.git
+        <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> $ git clone https://github.com/TauferLab/ANACIN-X.git
                 </pre></div>
       </ul> </p>
 </section>
@@ -162,16 +165,18 @@
 
 
     <h2>Configuring Jupyter Notebook<a class="headerlink" href="#configuring-jupyter-notebook" title="Permalink to this heading"></a></h2>
-    <p>In order to configure jypyter notebook server and your brwoser. You will need to enter following commands:</p>
-    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $ ssh -L 8888:localhost:8888 username@systemdomainname
+    <p>To configure the Jupyter Notebook server and the local browser, the initial step involves setting up <code class="docutils literal notranslate"><span class="pre">SSH</span></code>  tunneling between the local machine and the remote server. Prior to launching the Jupyter Notebook server, it is essential to load the <code class="docutils literal notranslate"><span class="pre">apptainer</span></code> and <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> modules to enable the proper functioning of ANACIN-X. Once these preparations are complete, the Jupyter Notebook server can be started on the remote machine.</p>
+
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+  $ ssh -L 8888:localhost:8888 username@systemdomainname
   $ module load apptainer
   $ spack load openmpi
-  $ jypyter notebook --no-browser --port-8888
+  $ jupyter notebook --no-browser --port=8888
       </pre></div>
       </div>
 
     <figure class="align-center" id="id4">
-      <img alt="../images/E01-pack_unpack.svg" src="../images/connectingbrowser.gif" /><figcaption>
+      <img alt="../images/running_images/Configuring.gif" src="../images/running_images/Configuring.gif" /><figcaption>
       <p> </p>
       </figcaption>
       </figure>
@@ -184,9 +189,10 @@
 
 
     <h2>Running Benchmark Application<a class="headerlink" href="#running-benchmark-application" title="Permalink to this heading"></a></h2>
-    <p>Tn this section we show how to configure the jupyter notebook.</p>
+    <p> Now, we can access the Jupyter Notebook in our local browser.
+      Open web browser and go to <code class="docutils literal notranslate"><span class="pre">http://localhost:8888</span></code>. This will forward the connection through the SSH tunnel to the Jupyter Notebook server running on the remote machine.</p>
     <figure class="align-center" id="id4">
-      <img alt="../images/E01-pack_unpack.svg" src="../images/notebook_demo.gif" /><figcaption>
+      <img alt="../images/running_images/running.gif" src="../images/running_images/running.gif" /><figcaption>
       <p> </p>
       </figcaption>
       </figure>
