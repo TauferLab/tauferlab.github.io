@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../static/sphinx_lesson.css" type="text/css" />
     <link rel="stylesheet" href="../static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
     <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico"/>
     <!--[if lt IE 9]>
     <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -49,7 +50,7 @@
                         <img src="../images/anacin-logo.png" class="logo" alt="Logo" />
                     </a>
                     <div role="search">
-                        <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+                        <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
                             <input type="text" name="q" placeholder="Search " />
                             <input type="hidden" name="check_keywords" value="yes" />
                             <input type="hidden" name="area" value="default" />
@@ -86,8 +87,6 @@
                         
                         </li>
                         <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
-                        <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation </a>
-                        </li>
                         <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span
                                     class="pre"></span>Running ANACIN-X</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results
@@ -96,9 +95,8 @@
 
                     <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
                     <ul>
-                        <li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a>
-                        </li>
-                        <li class="toctree-l1"><a class="reference internal" href="guide/">Instructor’s guide</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
                     </ul>
 
                 </div>
@@ -176,7 +174,7 @@
 
 
                             <span id="learner-personas"></span>
-                            <h2>Exection Trace Collection <a class="headerlink" href="#pulling-anacinx"
+                            <h2>Exection Trace Collection <a class="headerlink" 
                                     title="Permalink to this heading"></a></h2>
                             <p>
                                 MPI applications often run multiple times as ensembles of jobs; non-determinism (i.e.,
@@ -191,11 +189,11 @@
                             <p>
                                 ANACIN- X quantifies and characterizes non-determinism in such applications by first
                                 generating execution trace data via three tools, each of which depends on the MPI
-                                Profiling Interface (PMPI).
+                                Profiling Interface (PMPI) <a href="#ref" class="reference internal"><sup>1</sup></a>.
                             </p>
 
                             <figure class="align-center" id="id4">
-                                <img alt="..images/E01-pack_unpack.svg"
+                                <img alt="../images/anacinx_images/tracing_tools.png"
                                     src="../images/anacinx_images/tracing_tools.png" />
                                 <figcaption>
                                     <p><span class="caption-text">PNMPI Tools</span><a class="headerlink" href="#id4"
@@ -206,18 +204,18 @@
                             <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                                 <p class="admonition-title">DUMPI: Traces MPI communication calls and their order from
                                     the executions. </p>
-                                <p>Tool developed at Sandia National Laboratories. ANACIN-X is using it according to its
+                                <p>DUMPI<a href="#ref" class="reference internal"><sup>2</sup></a> tool was developed at Sandia National Laboratories. ANACIN-X is using it according to its
                                     software release license.
                                     It generates one trace file per MPI process containing an unambiguous order of MPI
                                     communication events involving
                                     that process. At the same time, (SST) DUMPI imposes low overhead, and thus minimal
-                                    probe effect [12],
+                                    probe effect,
                                     on the traced application.</p>
                             </div>
                             <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                                 <p class="admonition-title">Pluto: Collects memory addresses associated with those MPI
                                     communication calls to supplement (SST) DUMPI’s traces </p>
-                                <p>Pluto was developed by the authors and traces memory addresses of MPI requests
+                                <p>Pluto<a href="#ref" class="reference internal"><sup>3</sup></a> was developed by the authors and traces memory addresses of MPI requests
                                     associated with non-blocking MPI calls. ANACIN-X uses these memory addresses to
                                     distinguish between different types of non-blocking MPI calls (one of the main
                                     sources of non-determinism in MPI applications</p>
@@ -227,7 +225,7 @@
                                 <p class="admonition-title"> CSMPI: Collects call-paths terminating in calls to MPI
                                     functions.</p>
                                 <p>
-                                    CSMPI was also developed by the authors and traces call-paths (i.e., sequences of
+                                    CSMPI<a href="#ref" class="reference internal"><sup>4</sup></a> was also developed by the authors and traces call-paths (i.e., sequences of
                                     function calls beginning with the executable’s entry point) terminat- ing in calls
                                     to MPI functions. In doing so, CSMPI associates runtime events (which may be
                                     non-deterministic) with static information about program structure.
@@ -262,12 +260,12 @@
                                 </p>
                                 <p>
                                     The <code
-                                        class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code>
+                                        class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code><a href="#ref" class="reference internal"><sup>5</sup></a>
                                     tool was developed by the authors to construct a directed acyclic graph (DAG)
                                     representation of the order/interleaving of all MPI messages sent during the
                                     execution to which the input traces correspond. </p>
                             </div>
-                            <img alt="..images/E01-pack_unpack.svg"
+                            <img alt="../images/anacinx_images/event_graph1.png"
                                 src="../images/anacinx_images/event_graph1.png" />
                             <figcaption>
                                 <p><span class="caption-text">Event graph from MPI execution</span><a class="headerlink"
@@ -275,7 +273,7 @@
                             </figcaption>
                             </figure>
                             <p>In practice, <code
-                                    class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code>
+                                    class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code><a href="#ref" class="reference internal"><sup> 5</sup></a>
                                 converts per-process trace data to graphs: one graph file is generated for each
                                 execution. Figure above shows an example of event graph construction. </p>
                         </section>
@@ -287,16 +285,18 @@
                             <h2>Event Graph Analysis <a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
 <p>
-    • ANACIN-X quantifies the differences between event graphs, and thus executions, via the Weisfeiler–Lehmann Subtree (WLST) graph kernel [22]. 
-	• ANACIN-X calculates the WLST kernel distance between two graphs using the GraphKernels [23] software package.
-	•  The WLST graph kernel encodes graph structure into node labels by iteratively refining each node label with a hash of its neighbors’ labels. 
-	•  While many graph kernels exist [24], we select the WLST kernel primarily due to its performance characteristics. The asymptotic time complexity of the WLST kernel algorithm is 𝑂(𝑁h), where 𝑁 is the node count in the largest input graph and h is the vertex label refinement iteration count, where typically h ≪ 𝑁.  Because the MPI executions targeted for study are both highly parallel and long-running, 𝑁 is very large in practice, which in turn prohibits use of graph kernels with superlinear time complexity. 
-
-
-	• For each pair of graphs (i.e., those corresponding to a pair of executions) ANACIN-X provides an API for defining a sliding window over the graphs for which a series of pairwise kernel distances are computed — in effect, a kernel distance time series (KDTS). 
-	• . The KDTS of a pair of executions quantifies how the difference between the two executions’ message orders varies over time. When the KDTS is low, the executions’ message orders are similar, and vise-versa. 
- The collection of KDTSs obtained from all pairs of executions in an ensemble quantifies an application’s non-determinism as a whole. In effect, the individual KDTSs (i.e., those corresponding to pairs of executions) are merged into a time series of kernel distance distributions (i.e., corresponding to the entire ensemble of executions) 
-</p>
+    Event graph analysis module uses the created event graphs and quantify the difference between each graph. This step introduces three key concepts:
+    <ul>
+        <li><strong>WLST Graph Kernel Selection</strong> <br> ANACIN-X utilizes the Weisfeiler-Lehmann Subtree (WLST) <a href="#ref" class="reference internal"><sup>6</sup></a> graph kernel
+             to quantify differences between event graphs. The choice of WLST is based on its 
+             performance characteristics, with an asymptotic time complexity of complexity of <em>O(Nh)</em>, where N is the node count
+              in the largest input graph and h is the vertex label refinement iteration count.</li>
+            <br>
+        <li><strong>Kernel Distance Time Series (KDTS)</strong><br> ANACIN-X provides an API for defining a sliding window over pairs of graphs (corresponding to executions) to compute pairwise kernel distances. This results in a Kernel Distance Time Series (KDTS) which measures how differences in message orders between executions vary over time. Low KDTS values indicate similar message orders, while high values indicate dissimilarity.</li>
+        <br>
+        <li><strong>Quantifiying Non-Determinism</strong><br> The collection of KDTSs obtained from all pairs of executions in an ensemble provides a comprehensive view of an application's non-determinism. These individual KDTSs are merged into a time series of kernel distance distributions, effectively quantifying the non-deterministic behavior of the entire ensemble of executions. </li>
+    </ul>
+    </p>
                         </section>
 
                         <section id="visualization">
@@ -305,27 +305,56 @@
                             <span id="learner-personas"></span>
                             <h2>Visualization<a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
-<p>To view the relationship between kernel distance and non-determinism percentage (ND%) in an application, ANACIN-X sup- ports two types of visualizations for a KDTS file: (i) a violin plot showing the distribution of pairwise kernel distances for multiple configurations of the same application and (ii) a bar plot showing the relative frequency of call-paths in high-non-determinism areas of execution. An example of the first type of visualization is provided in Figure below.</p>
-<p>These visualizations can be obtained via (i) a Jupyter notebook, which guides the user through the visualization process and displays each generated figure within it, or (ii) a set of Python scripts im- plementing a command line interface, which allow users to generate figures from the same place they submit jobs. </p>                       
+<p>To view the relationship between kernel distance and non-determinism percentage (ND%) in an application, 
+    ANACIN-X supports two types of visualizations for a KDTS file: 
+    <ul>
+        <li>A violin plot showing the distribution of pairwise kernel distances for multiple configurations of the same application. (as shown infigure below)</li>
+        <li>A bar plot showing the relative frequency of call-paths in high-non-determinism areas of execution.</li>
+    </ul>
+</p>
+<p>These visualizations can be obtained via 
+    <ul>
+        <li>Jupyter notebook, which guides the user through the visualization process and displays each generated figure within it</li>
+        <li>A set of Python scripts implementing a command line interface, which allow users to generate figures from the same place they submit jobs.</li>
+    </ul>  </p>                       
 <figure class="align-center" id="id4">
-    <img alt="..images/E01-pack_unpack.svg"
+    <img alt="../images/anacinx_images/visualization.png"
         src="../images/anacinx_images/visualization.png" />
     <figcaption>
         <p><span class="caption-text">visualization</span><a class="headerlink" href="#id4"
                 title="Permalink to this image"></a></p>
     </figcaption>
 </figure>
+
+
 </section>
+
+<section id="ref">
+    <h2> References</h2>
+    <ol>
+        <li> <a href="https://dl.acm.org/doi/abs/10.1109/ICPP.2006.6">A Flexible and Dynamic Infrastructure for MPI Tool Interoperability</a> </li>
+        <li><a href=" https: //github.com/sstsimulator/sst- dumpi.">Jeremiah Wilke, Structural Simulation Toolkit (SST) DUMPI Trace Library</a></li>
+        <li> <a href="https://github.com/TauferLab/Pluto">Pluto: A PMPI tool for Tracing Non-blocking MPI Events </li>
+        <li> <a href="https://github.com/TauferLab/CSMPI/tree/master">CSMPI: A PMPI tool for Tracing MPI function Callstacks</a></li>
+
+        <li><a href="https://github.com/TauferLab/dumpi_to_graph">dumpi_to_graph: A tool for Converting Execution Traces into a Graph Representation</a></li>
+        <li> <a href="https://www.jmlr.org/papers/volume12/shervashidze11a/shervashidze11a.pdf"> Weisfeiler-Lehman Graph Kernels</a></li>
+    </ol>
+</section>
+
+
             
 
                     </div>
+
                 </div>
+
                 <footer>
                     <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-                        <a href="../one-sided-sync/" class="btn btn-neutral float-left"
+                        <a href="../graphs/" class="btn btn-neutral float-left"
                             title="One-sided communication: synchronization" accesskey="p" rel="prev"><span
                                 class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-                        <a href="../mpi-and-threads-pt2/" class="btn btn-neutral float-right"
+                        <a href="../benchmarks/" class="btn btn-neutral float-right"
                             title="MPI and threads in practice" accesskey="n" rel="next">Next <span
                                 class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
                     </div>
@@ -335,7 +364,7 @@
             <hr />
 
             <div role="contentinfo">
-                <p>&#169; Copyright 2020, The contributors.</p>
+                <p>&#169; Copyright 2021, Global Computing Lab.</p>
             </div>
 
             Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

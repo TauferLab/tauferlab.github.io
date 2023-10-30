@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Results </title>
+  <title>Results Interpretation </title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
@@ -13,6 +13,7 @@
       <link rel="stylesheet" href="../static/sphinx_lesson.css" type="text/css" />
       <link rel="stylesheet" href="../static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
       <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+      <link rel="shortcut icon" href="../../favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -46,7 +47,7 @@
               <img src="../images/anacin-logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search " />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -63,30 +64,26 @@
             </ul>
               <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a><ul>
-    <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">Introducing ANACIN-X </a>
-        <ul>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">Why ANACIN-X? </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">ANACIN-X Steps </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">How to use ANACIN-X?</a></li>
-         </ul>
-    <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">Event Graphs </a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Demonstration of ANACIN-X</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Results Interpretation</a></li>
-  </ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and Non-Determinism</a>
   <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation </a></li>
   <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span class="pre"></span>Running ANACIN-X</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results Interpretation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results Interpretation </a>
+  <ul>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario">Scenario</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#tracking_incorectness">Tracking Scientific Incorectness</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#identifying_relevant">Identifying Relevant Source Code Location</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario">Other Results</a></li>
+  </ul>
+  </li>
 </ul>
 
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
-  <li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor’s guide</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
 </ul>
 
         </div>
@@ -103,9 +100,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Tutorial Objectives</li>
+      <li class="breadcrumb-item active">Results Interpretation</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/TauferLab/ANACIN-X" class="fa fa-github"> GitHub</a>
+              <a href="https://github.com/TauferLab/ANACIN-X" class="fa fa-github">  GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -113,104 +110,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="lesson-name">
-<h1>Tutorial Objectives<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
+  <section id="scenario">
+<h1>Tracking Scientific Incorrectness with ANACIN-X <a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
+<h2>Scenario</h2>
 <p>
-  In this chapter, we will introduce MPI and how Non-determinism occurs in MPI applications. We will discuss about this phenomenan with examples. And finally we will discuss about the 
-  impact of this phenomenan on scientific applications.
- </p> 
-</div>
+  Let us consider a scientist, in conducting a meticulous experiment, initiaties two separate runs of the identical codebase. And, the outcome from these runs diverge significantly, raising questions about the underlying factors influencing the code's behavior.
+</p> 
 
-<div class="toctree-wrapper compound">
-</div>
+    <figure class="align-center" id="id4">
+      <img alt="../images/results_interpretation_images/scientist1.png" src="../images/results_interpretation_images/scientist1.png" /><figcaption>
+      <p><span class="caption-text">Different outputs at separate runs of same code</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+      </figcaption>
+      </figure>
+  
 
-<section id="message-passing-interface">
+      <div id = "tracking_incorectness">
 
+        <h2>Tracking Scientific Incorectness</h2>
+        <p>
+     
+  The scientist uses ANACIN-X to pinpoint discrepancies between runs by generating Event Graphs for each run and plotting the KDTS (Kernel Distance Time Series).
+        </p> 
+        
+            <figure class="align-center" id="t">
+              <img alt="../images/results_interpretation_images/Scintist2.png" src="../images/results_interpretation_images/Scintist2.png" /><figcaption>
+              <p><span class="caption-text">Different outputs at separate runs of same code</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+              </figcaption>
+              </figure>
+  
+      </div>
+      
+<section id="identifying_relevant">
+  <span id="learner-personas"></span><h2>Identifying Relevant Source Code Location <a class="headerlink" href="#event_graphs" title="Permalink to this heading"></a></h2>
+  <p>
 
-<span id="learner-personas"></span><h2>Message Passing Interface <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
-<p>
- In this section we introduce MPI.
-
+    ANACIN-X automatically identify abrupt spike in kernel distance. These spikes imply sudden changes in the underlying communication non-determinism across executions.
+    This information helps to extract relevant source-code location via callstack vertex labels. 
+    <br><br>
+    Now, the scientist knows where to look for the root cause of discrepant results.
+  
 </p>
+  
+  <figure class="align-center" id="id4">
+    <img alt="../images/results_interpretation_images/scientist3.png" src="../images/results_interpretation_images/scientist3.png" /><figcaption>
+    <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+    </figcaption>
+    </figure>
+
 
 </section>
 
-<section id="non-determinism-in-mpi-applications">
+<section id="other_results">
+  <!-- <span id="learner-personas"></span><h2>Additional Results  <a class="headerlink" href="#graph_similarity" title="Permalink to this heading"></a></h2>
+<p> Show Real results in benchmark applications. Show visualizations of other plots to teach interprete the results  </p>
+   <figure class="align-center" id="id4">
+    <img alt="../images/E01-pack_unpack.svg" src="../images/graph_images/similarity_graph.png" /><figcaption>
+    <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+    </figcaption>
+    </figure> -->
 
-
-    <span id="learner-personas"></span><h2>Non-Determinism in MPI applications.<a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
-    <p>
-        Non-determinism refers to the situation where the outcome of a program execution is not uniquely predictable. In the context of MPI, non-determinism can occur due to factors such as message ordering, synchronization, and race conditions between processes. When a parallel program exhibits non-deterministic behavior, it means that multiple executions of the same program with the same inputs can produce different results.
-    
-    </p>
-    <section>
-        <h3> Example 1</h3>
-        <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/example1.png" /><figcaption>
-            <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
-    </section>
-    <section>
-        <h3> Example 2</h3>
-        <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/example1.png" /><figcaption>
-            <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
-    </section>
-    </section>
-
-
-    <section id="impacts-of-non-determinism">
-
-
-        <span id="learner-personas"></span><h2>Impact of Non-Determinism <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
-        <p>
-         In this section we provide information about how non-determinism affects MPI applications.
-        
-        </p>
-        <ul>
-            <li>Debugging</li>
-            <li>Testing and Validation</li>
-            <li> Reproducibility</li>
-            <li>Portability</li>
-        </ul>
-
-        <section>
-            <h3> Impact in Scientific Application</h3>
-            <figure class="align-center" id="id4">
-                <img alt="../images/E01-pack_unpack.svg" src="../images/halo.png" /><figcaption>
-                <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-                </figcaption>
-                </figure>
-        </section>
-        </section>
-
-        <section>
-        <h3> Example 2</h3>
-        <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/example1.png" /><figcaption>
-            <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
-    </section>
-    
-
-
-
-
+</section>
 
 
 <section id="running-benchmark-application">
-  <section id="running-benchmark-application">
+  <!-- <section id="running-benchmark-application">
 
 
     <h2>Being aware of this impact<a class="headerlink" href="#running-benchmark-application" title="Permalink to this heading"></a></h2>
     <p>Tn this section we show how to configure the jupyter notebook.</p>
    
   
-</section>
+</section> -->
 
 </section>
 
@@ -218,15 +188,15 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-            <a href="../one-sided-sync/" class="btn btn-neutral float-left" title="One-sided communication: synchronization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-            <a href="../mpi-and-threads-pt2/" class="btn btn-neutral float-right" title="MPI and threads in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>    </div>
+            <a href="../running_anacinx/" class="btn btn-neutral float-left" title="One-sided communication: synchronization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+            <a href="../bibliography/" class="btn btn-neutral float-right" title="MPI and threads in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>    </div>
 
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, The contributors.</p>
+    <p>&#169; Copyright 2021, Global Computing Lab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

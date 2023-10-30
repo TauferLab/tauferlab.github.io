@@ -6,7 +6,7 @@
     <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &mdash; ANACIN-X </title>
+    <title>System Setup </title>
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css"
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../static/sphinx_lesson.css" type="text/css" />
     <link rel="stylesheet" href="../static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
     <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico"/>
     <!--[if lt IE 9]>
     <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -49,7 +50,7 @@
                         <img src="../images/anacin-logo.png" class="logo" alt="Logo" />
                     </a>
                     <div role="search">
-                        <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+                        <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
                             <input type="text" name="q" placeholder="Search " />
                             <input type="hidden" name="check_keywords" value="yes" />
                             <input type="hidden" name="area" value="default" />
@@ -64,33 +65,12 @@
                     <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
                     <ul>
                         <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial
-                                Objectives</a>
-                            <ul>
-                                <li class="toctree-l2"><a class="reference internal"
-                                        href="#message-passing-interface">Introducing ANACIN-X </a>
-                                    <ul>
-                                        <li class="toctree-l3"><a class="reference internal"
-                                                href="#non-determinism-in-mpi-applications">Why ANACIN-X? </a></li>
-                                        <li class="toctree-l3"><a class="reference internal"
-                                                href="#non-determinism-in-mpi-applications">ANACIN-X Steps </a></li>
-                                        <li class="toctree-l3"><a class="reference internal"
-                                                href="#non-determinism-in-mpi-applications">How to use ANACIN-X?</a>
-                                        </li>
-                                    </ul>
-                                <li class="toctree-l2"><a class="reference internal"
-                                        href="#non-determinism-in-mpi-applications">Event Graphs </a></li>
-                                <li class="toctree-l2"><a class="reference internal"
-                                        href="#impacts-of-non-determinism">Demonstration of ANACIN-X</a></li>
-                                <li class="toctree-l2"><a class="reference internal"
-                                        href="#impacts-of-non-determinism">Results Interpretation</a></li>
-                            </ul>
+                                Objectives</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and
                                 Non-Determinism</a>
                         <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">ANACIN-X</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
-                        <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation </a>
-                        </li>
                         <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span
                                     class="pre"></span>Running ANACIN-X</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results
@@ -99,9 +79,8 @@
 
                     <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
                     <ul>
-                        <li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a>
-                        </li>
-                        <li class="toctree-l1"><a class="reference internal" href="guide/">Instructor’s guide</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
                     </ul>
 
                 </div>
@@ -119,7 +98,7 @@
                     <div role="navigation" aria-label="Page navigation">
                         <ul class="wy-breadcrumbs">
                             <li><a href="#" class="icon icon-home"></a></li>
-                            <li class="breadcrumb-item active">Tutorial Objectives</li>
+                            <li class="breadcrumb-item active">System Setup</li>
                             <li class="wy-breadcrumbs-aside">
                                 <a href="https://github.com/TauferLab/ANACIN-X"
                                     class="fa fa-github"> GitHub</a>
@@ -133,9 +112,23 @@
                             <section id="lesson-name">
                                 <h1>System Setup<a class="headerlink" href="#lesson-name"
                                         title="Permalink to this heading"></a></h1>
-                                <p>
-                                    The following modules are required for running ANACIN-X.
-                                </p>
+                                <!-- <p>
+                                    The ANACIN-X software in GitHub is public under Apache License 2.0.
+                                     Students and instructors using Code Ocean for the training need to 
+                                     create an account on the platform. Accounts are free and should provide
+                                      enough computational units to run the ANACIN-X environment. Similarly, students
+                                       and instructors using Jetstream must have an XSEDE account. Instructors must
+                                        acquire an educational allocation for the Jetstream cloud. Once logged into Jetstream,
+                                         students and instructors should use the image that can be searched with the tag ANACIN-X.
+                                </p> -->
+                                <p> When the training takes place on local HPC resources, ther system requirements includes:</p>
+                                
+                                <ul>
+                                    <li> The ability to clone the GitHub repository with the software package, compile it, and run it on the local cluster.</li>
+                                    <li>Access to a computer with multiple processes. The largest use cases referenced in this paper ran on a 32-process cluster, but smaller clusters can generate similar results.</li>
+                                    <li>Access to a computer with at least two compute nodes. </li>
+                                </ul>
+                                <p> The following modules must be loaded in the system to follow this tutorial.</p>
                         </div>
 
                         <div class="toctree-wrapper compound">
@@ -211,7 +204,7 @@
             <hr />
 
             <div role="contentinfo">
-                <p>&#169; Copyright 2020, The contributors.</p>
+                <p>&#169; Copyright 2021, Global Computing Lab.</p>
             </div>
 
             Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
