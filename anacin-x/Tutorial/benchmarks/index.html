@@ -47,7 +47,7 @@
               <img src="../images/anacin-logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search " />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -64,30 +64,26 @@
             </ul>
               <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a><ul>
-    <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">Introducing ANACIN-X </a>
-        <ul>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">Why ANACIN-X? </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">ANACIN-X Steps </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">How to use ANACIN-X?</a></li>
-         </ul>
-    <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">Event Graphs </a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Demonstration of ANACIN-X</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Results Interpretation</a></li>
-  </ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and Non-Determinism</a>
   <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">ANACIN-X</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a>
+  <ul>
+    <li class=""toctree-l2"><a class="reference internal" href="#message_race">Message Race</a></li>
+    <li class=""toctree-l2"><a class="reference internal" href="#amg_2013">AMG2013</a></li>
+    <li class=""toctree-l2"><a class="reference internal" href="#mcb_grid">MCB Grid</a></li>
+    <li class=""toctree-l2"><a class="reference internal" href="#unstructured_mesh">Unstructured Mesh</a></li>
+  </ul>
+  </li>
   <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span class="pre"></span>Running ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results Interpretation </a></li>
 </ul>
 
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
-  <li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor’s guide</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
 </ul>
 
         </div>
@@ -191,7 +187,7 @@
 <div class="toctree-wrapper compound">
 </div>
 
-<section id="message-race">
+<section id="message_race">
 
 <span id="learner-personas"></span><h2>Message Race <a class="headerlink" href="#message_Race" title="Permalink to this heading"></a></h2>
 <p>
@@ -330,41 +326,6 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
       
       </section>
 
-
-
-    <!-- <section id="impacts-of-non-determinism">
-
-
-        <span id="learner-personas"></span><h2>Impact of Non-Determinism <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
-        <p>
-         In this section we provide information about how non-determinism affects MPI applications.
-        
-        </p>
-        <ul>
-            <li>Debugging</li>
-            <li>Testing and Validation</li>
-            <li> Reproducibility</li>
-            <li>Portability</li>
-        </ul>
-
-        <section>
-            <h3> Impact in Scientific Application</h3>
-            <figure class="align-center" id="id4">
-                <img alt="../images/E01-pack_unpack.svg" src="../images/halo.png" /><figcaption>
-                <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-                </figcaption>
-                </figure>
-        </section>
-        </section>
-
-        <section>
-        <h3> Example 2</h3>
-        <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/example1.png" /><figcaption>
-            <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
-    </section> -->
     
 
 
@@ -396,7 +357,7 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, The contributors.</p>
+    <p>&#169; Copyright 2021, Global Computing Lab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

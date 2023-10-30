@@ -47,7 +47,7 @@
               <img src="../images/anacin-logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search " />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -64,30 +64,26 @@
             </ul>
               <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a><ul>
-    <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">Introducing ANACIN-X </a>
-        <ul>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">Why ANACIN-X? </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">ANACIN-X Steps </a></li>
-        <li class="toctree-l3"><a class="reference internal" href="#non-determinism-in-mpi-applications">How to use ANACIN-X?</a></li>
-         </ul>
-    <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">Event Graphs </a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Demonstration of ANACIN-X</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">Results Interpretation</a></li>
-  </ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Tutorial Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and Non-Determinism</a>
   <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation </a></li>
   <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span class="pre"></span>Running ANACIN-X</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results Interpretation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results Interpretation </a>
+  <ul>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario">Scenario</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#tracking_incorectness">Tracking Scientific Incorectness</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#identifying_relevant">Identifying Relevant Source Code Location</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario">Other Results</a></li>
+  </ul>
+  </li>
 </ul>
 
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
-  <li class="toctree-l1"><a class="reference internal" href="quick-reference/">Quick Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/">Instructor’s guide</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
 </ul>
 
         </div>
@@ -114,7 +110,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="lesson-name">
+  <section id="scenario">
 <h1>Tracking Scientific Incorrectness with ANACIN-X <a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <h2>Scenario</h2>
 <p>
@@ -127,20 +123,25 @@
       </figcaption>
       </figure>
   
-      <h2>Tracking Scientific Incorectness</h2>
-      <p>
-   
-The scientist uses ANACIN-X to pinpoint discrepancies between runs by generating Event Graphs for each run and plotting the KDTS (Kernel Distance Time Series).
-      </p> 
-      
-          <figure class="align-center" id="id4">
-            <img alt="../images/results_interpretation_images/Scintist2.png" src="../images/results_interpretation_images/Scintist2.png" /><figcaption>
-            <p><span class="caption-text">Different outputs at separate runs of same code</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
 
-<section id="event_graphs">
-  <span id="learner-personas"></span><h2>Identifying Revelant Source Code Location <a class="headerlink" href="#event_graphs" title="Permalink to this heading"></a></h2>
+      <div id = "tracking_incorectness">
+
+        <h2>Tracking Scientific Incorectness</h2>
+        <p>
+     
+  The scientist uses ANACIN-X to pinpoint discrepancies between runs by generating Event Graphs for each run and plotting the KDTS (Kernel Distance Time Series).
+        </p> 
+        
+            <figure class="align-center" id="t">
+              <img alt="../images/results_interpretation_images/Scintist2.png" src="../images/results_interpretation_images/Scintist2.png" /><figcaption>
+              <p><span class="caption-text">Different outputs at separate runs of same code</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+              </figcaption>
+              </figure>
+  
+      </div>
+      
+<section id="identifying_relevant">
+  <span id="learner-personas"></span><h2>Identifying Relevant Source Code Location <a class="headerlink" href="#event_graphs" title="Permalink to this heading"></a></h2>
   <p>
 
     ANACIN-X automatically identify abrupt spike in kernel distance. These spikes imply sudden changes in the underlying communication non-determinism across executions.
@@ -159,14 +160,14 @@ The scientist uses ANACIN-X to pinpoint discrepancies between runs by generating
 
 </section>
 
-<section id="graph_similarity">
-  <span id="learner-personas"></span><h2>Additional Results  <a class="headerlink" href="#graph_similarity" title="Permalink to this heading"></a></h2>
+<section id="other_results">
+  <!-- <span id="learner-personas"></span><h2>Additional Results  <a class="headerlink" href="#graph_similarity" title="Permalink to this heading"></a></h2>
 <p> Show Real results in benchmark applications. Show visualizations of other plots to teach interprete the results  </p>
    <figure class="align-center" id="id4">
     <img alt="../images/E01-pack_unpack.svg" src="../images/graph_images/similarity_graph.png" /><figcaption>
     <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
     </figcaption>
-    </figure>
+    </figure> -->
 
 </section>
 
@@ -188,14 +189,14 @@ The scientist uses ANACIN-X to pinpoint discrepancies between runs by generating
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
             <a href="../running_anacinx/" class="btn btn-neutral float-left" title="One-sided communication: synchronization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-            <a href="../" class="btn btn-neutral float-right" title="MPI and threads in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>    </div>
+            <a href="../bibliography/" class="btn btn-neutral float-right" title="MPI and threads in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>    </div>
 
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, The contributors.</p>
+    <p>&#169; Copyright 2021, Global Computing Lab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
