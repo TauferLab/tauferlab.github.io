@@ -229,7 +229,7 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
 
   <span id="learner-personas"></span><h2>AMG2013 <a class="headerlink" href="#amg2013" title="Permalink to this heading"></a></h2>
   <p>
-    Algebric Multigrid 2013 is selected as our benchmark as it can demonstrate both receiver-side and sender side non-determinism, as highlighted in [32]. 
+    Algebric Multigrid 2013<a href="#ref" class="reference internal"><sup>1</sup></a> is selected as our benchmark as it can demonstrate both receiver-side and sender side non-determinism, as highlighted in <a href="#ref" class="reference internal"><sup>2</sup></a>. 
     It achieves non-determinism through the use of non-blocking wildcard probes.
     <br>
     When a probe matches with a message, a receive is posted, and upon completion of the recieve, a send is issued to the rprocess whose message was matched.
@@ -281,7 +281,7 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
 
     <span id="learner-personas"></span><h2>MCB Grid <a class="headerlink" href="#mcb_grid" title="Permalink to this heading"></a></h2>
     <p>
-      MCB is a proxy application for Monte Carlo simulations based on three main types of particle exchange patterns: a particle exchange on a 2-dimensional grid, a non-blocking gather of particles, and a non-blocking scatter of particles. 
+      MCB <a href="#ref" class="reference internal"><sup>3</sup></a> is a proxy application for Monte Carlo simulations based on three main types of particle exchange patterns: a particle exchange on a 2-dimensional grid, a non-blocking gather of particles, and a non-blocking scatter of particles. 
       The latter two serve as bookkeeping for the particle exchange. 
     </p>
     
@@ -308,7 +308,7 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
 
       <span id="learner-personas"></span><h2>Unstructured Mesh Patterns <a class="headerlink" href="#unstructured_mesh" title="Permalink to this heading"></a></h2>
       <p>
-        The communication pattern, derived from the Chatterbug Communication Pattern Suite, displays non-determinism due to a randomized process topology. This randomness leads to variations in which processes communicate with each other from run to run, setting it apart from the other three patterns where only the message order differs between runs.
+        The communication pattern, derived from the Chatterbug Communication Pattern Suite <a href="#ref" class="reference internal"><sup>4</sup></a>, displays non-determinism due to a randomized process topology. This randomness leads to variations in which processes communicate with each other from run to run, setting it apart from the other three patterns where only the message order differs between runs.
       
         Additionally, there are three distinct forms of non-determinism observed in the described communication patterns:
         <ul>
@@ -342,6 +342,18 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
    
   
 </section> -->
+
+<div id ="ref">
+  <h2>References</h2>
+  <ol>
+    <li><a href="https://dl.acm.org/doi/10.1145/2807591.2807603">High-performance algebraic multigrid solver optimized for multi-core based distributed parallel systems</a></li>
+    <li><a href="https://ieeexplore.ieee.org/abstract/document/5560143">On Communication Determinism in Parallel HPC Applications.</a></li>
+    <li> N. Gentile and B. Miller, <em>“Monte carlo benchmark (MCB),”</em> Lawrence Livermore Nat. Lab., Livermore, CA, USA, Tech. Rep. TR- LLNL-CODE-507091, 2010.</li>
+    <li>N. Jain and A. Bhatele, <em>“Chatterbug communication proxy appli- cations suite,”</em> Lawrence Livermore Nat. Lab., Livermore, CA, USA, Tech. Rep. LLNL-CODE-756471, 2018</li>
+
+  </ol>
+</div>
+
 
 </section>
 

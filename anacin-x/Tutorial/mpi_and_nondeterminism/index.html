@@ -134,7 +134,7 @@
  </ul>
  <figure class="align-center" id="id4">
   <img alt="../images/mpi_nd_images/mpi_communications.png" src="../images/mpi_nd_images/mpi_communications.png" /><figcaption>
-  <p><span class="caption-text">Different communication methods in MPI </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+  <p><span class="caption-text">Different communication methods in MPI. Source:  <a href="#ref" class="reference internal"><sup>1</sup></a> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
   </figcaption>
   </figure>
 </p>
@@ -206,7 +206,7 @@
               <p><span class="caption-text">Real case example: Impact on program correctness</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
               </figcaption>
               </figure>
-              <p>In a case study on HPC debugging, scientists encountered a non-deterministic bug causing intermittent hangs after several hours of execution. The bug, found in the linear algebra package HYPRE 2.10.1 used by their research application Diablo, disrupted their work for 18 months. It took over 10,000 hours (about a year) of compute time to locate and diagnose the issue.</p>
+              <p>In a case study<a href="#ref" class="reference internal"><sup> 2</sup></a> on HPC debugging, scientists encountered a non-deterministic bug causing intermittent hangs after several hours of execution. The bug, found in the linear algebra package HYPRE 2.10.1 used by their research application Diablo, disrupted their work for 18 months. It took over 10,000 hours (about a year) of compute time to locate and diagnose the issue.</p>
 
             <h3> Impact in Scientific Correctness</h3>
             <figure class="align-center" id="id4">
@@ -214,22 +214,23 @@
                 <p><span class="caption-text">Real case example: Impact on Scientific correctness</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
                 </figcaption>
                 </figure>
-                <p>The study [3] illustrates how non-determinism affects the reproducibility of scientific results, showcasing a simulation of galaxy formation using the Enzo code [17]. Discrepancies in outputs undermine the reliability of conclusions drawn from simulations, and despite efforts, the exact causes of these disparities remain poorly understood [3].</p>
+                <p>The study <a href="#ref" class="reference internal"><sup> 3</sup></a> illustrates how non-determinism affects the reproducibility of scientific results, showcasing a simulation of galaxy formation using the Enzo code<a href="#ref" class="reference internal"><sup> 4</sup></a>. Discrepancies in outputs undermine the reliability of conclusions drawn from simulations, and despite efforts, the exact causes of these disparities remain poorly understood.</p>
         </section>
         </section>
 
-        <!-- <section>
-        <h3> Example 2</h3>
-        <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/example2.png" /><figcaption>
-            <p><span class="caption-text">Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-            </figcaption>
-            </figure>
-    </section> -->
+        
     
 
 
-
+<section id="ref">
+  <h2>References</h2>
+  <ol>
+    <li><a href="https://hpc.nmsu.edu/discovery/mpi/introduction">https://hpc.nmsu.edu/discovery/mpi/introduction</a></li>
+    <li><a href="https://dl.acm.org/doi/10.1145/3155284.3018767">Noise Injection Techniques to Expose Subtle and Unintended Message Races</a></li>
+    <li><a href="https://sc18.supercomputing.org/proceedings/workshops/workshop_files/ws_rescue101s1-file1.pdf">Assessing Reproducibility: An Astrophysical Example of Computational Uncertainty in the HPC Context</a></li>
+    <li><a href="https://iopscience.iop.org/article/10.1088/0067-0049/211/2/19">Enzo: An adaptive mesh refinement code for astrophysics</a></li>
+  </ol>
+</section>
 
 
 
