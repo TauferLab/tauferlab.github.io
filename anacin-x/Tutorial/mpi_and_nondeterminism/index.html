@@ -57,27 +57,24 @@
           <ul>
             <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a></li>
             </ul>
-              <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul>
-
+  <p class="caption" role="heading"><span class="caption-text">Unit A</span></p>
 <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">1. MPI and Non-Determinism</a><ul>
   <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">1.1 Message Passing Interface </a></li>
   <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">1.2 Non-Determinism in MPI Applications </a></li>
   <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">1.3 Impacts of Non-Determinism</a></li>
 </ul>
   <li class="toctree-l1"><a class="reference internal" href="../graphs/">2. Graphs</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_A.html">Use Case A</a></li>
+
+  <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
   <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">3. ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">4. Benchmarks</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_B.html">Use Case B</a></li>
+  <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
   <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span class="pre"></span>5. Running ANACIN-X</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">6.Results Interpretation </a></li>
-</ul>
-
-<p class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
-<ul>
-  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_A.html">Use Case A</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_B.html">Use Case B</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_C.html">Use Case C</a></li>
-  
+  <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">6. Results Interpretation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_C.html">Use Case C</a></li>
 </ul>
 
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
@@ -107,14 +104,33 @@
   </ul>
   <hr/>
 </div>
+
+
+
+       
+
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-  <section id="lesson-name">
+
+<section id="lesson-name">
+
+  <div class="admonition-questions questions admonition" id="questions-0">
+    <p class="admonition-title">Questions</p>
+    <ul class="simple">
+    <li>How does non-determinism arise in MPI applications?</li>
+    <li>What are the impacts of non-determinism in scientific executions?</li>
+    </ul>
+    </div>
+    <div class="admonition-objectives objectives admonition" id="objectives-0">
+    <p class="admonition-title">Objectives</p>
+    <ul class="simple">
+    <li><p>Learn about different communication methods in MPI.</p></li>
+    <li> <p>Learn how non-determinism impacts on scientific applications with real examples.</p></li>
+    </ul>
+    </div>      
 <h1>MPI and Non-Determinism<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <p>
-  In this chapter, we will introduce MPI and how Non-determinism occurs in MPI applications. We will discuss about this phenomenan with examples. And finally we will discuss about the 
-  impact of this phenomenan on scientific applications.
+  In this chapter, we will introduce MPI and how non-determinism occurs in MPI applications. We will describe the impact of non-determinism on scientific applications.
  </p> 
 </div>
 
@@ -126,9 +142,9 @@
 
 <span id="learner-personas"></span><h2>Message Passing Interface <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
 <p>
- Message Passing is the defacto coding standard for parallel applications on distributed systems at peta and exascale. MPI is not a programming language; rather, it is a library of functions that developers
- can utilize within C, C++, or Fortran code to write parallel programs. 
- <br><br>MPI helps communication between two and more computing nodes to share data using message passing through three different communication methods:
+ Message Passing Interface (MPI) is the de facto coding standard for parallel applications on distributed systems at petascale and exascale. MPI is not a programming language; rather, it is a library of functions that developers
+ can use within C, C++, or Fortran code to write parallel programs. 
+ <br><br>MPI uses three different communication methods to share data among nodes:
  <ul>
   <li>Point-to-Point Communication</li>
   <li>Collective Communication</li>
@@ -147,7 +163,7 @@
 <section id="non-determinism-in-mpi-applications">
 
 
-    <span id="learner-personas"></span><h2>Non-Determinism in MPI applications.<a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
+    <span id="learner-personas"></span><h2>Non-Determinism in MPI Applications.<a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
     <p>
       When a parallel program exhibits non-deterministic behavior, it means that multiple executions of the same program with the same inputs can produce different results.
     
@@ -157,7 +173,7 @@
 
     <section>
         <!-- <h3> Example 1</h3> -->
-        <p> The examples below demonstrate how non-determinism arises im MPI applications.</p>
+        <p> These examples demonstrate how non-determinism arises in MPI applications.</p>
         <figure class="align-center" id="id4">
             <img alt="../images/E01-pack_unpack.svg" src="../images/mpi_nd_images/example1.png" /><figcaption>
             <p><span class="caption-text"> An Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
@@ -168,20 +184,20 @@
       <p> When thread/process order influences arithmetic order, we can get some unexpected results across runs. Sure, 10<sup>-9</sup> seems 
       like a small error, but it can get "not-so-innocent".</p>
         <figure class="align-center" id="id4">
-            <img alt="../images/E01-pack_unpack.svg" src="../images/mpi_nd_images/nd2.png" /><figcaption>
+            <img alt="../images/mpi_nd_images/nd2.png" src="../images/mpi_nd_images/nd2.png" /><figcaption>
             <p><span class="caption-text">Non Deterministic Sum Execution</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
             </figcaption>
             </figure>
-            <p>Here when the sum is the denominator of something,  It's the difference between a normal arithmetic execution and an FPE( floating point exception)</p>
+            <p>Here when the sum is the denominator of something,  It is the difference between a normal arithmetic execution and an FPE( floating point exception)</p>
     </section>
 
 
     <section>
-      <h3>Peta to Exa Scale</h3>
+      <h3>Petascale to Exascale</h3>
       <p>At the exascale level, MPI applications commonly trade determinism for prioritizing on asynchrony and concurrency. This shift enables improved performance and efficiency in large-scale parallel computing tasks.</p>
       <figure class="align-center" id="id4">
           <img alt="../images/mpi_nd_images/peta_exa.png" src="../images/mpi_nd_images/peta_exa.png" /><figcaption>
-          <p><span class="caption-text">Message-Passing Applications: From Peta to Exascale</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+          <p><span class="caption-text">Message-Passing Applications: From Petascale to Exascale</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
           </figcaption>
           </figure>
   </section>

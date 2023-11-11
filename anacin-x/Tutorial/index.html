@@ -57,24 +57,24 @@
           <ul>
             <li class="toctree-l1"><a class="reference internal" href="system_setup/">System Setup</a></li>
             </ul>
-              <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Unit A</span></p>
 <ul>
 
 <li class="toctree-l1"><a class="reference internal" href="mpi_and_nondeterminism/">1. MPI and Non-Determinism</a></li>
   <li class="toctree-l1"><a class="reference internal" href="graphs/">2. Graphs</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_A.html">Use Case A</a></li>
+
+  <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
   <li class="toctree-l1"><a class="reference internal" href="anacin-x/">3. ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="benchmarks/">4. Benchmarks</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_B.html">Use Case B</a></li>
+
+  <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
   <li class="toctree-l1"><a class="reference internal" href="running_anacinx/">5. Running ANACIN-X</a></li>
   <li class="toctree-l1"><a class="reference internal" href="results_interpretation/">6. Results Interpretation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_C.html">Use Case C</a></li>
 </ul>
 
-<p class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
-<ul>
-  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_A.html">Use Case A</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_B.html">Use Case B</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_C.html">Use Case C</a></li>
-  
-</ul>
 
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
@@ -132,13 +132,13 @@
 <div class="admonition-prerequisites prerequisites admonition" id="prerequisites-0">
   <p class="admonition-title">Tutorial Objectives</p>
 
-  <p> By the end of the module students should be able to:”: </p>
+  <p> By the end of the module students should be able to: </p>
   <ul>
-    <li>Understand the emergence of Non-determinism in MPI applications and its impact on scientific code executions.<a href="mpi_and_nondeterminism/">(Chapter 1)</a></li>
-    <li>Comprehend the modeling of communication graphs as event graphs for analysis <a href="graphs/">(Chapter 2)</a> 
+    <li>Understand the emergence of non-determinism in MPI applications and the impact of non-determinism on scientific code executions.<a href="mpi_and_nondeterminism/">(Chapter 1)</a></li>
+    <li>Understand and identify the modeling of communication graphs as event graphs for analysis <a href="graphs/">(Chapter 2)</a> 
       and learn the process by which ANACIN-X utilizes communication traces to identify non-determinism <a href="anacin-x/">(Chapter 3)</a>.</li>
-    <li>Acquire the skills to install and run ANACINX software <a href="running_anacinx/">(Chapter 5)</a> across various benchmark applications <a href="benchmarks/">(Chapter 4)</a>, and interpret the outcomes produced by ANACIN-X <a href="results_interpretation/">(Chapter 6)</a></li>
-    <li>Evaluate their understanding through practical application in provided use cases <a href="tutorial_objectives/use_case_A.html">A</a>, <a href="tutorial_objectives/use_case_B.html">B</a>, and <a href="tutorial_objectives/use_case_C.html">C</a>, assessing their proficiency in the learned concepts</li>
+    <li>Install and run ANACINX software <a href="running_anacinx/">(Chapter 5)</a> across various benchmark applications <a href="benchmarks/">(Chapter 4)</a>, and interpret the outcomes produced by ANACIN-X <a href="results_interpretation/">(Chapter 6)</a></li>
+    <li>Evaluate their understanding through benchmark applications in  use cases <a href="tutorial_objectives/use_case_A.html">A</a>, <a href="tutorial_objectives/use_case_B.html">B</a>, and <a href="tutorial_objectives/use_case_C.html">C</a>.</li>
   </ul>
   
   </div>
@@ -150,15 +150,15 @@
     <tbody>
       <tr class="row-odd">
         <td><strong>1.</strong></td>
-        <td><p><a class="reference internal" href="mpi_and_nondeterminism/"><span class="doc">MPI and Non-Determinim</span></a></p></td>
-        <td><p>Introduces MPI and Non-Determinism. Provides examples on <br>how non-determinism impacts in scientifinc applications. </p></td>
+        <td><p><a class="reference internal" href="mpi_and_nondeterminism/"><span class="doc">MPI and Non-Determinism</span></a></p></td>
+        <td><p>Introduces MPI and Non-Determinism; provides examples of <br>how non-determinism impacts scientific applications. </p></td>
       </tr>
     
       <tr class="row-odd">
         <td><strong>2.</strong></td>
         <td><p><a class="reference internal" href="graphs/"><span class="doc">Graphs</span></a></p></td>
         <td><p>Shows how MPI communication events are modeled as event <br>
-              graphs, and ways to analyze them for non-determinism identification.</p></td>
+              graphs; presents ways to analyze event graphs to identify <br>non-determinism.</p></td>
         </tr>
     </tbody>  
     <tr class="row-odd"><td><strong>3.</strong></td>
@@ -170,23 +170,23 @@
       <tr class="row-odd">
         <td><strong>4.</strong></td>
         <td><p><a class="reference internal" href="benchmarks/"><span class="doc">Benchmarks</span></a></p></td>
-        <td><p>Defines four application benchmarks for testing its ability to <br>characterize non-determinism. </p></td>
+        <td><p>Defines four application benchmarks for testing ANACIN-X's ability <br> to characterize non-determinism. </p></td>
         </tr>
         <tr class="row-odd">
           <td><strong>5.</strong></td>
           <td><p><a class="reference internal" href="running_anacinx/"><span class="doc">Running ANACIN-X</span></a></p></td>
-          <td><p>Provides instructions for installing and running ANACIN-X software.</p></td>
+          <td><p>Provides a step-by-step guide to installing and running ANACIN-X.</p></td>
           </tr>
           <tr class="row-odd">
             <td><strong>6.</strong></td>
             <td><p><a class="reference internal" href="results_interpretation/"><span class="doc">Results Interpretation</span></a></p></td>
-            <td><p> Demonstrate how to interpret ANACIN-X results to identify the<br> source of Non-Determinism in an application.</p></td>
+            <td><p> Demonstrate how to interpret results from ANACIN-X and identify <br>the sources of Non-Determinism in an application.</p></td>
             </tr>
-            <tr class="row-odd">
+            <!-- <tr class="row-odd">
               <td><strong>7.</strong></td>
               <td><p><a class="reference internal" href="tutorial_objectives/"><span class="doc">Use Cases</span></a></p></td>
-              <td><p>Provides different use cases for students to identify the level of<br> understanding.</p></td>
-              </tr>
+              <td><p>Provides mult use cases for students to identify the level of<br> understanding.</p></td>
+              </tr> -->
     
     
     </table>
@@ -198,7 +198,7 @@
 
     <h2>Acknowledgment<a class="headerlink" href="#about-the-course" title="Permalink to this heading"></a></h2>
     <p>This project is a joint effort between the University of Tennessee Knoxville (UTK) and the University of North Texas (UNT).</p>
-    <p>This work was supported in part by the National Science Foundation under Grant 1900888 and Grant 1900765. The authors acknowledge IBM through a Shared University Research Award. Results generated in part with support of the Tellico cluster computer and the XSEDE computational resources Stampede2 cluster computer and Jetstream cloud computer</p>
+    <p>This work was supported in part by the National Science Foundation under Grant 1900888 and Grant 1900765. The authors acknowledge IBM through a Shared University Research Award. Results were generated in part with support of the Tellico cluster computer and the XSEDE computational resources Stampede2 cluster computer and Jetstream cloud computer</p>
 </section>
 
 <!-- <section id="see-also">
