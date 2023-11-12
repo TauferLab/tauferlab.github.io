@@ -6,7 +6,7 @@
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tutorial Objectives </title>
+  <title>Use Case A </title>
   <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css"
@@ -61,55 +61,34 @@
           <ul>
             <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a></li>
           </ul>
-          <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+          <p class="caption" role="heading"><span class="caption-text">Unit A</span></p>
           <ul>
             
-            <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">MPI and
+            <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">1. MPI and
                 Non-Determinism</a>
-            <li class="toctree-l1"><a class="reference internal" href="../graphs/">Graphs</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">ANACIN-X</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../graphs/">2. Graphs</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_A.html">Use Case A</a></li>
+
+            <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
+            <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">3 ANACIN-X</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">4. Benchmarks</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_B.html">Use Case B</a></li>
+            
+            <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
             <li classinstallation="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span
-                  class="pre"></span>Running ANACIN-X</a></li>
-            <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">Results
-                Interpretation </a></li>
-                <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/">Use Cases</a>
-                  <ul>
-                    <li class="toctree-l2"><a class="reference internal" href="#objectives_and_prerequisites">Objectives and Prerequisits</a></li>
-          
-                    <li class="toctree-l2"><a class="reference internal" href="#use_case_A">Use Case A </a>
-                      <ul>
-                        <li class="toctree-l3"><a class="reference internal" href="#lvl_A1">Learning Goal A1</a></li>
-                        <li class="toctree-l3"><a class="reference internal"
-                            href="#lvl_A2">Learning Goal A2 </a></li>
-                      </ul>
-                    </li>
-    
-                    <li class="toctree-l2"><a class="reference internal" href="#use_case_B">Use Case B </a>
-                      <ul>
-                        <li class="toctree-l3"><a class="reference internal" href="#lvl_B1">Learning Goal B1</a></li>
-                        <li class="toctree-l3"><a class="reference internal"
-                            href="#lvl_B2">Learning Goal B2 </a></li>
-                      </ul>
-                    </li>
-    
-                    <li class="toctree-l2"><a class="reference internal" href="#use_case_C">Use Case C </a>
-                      <ul>
-                        <li class="toctree-l3"><a class="reference internal" href="#lvl_C1">Learning Goal C1</a></li>
-                        <li class="toctree-l3"><a class="reference internal"
-                            href="#lvl_C2">Learning Goal C2 </a></li>
-                      </ul>
-                    </li>
-                    
+                  class="pre"></span>5. Running ANACIN-X</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">6. Results
+                Interpretation </a></li>  
                   </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_C.html">Use Case C</a></li>
           </ul>
 
           <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
-          <ul>
+          
             <ul>
               <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
               <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
-          </ul>
+          
           </ul>
 
         </div>
@@ -127,7 +106,7 @@
           <div role="navigation" aria-label="Page navigation">
             <ul class="wy-breadcrumbs">
               <li><a href="#" class="icon icon-home"></a></li>
-              <li class="breadcrumb-item active">Tutorial Objectives</li>
+              <li class="breadcrumb-item active">Use Case A</li>
               <li class="wy-breadcrumbs-aside">
                 <a href="https://github.com/TauferLab/ANACIN-X" class="fa fa-github"> GitHub</a>
               </li>
@@ -373,244 +352,6 @@
           </section>
 
           
-          <section id="use_case_B">
-            <h2>Use Case B: <em>Factors That Impact Non-Determinism</em><a class="headerlink" href="#use_case_B" title="Permalink to this heading"></a></h2>
-            <p>
-              Non-determinism can be difficult to reproduce [22].
-              In such situations, developers and scientists need to know what factors impact the amount of non-determinism
-              present to make the non-determinism more or less significant. For this reason, intermediate students should be able to identify the factors. 
-              Specifically, they should be able to answer the following questions:</p>
-              <ul>
-                <li>What is the effect of increasing the number of MPI processes used during execution? </li>
-                <li>What is the effect of increasing the number of commu- nication pattern iterations? </li>
-              </ul>
-      
-              <section id = "lvl_B1">
-                <h3> Learning Goal B1: <em>Study Effects of Number of Processes</em> </h3>
-                <p>In order to satisfy the Goal,students must know that the number of MPI processes in a simulation is directly related with the amount of non-determinism in the simulation: increasing the number of processes will increase the amount of non-determinism, and vice versa. </p>
-               
-
-                <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
-                  <p class="admonition-title">Observe the scenarios in each figure</p>
-                  <figure class="align-default">
-                    <figcaption>
-                      <p><span class="caption-text">Kernel distances for 20 executions of the Unstructured Mesh mini-application. The executions in (a) are performed on 32 MPI processes; and the executions in (b) are performed on 16 MPI processes. The kernel distance is a proxy for non-determinism: the higher, the more non-deterministic the execution.    </figcaption>
-                    <img alt="" src="../images/tutorial_objectives/4.png" /></figure>
-
-                        
-                </div>
-
-                <div class="admonition-objectives objectives admonition" id="objectives-0">
-                  <p class="admonition-title">Note</p>
-                  <ul class="simple">
-                  <li><p>Each figure is a violin plot across 20 data points that displays the measured amount of non-determinism within the communication pattern at the setting along the X-axis. We use the Unstructured Mesh communication pattern for these two figures, but other patterns are available in ANACIN-X.</p></li>
-                  </ul>
-                </div>
-
-
-<div class="admonition-questions questions admonition" id="questions-0">
-                          <p class="admonition-title">Questions</p>
-                          <ul class="simple">
-                            <li>
-                              <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks. Observe that the increase in the 
-                                number of processes in their simulations to  reveal change in degree of non-determinism.</em> 
-                              </li>
-                             
-                          </ul>
-                  </li>
-</div>
-                  <div class="admonition-solution solution important dropdown admonition" id="solution-0">
-                  <p class="admonition-title">Solution</p>
-                  <ol class="arabic">
-                  <li><p><strong>B1: Solution shows the change in degree of non-determinism by using different benchmark with differen number of proecesses</p></li>
-                    <figure class="align-default">
-                      <figcaption>
-                        <p><span class="caption-text"> #</figcaption>
-                      <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
-                  
-                  </ol>
-                  </div>
-              </section>
-
-              <section id = "lvl_B2">
-                <h3> Learning Goal B2: <em>Study Non-determinism across Iterations</em> </h3>
-                <p>Scientific applications often consist of the iterative execution of the same software code.
-                   These iterations during the same application execution exhibit non-determinism that is easy to
-                   identify. To satisfy Goal B.2, students should be able to link the iterations of an application
-                    execution to the amount of non- determinism in the application. </p>
-
-                <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
-                  <p class="admonition-title">Observe the scenarios in each figure</p>
-                  <figure class="align-default">
-                    <figcaption>
-                      <p><span class="caption-text">Kernel distances for 20 executions of the Unstructured Mesh mini-application. The executions in (a) are performed with two iterations of the core application code; and the executions in (b) are performed with single iterations of the core application code. The kernel distance is a proxy for non-determinism: the higher, the more non-deterministic the execution. </figcaption>
-                    <img alt="" src="../images/tutorial_objectives/5.png" /></figure>
-
-
-
-                 
-
-                </div>
-
-
-                <div class="admonition-questions questions admonition" id="questions-0">
-                  <p class="admonition-title">Questions</p>
-                  <ul class="simple">
-                    <li>
-                      <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks applications to generate plots.
-                         Discover if there is a link between iterations and amount of non-determinism in the application. </em> 
-                      </li>
-          
-                  </ul>
-                  </div>
-
-                  <div class="admonition-objectives objectives admonition" id="objectives-0">
-                    <p class="admonition-title">Note</p>
-                    <ul class="simple">
-                    <li><p> For this test, ANACIN-X should be run with 100% non-determinism to produce results with significant non-determinism 
-                      across iterations. These tests enable students to understand how, in applications exhibiting non-determinism, by increasing 
-                      the number of iterations in their application, they may accumulate substantial differences in the numerical results and 
-                      ultimately different scientific findings.</p></li>
-                    </ul>
-                  </div>
-
-                  
-
-
-                  <div class="admonition-solution solution important dropdown admonition" id="solution-0">
-                  <p class="admonition-title">Solution</p>
-                  <ol class="arabic">
-                    <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
-                      <figure class="align-default">
-                        <figcaption>
-                          <p><span class="caption-text"> #</figcaption>
-                        <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
-                  </ol>
-                  </div>
-              </section>
-
-
-          </section>
-
-
-
-
-          <section id="use_case_C">
-            <h2>Use Case C: <em>Root Sources of Non-determinism</em><a class="headerlink" href="#use_case_C" title="Permalink to this heading"></a></h2>
-            <p>
-              ANACIN-X train students to identify potential root sources of non-determinism in their code: functions within code that can produce non-deterministic communication patterns.
-               To this end, advanced students should be able to answer the following questions at an advanced level of understanding in non-determinism: </p>
-               <ul>
-<li> How do root sources of non-determinism impact the amount of non-determinism? </li>
-<li>How can ANACIN-X be used to identify root sources of non-determinism?</li>
-
-               </ul>
-              <section id = "lvl_C1">
-                <h3> Learning Goal C1: <em>Quantify Amount of Non-determinism in Executions</em> </h3>
-                <p>Root sources of non-determinism are embedded in an application’s code.
-                   The access to an application’s code is not always guaranteed; when available, 
-                   the code may be very complex to parse and understand.
-                   <br><br> To demonstrate understanding 
-                   of Goal C.1, students should be able to explain that root sources of non-determinism 
-                   can be used to directly control the amount of non-determinism in an application.</p>
-              
-
-                <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
-                  <p class="admonition-title">Observe the scenarios in each figure</p>
-                  <figure class="align-default">
-                    <figcaption>
-                      <p><span class="caption-text">Kernel distance visualization of the AMG2013 mini-application and its communication pattern on 32 MPI processes. We vary the percentage of non-determinism from 0% up to 100% at increments of 10%. Simulation is made using 1 compute node, 1 communication pattern iteration, and message sizes of 1 byte. </figcaption>
-                    <img alt="" src="../images/tutorial_objectives/6.png" /></figure>
-                        
-                </div>
-
-
-<div class="admonition-questions questions admonition" id="questions-0">
-                          <p class="admonition-title">Questions</p>
-                          <ul class="simple">
-                            <li>
-                              <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks applications to generate plots. Using figure, quantify the amount of non-determinism within one execution and demon- strate whether such an amount is directly related to the actual percentage of non-determinism for a given application. </em> 
-                              </li>
-
-                          </ul>
-                  </li>
-</div>
-                  <div class="admonition-solution solution important dropdown admonition" id="solution-0">
-                  <p class="admonition-title">Solution</p>
-                  <ol class="arabic">
-                    <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
-                      <figure class="align-default">
-                        <figcaption>
-                          <p><span class="caption-text"> #</figcaption>
-                        <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
-                  </ol>
-                  </div>
-              </section>
-
-              <section id = "lvl_C2">
-                <h3> Learning Goal C2: <em>Identify Root Sources of Non-determinism </em> </h3>
-                <p>It is not straightforward to control the amount of non-determinism within an application when the root source of that non-determinism is not already known and is embedded in the called system functions. 
-                  For this reason, students should learn how to identify likely root sources of non-determinism in their code.</p>
-
-                <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
-                  <p class="admonition-title">Observe the scenarios in each figure</p>
-                  <figure class="align-default">
-                    <figcaption>
-                      <p><span class="caption-text"> Callstack visualization for the AMG2013 mini-application and its communication pattern. The settings are the same as in Figure for C1</figcaption>
-                    <img alt="" src="../images/tutorial_objectives/7.png" /></figure>
-
-                  <ol class="arabic">
-
-
-                 
-
-                </div>
-
-                <div class="admonition-objectives objectives admonition" id="objectives-0">
-                  <p class="admonition-title">Note</p>
-                  <ul class="simple">
-                  <li><p> The ANACIN-X environment identifies the callstacks in the application and measures their frequency. In the figure, the X-axis corresponds to the list of callstacks in the application’s 
-                    run that were identified as taking place during high periods of non-determinism. 
-                    The Y-axis corresponds to the normalized relative frequency of the dentified callstacks as they appear in an execution’s event graph. </p></li>
-                  </ul>
-                </div>
-
-                <div class="admonition-questions questions admonition" id="questions-0">
-                  <p class="admonition-title">Questions</p>
-                  <ul class="simple">
-                    <li>
-                      <strong>Task 1:</strong> <em>Observe which MPI functions were identified in regions of high amounts of non-determinism. 
-                        These functions are likely root sources of non-determinism because MPI functions that take place during periods of
-                         high non-determinism are likely related to the non-determinism</em> 
-                      </li>
-                      <li>
-                        <strong>Task 2:</strong> <em>Extend the ANACIN-X environment to support your own application:  to determine where in your code you should look to manage the non-determinism by locating the callstack functions associated to the high non-determinism.</em> 
-                        </li>
-                  </ul>
-                  </div>
-
-
-                  
-
-
-                  <div class="admonition-solution solution important dropdown admonition" id="solution-0">
-                  <p class="admonition-title">Solution</p>
-                  <ol class="arabic">
-                    <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
-                      <figure class="align-default">
-                        <figcaption>
-                          <p><span class="caption-text"> #</figcaption>
-                        <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
-
-
-                  
-        
-                  </ol>
-                  </div>
-              </section>
-
-
-          </section>
 
 
           <div class="toctree-wrapper compound">
@@ -620,10 +361,10 @@
       </div>
       <footer>
         <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-          <a href="../system_setup/" class="btn btn-neutral float-left"
+          <a href="../graphs/" class="btn btn-neutral float-left"
             title="system_setup" accesskey="p" rel="prev"><span
               class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-          <a href="../mpi_and_nondeterminism/" class="btn btn-neutral float-right" title="MPI and threads in practice"
+          <a href="../anacin-x/" class="btn btn-neutral float-right" title="MPI and threads in practice"
             accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         </div>
 

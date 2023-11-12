@@ -59,31 +59,51 @@
                 </div>
                 <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
                     <ul>
+                        <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a>
                         </li>
                     </ul>
-                    <p class="caption" role="heading"><span class="caption-text">Chapters</span></p>
-                    <ul>
+                    <p class="caption" role="heading"><span class="caption-text">UNIT A</span></p>
+                    <!-- <ul>
                         
                         <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">1. MPI and
                                 Non-Determinism</a>
                         <li class="toctree-l1"><a class="reference internal" href="../graphs/">2. Graphs</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_A.html">Use Case A</a></li>
+
+                        <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
                         <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">3. ANACIN-X</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">4. Benchmarks</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_B.html">Use Case B</a></li>
+                        <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
                         <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span
                                     class="pre"></span>5. Running ANACIN-X</a></li>
                         <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">6. Results
                                 Interpretation </a></li>
+                         <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_C.html">Use Case C</a></li>
 
-                    </ul>
+                    </ul> -->
 
-                    <p class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
                     <ul>
-                      <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_A.html">Use Case A</a></li>
-                      <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_B.html">Use Case B</a></li>
-                      <li class="toctree-l1"><a class="reference internal" href="tutorial_objectives/use_case_C.html">Use Case C</a></li>
-                      
+                        
+                        <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">1. MPI and
+                                Non-Determinism</a>
+                        <li class="toctree-l1"><a class="reference internal" href="../todo1.html">2. Graphs</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../todo1.html">Use Case A</a></li>
+
+                        <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
+                        <li class="toctree-l1"><a class="reference internal" href="../todo1.html">3. ANACIN-X</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../todo1.html">4. Benchmarks</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../todo1.html">Use Case B</a></li>
+                        <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
+                        <li class="toctree-l1"><a class="reference internal" href="../todo1.html"><span
+                                    class="pre"></span>5. Running ANACIN-X</a></li>
+                        <li class="toctree-l1"><a class="reference internal" href="../todo1.html">6. Results
+                                Interpretation </a></li>
+                         <li class="toctree-l1"><a class="reference internal" href="../todo1.html">Use Case C</a></li>
+
                     </ul>
+
 
                     <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
                     <ul>
@@ -120,23 +140,15 @@
                             <section id="lesson-name">
                                 <h1>System Setup<a class="headerlink" href="#lesson-name"
                                         title="Permalink to this heading"></a></h1>
-                                <!-- <p>
-                                    The ANACIN-X software in GitHub is public under Apache License 2.0.
-                                     Students and instructors using Code Ocean for the training need to 
-                                     create an account on the platform. Accounts are free and should provide
-                                      enough computational units to run the ANACIN-X environment. Similarly, students
-                                       and instructors using Jetstream must have an XSEDE account. Instructors must
-                                        acquire an educational allocation for the Jetstream cloud. Once logged into Jetstream,
-                                         students and instructors should use the image that can be searched with the tag ANACIN-X.
-                                </p> -->
-                                <p> When the training takes place on local HPC resources, ther system requirements includes:</p>
-                                
+
+                                <p> To run this tutorial on local HPC resources, you will need:
+                                </p>     
                                 <ul>
                                     <li> The ability to clone the GitHub repository with the software package, compile it, and run it on the local cluster.</li>
-                                    <li>Access to a computer with multiple processes. The largest use cases referenced in this paper ran on a 32-process cluster, but smaller clusters can generate similar results.</li>
-                                    <li>Access to a computer with at least two compute nodes. </li>
+                                    <li>Access to a computer with multiple processes, or an access to a computer with at least two compute nodes.</li>
+                                    <!-- <li>Access to a computer with at least two compute nodes. </li> -->
                                 </ul>
-                                <p> The following modules must be loaded in the system to follow this tutorial.</p>
+                            
                         </div>
 
                         <div class="toctree-wrapper compound">
@@ -147,10 +159,10 @@
                             <span id="learner-personas"></span>
                             <h2>Apptainer<a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
-                            <p>We have utilized a apptainer container, which includes all the necessary dependencies for running ANACIN-X.
-                                 You can access the pre-configured container <a href ="https://hub.docker.com/repository/docker/globalcomputinglab/anacinx_prod/general">here</a>. For further information on Apptainer, please follow the provided link.
-                                <a href="
-                                https://apptainer.org/docs/user/latest/index.html"> Learn about Apptainer </a>
+                                    <p>We use an Apptainer container, which includes all the necessary dependencies for running ANACIN-X.
+                                 You can access the pre-configured container <a href ="https://hub.docker.com/repository/docker/globalcomputinglab/anacinx_prod/general">here</a>. Click
+                                 <a href="
+                                https://apptainer.org/docs/user/latest/index.html"> here </a> to learn more about apptainer.
 
                             </p>
 
@@ -161,14 +173,10 @@
                             <span id="learner-personas"></span>
                             <h2>Anaconda<a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
-                            <p>We utilize Jupyter Notebook as our primary platform for executing our 
-                                software and visualizing the results. Therefore, it is essential to
-                                 have Anaconda installed. To obtain Anaconda for Linux Power8, please 
-                                 access the provided link and follow the instructions below.
-                                <a href="
-                                https://docs.anaconda.com/free/anaconda/install/linux-power8/"> Learn about Anaconda
-                                </a>
-
+                            <p>We use Jupyter Notebook as our primary platform, so it is necessary to install Anaconda.
+                                Click  <a href="
+                                https://docs.anaconda.com/free/anaconda/install/linux-power8/">here
+                                </a> to obtain Anaconda for Linux.
                             </p>
 
                         </section>
@@ -179,11 +187,9 @@
                             <h2>Spack<a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
                             <p>
-                                We utilize the Spack package manager for the installation of additional essential software.
-                                 To obtain detailed instructions on how to install Spack and access Spack tutorials, 
-                                 please refer to the link provided below.
+                                We use the Spack package manager to install additional essential software. Click
                                 <a href="
-                                https://spack.io/about/#install-spack"> Learn about Spack </a>
+                                https://spack.io/about/#install-spack"> here </a> for more information about Spack.
 
                             </p>
 
@@ -202,7 +208,7 @@
                         <a href="../" class="btn btn-neutral float-left"
                             title="One-sided communication: synchronization" accesskey="p" rel="prev"><span
                                 class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-                        <a href="../tutorial_objectives/" class="btn btn-neutral float-right"
+                        <a href="../mpi_and_nondeterminism/" class="btn btn-neutral float-right"
                             title="MPI and threads in practice" accesskey="n" rel="next">Next <span
                                 class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
                     </div>
