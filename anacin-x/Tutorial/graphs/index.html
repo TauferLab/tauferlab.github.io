@@ -120,32 +120,30 @@
              
   <section id="lesson-name">
 
-    <div class="admonition-questions questions admonition" id="questions-0">
+    <!-- <div class="admonition-questions questions admonition" id="questions-0">
       <p class="admonition-title">Questions</p>
       <ul class="simple">
       <li>How to represent communication events as graphs?</li>
       </ul>
-      </div>
+      </div> -->
       <div class="admonition-objectives objectives admonition" id="objectives-0">
       <p class="admonition-title">Objectives</p>
       <ul class="simple">
-      <li><p>Learn about event graphs.</p></li>
-      <li> <p>Learn about quantification of event graphs similarity.</p></li>
+      <li><p>Understand what graphs are and how MPI communication events are modeled as event graphs.</p></li>
       </ul>
       </div>   
 <h1>Graphs<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <p>
-  Graphs can be used to represent various types of data and relationships.
-  They are commonly used in computer science and related fields to model and solve problems in areas such as network analysis, social network analysis, routing algorithms, and more.
+  Graphs can be used to represent various types of data and relationships. They are commonly used in computer science and related fields to model and solve problems in areas such as network analysis, social network analysis, routing algorithms, and more.
 <br><br>
-When it comes to representing MPI (Message Passing Interface) communications using graphs, the graph structure can be used to depict the communication patterns between processes in a parallel computing system. In MPI, processes communicate with each other by sending and receiving messages.
+When representing MPI (Message Passing Interface) communications using graphs, the graph structure can be used to depict the communication patterns between processes in a parallel computing system. In MPI, processes communicate with each other by sending and receiving messages.
 </p> 
 <p>
-  Representation of MPI communication events to graphs can be done by defining following graph attributes: </p>
+  Representation of MPI communication events to graphs can be done by defining the following graph attributes: </p>
   <blockquote>
     <div><ul class="simple">
       <li><b>Nodes:</b> MPI processes</li>
-      <li><b>Edges:</b> Communication between Processes</li>
+      <li><b>Edges:</b> Communication between processes</li>
     </ul>
     </div></blockquote>
 
@@ -155,30 +153,27 @@ When it comes to representing MPI (Message Passing Interface) communications usi
       </figcaption>
       </figure>
 
-      <p>The diagram above illustrates an event graph depicting the execution of a basic MPI code across three processes. Various MPI events, such as send and receive operations, are represented as blue and orange nodes respectively. The graph also displays interprocess and intra-process communication events as directed edges.</p>
+      <p>The diagram above illustrates an event graph depicting the execution of a basic MPI code across three processes. Various MPI events, such as send and receive operations, are represented as blue and orange nodes, respectively. The graph also displays interprocess and intra-process communication events as directed edges.</p>
   
 <section id="event_graphs">
   <span id="learner-personas"></span><h2>Event Graphs <a class="headerlink" href="#event_graphs" title="Permalink to this heading"></a></h2>
-  <p>In this figure, we consider a simulation across three processors, each represented by a row in the graph.
-    Processor 1 is the top row, Processor 2 is the middle row, and Processor 3 is the bottom row. <br><br>
-    The vertices in each row represent the send and receive MPI functions in each processor. 
-    Two vertices are connected if they are consecutive operations in the same processor or sent/received message to another processors.
-    </p>
   
   <figure class="align-center" id="id4">
-    <img alt="../images/E01-pack_unpack.svg" src="../images/graph_images/two_runs.png" /><figcaption>
-    <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+    <img alt="../images/graph_images/two_runs.png" src="../images/graph_images/two_runs.png" /><figcaption>
+    <p><span class="caption-text">Figure: Example of event graph </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
     </figcaption>
     </figure>
+  <p>In above figure, we consider a simulation across three processors, each represented by a row in the graph. Processor 1 is the top row, Processor 2 is the middle, and Processor 3 is the bottom. <br><br>
+    The vertices in each row represent each processor's send and receive MPI functions. Two vertices are connected if they are consecutive operations in the same processor or sent/received messages to other processors.
+    </p>
+
 
    <p>
-  During Run 1, the first event in Processor 3 sends a message that is received as the second event in Processor 2,
-   and the second event in Processor 3 sends a message that is received as the third event in Processor 2.
-   <br><br> On the other hand, during Run 2, the first event in Processor 3 sends a message that is received 
-   as the third event in Processor 2, and the second event in Processor 3 sends a message that is received 
-   as the second event in Processor 2.<br><br> Thus the two different runs result in event graphs of different structures.</p>
-    
+    During Run 1, the first event in Processor 3 sends a message received as the second event in Processor 2, and the second event in Processor 3 sends a message eceived as the third event in Processor 2.
 
+   <br><br> On the other hand, during Run 2, the first event in Processor 3 sends a message received as the third event in Processor 2, and the second event in Processor 3 sends a message received as the second event in Processor 2.
+    <br><br> Thus, the two different runs result in event graphs of different structures even when we are using the same application.</p>
+    
 </section>
 
 
@@ -192,8 +187,7 @@ When it comes to representing MPI (Message Passing Interface) communications usi
 
 <section id="graph_kernels">
   <span id="learner-personas"></span><h2>Graph Kernels <a class="headerlink" href="#graph_kernels" title="Permalink to this heading"></a></h2>
-  <p>Graph Kernels are a family of methods for measuring the structural similarity of graphs. ANACINX leverages Graph kernels to quantify (dis)similarity of event graphs that model multiple runs of a target application, Thereby quantifying the degree to which non-determinism manifests in the application.</p>
-  
+  <p>Graph Kernels are a family of methods for measuring the structural similarity of graphs <span style="color: red">CITE</span>. ANACIN-X leverages Graph kernels to quantify (dis)similarity of event graphs that model multiple runs of a target application, Thereby quantifying the degree to which non-determinism manifests in the application.</p>
   <figure class="align-center" id="id4">
     <img alt="../images/graph_images/similarity_quantificatin.png" src="../images/graph_images/similarity_quantificatin.png" /><figcaption>
     <p><span class="caption-text"> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
@@ -215,21 +209,21 @@ When it comes to representing MPI (Message Passing Interface) communications usi
         </dd>
         <dt><code class="docutils literal notranslate"><span class="pre">&Phi;(G)</span></code></dt><dd><p>The embedding of G in a specific kind of vector space.</p>
         </dd>
-        <dt><code class="docutils literal notranslate"><span class="pre">K(G,G&prime;)</span></code></dt><dd><p>Kernel Similarity, value of the inner product of the embeddings of G and G&prime; in the vector space.</p>
+        <dt><code class="docutils literal notranslate"><span class="pre">K(G,G&prime;)</span></code></dt><dd><p>Kernel Similarity is the value of the inner product of G and G&prime; embeddings in the vector space.</p>
         </dd>
         </dl>
         </div>
   
         <div class="admonition-objectives objectives admonition" id="parameters">
           <p class="admonition-title">Also</p>
-          <p> The Kernel Similarity, K, suffices to treat a graph kernel as a function that counts matching substructures of some kind (e.g., subtrees) of two graph to quantify how similar they are.
-          <br>
-          <br>
+          <p> The Kernel Similarity, K, suffices to treat a graph kernel as a function that counts matching substructures of some kind (e.g., subtrees) of two graphs to quantify their similarity.</p>
+       
+  
           We use positive difinite graph kernel metric called <code class="docutils literal notranslate"><span class="pre">Graph Kernel Distance</span></code> that describes how far apart a pair of graphs are from each other and is given by:<br>
           <em></em>
           <p><em>d<sub>K</sub> (G,G&prime;)</em>  = <span>&#8730;</span><span  style="border-top: 1px solid black"> <em>K(G,G&prime;) + K(G&prime;,G&prime;) - 2K(G,G&prime;)</em>
           </span>
-         <br><br> Here, K(G&prime;,G&prime;) and K(G,G) represent the self-similarites of G and G&prime; respectively, and K(G;,G&prime;) represents their cross-similarity.  </p>
+         <br><br> Here, K(G&prime;,G&prime;) and K(G,G) represent the self-similarites of G and G&prime; respectively, and K(G,G&prime;) represents their cross-similarity.  </p>
           </p>
           </div>
   </div>
@@ -239,8 +233,7 @@ When it comes to representing MPI (Message Passing Interface) communications usi
 
 <section id="event_graph_labeling">
   <h2>Event Graph Labeling</h2>
-  <p>We enrich our event graph construction by associating labels to vertices that have
-     semantic relevance for communication non-determinism, as shown in Figure. 
+  <p>We enrich our event graph construction by associating labels to vertices that have semantic relevance for communication non-determinism, as shown in Figure. 
      </p>
      <figure class="align-center" id="id4">
       <img alt="../images/graph_images/similarity_quantificatin.png" src="../images/graph_images/graph_labeling.png" /><figcaption>
@@ -248,32 +241,32 @@ When it comes to representing MPI (Message Passing Interface) communications usi
       </figcaption>
       </figure>
      <p>
-     ANACIN-X uses two types of labeling that serve different functions: 
+      ANACIN-X uses two types of labeling that serve different functions:
+
      <ol>
-      <li><strong>Labels to Identify Type of non-determinism: </strong>
-         <br>Vertex labels enhance the WLST kernel's ability to differentiate event graphs with similar structures
-         but different non-deterministic behaviors. They offer vital information, 
-         especially when subtle differences in message order occur between runs. 
+      <li><strong>Labels to Identify Type of Non-determinism: </strong>
+         <br>Vertex labels enhance the WLST kernel's ability to differentiate event graphs with similar structures but different non-deterministic behaviors. They offer vital information, especially when subtle differences in message order occur between runs.
          <br> <br>ANACIN-X supports three types of vertex labels: 
          <ul>
           <li><strong>Process IDs</strong>  help detect variations in a process's neighbors across runs caused by non-determinism.
           </li>
-          <li><strong>Logical Timestamps</strong> enables the WLST kernel to take into account the history of data flow from one process to another over the course of execution.</li>
-          <li><strong>Logical Ticks</strong> help WLST kernel to detect run-t-run difference in terms of patterns of message lateness</li>
+          <li><strong>Logical Timestamps</strong>  enable the WLST kernel to consider the data flow history from one process to another throughout execution.</li>
+          <li><strong>Logical Ticks</strong> help WLST kernel to detect run-to-run difference in terms of patterns of message lateness</li>
          </ul>
          <strong>process IDs</strong> (representing MPI ranks),
           logical timestamps, and logical ticks. Process ID labels help detect variations in
            a process's neighbors across runs caused by non-determinism.</li>
            <br>
-      <li><strong>Labels to Identify Causes of non-determinism: </strong> <br>
-        ANACIN-X uses vertex labeling in the graph model to link runtime 
-        non-determinism to specific causes in the application source code.
-         This is done by analyzing callstack labels, representing paths in the function call graph. 
-         Aggregating these callstacks in regions of interest identifies the "hot paths" of non-deterministic communication patterns.
-
+      <li><strong>Labels to Identify Causes of Non-determinism: </strong> <br>
+        ANACIN-X uses vertex labeling in the graph model to link runtime non-determinism to specific causes in the application source code. This is done by analyzing call stack labels, representing paths in the function call graph. Aggregating these call stacks in regions of interest identifies the "hot paths" of non-deterministic communication patterns.
       </li>
      </ol>
     </p>
+</section>
+
+<section id=""conclusion">
+<h2>Conclusion</h2>
+<p>Pending</p>
 </section>
 
 

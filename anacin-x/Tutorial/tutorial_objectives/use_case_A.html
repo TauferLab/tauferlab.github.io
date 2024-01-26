@@ -220,21 +220,24 @@
             </tbody>
           </table> -->
 
-          <p> Each of these three difficulty level's use cases are defined below.</p>
-
-
+          <div class="admonition-objectives objectives admonition" id="objectives-0">
+            <p class="admonition-title">Objectives</p>
+            <ul class="simple">
+            <li>Provide beginner-level tasks to check the understanding of message passing paradigm and communication non-determinism.</li>
+            </ul>
+            </div>   
           <section id="use_case_A">
             <h2>Use Case A: <em>Distributed Computing and Non-Determinism</em><a class="headerlink" href="#use_case_A" title="Permalink to this heading"></a></h2>
             <p>
-              Students first gain an understanding of both message passing and communication non-determinism. Specifically, students at a beginner level should be able to meet following goals once they have completed: </p>
-      
+              Visualization of communication patterns helps understand the concept of distributed computing and non-determinism. The exercise in this use case will help you understand the concepts of working in parallel applications and how non-determinism is associated with message passing.<br>
+              <br>With successfully completing the tasks in this use case, you should be able to answer the following questions:
+              <ul>
+                <li>What is message passing in the context of an execution?</li>
+                <li>What is non-determinism in the context of an execution?</li>
+              </ul>
+
               <section id = "lvl_A1">
-                <h3> Learning Goal A1: <em>Introduce Parallelism using Message Passing Paradigm</em> </h3>
-                <p>In order to satisfy the Goal, The students must understand two key concepts</p>
-                <ul>
-                  <li> Any process in an exectuion can send a message to another process.</li>
-                  <li>Processes can exchange message using different communication patterns.</li>
-                </ul>
+                <h3>Goal 1: <em>Introduce Parallelism using Message Passing Paradigm</em> </h3>
 
                 <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
                   <p class="admonition-title">Observe the scenarios in each figure</p>
@@ -263,28 +266,22 @@
                               <strong>Task 1:</strong> <em>Describe the scenarios in each figure.</em> 
                               </li>
                               <li>
-                                <strong>Task 2:</strong> <em>What strategies would you employ to effectively reproduce the scenarios in the given figures and then broaden the range and quantity of scenarios using ANACIN-X with varying numbers of processes? How would you go about selecting and implementing the diverse communication patterns supported by ANACIN-X in this context?</em> 
-                                </li>
+                                <strong>Task 2:</strong> <em>What strategies would you employ to effectively reproduce the scenarios in the given figures and then broaden the range and quantity of scenarios using ANACIN-X with varying numbers of processes? How would you select and implement the diverse communication patterns supported by ANACIN-X in this context? </em>
                           </ul>
                   </li>
 </div>
                   <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                   <p class="admonition-title">Solution</p>
                   <ol class="arabic">
-                  <li><p><strong>A1: </strong>Figure 2, has three MPI processes, each sending a message to the fourth process. 
-                    This is an event graph visualization of a message race communication pattern. 
-                    Figure 3, on the other hand, has two MPI processes each send a message to the other. 
-                    Afterward, each process sends a message back asyn- chronously.
-                     This is a small-scale replication of the AMG 2013 communication pattern</p></li>
-                  <li><p><strong>A2: </strong>Solution to TASK A2</p></li>
+                  <li><p><strong> </strong>Figure 2 has three MPI processes, each sending a message to the fourth process. This is an event graph visualization of a message race communication pattern. Figure 3, on the other hand, has two MPI processes each sending a message to the other. Afterward, each process sends a message back asynchronously. This is a small-scale replication of the AMG 2013 communication pattern.</p></li>
+                  <li><p><strong> </strong>TODO</p></li>
                   </ol>
                   </div>
               </section>
 
               <section id = "lvl_A2">
-                <h3> Learning Goal A2: <em>Define non-determinism associated to message passing </em> </h3>
-                <p>In order to satisfy the Goal, students must be able to understand that non-determinism is defined by inconsistent type and order of messages exchanged between MPI processes across runs of the same application execution.</p>
-
+                <h3>Goal 2: <em>Define non-determinism associated to message passing </em> </h3>
+                
                 <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
                   <p class="admonition-title">Observe the scenarios in each figure</p>
                   <figure class="align-default">
@@ -303,8 +300,7 @@
                 <div class="admonition-objectives objectives admonition" id="objectives-0">
                   <p class="admonition-title">Note</p>
                   <ul class="simple">
-                  <li><p>Both Figures <em>a and b</em> are event graphs. They both correspond to the message race communication pattern. 
-                    Both figures are generated using the same code with the same inputs but are the result of two independent runs.</p></li>
+                  <li><p>Both Figures <em>a and b</em> are event graphs. They both correspond to the message race communication pattern. Both figures are generated using the same code with the same inputs but result from two independent runs.</p></li>
                   </ul>
                 </div>
 
@@ -327,9 +323,8 @@
                   <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                   <p class="admonition-title">Solution</p>
                   <ol class="arabic">
-                  <li><p><strong>Task 1: </strong>Despite being executed using the same code and the same inputs, 
-                    the runs from Figure a and Figure b have different communication patterns. 
-                    Specifically, the messages sent by Process 1 and Process 2 do not arrive at Process 0 in the same order.
+                  <li>Despite being executed using the same code and inputs, the runs from Figures <em>a</em> and <em>b</em> have different communication patterns. Precisely, the messages sent by Process 1 and Process 2 do not arrive at Process 0 in the same order.
+                  </em> .
                     <br><br>
                     Students use this example and other examples generated by ANACIN-X to understand that non-determinism is
                      when multiple executions of the same code, run in the same way, produce different communication patterns. 
@@ -339,10 +334,10 @@
                       Figure a and Figure b were generated by running ANACIN-X with four processes and 100% non-determinism. 
                       Tests to reproduce scenarios such as those in Figures a and b should be run across multiple compute nodes
                        to increase the likelihood that runs are non-determinism</p></li>
-                  <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
+                  <li><p>Solution to TASK 2</p></li>
                     <figure class="align-default">
                       <figcaption>
-                        <p><span class="caption-text"> #</figcaption>
+                        <p><span class="caption-text"> </figcaption>
                       <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
                   </ol>
                   </div>
