@@ -140,13 +140,6 @@
                         <div itemprop="articleBody">
 
                             <section id="lesson-name">
-                                <div class="admonition-questions questions admonition" id="questions-0">
-                                    <p class="admonition-title">Questions</p>
-                                    <ul class="simple">
-                                    <li>How does ANACIN-X work?</li>
-                                    
-                                    </ul>
-                                    </div>
                                     <div class="admonition-objectives objectives admonition" id="objectives-0">
                                     <p class="admonition-title">Objectives</p>
                                     <ul class="simple">
@@ -157,18 +150,14 @@
                                 <h1>ANACIN-X Framework<a class="headerlink" href="#lesson-name"
                                         title="Permalink to this heading"></a></h1>
                                 <p>
-                                    Our framework allows scientists to characterize the source of non-determinism in a
-                                    application without a priori knowledge of its communication patterns.
-                                    ANACIN-X is a suite of software modules for trace-based analysis of
-                                    non-deterministic behavior in MPI applications. The four core modules are as
-                                    follows:
+                                    Our framework allows scientists to characterize the source of non-determinism in an application without prior knowledge of its communication patterns. ANACIN-X is a suite of software modules for trace-based analysis of non-deterministic behavior in MPI applications. The four core modules are as follows:
                                 </p>
                                 <div class="admonition-objectives objectives admonition" id="objectives-0">
                                     <p class="admonition-title">Modules</p>
                                     <ul class="simple">
                                         <li>
-                                            <p><b>Execution Trace Collection:</b> A software module for trace generation
-                                                and collection of an application's executions.</p>
+                                            <p><b>Execution Trace Collection:</b> A software module for trace generation and collection of an application's executions.
+                                            </p>
                                         </li>
                                         <li>
                                             <p><b>Event Graph Construction:</b> A software module for event
@@ -189,7 +178,7 @@
                             <figure class="align-center" id="id4">
                                 <img alt="../images/E01-pack_unpack.svg" src="../images/anacinx_images/ANACINX.png" />
                                 <figcaption>
-                                    <p><span class="caption-text">ANACIN-X framework</span><a class="headerlink"
+                                    <p><span class="caption-text">ANACIN-X Framework</span><a class="headerlink"
                                             href="#id4" title="Permalink to this image"></a></p>
                                 </figcaption>
                             </figure>
@@ -205,18 +194,14 @@
                             <h2>Exection Trace Collection <a class="headerlink" title="Permalink to this heading"></a>
                             </h2>
                             <p>
-                                MPI applications often run multiple times as ensembles of jobs; non-determinism (i.e.,
-                                run-to-run variations in communication behavior across the ensemble) can be studied in
-                                this context.
+                                MPI applications often run multiple times as ensembles of jobs; non-determinism (i.e., run-to-run variations in communication behavior across the ensemble) can be studied in this context.
 
                             </p>
                             <p>
-                                By running multiple executions of an application, users can improve the statistical
-                                significance of their comparisons vis-a-vis non-determinism
+                                By running multiple executions of an application, users can improve the statistical significance of their comparisons vis-a-vis non-determinism.
                             </p>
                             <p>
-                                ANACIN- X quantifies and characterizes non-determinism in such applications by first
-                                generating execution trace data via three tools, each of which depends on the MPI
+                                ANACIN- X quantifies and characterizes non-determinism in such applications by first generating execution trace data via three tools, each depending on the MPI
                                 Profiling Interface (PMPI) <a href="#ref" class="reference internal"><sup>1</sup></a>.
                             </p>
 
@@ -232,34 +217,24 @@
                             <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                                 <p class="admonition-title">DUMPI: Traces MPI communication calls and their order from
                                     the executions. </p>
-                                <p>DUMPI<a href="#ref" class="reference internal"><sup>2</sup></a> tool was developed at
-                                    Sandia National Laboratories. ANACIN-X is using it according to its
-                                    software release license.
-                                    It generates one trace file per MPI process containing an unambiguous order of MPI
-                                    communication events involving
-                                    that process. At the same time, (SST) DUMPI imposes low overhead, and thus minimal
-                                    probe effect,
-                                    on the traced application.</p>
+                                <p>Sandia National Laboratory developed the DUMPI<a href="#ref" class="reference internal"><sup>2</sup></a> tool.
+                                    ANACIN-X is using it according to its software release license. It generates one trace file per MPI process containing an unambiguous order of MPI communication events involving that process. At the same time, (SST) DUMPI imposes low overhead, and thus minimal probe effect, on the traced application.
+</p>
                             </div>
                             <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                                 <p class="admonition-title">Pluto: Collects memory addresses associated with those MPI
                                     communication calls to supplement (SST) DUMPI’s traces </p>
-                                <p>Pluto<a href="#ref" class="reference internal"><sup>3</sup></a> was developed by the
-                                    authors and traces memory addresses of MPI requests
-                                    associated with non-blocking MPI calls. ANACIN-X uses these memory addresses to
-                                    distinguish between different types of non-blocking MPI calls (one of the main
-                                    sources of non-determinism in MPI applications</p>
+                                <p> The authors developed Pluto<a href="#ref" class="reference internal"><sup>3</sup></a>, and it traces memory addresses of MPI requests
+                                    associated with non-blocking MPI calls. ANACIN-X uses these memory addresses to distinguish between different types of non-blocking MPI calls (one of the main sources of non-determinism in MPI applications).
+                                </p>
                             </div>
 
                             <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                                 <p class="admonition-title"> CSMPI: Collects call-paths terminating in calls to MPI
                                     functions.</p>
                                 <p>
-                                    CSMPI<a href="#ref" class="reference internal"><sup>4</sup></a> was also developed
-                                    by the authors and traces call-paths (i.e., sequences of
-                                    function calls beginning with the executable’s entry point) terminat- ing in calls
-                                    to MPI functions. In doing so, CSMPI associates runtime events (which may be
-                                    non-deterministic) with static information about program structure.
+                                    The authors also developed CSMPI<a href="#ref" class="reference internal"><sup>4</sup></a>, which traces call-paths (i.e., sequences of function calls beginning with the executable’s entry point) terminating in calls to MPI functions. In doing so, CSMPI associates runtime events (which may be non-deterministic) with static information about program structure.
+
                                 </p>
                             </div>
 
@@ -272,15 +247,12 @@
                             <h2>Event Graph Construction <a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
                             <p>
-                                ANACIN-X uses the trace files to model the execution of non-deterministic application as
-                                a directed acyclic graph. It feeds the (SST) DUMPI, Pluto, and CSMPI trace files into
-                                the <code
+                                ANACIN-X uses the trace files to model the execution of a non-deterministic application as a directed acyclic graph. It feeds the (SST) DUMPI, Pluto, and CSMPI trace files into the <code
                                     class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code>
-                                tool to generate a graph model, or ’event graph’, of each execution’s interprocess
-                                communication.
+                                    tool to generate a graph model, or <em>event graph</em>, of each execution’s interprocess communication.
+
                             </p>
-                            <p>The DAG represents point to point communication events (message send and receives) and
-                                edges represents happens before relationship between the events</p>
+                            <p>The DAG represents point-to-point communication events (message send and receive) and the edges represent a happens-before relationship between the events.</p>
 
 
 
@@ -290,25 +262,23 @@
                                         class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code>
                                 </p>
                                 <p>
-                                    The <code
-                                        class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code><a
+                                    The authors developed  <code
+                                        class="docutils literal notranslate"> <span class="pre">dumpi_to_graph</span></code><a
                                         href="#ref" class="reference internal"><sup>5</sup></a>
-                                    tool was developed by the authors to construct a directed acyclic graph (DAG)
-                                    representation of the order/interleaving of all MPI messages sent during the
-                                    execution to which the input traces correspond. </p>
+                                    tool to construct a directed acyclic graph (DAG) representation of the order/interleaving of all MPI messages sent during the execution to which the input traces correspond. </p>
                             </div>
                             <img alt="../images/anacinx_images/event_graph1.png"
                                 src="../images/anacinx_images/event_graph1.png" />
+
                             <figcaption>
-                                <p><span class="caption-text">Event graph from MPI execution</span><a class="headerlink"
-                                        href="#id4" title="Permalink to this image"></a></p>
+                                <p><span class="caption-text">Event graph from MPI execution</span><a class="headerlink" href="#id4"
+                                        title="Permalink to this image"></a></p>
                             </figcaption>
                             </figure>
                             <p>In practice, <code
                                     class="docutils literal notranslate"><span class="pre">dumpi_to_graph</span></code><a
                                     href="#ref" class="reference internal"><sup> 5</sup></a>
-                                converts per-process trace data to graphs: one graph file is generated for each
-                                execution. Figure above shows an example of event graph construction. </p>
+                                    converts per-process trace data to graphs: one graph file is generated for each execution. The figure above shows an example of event graph construction. </p>
                         </section>
 
                         <section id="event-graph-analysis">
@@ -318,30 +288,15 @@
                             <h2>Event Graph Analysis <a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
                             <p>
-                                Event graph analysis module uses the created event graphs and quantify the difference
-                                between each graph. This step introduces three key concepts:
+                                The event graph analysis module uses the created event graphs and quantifies the difference between each graph. This step introduces three key concepts:
                             <ul>
-                                <li><strong>WLST Graph Kernel Selection</strong> <br> ANACIN-X utilizes the
-                                    Weisfeiler-Lehmann Subtree (WLST) <a href="#ref"
-                                        class="reference internal"><sup>6</sup></a> graph kernel
-                                    to quantify differences between event graphs. The choice of WLST is based on its
-                                    performance characteristics, with an asymptotic time complexity of complexity of
-                                    <em>O(Nh)</em>, where N is the node count
-                                    in the largest input graph and h is the vertex label refinement iteration count.
+                                <li><strong>WLST Graph Kernel Selection</strong> <br> ANACIN-X utilizes the Weisfeiler-Lehmann Subtree (WLST) <a href="#ref"
+                                        class="reference internal"><sup>6</sup></a> graph kernel to quantify differences between event graphs. The choice of WLST is based on its performance characteristics, with an asymptotic time complexity of <em>O(Nh)</em>, where N is the node count in the largest input graph, and h is the vertex label refinement iteration count.
                                 </li>
                                 <br>
-                                <li><strong>Kernel Distance Time Series (KDTS)</strong><br> ANACIN-X provides an API for
-                                    defining a sliding window over pairs of graphs (corresponding to executions) to
-                                    compute pairwise kernel distances. This results in a Kernel Distance Time Series
-                                    (KDTS) which measures how differences in message orders between executions vary over
-                                    time. Low KDTS values indicate similar message orders, while high values indicate
-                                    dissimilarity.</li>
+                                <li><strong>Kernel Distance Time Series (KDTS)</strong><br> ANACIN-X provides an API for defining a sliding window over pairs of graphs (corresponding to executions) to compute pairwise kernel distances. This results in a Kernel Distance Time Series (KDTS) measuring how differences in message orders between executions vary over time. Low KDTS values indicate similar message orders, while high values indicate dissimilarity.</li>
                                 <br>
-                                <li><strong>Quantifiying Non-Determinism</strong><br> The collection of KDTSs obtained
-                                    from all pairs of executions in an ensemble provides a comprehensive view of an
-                                    application's non-determinism. These individual KDTSs are merged into a time series
-                                    of kernel distance distributions, effectively quantifying the non-deterministic
-                                    behavior of the entire ensemble of executions. </li>
+                                <li><strong>Quantifiying Non-Determinism</strong><br> The collection of KDTSs obtained from all pairs of executions in an ensemble provides a comprehensive view of an application's non-determinism. These individual KDTSs are merged into a time series of kernel distance distributions, effectively quantifying the non-deterministic behavior of the entire ensemble of executions. </li>
                             </ul>
                             </p>
                         </section>
@@ -352,34 +307,38 @@
                             <span id="learner-personas"></span>
                             <h2>Visualization<a class="headerlink" href="#pulling-anacinx"
                                     title="Permalink to this heading"></a></h2>
-                            <p>To view the relationship between kernel distance and non-determinism percentage (ND%) in
-                                an application,
-                                ANACIN-X supports two types of visualizations for a KDTS file:
+                            <p>To view the relationship between kernel distance and non-determinism percentage (ND%) in an application, ANACIN-X supports two types of visualizations for a KDTS file:
                             <ul>
-                                <li>A violin plot showing the distribution of pairwise kernel distances for multiple
-                                    configurations of the same application. (as shown infigure below)</li>
-                                <li>A bar plot showing the relative frequency of call-paths in high-non-determinism
-                                    areas of execution.</li>
+                                <li>A violin plot showing the distribution of pairwise kernel distances for multiple configurations of the same application. (as shown in the figure below)</li>
+                                <li>A bar plot showing the relative frequency of call paths in high-non-determinism areas of execution.
+                                </li>
                             </ul>
                             </p>
                             <p>These visualizations can be obtained via
                             <ul>
-                                <li>Jupyter notebook, which guides the user through the visualization process and
-                                    displays each generated figure within it</li>
-                                <li>A set of Python scripts implementing a command line interface, which allow users to
-                                    generate figures from the same place they submit jobs.</li>
+                                <li>Jupyter notebook, which guides the user through the visualization process and displays each generated figure within it.</li>
+                                <li>A set of Python scripts implementing a command line interface, which allows users to generate figures from the same place they submit jobs.</li>
                             </ul>
                             </p>
                             <figure class="align-center" id="id4">
                                 <img alt="../images/anacinx_images/visualization.png"
                                     src="../images/anacinx_images/visualization.png" />
                                 <figcaption>
-                                    <p><span class="caption-text">visualization</span><a class="headerlink" href="#id4"
+                                    <p><span class="caption-text">Visualization</span><a class="headerlink" href="#id4"
                                             title="Permalink to this image"></a></p>
                                 </figcaption>
                             </figure>
 
 
+                        </section>
+
+                        <section id="conclusion">
+
+
+                            <span id="learner-personas"></span>
+                            <h2>Conclusion<a class="headerlink" href="#pulling-anacinx"
+                                    title="Permalink to this heading"></a></h2>
+                                    <p>In summary, the chapter explains the four core modules comprising the ANACINX framework. These modules are designed to sequentially collect communication event traces, construct the event graphs for individual runs, analyze these graphs, and finally visualize the non-deterministic behavior exhibited by the application. The chapter provides a detailed explanation of how each module executes its tasks.</p>
                         </section>
 
                         <section id="ref">

@@ -115,25 +115,17 @@
            <div itemprop="articleBody">
              
   <section id="lesson-name">
-    <div class="admonition-questions questions admonition" id="questions-0">
-      <p class="admonition-title">Questions</p>
-      <ul class="simple">
-      <li>How does non-determinism arise in MPI applications?</li>
-      <li>What are the impacts of non-determinism in scientific executions?</li>
-      </ul>
-      </div>
       <div class="admonition-objectives objectives admonition" id="objectives-0">
       <p class="admonition-title">Objectives</p>
       <ul class="simple">
-      <li><p>Learn about different communication methods in MPI.</p></li>
-      <li> <p>Learn how non-determinism impacts on scientific applications with real examples.</p></li>
+      <li><p>Learn how to install and run ANACIN-X in your system.</p></li>
       </ul>
       </div>   
 <h1>RUNNING ANACIN-X<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <p>
-In this chapter, we will provide step-by-step instructions for installing the 
-ANACIN-X software on your system. Additionally, we will supply the essential 
-commands and offer a hands-on demonstration of the entire process.
+  In this chapter, we will provide step-by-step instructions for installing the ANACIN-X software on your system. Additionally, we will supply the essential commands and offer a
+  hands-on demonstration of the entire process.
+  
  </p> 
 </div>
 
@@ -145,9 +137,9 @@ commands and offer a hands-on demonstration of the entire process.
 
 <span id="learner-personas"></span><h2>Pulling Existing Repository from Docker Hub <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
 <p>
- We can retrive ANACIN-X image from the Global Computing Lab Docker Hub.
-We may simply load the <code class="docutils literal notranslate"><span class="pre">apptainer</span></code> module and run the <code class="docutils literal notranslate"><span class="pre">apptainer pull</span></code> command.
-We must create a result directory to store traces from each run and to enable further computations.
+  We can retrieve the ANACIN-X image from the Global Computing Lab Docker Hub.
+We could load the <code class="docutils literal notranslate"><span class="pre">apptainer</span></code> module and run the <code class="docutils literal notranslate"><span class="pre">apptainer pull</span></code> command.
+We must create a result directory to store each run's traces and enable further computations.
  <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $ mkdir results
   $ module load apptainer
   $ apptainer pull oras://docker.io/globalcomputinglab/anacinx_prod:v4_1_ppc64le
@@ -167,11 +159,10 @@ We must create a result directory to store traces from each run and to enable fu
 
 
     <h2>Getting Jupyter Notebook<a class="headerlink" href="#getting-jupyter-notebook" title="Permalink to this heading"></a></h2>
-    <p>The jupyter notebook file and other supporting python scripts are available in GCLAB GitHub repository. 
-      In order to clone the repository, you can follow the following steps:
+    <p>The Jupyter Notebook file and other supporting Python scripts are available in the GCLAB GitHub repository. To clone the repository, you can follow the following steps:
       <ul>
         <li> Navigate to the directory where you want to clone the repository.</li>
-        <li> Run following command: </li>
+        <li> Run the following command: </li>
         <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> $ git clone https://github.com/TauferLab/ANACIN-X.git
                 </pre></div>
       </ul> </p>
@@ -184,7 +175,8 @@ We must create a result directory to store traces from each run and to enable fu
 
 
     <h2>Configuring Jupyter Notebook<a class="headerlink" href="#configuring-jupyter-notebook" title="Permalink to this heading"></a></h2>
-    <p>To configure the Jupyter Notebook server and the local browser, the initial step involves setting up <code class="docutils literal notranslate"><span class="pre">SSH</span></code>  tunneling between the local machine and the remote server. Prior to launching the Jupyter Notebook server, it is essential to load the <code class="docutils literal notranslate"><span class="pre">apptainer</span></code> and <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> modules to enable the proper functioning of ANACIN-X. Once these preparations are complete, the Jupyter Notebook server can be started on the remote machine.</p>
+    <p>The initial step to configure the Jupyter Notebook server and the local browser involves setting up <code class="docutils literal notranslate"><span class="pre">SSH</span></code>  tunneling between the local machine and the remote server.
+      Before launching the Jupyter Notebook server, it is essential to load the <code class="docutils literal notranslate"><span class="pre">apptainer</span></code> and <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> modules to enable the proper functioning of ANACIN-X. Once these steps are complete, the Jupyter Notebook server can be started on the remote machine.</p>
 
     <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
   $ ssh -L 8888:localhost:8888 username@systemdomainname
@@ -206,17 +198,20 @@ We must create a result directory to store traces from each run and to enable fu
 
 <section id="running-benchmark-application">
   <section id="running-benchmark-application">
-
-
     <h2>Running Benchmark Application<a class="headerlink" href="#running-benchmark-application" title="Permalink to this heading"></a></h2>
-    <p> Now, we can access the Jupyter Notebook in our local browser.
-      Open web browser and go to <code class="docutils literal notranslate"><span class="pre">http://localhost:8888</span></code>. This will forward the connection through the SSH tunnel to the Jupyter Notebook server running on the remote machine.</p>
+    <p> Now, we can access the Jupyter Notebook in our local browser. Open a web browser and go to <code class="docutils literal notranslate"><span class="pre">http://localhost:8888</span></code>.
+      This will forward the connection through the SSH tunnel to the Jupyter Notebook server running on the remote machine.</p>
     <figure class="align-center" id="id4">
       <img alt="../images/running_images/running.gif" src="../images/running_images/running.gif" /><figcaption>
       <p> </p>
       </figcaption>
       </figure>
   
+</section>
+<section id = "Conclusion">
+<h2>Conclusion</h2>
+<p>To conclude, this chapter provides a comprehensive guide detailing the step-by-step process of installing the ANACINX software, configuring Jupyter Notebook, and successfully running benchmark applications on your system.</p>
+
 </section>
 
 

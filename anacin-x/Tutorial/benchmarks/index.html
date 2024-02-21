@@ -120,26 +120,16 @@
            <div itemprop="articleBody">
              
   <section id="lesson-name">
-    <div class="admonition-questions questions admonition" id="questions-0">
-      <p class="admonition-title">Questions</p>
-      <ul class="simple">
-      <li>How does non-determinism arise in MPI applications?</li>
-      <li>What are the impacts of non-determinism in scientific executions?</li>
-      </ul>
-      </div>
       <div class="admonition-objectives objectives admonition" id="objectives-0">
       <p class="admonition-title">Objectives</p>
       <ul class="simple">
-      <li><p>Learn about different communication methods in MPI.</p></li>
-      <li> <p>Learn how non-determinism impacts on scientific applications with real examples.</p></li>
+      <li><p>Learn about different benchmark applications used by ANACIN-X.</p></li>
       </ul>
       </div>   
 
 <h1>Benchmarks<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
 <p>
-  ANACIN-X provides users with four application benchmarks for testing its ability to characterize non-determinism.
-  Each benchmark application employs a unique combination of a non-determinism source and non-determinism type. These Benchmarks 
-  patterns are common in scientific applications and thus are used in ANACIN-X as testing benchmarks.
+  ANACIN-X provides users with four application benchmarks for testing its ability to characterize non-determinism. Each benchmark application employs a unique combination of a non-determinism source and non-determinism type. These benchmark patterns are common in scientific applications and thus are used in ANACIN-X as testing benchmarks.
  </p> 
 </div>
 
@@ -192,16 +182,17 @@
 
 
 <p>
-  For a given benchark application, a user may generate an input set of trace data by defining the following parameters: </p>
+  For a given benchmark application, a user may generate an input set of trace data by defining the following parameters:</p>
   <blockquote>
     <div><ul class="simple">
-      <li><b>MPI Processes:</b> number of MPI processes <i>(integer)</i> used for the benchmark execution </li>
-      <li><b>Compute Nodes:</b>number of compute nodes <i>(integer)</i> used for the benchmark execution</li>
-      <li><b>Message Size (bytes)</b> size of messages being passed (integer value)</li>
-      <li><b>Pattern Iterations:</b> number of times a communication pattern iterates within an application execution (integer value)</li>
-      <li><b>Message Non-determinism Percentage</b> peak amount of message non- determinism enabled in an application by its non-determinism source (percentage); due to messages that can be received by or sent by a process in a variable order </li>
-      <li><b>Topological Non-determinism Percentage:</b> amount of topological non-determinism (percentage); due to applications where the set of processes a given process communicates with can vary from run to run — this is unique to the Unstructured Mesh benchmark</li>
-      <li><b>Application Executions:</b>number of times to run the application (integer value of 2 or larger). 
+      <li><b>MPI Processes:</b> number of MPI processes <i>(integer)</i> used for the benchmark execution. </li>
+      <li><b>Compute Nodes:</b>number of compute nodes <i>(integer)</i> used for the benchmark execution.</li>
+      <li><b>Message Size (bytes)</b> size of messages being passed (integer value).</li>
+      <li><b>Pattern Iterations:</b> number of times a communication pattern iterates within an application execution (integer value).</li>
+      <li><b>Message Non-determinism Percentage</b> peak amount of message non-determinism enabled in an application by its non-determinism source (percentage); due to messages that can be received by or sent by a process in a variable order. </li>
+      <li><b>Topological Non-determinism Percentage:</b> amount of topological non-determinism (percentage); due to applications where the set of processes a given process communicates with can vary from run to run; this is unique to the Unstructured Mesh benchmark.
+      </li>
+      <li><b>Application Executions:</b> number of times to run the application (integer value of 2 or larger). 
       </li>
     </ul>
     </div></blockquote>
@@ -215,13 +206,11 @@
 
 <span id="learner-personas"></span><h2>Message Race <a class="headerlink" href="#message_Race" title="Permalink to this heading"></a></h2>
 <p>
-Message Race refers to a situation where multiple processes attempt to send messages to a common recipient, and the order in which these
-messages are received is not guranteed. This lack of ordering can create unpredictability in the behaviour of the system. 
-It is simple but ubiquitious cause of non determinsim in MPI applications. 
+  Message Race refers to a situation where multiple processes attempt to send messages to a common recipient, and the order in which these messages are received is not guaranteed. This lack of order can create unpredictability in the behavior of the system. It is a simple but ubiquitous cause of non-determinism in MPI applications. 
 </p>
 
 
-<p>The pseudocode below demonstrate the non-determinism percentage controlled by parameters <em>N<sub>DET</sub></em> and  <em>N<sub>ND</sub></em> parameters</p>
+<p>The pseudocode below demonstrate the non-determinism percentage controlled by <em>N<sub>DET</sub></em> and  <em>N<sub>ND</sub></em> parameters.</p>
 
 <div class="highlight-c notranslate"><div class="highlight"><pre>
   <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -244,7 +233,7 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
     <p><span class="caption-text">Event Graph of Message Race</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
     </figcaption>
     </figure>
- <p>Figure above shows the non determinism due to message race. Here, the process 0 receives messages from 4 fixed sources followed by 4 wildcard receives. This is a controlled message race by 50 % ND configuration.</p>
+ <p>The figure above shows the non determinism due to message race. Here, the process 0 receives messages from four fixed sources followed by four wildcard receives. This is a controlled message race by 50 % ND configuration.</p>
 </section>
 
 
@@ -253,14 +242,12 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
 
   <span id="learner-personas"></span><h2>AMG2013 <a class="headerlink" href="#amg2013" title="Permalink to this heading"></a></h2>
   <p>
-    Algebric Multigrid 2013<a href="#ref" class="reference internal"><sup>1</sup></a> is selected as our benchmark as it can demonstrate both receiver-side and sender side non-determinism, as highlighted in <a href="#ref" class="reference internal"><sup>2</sup></a>. 
+    Algebraic Multigrid 2013<a href="#ref" class="reference internal"><sup>1</sup></a> is selected as our benchmark as it can demonstrate both receiver-side and sender-side non-determinism, as highlighted in <a href="#ref" class="reference internal"><sup>2</sup></a>. 
     It achieves non-determinism through the use of non-blocking wildcard probes.
     <br>
-    When a probe matches with a message, a receive is posted, and upon completion of the recieve, a send is issued to the rprocess whose message was matched.
-    The source parameter's value in the receive call is non-deterministic due to the wildcard probes' non-determinism, making the propagation of non-determinism 
-    from probe to receive and send not immediately apparent from a simple inspection of the code.
+    When a probe matches with a message, a receive is posted, and upon completion of the receive, a send is issued to the process whose message was matched. The source parameter's value in the receive call is non-deterministic due to the wildcard probes' non-determinism, making the propagation of non-determinism from probe to receive and send not immediately apparent from a simple inspection of the code.
     <br> <br>
-    The pseudocode below shwos the communication pattern in AMG2013.
+    The pseudocode below shows the communication pattern in AMG2013.
   </p>
 
 
@@ -294,7 +281,9 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
     <p><span class="caption-text">Event Graph of AMG2013</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
     </figcaption>
     </figure>
- <p>Figure above shows the event graph generated by from non-determinastic order of message passing in AMG 2013.</p>
+ <p>The figure above shows the event graph generated  from non-deterministic
+  order of message passing in AMG 2013.
+  </p>
 
   
   </section>
@@ -305,8 +294,7 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
 
     <span id="learner-personas"></span><h2>MCB Grid <a class="headerlink" href="#mcb_grid" title="Permalink to this heading"></a></h2>
     <p>
-      MCB <a href="#ref" class="reference internal"><sup>3</sup></a> is a proxy application for Monte Carlo simulations based on three main types of particle exchange patterns: a particle exchange on a 2-dimensional grid, a non-blocking gather of particles, and a non-blocking scatter of particles. 
-      The latter two serve as bookkeeping for the particle exchange. 
+      MCB <a href="#ref" class="reference internal"><sup>3</sup></a> is a proxy application for Monte Carlo simulations based on three main types of particle exchange patterns: a particle exchange on a 2-dimensional grid, a non-blocking gathering of particles, and a non-blocking scatter of particles. The latter two serve as bookkeeping for the particle exchange.
     </p>
     
 
@@ -316,12 +304,11 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
       </figcaption>
       </figure>
 
-    <p>MCB primarily uses MPI’s non-blocking point-to-point communication primitives, heavily relying on functions like  <code class="docutils literal notranslate"><span class="pre">MPI_Testsome</span></code>   during particle exchange.</p>
+    <p>MCB primarily uses MPI’s non-blocking point-to-point communication primitives, heavily relying on functions like <code class="docutils literal notranslate"><span class="pre">MPI_Testsome</span></code>   during particle exchange.</p>
     
-    <p>Communication buffers are shared between neighbor processes. Varying buffer size affects communication rates, leading to changes in non-determinism levels. Users often lack awareness of the buffer size used during compilation, making it challenging to link observed numerical non-determinism to buffer size.
+    <p>Communication buffers are shared between neighbor processes. Varying buffer size affects communication rates, leading to changes in non-determinism levels. Users often need more awareness of the buffer size used during compilation, making it challenging to link observed numerical non-determinism to buffer size.
     <br><br>
-    ANACIN-X
-     quantifies how changes in buffer size influence non-determinism in MCB communication patterns. It dissects executions, establishing the relationship between application configuration parameters, especially buffer size, and non-determinism in communication patterns. This non-determinism can cause numerical output differences between runs.
+    ANACIN-X quantifies how changes in buffer size influence non-determinism in MCB communication patterns. It dissects executions, establishing the relationship between application configuration parameters, especially buffer size, and non-determinism in communication patterns. This non-determinism can cause numerical output differences between runs.
     </p>
 
     </section>
@@ -351,7 +338,11 @@ It is simple but ubiquitious cause of non determinsim in MPI applications.
       </section>
 
     
+<section id="conclusion">
+<h2>Conclusion</h2>
+<p>This chapter introduces four application benchmarks available on ANACINX: Message Race, AMG2013, MCB Grid, and Unstructured Mesh. Each benchmark showcases various types of non-determinism commonly found in scientific applications. These benchmark applications are provided with ANACINX to evaluate its effectiveness in characterizing non-determinism.</p>
 
+</section>
 
 
 
