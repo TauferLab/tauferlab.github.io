@@ -115,30 +115,30 @@
           </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
 
-
+            <div class="admonition-objectives objectives admonition" id="objectives-0">
+              <p class="admonition-title">Objectives</p>
+              <ul class="simple">
+              <li>Provide advanced-level tasks to identify the root source of non-determinism and identify their impact.
+              </li>
+              </ul>
+              </div> 
 
           <section id="use_case_C">
             <h2>Use Case C: <em>Root Sources of Non-determinism</em><a class="headerlink" href="#use_case_C" title="Permalink to this heading"></a></h2>
             <p>
-              ANACIN-X train students to identify potential root sources of non-determinism in their code: functions within code that can produce non-deterministic communication patterns.
-               To this end, advanced students should be able to answer the following questions at an advanced level of understanding in non-determinism: </p>
+              The root sources of non-determinism are the functions within code that produce non-deterministic communication patterns. You need to recognize these sources to control the amount of non-determinism in your application. This use case is an exercise to quantify the amount of non-determinism in executions and to identify the root sources of non-determinism in the code.
+            <br><br>
+            With the successful completion of the tasks in this use case, you should be able to answer the following questions:
+          </p>
                <ul>
 <li> How do root sources of non-determinism impact the amount of non-determinism? </li>
 <li>How can ANACIN-X be used to identify root sources of non-determinism?</li>
 
                </ul>
               <section id = "lvl_C1">
-                <h3> Learning Goal C1: <em>Quantify Amount of Non-determinism in Executions</em> </h3>
-                <p>Root sources of non-determinism are embedded in an application’s code.
-                   The access to an application’s code is not always guaranteed; when available, 
-                   the code may be very complex to parse and understand.
-                   <br><br> To demonstrate understanding 
-                   of Goal C.1, students should be able to explain that root sources of non-determinism 
-                   can be used to directly control the amount of non-determinism in an application.</p>
-              
-
+                <h3>Goal 1: <em>Quantify non-determinism in executions</em> </h3>
                 <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
-                  <p class="admonition-title">Observe the scenarios in each figure</p>
+                  <p class="admonition-title">Observe the scenarios in the figure</p>
                   <figure class="align-default">
                     <figcaption>
                       <p><span class="caption-text">Kernel distance visualization of the AMG2013 mini-application and its communication pattern on 32 MPI processes. We vary the percentage of non-determinism from 0% up to 100% at increments of 10%. Simulation is made using 1 compute node, 1 communication pattern iteration, and message sizes of 1 byte. </figcaption>
@@ -147,38 +147,37 @@
                 </div>
 
 
-<div class="admonition-questions questions admonition" id="questions-0">
-                          <p class="admonition-title">Questions</p>
-                          <ul class="simple">
-                            <li>
-                              <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks applications to generate plots. Using figure, quantify the amount of non-determinism within one execution and demon- strate whether such an amount is directly related to the actual percentage of non-determinism for a given application. </em> 
-                              </li>
+                  <div class="admonition-questions questions admonition" id="questions-0">
+                                            <p class="admonition-title">Questions</p>
+                                            <ul class="simple">
+                                              <li>
+                                                <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmark applications to generate plots. Using the figure, quantify the amount of non-determinism within one execution and demonstrate whether such an amount is directly related to the actual percentage of non-determinism for a given application. </em> 
+                                                </li>
 
-                          </ul>
-                  </li>
-</div>
+                                            </ul>
+                                    </li>
+                  </div>
                   <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                   <p class="admonition-title">Solution</p>
                   <ol class="arabic">
-                    <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
+                    <li><p><strong>Solution to TASK 2</p>
                       <figure class="align-default">
                         <figcaption>
-                          <p><span class="caption-text"> #</figcaption>
+                          <p><span class="caption-text"> </figcaption>
                         <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
                   </ol>
                   </div>
               </section>
 
               <section id = "lvl_C2">
-                <h3> Learning Goal C2: <em>Identify Root Sources of Non-determinism </em> </h3>
-                <p>It is not straightforward to control the amount of non-determinism within an application when the root source of that non-determinism is not already known and is embedded in the called system functions. 
-                  For this reason, students should learn how to identify likely root sources of non-determinism in their code.</p>
+                <h3>Goal 2: <em>Identify root sources of non-determinism </em> </h3>
+
 
                 <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
-                  <p class="admonition-title">Observe the scenarios in each figure</p>
+                  <p class="admonition-title">Observe the scenarios in the figure</p>
                   <figure class="align-default">
                     <figcaption>
-                      <p><span class="caption-text"> Callstack visualization for the AMG2013 mini-application and its communication pattern. The settings are the same as in Figure for C1</figcaption>
+                      <p><span class="caption-text"> Callstack visualization for the AMG2013 mini-application and its communication pattern. The settings are the same as in Figure for Goal 1</figcaption>
                     <img alt="" src="../images/tutorial_objectives/7.png" /></figure>
 
                   <ol class="arabic">
@@ -191,9 +190,7 @@
                 <div class="admonition-objectives objectives admonition" id="objectives-0">
                   <p class="admonition-title">Note</p>
                   <ul class="simple">
-                  <li><p> The ANACIN-X environment identifies the callstacks in the application and measures their frequency. In the figure, the X-axis corresponds to the list of callstacks in the application’s 
-                    run that were identified as taking place during high periods of non-determinism. 
-                    The Y-axis corresponds to the normalized relative frequency of the dentified callstacks as they appear in an execution’s event graph. </p></li>
+                  <li><p>ANACIN-X environment identifies the call stacks in the application and measures their frequency. In the figure, the X-axis corresponds to the list of call stacks in the application’s run that were identified as taking place during high periods of non-determinism. The Y-axis corresponds to the normalized relative frequency of the identified call stacks appearing in an execution’s event graph.</p></li>
                   </ul>
                 </div>
 
@@ -201,12 +198,10 @@
                   <p class="admonition-title">Questions</p>
                   <ul class="simple">
                     <li>
-                      <strong>Task 1:</strong> <em>Observe which MPI functions were identified in regions of high amounts of non-determinism. 
-                        These functions are likely root sources of non-determinism because MPI functions that take place during periods of
-                         high non-determinism are likely related to the non-determinism</em> 
+                      <strong>Task 1:</strong> <em>Observe which MPI functions were identified in regions of high amounts of non-determinism. These functions are likely root sources of non-determinism because MPI functions that take place during periods of high non-determinism are likely related to non-determinism.</em> 
                       </li>
                       <li>
-                        <strong>Task 2:</strong> <em>Extend the ANACIN-X environment to support your own application:  to determine where in your code you should look to manage the non-determinism by locating the callstack functions associated to the high non-determinism.</em> 
+                        <strong>Task 2:</strong> <em> Extend the ANACIN-X environment to support your application: to determine where in your code you should look to manage the non-determinism by locating the call stack functions associated with the high non-determinism.</em> 
                         </li>
                   </ul>
                   </div>

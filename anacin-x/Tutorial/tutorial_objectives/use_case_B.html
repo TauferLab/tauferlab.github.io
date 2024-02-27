@@ -114,131 +114,25 @@
             <hr />
           </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <!-- <div itemprop="articleBody">
-
-              <section id="lesson-name">
-                <h1>Tutorial Objectives<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a>
-                </h1>
-                <p>
-                  Often, undergraduate and graduate degree programs in computer science introduce students to the
-                  concept of parallel code, but leave a more in-depth understanding of the code executions on large
-                  scale HPC systems up to individual exploration.
-                  <br><br>Many software developers and scientists working in HPC have a familiarity with parallel
-                  programming but have not been taught how to recognize and address non-determinism when it arises.
-                  <br><br>Our course module focuses on teaching methods to understand the causes and effects of
-                  non-determinism in HPC applications using the message passing paradigm .
-                  <br><br>Through our course module, students in computer science, software developers, and scientists
-                  gain an understanding of non-determinism, how to measure its occurrence in an execution, and how to
-                  identify its root causes within an application’s code.
-                </p>
-            </div> -->
-            
-
-            <!-- <section id="objectives_and_prerequisites">
-              <h2>Objectives and Prerequisites<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h2>
-              <p>
-                This tutorial defines three distinct levels of learning objectives as shown in table below: </p>
-          
-          <table class="colwidths-auto docutils align-default">
-            <caption>
-              An outline of the learning objectives for each level of difficulty in this course module.
-            </caption>
-            <tbody>
-              <tr class="row-odd">
-                <td><strong>A. Beginner Level</strong></td>
-                <td><span class="doc">
-                    <ul>
-                      <li> Goal A1: Introduce parallelism using the message passing paradigm</li>
-                      <li> Goal A2: Define non-determinism associated to message passing </li>
-                    </ul>
-                  </span></a></p>
-                </td>
-              </tr>
-
-              <tr class="row-odd">
-                <td><strong>B. Intermediate Level</strong></td>
-                <td><span class="doc">
-                    <ul>
-                      <li>Goal B1: Study effects of number of processes on non-determinism in applications</li>
-                      <li> Goal B2: Study non-determinism across multiple iterations of the same code during the same
-                        application execution</li>
-                    </ul>
-                  </span></a></p>
-                </td>
-              </tr>
-
-              <tr class="row-odd">
-                <td><strong>C. Advanced Level</strong></td>
-                <td><span class="doc">
-                    <ul>
-                      <li> Goal C1: Quantify the level of non-determinism in application’s executions</li>
-                      <li> Goal C2: Identify root sources of non-determinism in applications</li>
-                    </ul>
-                  </span></a></p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table class="colwidths-auto docutils align-default">
-            <caption>
-              An outline of the prerequisite knowledge for each level of difficulty in this course module.
-            </caption>
-            <tbody>
-              <tr class="row-odd">
-                <td><strong>A. Beginner Level</strong></td>
-                <td><span class="doc">
-                    <ul>
-                      <li> A basic knowledge of MPI, in particular point-to-point MPI communication calls.</li>
-                      <li> A basic knowledge of graph theory, but not necessarily an in-depth understanding. </li>
-                    </ul>
-                  </span></a></p>
-                </td>
-              </tr>
-
-              <tr class="row-odd">
-                <td><strong>B. Intermediate Level</strong></td>
-                <td><span class="doc">
-                    <ul>
-                      <li>An understanding of non-determinism from the topics described by the beginner level.</li>
-                      <li> The ability to interpret violin plots.</li>
-                    </ul>
-                  </span></a></p>
-                </td>
-              </tr>
-
-              <tr class="row-odd">
-                <td><strong>C. Advanced Level</strong></td>
-                <td><span class="doc">
-                    <ul>
-                      <li> An understanding of what external factors impact the amount of non-determinism in an application from the intermediate level.</li>
-                      <li> The ability to understand C++ source code to identify functions causing non-determinism.</li>
-                    </ul>
-                  </span></a></p>
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
-
-
-
+            <div class="admonition-objectives objectives admonition" id="objectives-0">
+              <p class="admonition-title">Objectives</p>
+              <ul class="simple">
+              <li>Provide intermediate-level tasks to identify the factors of non-determinism.</li>
+              </ul>
+              </div> 
           
           <section id="use_case_B">
             <h2>Use Case B: <em>Factors That Impact Non-Determinism</em><a class="headerlink" href="#use_case_B" title="Permalink to this heading"></a></h2>
             <p>
-              Non-determinism can be difficult to reproduce [22].
-              In such situations, developers and scientists need to know what factors impact the amount of non-determinism
-              present to make the non-determinism more or less significant. For this reason, intermediate students should be able to identify the factors. 
-              Specifically, they should be able to answer the following questions:</p>
+              Non-determinism can be challenging to reproduce. In such situations, you need to know what factors impact the amount of non-determinism present to make the non-determinism significant. This use case is an exercise for identifying the factors impacting non-determinism.<br>
+              <br>With the successful completion of the tasks in this use case, you should be able to answer the following questions:</p>
               <ul>
-                <li>What is the effect of increasing the number of MPI processes used during execution? </li>
-                <li>What is the effect of increasing the number of commu- nication pattern iterations? </li>
+                <li> What is the effect of increasing the number of MPI processes used during execution? </li>
+                <li> What is the effect of increasing the number of communication pattern iterations? </li>
               </ul>
       
               <section id = "lvl_B1">
-                <h3> Learning Goal B1: <em>Study Effects of Number of Processes</em> </h3>
-                <p>In order to satisfy the Goal,students must know that the number of MPI processes in a simulation is directly related with the amount of non-determinism in the simulation: increasing the number of processes will increase the amount of non-determinism, and vice versa. </p>
-               
+                <h3>Goal B1: <em>Effects of number of processes</em> </h3>
 
                 <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
                   <p class="admonition-title">Observe the scenarios in each figure</p>
@@ -253,8 +147,7 @@
                 <div class="admonition-objectives objectives admonition" id="objectives-0">
                   <p class="admonition-title">Note</p>
                   <ul class="simple">
-                  <li><p>Each figure is a violin plot across 20 data points that displays the measured amount of non-determinism within the communication pattern at the setting along the X-axis. We use the Unstructured Mesh communication pattern for these two figures, but other patterns are available in ANACIN-X.</p></li>
-                  </ul>
+                  <li><p> Each figure is a violin plot across 20 data points that displays the measured amount of non-determinism within the communication pattern at the setting along the X-axis. We use the Unstructured Mesh communication pattern for these two figures, but other patterns are available in ANACIN-X.</p>    </ul>
                 </div>
 
 
@@ -262,8 +155,7 @@
                           <p class="admonition-title">Questions</p>
                           <ul class="simple">
                             <li>
-                              <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks. Observe that the increase in the 
-                                number of processes in their simulations to  reveal change in degree of non-determinism.</em> 
+                              <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks. Observe that the increase in the number of processes in their simulations reveals a change in the degree of non-determinism.</em> 
                               </li>
                              
                           </ul>
@@ -272,10 +164,10 @@
                   <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                   <p class="admonition-title">Solution</p>
                   <ol class="arabic">
-                  <li><p><strong>B1: Solution shows the change in degree of non-determinism by using different benchmark with differen number of proecesses</p></li>
+                  <li><p>Solution</p></li>
                     <figure class="align-default">
                       <figcaption>
-                        <p><span class="caption-text"> #</figcaption>
+                        <p><span class="caption-text"> </figcaption>
                       <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
                   
                   </ol>
@@ -283,11 +175,7 @@
               </section>
 
               <section id = "lvl_B2">
-                <h3> Learning Goal B2: <em>Study Non-determinism across Iterations</em> </h3>
-                <p>Scientific applications often consist of the iterative execution of the same software code.
-                   These iterations during the same application execution exhibit non-determinism that is easy to
-                   identify. To satisfy Goal B.2, students should be able to link the iterations of an application
-                    execution to the amount of non- determinism in the application. </p>
+                <h3>Goal 2: <em> Non-determinism across Iterations</em> </h3>
 
                 <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
                   <p class="admonition-title">Observe the scenarios in each figure</p>
@@ -307,8 +195,7 @@
                   <p class="admonition-title">Questions</p>
                   <ul class="simple">
                     <li>
-                      <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks applications to generate plots.
-                         Discover if there is a link between iterations and amount of non-determinism in the application. </em> 
+                      <strong>Task 2:</strong> <em>Run ANACIN-X with similar settings on the other benchmark applications to generate plots. Discover if there is a link between iterations and the amount of non-determinism in the application. </em> 
                       </li>
           
                   </ul>
@@ -317,10 +204,7 @@
                   <div class="admonition-objectives objectives admonition" id="objectives-0">
                     <p class="admonition-title">Note</p>
                     <ul class="simple">
-                    <li><p> For this test, ANACIN-X should be run with 100% non-determinism to produce results with significant non-determinism 
-                      across iterations. These tests enable students to understand how, in applications exhibiting non-determinism, by increasing 
-                      the number of iterations in their application, they may accumulate substantial differences in the numerical results and 
-                      ultimately different scientific findings.</p></li>
+                    <li><p> For this test, ANACIN-X should be run with 100% non-determinism to produce results with significant non-determinism across iterations. These tests enable students to understand how, in applications exhibiting non-determinism, by increasing the number of iterations in their application, they may accumulate substantial differences in the numerical results and, ultimately, different scientific findings.</p></li>
                     </ul>
                   </div>
 
@@ -330,10 +214,10 @@
                   <div class="admonition-solution solution important dropdown admonition" id="solution-0">
                   <p class="admonition-title">Solution</p>
                   <ol class="arabic">
-                    <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
+                    <li><p>Solution to TASK 2</p>
                       <figure class="align-default">
                         <figcaption>
-                          <p><span class="caption-text"> #</figcaption>
+                          <p><span class="caption-text"> </figcaption>
                         <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
                   </ol>
                   </div>
