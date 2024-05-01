@@ -60,6 +60,7 @@
 
         ><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
           <ul>
+            <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
             <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a></li>
             </ul>
               <p class="caption" role="heading"><span class="caption-text">Unit A</span></p>
@@ -186,12 +187,12 @@ executions. This information helps to extract relevant source-code locations via
     <p> Here, we will provide an example of using ANACIN-X on identifying the root-cause of non-determinism in miniAMR benchmark application.</p>
     <p> The workflow of the root cause identification is outlined below:</p>
     <ol>
-      <li> Trace 100 64-process runs of miniAMR with same configuration/inputs</li>
-      <li> Build event graph for each run</li>
-      <li>Partition each event graph into a sequence of subgraphs</li>
-      <li>Compute WLST kernel distance between the all corresponding subgraphs across all runs</li>
-      <li> Identify subgraphs where the distribution of kernel distance is anomalous (i.e., where communication is nondeterministic)</li>
-      <li> Map back to locations in miniAMR source code via callstack vertex labels</li>
+      <li> Trace 100 64-process runs of miniAMR with same configuration/inputs.</li>
+      <li> Build event graph for each run.</li>
+      <li>Partition each event graph into a sequence of subgraphs.</li>
+      <li>Compute WLST kernel distance between the all corresponding subgraphs across all runs.</li>
+      <li> Identify subgraphs where the distribution of kernel distance is anomalous (i.e., where communication is nondeterministic).</li>
+      <li> Map back to locations in miniAMR source code via callstack vertex labels.</li>
     </ol>
 
     <p>After the intial steps (1,2,3,4) ; the kernel distance time series are extracted from miniAMR event graphs over 120 slices, where 100 of the slices represent stencil communication steps, and remaining  represent mesh refinement events. For each slice, we plot the kernel distances as shown in the figure below.</p>
