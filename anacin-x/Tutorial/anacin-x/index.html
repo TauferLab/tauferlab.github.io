@@ -296,6 +296,15 @@
                                 </li>
                                 <br>
                                 <li><strong>Kernel Distance Time Series (KDTS)</strong><br> ANACIN-X provides an API for defining a sliding window over pairs of graphs (corresponding to executions) to compute pairwise kernel distances. This results in a Kernel Distance Time Series (KDTS) measuring how differences in message orders between executions vary over time. Low KDTS values indicate similar message orders, while high values indicate dissimilarity.</li>
+                                <figure class="align-center" id="id4">
+                                    <img alt="../images/anacinx_images/kdts.png"
+                                        src="../images/anacinx_images/kdts.png" />
+                                    <figcaption>
+                                        <p><span class="caption-text">Kernel distances between time-delimited “slices” of miniAMR
+                                            event graphs form a time series of kernel distance distributions</span><a class="headerlink" href="#id4"
+                                                title="Permalink to this image"></a></p>
+                                    </figcaption>
+                                </figure>
                                 <br>
                                 <li><strong>Quantifiying Non-Determinism</strong><br> The collection of KDTSs obtained from all pairs of executions in an ensemble provides a comprehensive view of an application's non-determinism. These individual KDTSs are merged into a time series of kernel distance distributions, effectively quantifying the non-deterministic behavior of the entire ensemble of executions. </li>
                             </ul>
@@ -405,3 +414,4 @@
 </body>
 
 </html>
+
