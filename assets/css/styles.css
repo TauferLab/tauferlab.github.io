@@ -19417,3 +19417,8 @@ iframe {
     }
 }
 
+/* Custom CSS */
+
+.newsletter-item{
+    width:220px;
+}
