@@ -19422,3 +19422,18 @@ iframe {
 .newsletter-item{
     width:220px;
 }
+
+.citation-container {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 13px;
+    border-left: 4px solid #007bff; /* Blue border to highlight the citation */
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  
+  .citation-text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
