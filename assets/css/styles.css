@@ -19438,15 +19438,38 @@ iframe {
     color: #333;
   }
 
-  .poster-div {
-    background-color: #F5F5F5;
-    padding:20px;
-    padding-top:50px;
-    padding-bottom:50px;
+  .sc-poster-div {
+    /* background-color: #F5F5F5; */
+    /* padding:20px; */
+    /* padding-top:50px; */
+    /* padding-bottom:50px; */
     /* border-left: 4px solid #007bff; */
     border-radius: 4px;
   }
+
+  .sc-poster-subdiv {
+    /* padding:20px */
+    padding-bottom:20px;
+
+  }
   
+  .poster-link {
+    padding-bottom:10px;
+    border-left:3px solid white;
+  }
   
   .poster-link:hover{
+    /* border:1px solid #007bff; */
+    /* border-bottom:1px solid #007bff; */
+    /* border-radius: 4px; */
+    border-left:3px solid #007bff;
+  }
+  
+  .sc-p-1 {
+    font-size: 24px;
+    border-left: 4px solid #007bff;
+    padding: 25px;
+    line-height: 1.8;
+    text-align: center;
+    /* border-radius: 4px; */
   }
