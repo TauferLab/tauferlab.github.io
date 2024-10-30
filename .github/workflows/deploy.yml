@@ -40,7 +40,6 @@ jobs:
           preview-branch: master
           source-dir: .
           umbrella-dir: pr-preview
-          action: auto
       # - name: Setup Pages
       #   uses: actions/configure-pages@v5
       # - name: Upload artifact
