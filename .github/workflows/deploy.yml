@@ -38,7 +38,7 @@ jobs:
       - name: Deploy PR Preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          preview-branch: main
+          preview-branch: master
           source-dir: .
           umbrella-dir: pr-preview-${{ github.event.number }}
           action: auto
