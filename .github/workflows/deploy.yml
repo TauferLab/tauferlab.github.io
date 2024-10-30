@@ -28,7 +28,7 @@ jobs:
     if: github.event_name == 'pull_request'
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}/pr_preview_${{ github.event.number }}
+      url: ${{ steps.deployment.outputs.page_url }}pr_preview_${{ github.event.number }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
