@@ -39,7 +39,7 @@ jobs:
         with:
           preview-branch: master
           source-dir: .
-          umbrella-dir: pr-preview-${{ github.event.number }}
+          umbrella-dir: pr-preview
           action: auto
       # - name: Setup Pages
       #   uses: actions/configure-pages@v5
@@ -64,7 +64,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: .
-          clean-exclude: pr-preview-*/
+          clean-exclude: pr-preview/
           force: false
       # - name: Setup Pages
       #   uses: actions/configure-pages@v5
