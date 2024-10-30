@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPI and Non-Determinism</title>
+      <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+      <link rel="stylesheet" href="../static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+      <link rel="shortcut icon" href="../../favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="" id="documentation_options" src="../static/documentation_options.js"></script>
+        <script src="../static/jquery.js"></script>
+        <script src="../static/underscore.js"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../static/doctools.js"></script>
+        <script src="../static/sphinx_highlight.js"></script>
+        <script src="../static/clipboard.min.js"></script>
+        <script src="../static/copybutton.js"></script>
+        <script src="../static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Quick Reference" href="quick-reference/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home">ANACIN-X
+              <img src="../images/anacin-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search " />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a></li>
+            </ul>
+<ul>
+  <p class="caption" role="heading"><span class="caption-text">Unit A</span></p>
+<li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">1. MPI and Non-Determinism</a><ul>
+  <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface">1.1 Message Passing Interface </a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#non-determinism-in-mpi-applications">1.2 Non-Determinism in MPI Applications </a></li>
+  <li class="toctree-l2"><a class="reference internal" href="#impacts-of-non-determinism">1.3 Impacts of Non-Determinism</a></li>
+</ul>
+  <!-- <li class="toctree-l1"><a class="reference internal" href="../graphs/">2. Graphs</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_A.html">Use Case A</a></li>
+
+  <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
+  <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">3. ANACIN-X</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">4. Benchmarks</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_B.html">Use Case B</a></li>
+  <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
+  <li class="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span class="pre"></span>5. Running ANACIN-X</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">6. Results Interpretation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_C.html">Use Case C</a></li> -->
+
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html">2. Graphs</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html">Use Case A</a></li>
+
+  <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html">3. ANACIN-X</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html">4. Benchmarks</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html">Use Case B</a></li>
+  <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html"><span class="pre"></span>5. Running ANACIN-X</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html">6. Results Interpretation </a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../todo1.html">Use Case C</a></li>
+
+</ul>
+
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+  <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
+  <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ANACIN-X </a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">MPI and Non-Determinsism</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/TauferLab/ANACIN-X" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+
+
+       
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+<section id="lesson-name">
+
+
+    <div class="admonition-objectives objectives admonition" id="objectives-0">
+    <p class="admonition-title">Objectives</p>
+    <ul class="simple">
+    <li><p>Define MPI application, understand the emergence of non-determinism in MPI applications and articulate the impact of non-determinism on scientific code executions.</p></li>
+
+    </ul>
+    </div>      
+<h1>MPI and Non-Determinism<a class="headerlink" href="#lesson-name" title="Permalink to this heading"></a></h1>
+<p>
+  In this chapter, we will introduce MPI and how non-determinism occurs in MPI applications. We will describe the impact of non-determinism on scientific applications.
+ </p> 
+</div>
+
+<div class="toctree-wrapper compound">
+</div>
+
+<section id="message-passing-interface">
+
+
+<span id="learner-personas"></span><h2>Message Passing Interface <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
+<p>
+ Message Passing Interface (MPI) is the de facto coding standard for parallel applications on distributed systems at petascale and exascale. MPI is not a programming language; rather, it is a library of functions that developers
+ can use within C, C++, or Fortran code to write parallel programs. 
+ <br><br>MPI uses three different communication methods to share data among computing nodes:
+ <ul>
+  <li><strong>Point-to-Point Communication</strong> where message is passed between two processes. One process performs a send operation while the other performs a matching read.</li>
+  <li><strong>Collective Communication</strong> where communication involves a group of processes.</li>
+
+  <li><strong>One Sided Communication</strong> where a process can directly access the memory space of another process without involving it.</li>
+ </ul>
+ <figure class="align-center" id="id4">
+  <img alt="../images/mpi_nd_images/mpi_communications.png" src="../images/mpi_nd_images/mpi_communications.png" /><figcaption>
+  <p><span class="caption-text">Different communication methods in MPI. Source:  <a href="#ref" class="reference internal"><sup>1</sup></a> </span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+  </figcaption>
+  </figure>
+</p>
+
+</section>
+
+<section id="non-determinism-in-mpi-applications">
+
+
+    <span id="learner-personas"></span><h2>Non-Determinism in MPI Applications<a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
+    <p>
+      When a parallel program exhibits non-deterministic behavior, it means that multiple executions of the same program with the same inputs can produce different results.
+    
+        <br><br>In the context of MPI, non-determinism can occur due to factors such as message ordering, synchronization,
+         and race conditions between processes. 
+    </p>
+
+    <section>
+        <!-- <h3> Example 1</h3> -->
+        <p> These examples demonstrate how non-determinism arises in MPI applications.</p>
+        <figure class="align-center" id="id4">
+            <img alt="../images/E01-pack_unpack.svg" src="../images/mpi_nd_images/example1.png" /><figcaption>
+            <p><span class="caption-text"> An Example of Non-Determinism</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+            </figcaption>
+            </figure>
+    <!-- </section>
+    <section> -->
+      <p> When thread/process order influences arithmetic order, we can get some unexpected results across runs. Sure, 10<sup>-9</sup> seems 
+      like a small error, but it can get "not-so-innocent".</p>
+        <figure class="align-center" id="id4">
+            <img alt="../images/mpi_nd_images/nd2.png" src="../images/mpi_nd_images/nd2.png" /><figcaption>
+            <p><span class="caption-text">Non Deterministic Sum Execution</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+            </figcaption>
+            </figure>
+            <p>Here, when the sum is the denominator of something, it is the difference between a normal arithmetic execution and an FPE( floating point exception)</p>
+    </section>
+
+
+    <section>
+      <h3>Petascale to Exascale</h3>
+      <p>At petascale level, systems involve a high degree of parallelism and concurrency, but are not as massive and complex as exascale systems. At the exascale level, MPI applications commonly trade determinism for prioritizing on asynchrony and concurrency. This shift enables improved performance and efficiency in large-scale parallel computing tasks.</p>
+      <figure class="align-center" id="id4">
+          <img alt="../images/mpi_nd_images/peta_exa.png" src="../images/mpi_nd_images/peta_exa.png" /><figcaption>
+          <p><span class="caption-text">Message-Passing Applications: From Petascale to Exascale</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+          </figcaption>
+          </figure>
+  </section>
+    </section>
+
+
+    <section id="impacts-of-non-determinism">
+
+
+        <span id="learner-personas"></span><h2>Impact of Non-Determinism <a class="headerlink" href="#pulling-anacinx" title="Permalink to this heading"></a></h2>
+        <p>
+         Non-deterministic programs are fundamentally <strong>difficult to reason about</strong> because their outcomes are not predictable based on the input. These challanges increases as the scale increases. Non-determinism can lead to two particularly urgent problems:
+      
+         <ul>
+          <li>Lack of <strong>program correctness</strong> bugs can be expensive to <em>localize</em> and <em>diagnose</em></li>
+          <li>Lack of <strong>scientific correctness</strong>: results can be difficult to replicate over multiple runs.</li>
+         </ul>
+        
+        </p>
+
+        <section>
+          <h3> Impact on Program Correctness</h3>
+          <figure class="align-center" id="id4">
+              <img alt="../images/mpi_nd_images/halo.png" src="../images/mpi_nd_images/program_correctness.png" /><figcaption>
+              <p><span class="caption-text">Real case example: Impact on program correctness</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+              </figcaption>
+              </figure>
+              <p>In a case study<a href="#ref" class="reference internal"><sup> 2</sup></a> on HPC debugging, scientists encountered a non-deterministic bug causing intermittent hangs after several hours of execution. The bug, found in the linear algebra package HYPRE 2.10.1 used by their research application Diablo, disrupted their work for 18 months. It took over 10,000 hours (about a year) of compute time to locate and diagnose the issue.</p>
+
+            <h3> Impact on Scientific Correctness</h3>
+            <figure class="align-center" id="id4">
+                <img alt="../images/mpi_nd_images/halo.png" src="../images/mpi_nd_images/halo.png" /><figcaption>
+                <p><span class="caption-text">Real case example: Impact on Scientific correctness</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+                </figcaption>
+                </figure>
+                <p>A second study <a href="#ref" class="reference internal"><sup> 3</sup></a> illustrates how non-determinism affects the reproducibility of scientific results. 
+                  In simulation of galaxy formation using the Enzo code<a href="#ref" class="reference internal"><sup> 4</sup></a>, non-determinism led to major differences in detection of a galactic halo on multiple runs. Discrepancies in outputs undermine the reliability of scientific conclusions drawn from simulations.</p>
+        </section>
+        </section>
+
+        
+    
+      <h2>Conclusion</h2>
+      <p>MPI is a powerful tool for parallel programming, but it can also be non-deterministic, 
+        which can impact scientific applications in several ways. This chapter introduces you 
+        to MPI, non-determinism in MPI applications, and its impact on scientific applications. Next <a href="../todo1.html">Chapter 2 </a> shows how to model the communication MPI events through event graphs.
+
+  <br><br>
+You can test your understanding of the chapters 1 and 2 through <a href="../todo1.html"> Use Case A.</a></p>
+   
+
+
+<section id="ref">
+  <h2>References</h2>
+  <ol>
+    <li><a href="https://hpc.nmsu.edu/discovery/mpi/introduction">https://hpc.nmsu.edu/discovery/mpi/introduction</a></li>
+    <li><a href="https://dl.acm.org/doi/10.1145/3155284.3018767">Noise Injection Techniques to Expose Subtle and Unintended Message Races</a></li>
+    <li><a href="https://sc18.supercomputing.org/proceedings/workshops/workshop_files/ws_rescue101s1-file1.pdf">Assessing Reproducibility: An Astrophysical Example of Computational Uncertainty in the HPC Context</a></li>
+    <li><a href="https://iopscience.iop.org/article/10.1088/0067-0049/211/2/19">Enzo: An adaptive mesh refinement code for astrophysics</a></li>
+  </ol>
+</section>
+
+
+
+<section id="running-benchmark-application">
+
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+            <a href="../system_setup/" class="btn btn-neutral float-left" title="One-sided communication: synchronization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+            <a href="../todo1.html" class="btn btn-neutral float-right" title="MPI and threads in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>    </div>
+
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Global Computing Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

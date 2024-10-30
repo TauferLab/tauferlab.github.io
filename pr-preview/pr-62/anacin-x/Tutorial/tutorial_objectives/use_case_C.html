@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use Case C </title>
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css"
+    type="text/css" />
+  <link rel="stylesheet" href="../static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../static/sphinx_lesson.css" type="text/css" />
+  <link rel="stylesheet" href="../static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+  <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+  <link rel="shortcut icon" href="../../favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <script data-url_root="" id="documentation_options" src="../static/documentation_options.js"></script>
+  <script src="../static/jquery.js"></script>
+  <script src="../static/underscore.js"></script>
+  <script src="../static/_sphinx_javascript_frameworks_compat.js"></script>
+  <script src="../static/doctools.js"></script>
+  <script src="../static/sphinx_highlight.js"></script>
+  <script src="../static/clipboard.min.js"></script>
+  <script src="../static/copybutton.js"></script>
+  <script src="../static/minipres.js"></script>
+  <script>let toggleHintShow = 'Click to show';</script>
+  <script>let toggleHintHide = 'Click to hide';</script>
+  <script>let toggleOpenOnPrint = 'true';</script>
+  <script src="../static/togglebutton.js"></script>
+  <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+  <script src="../static/js/theme.js"></script>
+  <link rel="index" title="Index" href="genindex/" />
+  <link rel="search" title="Search" href="search/" />
+  <link rel="next" title="Quick Reference" href="quick-reference/" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home">ANACIN-X
+            <img src="../images/anacin-logo.png" class="logo" alt="Logo" />
+          </a>
+          <div role="search">
+            <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+              <input type="text" name="q" placeholder="Search " />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+          </div>
+        </div>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+          <ul>
+            <li class="toctree-l1"><a class="reference internal" href="../system_setup/">System Setup</a></li>
+          </ul>
+          <p class="caption" role="heading"><span class="caption-text">Unit A</span></p>
+          <ul>
+            
+            <li class="toctree-l1"><a class="reference internal" href="../mpi_and_nondeterminism/">1. MPI and
+                Non-Determinism</a>
+            <li class="toctree-l1"><a class="reference internal" href="../graphs/">2. Graphs</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_A.html">Use Case A</a></li>
+
+            <p class="caption" role="heading"><span class="caption-text">Unit B</span></p>
+            <li class="toctree-l1"><a class="reference internal" href="../anacin-x/">3 ANACIN-X</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">4. Benchmarks</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_B.html">Use Case B</a></li>
+            
+            <p class="caption" role="heading"><span class="caption-text">Unit C</span></p>
+            <li classinstallation="toctree-l1"><a class="reference internal" href="../running_anacinx/"><span
+                  class="pre"></span>5. Running ANACIN-X</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="../results_interpretation/">6. Results
+                Interpretation </a></li>  
+                  </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial_objectives/use_case_C.html">Use Case C</a></li>
+          </ul>
+
+          <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+          
+            <ul>
+              <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
+              <li class="toctree-l1"><a class="reference internal" href="../copyright/">Copyright and License</a></li>
+          
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">ANACIN-X </a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+            <ul class="wy-breadcrumbs">
+              <li><a href="#" class="icon icon-home"></a></li>
+              <li class="breadcrumb-item active">Use Case C</li>
+              <li class="wy-breadcrumbs-aside">
+                <a href="https://github.com/TauferLab/ANACIN-X" class="fa fa-github"> GitHub</a>
+              </li>
+            </ul>
+            <hr />
+          </div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+
+          <section id="use_case_C">
+            <h2>Use Case C: <em>Root Sources of Non-determinism</em><a class="headerlink" href="#use_case_C" title="Permalink to this heading"></a></h2>
+            <p>
+              ANACIN-X train students to identify potential root sources of non-determinism in their code: functions within code that can produce non-deterministic communication patterns.
+               To this end, advanced students should be able to answer the following questions at an advanced level of understanding in non-determinism: </p>
+               <ul>
+<li> How do root sources of non-determinism impact the amount of non-determinism? </li>
+<li>How can ANACIN-X be used to identify root sources of non-determinism?</li>
+
+               </ul>
+              <section id = "lvl_C1">
+                <h3> Learning Goal C1: <em>Quantify Amount of Non-determinism in Executions</em> </h3>
+                <p>Root sources of non-determinism are embedded in an application’s code.
+                   The access to an application’s code is not always guaranteed; when available, 
+                   the code may be very complex to parse and understand.
+                   <br><br> To demonstrate understanding 
+                   of Goal C.1, students should be able to explain that root sources of non-determinism 
+                   can be used to directly control the amount of non-determinism in an application.</p>
+              
+
+                <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
+                  <p class="admonition-title">Observe the scenarios in each figure</p>
+                  <figure class="align-default">
+                    <figcaption>
+                      <p><span class="caption-text">Kernel distance visualization of the AMG2013 mini-application and its communication pattern on 32 MPI processes. We vary the percentage of non-determinism from 0% up to 100% at increments of 10%. Simulation is made using 1 compute node, 1 communication pattern iteration, and message sizes of 1 byte. </figcaption>
+                    <img alt="" src="../images/tutorial_objectives/6.png" /></figure>
+                        
+                </div>
+
+
+<div class="admonition-questions questions admonition" id="questions-0">
+                          <p class="admonition-title">Questions</p>
+                          <ul class="simple">
+                            <li>
+                              <strong>Task 1:</strong> <em>Run ANACIN-X with similar settings on the other benchmarks applications to generate plots. Using figure, quantify the amount of non-determinism within one execution and demon- strate whether such an amount is directly related to the actual percentage of non-determinism for a given application. </em> 
+                              </li>
+
+                          </ul>
+                  </li>
+</div>
+                  <div class="admonition-solution solution important dropdown admonition" id="solution-0">
+                  <p class="admonition-title">Solution</p>
+                  <ol class="arabic">
+                    <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
+                      <figure class="align-default">
+                        <figcaption>
+                          <p><span class="caption-text"> #</figcaption>
+                        <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
+                  </ol>
+                  </div>
+              </section>
+
+              <section id = "lvl_C2">
+                <h3> Learning Goal C2: <em>Identify Root Sources of Non-determinism </em> </h3>
+                <p>It is not straightforward to control the amount of non-determinism within an application when the root source of that non-determinism is not already known and is embedded in the called system functions. 
+                  For this reason, students should learn how to identify likely root sources of non-determinism in their code.</p>
+
+                <div class="admonition-what-kind-of-operations-are-being-carried-out exercise important admonition" id="exercise-0">
+                  <p class="admonition-title">Observe the scenarios in each figure</p>
+                  <figure class="align-default">
+                    <figcaption>
+                      <p><span class="caption-text"> Callstack visualization for the AMG2013 mini-application and its communication pattern. The settings are the same as in Figure for C1</figcaption>
+                    <img alt="" src="../images/tutorial_objectives/7.png" /></figure>
+
+                  <ol class="arabic">
+
+
+                 
+
+                </div>
+
+                <div class="admonition-objectives objectives admonition" id="objectives-0">
+                  <p class="admonition-title">Note</p>
+                  <ul class="simple">
+                  <li><p> The ANACIN-X environment identifies the callstacks in the application and measures their frequency. In the figure, the X-axis corresponds to the list of callstacks in the application’s 
+                    run that were identified as taking place during high periods of non-determinism. 
+                    The Y-axis corresponds to the normalized relative frequency of the dentified callstacks as they appear in an execution’s event graph. </p></li>
+                  </ul>
+                </div>
+
+                <div class="admonition-questions questions admonition" id="questions-0">
+                  <p class="admonition-title">Questions</p>
+                  <ul class="simple">
+                    <li>
+                      <strong>Task 1:</strong> <em>Observe which MPI functions were identified in regions of high amounts of non-determinism. 
+                        These functions are likely root sources of non-determinism because MPI functions that take place during periods of
+                         high non-determinism are likely related to the non-determinism</em> 
+                      </li>
+                      <li>
+                        <strong>Task 2:</strong> <em>Extend the ANACIN-X environment to support your own application:  to determine where in your code you should look to manage the non-determinism by locating the callstack functions associated to the high non-determinism.</em> 
+                        </li>
+                  </ul>
+                  </div>
+
+
+                  
+
+
+                  <div class="admonition-solution solution important dropdown admonition" id="solution-0">
+                  <p class="admonition-title">Solution</p>
+                  <ol class="arabic">
+                    <li><p><strong>Task 2: </strong>Solution to TASK 2</p>
+                      <figure class="align-default">
+                        <figcaption>
+                          <p><span class="caption-text"> #</figcaption>
+                        <img alt="" src="../images/connectingbrowser.gif" /></figure></li>
+
+
+                  
+        
+                  </ol>
+                  </div>
+              </section>
+
+
+          </section>
+
+
+          <div class="toctree-wrapper compound">
+
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+          <a href="../results_interpretation/" class="btn btn-neutral float-left"
+            title="system_setup" accesskey="p" rel="prev"><span
+              class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <a href="../bibliography/" class="btn btn-neutral float-right" title="Bib"
+            accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        </div>
+
+  </div>
+
+  <hr />
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Global Computing Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+  <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+  provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+  </footer>
+  </div>
+  </div>
+  </section>
+  </div>
+  <script>
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+</body>
+
+</html>

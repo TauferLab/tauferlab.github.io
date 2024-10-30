@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #232B36;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 16px;
+                color: #E67E22;
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                    font-family: 'Lucida Console'
+                }
+
+        .main {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            font-size: 18px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+
+
+        .terminal {
+            width: 100%;
+            margin: 10px;
+            background-color: black;
+            color: #f1f1f1;
+            padding: 15px;
+            font-family:'Lucida Console';
+            font-size:medium;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidenav">
+        <a href="#VirtualMachine">XSEDE Virtual Machine</a>
+        <a href="#ubuntu">UBUNTU</a>
+        <!--
+     <a href="#mac">Machintosh</a>
+     <a href="#windows">Windows</a>
+        -->
+    </div>
+
+    <div class="main">
+        <h1> Installing SOMOSPIE </h1>
+    </div>
+
+    <div class="main">
+        <h2 id="VirtualMachine">Installing SOMOSPIE on XSEDE virtual Machine</h2>
+        <p>
+            To get started with SOMOSPIE Engine on an XSEDE virtual machine, make sure you meet the <a href="#prerequisites"> prerequisites</a>, then clone SOMOSPIE.
+            <h3 id="prerequisites"> Prerequisites </h3>
+            <h4 id="createvm"> Set a XSEDE virtual machine</h4>
+            <ol>
+                <li> Launch the following XSEDE UBUNTU <a href=https://use.jetstream-cloud.org/application/images/946 target="_blank"> image. </a></li>
+                <li>
+                    Click on Launch <br>
+                    <img src="images/launch.png" width="30%">
+                </li>
+                <li>
+                    You can leave the default values in "Basic Info" section, but make sure to select m1.medium (CPU:6, Mem: 16 GB, Disk: 60GB) on "Instance Size" <br>
+                    <img src="images/instance.png" width="60%">
+                </li>
+                <li>
+                    Click on Launch Instance
+                </li>
+                <li>
+                    Wait until the status of your virtual machine is <b><font color="green"> Active </font> </b>  with a <b> <font color="green"> green dot </font> </b>
+                </li>
+                <li>
+                    You are ready to clone and run SOMOSPIE <br>
+                    <img src="images/active.png">
+                </li>
+            </ol>
+            <h3 id="cloning"> Cloning and running SOMOSPIE </h3>
+            <ol>
+                <li>
+                    Clone SOMOSPIE <br><br>
+                    <div class="terminal">
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$git clone --recursive https://github.com/TauferLab/SOMOSPIE <br>
+                    </div>
+
+                </li>
+                <br>
+                <li>
+                    To continue setup, we need to activate the anaconda evironment that will be used for SOMOSPIE.ipynb. On Jetstream, use the built-in "ez" method: <br>
+                    <br>
+                    <div class="terminal">
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$ezj <br>
+                    </div>
+                    <br>
+                </li>
+                <br>
+                <li>
+                    Once you see URL for accessing Jupyter Notebook, return to the command-line: force exit by pressing Ctrl+C twice.
+                </li>
+                <li>
+                    The final setup step is simple:<br>
+                    <br>
+                    <div class="terminal">
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$make bash <br>
+                    </div>
+                    <br>
+                </li>
+                <li>
+                    You are now ready to start using SOMOSPIE! Launch Jupyter Notebooks with ezj, click the link provided, and open SOMOSPIE.ipynb.<br>
+                    <br>
+                    <div class="terminal">
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$ezj <br>
+                    </div>
+                </li>
+            </ol>
+        </p>
+    </div>
+    <div class="main">
+        <h2 id="ubuntu">Installing SOMOSPIE on UBUNTU</h2>
+        <p>
+            <h3 id="cloning"> Cloning and running SOMOSPIE </h3>
+            <ol>
+                <li>
+                    Clone SOMOSPIE <br><br>
+                    <div class="terminal">
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$git clone --recursive https://github.com/TauferLab/SOMOSPIE <br>
+                    </div>
+
+                </li>
+                <br>
+                <li>
+                    Install the required libraries:<br>
+
+                    <br>
+                    <div class="terminal">
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$make jetstream <br>
+                    </div> <br>
+                </li>
+
+                <br>
+                <li>
+                    Run Jupyter notebook:<br>
+
+                    <br>
+                    <div class="terminal">
+                        <b><font color="green"> username@js-169-84:</font><font color="blue">~</font></b>$jupyter-notebook <br>
+                    </div>
+                </li>
+            </ol>
+        </p>
+    </div>
+
+    <!--
+    <div class="main">
+        <h2  id="mac">Installing SOMOSPIE on Machintosh</h2>
+        <p>
+            The installation of SOMOSPIE on Machintosh
+        </p>
+    </div>
+
+
+    <div class="main">
+        <h2  id="windows">Installing SOMOSPIE on Windows</h2>
+        <p>
+            This sidebar Windows.
+        </p>
+    </div>
+
+    -->
+</body>
+</html>
