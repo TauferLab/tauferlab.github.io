@@ -7,9 +7,11 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -26,23 +28,31 @@ concurrency:
 jobs:
   deploy-preview:
     if: github.event_name == 'pull_request'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}pr_preview_${{ github.event.number }}
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}pr_preview_${{ github.event.number }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy PR Preview
+        uses: rossjrw/pr-preview-action@v1
         with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          token: ${{ secrets.GITHUB_TOKEN }}
+          preview-branch: main
+          source-dir: .
+          umbrella-dir: pr-preview-${{ github.event.number }}
+          action: auto
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v5
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     # Upload entire repository
+      #     path: '.'
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
   deploy-release:
     if: github.event_name == 'push'
     environment:
@@ -52,13 +62,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy website
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          folder: .
+          clean-exclude: pr-preview-*/
+          force: false
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v5
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     # Upload entire repository
+      #     path: '.'
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
