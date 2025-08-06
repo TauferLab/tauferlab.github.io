@@ -1,0 +1,1012 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18066333-8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-18066333-8');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SOMOSPIE" />
+  <meta name="keywords" content="analytics, molecular dynamics, workflow, simulation, in situ" />
+  <meta name="author" content="Michela Taufer" />
+  <title>SOMOSPIE | </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+
+  <style>
+    .accordion {
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: white;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      outline: 2px solid;
+      font-family: sans-serif
+    }
+  </style>
+
+
+</head><!--/head-->
+
+<body>
+
+  <!--/#header-->
+
+  <section id="home-slider">
+    <div class="container">
+      <div class="row">
+        <div class="main-slider">
+          <div class="slide-text">
+            <h1><b>SOMOSPIE:</b> A modular<br>SOil MOisture SPatial Inference Engine <br> based on data-driven decisions</h1>
+            <p>
+              Funded by the National Science Foundation (NSF) under grant numbers
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1724843&HistoricalAwards=false"
+                target="_blank">1724843</a>,
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103845&HistoricalAwards=false"
+                target="_blank">2103845</a>,
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103836&HistoricalAwards=false"
+                target="_blank">2103836</a>,
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2138811&HistoricalAwards=false"
+                target="_blank">2138811</a>, and
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2334945&HistoricalAwards=false"
+                target="_blank">2334945</a>
+            </p>
+          </div>
+          <div id="slide-logo-container">
+            <div id="slide-logo-inner-container">
+              <div id="slide-logo-images-container">
+                <img src="images/logos/logo_white.png" height="200">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <div class="row">
+        <div class="main-slider">
+          <div class="slide-text">
+            <h1><b>GEOtiled:</b> A Framework for Scalable <br> Terrain Parameter Computation </h1>
+            <p>
+              Funded by the National Science Foundation (NSF) under grant numbers
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1724843&HistoricalAwards=false"
+                target="_blank">1724843</a>,
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103845&HistoricalAwards=false"
+                target="_blank">2103845</a>,
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103836&HistoricalAwards=false"
+                target="_blank">2103836</a>,
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2138811&HistoricalAwards=false"
+                target="_blank">2138811</a>, and
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2334945&HistoricalAwards=false"
+                target="_blank">2334945</a>
+            </p>
+          </div>
+          <div id="slide-logo-container">
+            <div id="slide-logo-inner-container">
+              <div id="slide-logo-images-container">
+                <img src="images/logos/geotiled_logo.png" height="130">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+  </section>
+  <!--/#home-slider-->
+
+  <section id="services">
+    <div class="container">
+      <div id="testimonial-container">
+        <div class="row">
+          <h1 class="padding-top bold title text-center">About SOMOSPIE</h1>
+          <div class="text-center" style="padding: 20px">
+            <span style="font-size: 18px; font-family: 'Noto Sans',sans-serif;">
+            SOMOSPIE is a modular SOil MOisture SPatial Inference Engine that allows Earth scientists to address 
+            the coarse-grained resolution and spatial information gaps associated with satellite data. The modular components of SOMOSPIE consists of:
+            </span>
+          </div>
+          <!-- Col 1 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: orangered"></i>
+                    <i class="fa fa-angle-double-down fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Input </b> of available satellite data at its native spatial
+                    resolution.</span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: royalblue"></i>
+                    <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Selection</b> of a geographic region of interest.</span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+          <!-- Col 2 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: yellowgreen"></i>
+                    <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Prediction,</b> of missing values across the entire region of
+                    interest (i.e., gap-filling) and at finer-grained resolution.</span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: darkslategrey"></i>
+                    <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Analysis and visualization</b> of generated predictions.</span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+        </div> <!--/#row-->
+       </div><!--/#testimonial-container-->
+    </div> <!--/#container-->
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div id="testimonial-container">
+        <div class="row">
+          <h1 class="padding-top bold title text-center">SOMOSPIE and FAIR</h1>
+          <div class="text-center" style="padding: 20px">
+            <span style="font-size: 18px; font-family: 'Noto Sans',sans-serif;">
+              SOMOSPIE supports reproducibility, explainability, and portability of results. Its new features allow
+              users to:
+            </span>
+          </div>
+          <!-- Column 1 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: orangered"></i>
+                    <i class="fa fa-angle-double-down fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Deploy</b> container technology on cloud platforms to perform rapid
+                    data movement and achieve portability.</span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+          <!-- Column 2 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: blue"></i>
+                    <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Collect</b> workflow execution's record trails to enable data
+                    traceability and results explainability.</span>
+                </div>
+              </div>
+            </div> <!-- testimonial -->
+          </div> <!-- end col -->
+        </div> <!--/#row-->
+        <div class="" style="font-size: 18px;">
+            For more details, please explore our software, data, and documentation here: <a href="https://globalcomputing.group/somospie" target="_blank">https://globalcomputing.group/somospie</a>
+        </div>
+      </div><!--/#testimonial-container-->
+    </div> <!--/#container-->
+  </section>
+
+  <!-- Remove horror image - even not readable  
+    <section id="workflow">
+      <div>
+	<p style="text-align:center;"><img src="images/workflow/somospie_upscaling_general.png" width="820"></p>
+      </div>
+    </section>
+    -->
+
+    </div>
+  </section>
+
+
+
+  <!--template of a row
+		    <div class="row" style="padding-top: 20px">
+		     
+                      <div class="col-xs-12 col-sm-6 publication">
+                        <i class="fa fa-file-text-o"></i>
+                        .
+                        <b></b>
+                        <i></i> (20xx).
+
+			<b></b>
+                        <a href= target="_blank">[link]</a>
+                        <br>
+                        <button class="accordion">[Bibtex]</button>
+                        <div class="panel">
+                          <p>
+                            
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 publication">
+                        <i class="fa fa-file-text-o"></i>
+                        .
+                        <b></b>
+                        <i></i> (20xx).
+
+			<b></b>
+                        <a href= target="_blank">[link]</a>
+                        <br>
+                        <button class="accordion">[Bibtex]</button>
+                        <div class="panel">
+                          <p>
+                            
+                          </p>
+                        </div>
+                      </div>
+
+		    </div>
+		    -->
+
+  <section id="services">
+    <div class="container">
+      <div id="testimonial-container">
+        <div class="row">
+          <h1 class="padding-top bold title text-center">About GEOtiled</h1>
+          <div class="text-center" style="padding: 20px">
+            <span style="font-size: 18px; font-family: 'Noto Sans',sans-serif;">
+            GEOtiled is a modular workflow that allows the rapid computation of terrain parameters (e.g., slope, aspect, hillshade) 
+            from Digital Elevation Models (DEMs) by leveraging data decomposition and parallel processing. GEOtiled allows:
+            </span>
+          </div>
+          <!-- Col 1 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: orangered"></i>
+                    <i class="fa fa-angle-double-down fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Download </b> available DEM data from the United States Geological Survey (USGS) webpage.</span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: royalblue"></i>
+                    <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px">Over 15 different computable terrain parameters.</span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+          <!-- Col 2 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: yellowgreen"></i>
+                    <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Generation</b> of terrain parameters using either the <b>GDAL</b> or <b>SAGA</b> library.</span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: darkslategrey"></i>
+                    <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Visualization</b> of generated results.</span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+        </div> <!--/#row-->
+      </div><!--/#testimonial-container-->
+    </div> <!--/#container-->
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div id="testimonial-container">
+        <div class="row">
+          <h1 class="padding-top bold title text-center">GEOtiled and FAIR</h1>
+          <div class="text-center" style="padding: 20px">
+            <span style="font-size: 18px; font-family: 'Noto Sans',sans-serif;">
+            GEOtiled supports reproducibility, explainability, and portability of results. Its new features allow users to:
+            </span>
+          </div>
+          <!-- Col 1 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: orangered"></i>
+                    <i class="fa fa-angle-double-down fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Index</b> their data in easily searchable repositories. </span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: royalblue"></i>
+                    <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Access</b> public platforms such as GeoTIFF and Shapefile.</span>
+                </div>
+              </div>
+            <div class="col-lg-12 padding-top wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            </div>
+            </div>
+          </div> <!-- end col -->
+          <!-- Col 2 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: yellowgreen"></i>
+                    <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Operate</b> common geospatial formats for easy use on other software or systems.</span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: darkslategrey"></i>
+                    <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Document</b> data curation along with the organization and content of files.</span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+        </div> <!--/#row-->
+        <div class="" style="font-size: 18px;">
+            For more details, please explore our software, data, and documentation here: <a href="https://globalcomputing.group/GEOtiled" target="_blank">https://globalcomputing.group/GEOtiled</a>
+        </div>
+        </div>
+      </div><!--/#testimonial-container-->
+    </div> <!--/#container-->
+  </section>
+
+
+  <section id="publications">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 padding-top wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h1 class="bold title text-center">Publications</h1>
+
+        <!--2025-->
+        <div class="row" style="padding-top: 20px">
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Gabriel Laboy, Ian Lumsden, Jack Marquez, Kin Wai NG Lugo, Rodrigo Vargas, and Michela Taufer. 
+              <b>A Modular, Cross-Platform Toolkit for High-Resolution Terrain Parameter Analysis.</b>
+              <i>In Proceedings of the 21st IEEE International Conference on eScience (eScience), Chicago, IL, USA, September 2025. IEEE Computer Society. (Acceptance Rate: 33/98, 33.6%).</i> 
+            </div>
+
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Gabriel Laboy, Paula Olaya, Jack Marquez, Michael Sutherlin, Rodrigo Vargas, and Michela Taufer. 
+              <b>Advancing the GEOtiled Framework Through Scalable Terrain Parameter Computation. </b>
+              <i>In Proceedings of the 34th International Symposium on High-Performance Parallel and Distributed Computing (HPDC), pages 1–2, Notre Dame, IN, USA, July 20–23 2025. ACM. (Short Paper).
+              </i>
+            </div>
+          </div>
+
+
+        <!--2024-->
+        <div class="row" style="padding-top: 20px">
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Befikir Bogale, Ian Lumsden, Dalal Sukkari, Dewi Yokelson, Stephanie Brink, Olga Pearce, and Michela Taufer. 
+              <b>Surrogate Models for Analyzing Performance Behavior of HPC Applications Using RAJAPerf.</b>
+              <i>In Proceedings of the International Conference on Computational Science (ICCS), page 1–8, Singapore, July 7–9 2025. Springer.</i> 
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-97635-3_39" target="_blank">[link]</a>
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @InProceedings{10.1007/978-3-031-97635-3_39, </br>
+                author="Bogale, Befikir and Lumsden, Ian and Sukkari, Dalal and Yokelson, Dewi and Brink, Stephanie and Pearce, Olga and Taufer, Michela",</br>
+                editor="Lees, Michael H. and Cai, Wentong and Cheong, Siew Ann and Su, Yi and Abramson, David and Dongarra, Jack J. and Sloot, Peter M. A.",</br>
+                title="Surrogate Models for Analyzing Performance Behavior of HPC Applications Using the RAJA Performance Suite",</br>
+                booktitle="Computational Science -- ICCS 2025",</br>
+                year="2025",</br>
+                publisher="Springer Nature Switzerland",</br>
+                address="Cham",</br>
+                pages="327--335",</br>
+                isbn="978-3-031-97635-3"</br>
+                }
+                </p>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Paula Olaya, Sophia Wen, Jay Lofstead, and Michela Taufer. 
+              <b>PerSSD: Persistent, Shared, and Scalable Data with Node-Local Storage for Scientific Workflows in Cloud Infrastructure.</b>
+              <i>In Proceedings of the 2024 IEEE International Conference on Big Data, Washington DC, US, December 2024. 
+              IEEE Computer Society. (Acceptance Rate: 600/124, 18.8%).
+              </i>
+              <a href="https://ieeexplore.ieee.org/document/10826021/"
+                target="_blank">[link]</a>
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                    @INPROCEEDINGS{10826021, </br>
+                      author={Olaya, Paula and Wen, Sophia and Lofstead, Jay and Taufer, Michela},</br>
+                      booktitle={2024 IEEE International Conference on Big Data (BigData)}, </br>
+                      title={PerSSD: Persistent, Shared, and Scalable Data with Node-Local Storage for Scientific Workflows in Cloud Infrastructure}, </br>
+                      year={2024},</br>
+                      volume={},</br>
+                      number={},</br>
+                      pages={272-281},</br>
+                      keywords={Automation;Software architecture;File systems;Pipelines;Information sharing;Geoscience;Manuals;Performance gain;Reproducibility of results;Noise measurement},</br>
+                      doi={10.1109/BigData62323.2024.10826021}}</br>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          </div>
+        </div>
+        <div class="" style="font-size: 18px;">
+         Check more publications for GEOtiled here: <a href="https://globalcomputing.group/GEOtiled/publications" target="_blank">https://globalcomputing.group/GEOtiled/publications</a> and for SOMOSPIE here: <a href="https://globalcomputing.group/somospie#publications" target="_blank">https://globalcomputing.group/somospie</a>
+        </div>
+
+      </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <div id="team-carousel" class="carousel slide wow fadeIn" data-ride="carousel" data-wow-duration="400ms"
+        data-wow-delay="400ms">
+        <div class="row padding-top">
+          <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">Meet the Team
+          </h1>
+          <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms"></p>
+          <!--clearfix xs every 2 to ensure uniform height in each row on mobile-->
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/michela.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li><a href="mailto:mtaufer@utk.edu"><i class="fa fa-envelope"></i></a></li>
+                    <li>
+                      <a href="https://www.eecs.utk.edu/people/faculty/dr-michela-taufer/" target="_blank">
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Michela Taufer</h2>
+                <p>Professor, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/rodrigo.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:rvargas@udel.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.udel.edu/academics/colleges/canr/departments/plant-and-soil-sciences/faculty-staff/rodrigo-vargas/"
+                        target="_blank">
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Rodrigo Vargas</h2>
+                <p>Professor, University of Delaware</p>
+              </div>
+            </div>
+          </div>
+        <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/jack.png" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:jmarque4@utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Jack Marquez</h2>
+                <p>Research Assistant Professor, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+        <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/kin.png" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:kng2@utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Kin Wai NG</h2>
+                <p>Research Assistant Professor, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/paula.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:polaya@vols.utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Paula Olaya</h2>
+                <p>Graduate Student, University of
+                  Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/gabriel.png" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:glaboy@vols.utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Gabriel Laboy</h2>
+                <p>Graduate Student, University of
+                  Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/jay.png" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:washwor1@vols.utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Jay Ashworth</h2>
+                <p>Graduate Student, University of
+                  Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/#team-->
+
+  <section id="former">
+    <div class="container">
+      <div id="team-carousel" class="carousel slide wow fadeIn" data-ride="carousel" data-wow-duration="400ms"
+        data-wow-delay="400ms">
+        <div class="row padding-top">
+          <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">
+            Former Members
+          </h1>
+          <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms"></p>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/ricardo.jpg" class="img-responsive" alt="" height="95%">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:rllamas@udel.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Ricardo Llamas</h2>
+                <p>Graduate Student, University of
+                  Delaware</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/ria.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:rpatel77@vols.utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Ria Patel</h2>
+                <p>Graduate Student, University of
+                  Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/camila.jpg" class="img-responsive" alt="" height="95%">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:mroa@vols.utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>María Camila Roa</h2>
+                <p>Graduate Student, University of
+                  Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/lauren1.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:lprocto3@vols.utk.edu<"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Lauren Proctor</h2>
+                <p>Undergraduate Student, University
+                  of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/profile.png" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:nzhou6@utk.edu<"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Naweiluo Zhou</h2>
+                <p>Postdoctoral Researcher, University
+                  of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/allie.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Juliet Bradford</h2>
+                <p>Undergraduate Student, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-top">
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/leo.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Leobardo Valera</h2>
+                <p>Postdoctoral Researcher, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/jimmy.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Jimmy Landmesser</h2>
+                <p>Graduate Student, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/david.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>David J. Icove</h2>
+                <p>Professor, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/fred.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Fred L. Martin</h2>
+                <p>Collaborator</p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/danny.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Danny Rorabaugh</h2>
+                <p>Postdoctoral Researcher, University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+          <!--clearfix xs every 2 to ensure uniform height in each row on mobile-->
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/mike.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Michael Wyatt II</h2>
+                <p>Doctoral Student (2020), University of Tennessee Knoxville</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-top">
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/joy.jpg" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info">
+                <h2>Joy Kitson</h2>
+                <p>Undergraduate Student, University of Delaware</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/#former-->
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-text text-center">
+            <p>&copy; <a href="https://globalcomputing.group/" target="_blank">2020 Global Computing Laboratory</a></p>
+            <p>
+
+              SOMOSPIE is funded by the National Science Foundation (NSF) under grant numbers
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1724843&HistoricalAwards=false"
+                target="_blank">1724843</a>,
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103845&HistoricalAwards=false"
+                target="_blank">2103845</a>, and
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2103836&HistoricalAwards=false"
+                target="_blank">2103836</a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/#footer-->
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
