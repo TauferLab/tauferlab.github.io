@@ -62,7 +62,7 @@
 
 
     .cta-link {
-      background-color: #232631;
+      background-color: #f5f5f7;
       position: relative;
       margin: 0 auto;
       padding: 1em;
@@ -71,6 +71,15 @@
       font-size: 22px;
       font-weight: 600;
       border-radius: 10px;
+    }
+
+    .logo-hover {
+      transition: transform 0.3s ease;
+      transform: scale(1);
+    }
+
+    .logo-hover:hover {
+        transform: scale(1.1);
     }
 
     @property --angle{
@@ -84,7 +93,14 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+      background-image: conic-gradient(from var(--angle),   #001f3f,
+  #003f7f,
+  #005fff,
+  #3399ff,
+  #66ccff,
+  #005fff,
+  #003f7f,
+  #001f3f);
       top: 50%;
       left: 50%;
       translate: -50% -50%;
@@ -107,6 +123,12 @@
         to {
             --angle: 360deg;
         }
+    }
+
+    .cta-logo {
+        display: block;
+        width: auto;
+        height: 100px;
     }
 
     @media (max-width: 600px) {
@@ -316,7 +338,9 @@
             Ready to dive in? Join us and explore the full power of our software, data, and documentation! Discover more here:
         </div>
         <div style="display: flex; justify-content: center;">
-        <a href="https://globalcomputing.group/somospie" target="_blank" class="cta-link">https://globalcomputing.group/somospie</a>
+        <a href="https://globalcomputing.group/somospie" target="_blank" class="cta-link">
+            <img src="images/logos/logo_white.png" alt="SomosPie Logo" class="cta-logo logo-hover">
+        </a>
         </div>
       </div><!--/#testimonial-container-->
     </div> <!--/#container-->
@@ -512,11 +536,13 @@
             </div>
           </div> <!-- end col -->
         </div> <!--/#row-->
-        <div class="" style="font-size: 22px; font-weight: 600; margin-bottom: 30px; text-align: center">
+        <div class="" style="font-size: 24px; font-weight: 600; margin-bottom: 30px; text-align: center">
         Power up your projects! Tap into our software, data sets, and detailed docs now:
         </div>
         <div style="display: flex; justify-content: center;">
-        <a href="https://globalcomputing.group/GEOtiled" target="_blank" class="cta-link">https://globalcomputing.group/GEOtiled</a>
+        <a href="https://globalcomputing.group/GEOtiled" target="_blank" class="cta-link">
+            <img src="images/logos/geotiled_logo.png" alt="GEOtiled Logo" class="cta-logo logo-hover">
+        </a>
         </div>
         </div>
       </div><!--/#testimonial-container-->
@@ -561,16 +587,17 @@
               <button class="accordion">[Bibtex]</button>
               <div class="panel">
                 <p>
-                @InProceedings{10.1007/978-3-031-97635-3_39, </br>
-                author="Bogale, Befikir and Lumsden, Ian and Sukkari, Dalal and Yokelson, Dewi and Brink, Stephanie and Pearce, Olga and Taufer, Michela",</br>
-                editor="Lees, Michael H. and Cai, Wentong and Cheong, Siew Ann and Su, Yi and Abramson, David and Dongarra, Jack J. and Sloot, Peter M. A.",</br>
-                title="Surrogate Models for Analyzing Performance Behavior of HPC Applications Using the RAJA Performance Suite",</br>
-                booktitle="Computational Science -- ICCS 2025",</br>
-                year="2025",</br>
-                publisher="Springer Nature Switzerland",</br>
-                address="Cham",</br>
-                pages="327--335",</br>
-                isbn="978-3-031-97635-3"</br>
+                @inproceedings{bogale2025surrogate, <br>
+                    author    = {Befikir Bogale and Ian Lumsden and Dalal Sukkari and Dewi Yokelson and Stephanie Brink and Olga Pearce and Michela Taufer}, <br>
+                    title     = {Surrogate Models for Analyzing Performance Behavior of HPC Applications Using RAJAPerf}, <br>
+                    booktitle = {\textit{Proceedings of the International Conference on Computational Science (ICCS)}}, <br>
+                    pages     = {1--8}, <br>
+                    address   = {Singapore}, <br>
+                    month     = {July 7--9}, <br>
+                    year      = {2025}, <br>
+                    publisher = {Springer}, <br>
+                    url       = {https://doi.org/10.1007/978-3-031-97635-3_39}, <br>
+                    doi       = {doi.org/10.1007/978-3-031-97635-3_39} <br>
                 }
                 </p>
               </div>
@@ -589,16 +616,17 @@
               <button class="accordion">[Bibtex]</button>
               <div class="panel">
                 <p>
-                    @INPROCEEDINGS{10826021, </br>
-                      author={Olaya, Paula and Wen, Sophia and Lofstead, Jay and Taufer, Michela},</br>
-                      booktitle={2024 IEEE International Conference on Big Data (BigData)}, </br>
-                      title={PerSSD: Persistent, Shared, and Scalable Data with Node-Local Storage for Scientific Workflows in Cloud Infrastructure}, </br>
-                      year={2024},</br>
-                      volume={},</br>
-                      number={},</br>
-                      pages={272-281},</br>
-                      keywords={Automation;Software architecture;File systems;Pipelines;Information sharing;Geoscience;Manuals;Performance gain;Reproducibility of results;Noise measurement},</br>
-                      doi={10.1109/BigData62323.2024.10826021}}</br>
+                @inproceedings{olaya2024perssd, <br>
+                    author    = {Paula Olaya and Sophia Wen and Jay Lofstead and Michela Taufer}, <br>
+                    title     = {PerSSD: Persistent, Shared, and Scalable Data with Node-Local Storage for Scientific Workflows in Cloud Infrastructure}, <br>
+                    booktitle = {\textit{Proceedings of the 2024 IEEE International Conference on Big Data}}, <br>
+                    address   = {Washington DC, USA}, <br>
+                    month     = {December}, <br>
+                    year      = {2024}, <br>
+                    publisher = {IEEE Computer Society}, <br>
+                    url       = {https://doi.org/10.1109/BigData62323.2024.10826021}, <br>
+                    doi       = {10.1109/BigData62323.2024.10826021} <br>
+                }
                 </p>
               </div>
             </div>
@@ -606,8 +634,12 @@
           </div>
           </div>
         </div>
-        <div class="" style="font-size: 18px;">
-         Check more publications for GEOtiled here: <a href="https://globalcomputing.group/GEOtiled/publications" target="_blank">https://globalcomputing.group/GEOtiled/publications</a> and for SOMOSPIE here: <a href="https://globalcomputing.group/somospie#publications" target="_blank" >https://globalcomputing.group/somospie</a>
+        <div class="" style="font-size: 24px; font-weight: 600; margin-bottom: 30px; text-align: center">
+          Discover the latest breakthroughs powered by this software! Check out our publications:
+        </div>
+        <div style="display: flex; justify-content: center;">
+        <a href="https://globalcomputing.group/somospie#publications" target="_blank" class="cta-link" style="background-color: #232631;">SOMOSPIE Publications</a>
+        <a href="https://globalcomputing.group/GEOtiled/publications" target="_blank" class="cta-link" style="background-color: #232631;">GEOtiled Publications</a>
         </div>
 
       </div>
