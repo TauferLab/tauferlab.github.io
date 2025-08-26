@@ -9,5 +9,5 @@ for file in *.png *.jpg *.jpeg; do
     filename="${file%.*}"
 
     # Run ffmpeg to convert and resize to 400x400
-    ffmpeg -i "$file" -vf scale=400:400 "${filename}.webp"
+    ffmpeg -i "$file" -vf scale=400:400 "${filename}.jpg"
 done
