@@ -1,0 +1,860 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18066333-8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-18066333-8');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAFARI" />
+  <meta name="keywords" content="reproducibility, cyberinfrastructures, workflow, scientific analysis, forensics" />
+  <meta name="author" content="Michela Taufer" />
+  <title>SAFARI | </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+
+  <style>
+    .accordion {
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: white;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      outline: 2px solid;
+      font-family: sans-serif
+    }
+
+    .cta-link {
+        background-color: #f5f5f7;
+        position: relative;
+        margin: 0 auto;
+        padding: 1em;
+        color: #fefefe;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 10px;
+        width: 220px;
+      }
+
+      .logo-hover {
+        transition: transform 0.3s ease;
+        transform: scale(1);
+      }
+
+      .logo-hover:hover {
+        transform: scale(1.1);
+      }
+
+      @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      .cta-link::after,
+      .cta-link::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(
+          from var(--angle),
+            #000000,   
+            #001a0f,   
+            #002b1a,   
+            #003d26,   
+            #004d33,   
+            #006644,   
+            #004d33,   
+            #003d26,   
+            #002b1a,   
+            #000000    
+        );
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        border-radius: 10px;
+        animation: 3s spin linear infinite;
+        padding: 36px;
+        transform: scale(1.02);
+      }
+
+      .cta-link::before {
+        filter: blur(1.5rem);
+        opacity: 0.7;
+      }
+
+      @keyframes spin {
+        from {
+          --angle: 0deg;
+        }
+        to {
+          --angle: 360deg;
+        }
+      }
+
+      .cta-logo {
+        display: block;
+        width: 100%;
+        height:100%;
+      }
+
+      @media (max-width: 600px) {
+        .cta-link {
+          font-size: 16px;
+          padding: 0.75em;
+        }
+
+        .cta-link::after,
+        .cta-link::before {
+          padding: 24px;
+          transform: scale(1.01);
+        }
+
+        #home-slider .slide-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+  </style>
+</head><!--/head-->
+
+<body>
+  <!--/#header-->
+  <section id="home-slider">
+    <div class="container">
+      <div class="row">
+        <div class="main-slider">
+          <div class="slide-text">
+            <h1><b>SAFARI:</b> Scientific Analytics, Forensics, and Reproducibility for Workflows in Cyberinfrastructures </h1>
+            <p>
+              Funded by the National Science Foundation (NSF) under grant numbers
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2530461&HistoricalAwards=false"
+                target="_blank">#2530461</a>
+            </p>
+          </div>
+          <div id="slide-logo-container">
+            <div id="slide-logo-inner-container">
+              <div id="slide-logo-images-container">
+                <img src="images/logos/logo_safari2.png" height="300">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+  </section>
+  <!--/#home-slider-->
+
+  <section id="services">
+    <div class="container">
+      <div id="testimonial-container">
+        <div class="row">
+          <h1 class="padding-top bold title text-center">About SAFARI</h1>
+          <div class="text-center" style="padding: 20px">
+            <span style="font-size: 18px; font-family: 'Noto Sans',sans-serif;">
+            SAFARI (Scientific Analytics, Forensics, and Reproducibility for Workflows in CI) embeds forensic data analytics into cyberinfrastructure (CI) services to ensure reliability, integrity, and 
+            reproducibility of scientific workflows, particularly in Earth science but with broad applicability across domains.
+            </span>
+          </div>
+          <!-- Col 1 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: orangered"></i>
+                    <i class="fa fa-chain fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                <span style="font-size: 18px"><b>Establish Trustworthiness of Scientific Workflows:</b>
+                Integrate forensic data analytics to validate provenance, detect vulnerabilities, and confirm the authenticity and integrity of data and computational steps.
+                 </span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: royalblue"></i>
+                    <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Ensure Reproducibility of Results:</b> 
+                  Embed provenance tracking, annotation, and verification frameworks to guarantee that scientific findings are consistent, transparent, and replicable even under non-determinism and platform variability.
+                 </span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+          <!-- Col 2 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: darkgoldenrod"></i>
+                    <i class="fa fa-bolt fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Enhance Reusability of Workflow Components:</b> 
+                  Break down complex, monolithic workflows into modular, containerized building blocks that can be reused across high-throughput computing platforms and diverse science domains.
+                  </span>
+                </div>
+              </div>
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: darkslategrey"></i>
+                    <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Advance Robust and Resilient Open Science:</b> 
+                  Deliver a suite of CI services—including artifact repositories, scalable automation, and open documentation—while engaging Earth scientists, computational experts, and ACCESS affinity groups to foster community adoption and workforce training.
+                 </span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+        </div> <!--/#row-->
+        <div class="text-center" style="padding: 5px;">
+        </div>
+      </div><!--/#testimonial-container-->
+    </div> <!--/#container-->
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div id="testimonial-container">
+        <div class="row">
+          <h1 class="padding-top bold title text-center">SAFARI and FAIR</h1>
+          <div class="text-center" style="padding: 20px">
+            <span style="font-size: 18px; font-family: 'Noto Sans',sans-serif;">
+              SAFARI extends the FAIR principles by embedding forensic data analytics into workflows, ensuring that scientific artifacts are:            
+            </span>
+          </div>
+          <!-- Column 1 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: yellowgreen"></i>
+                    <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"><b>Findable –</b> Provides a searchable artifact commons of workflows, tools, and data containers enriched with provenance metadata, making scientific artifacts easy to discover and trace.</span>
+                </div>
+              </div>
+             <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: orangered"></i>
+                    <i class="fa fa-connectdevelop fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Interoperable –</b> Uses modular, containerized components and metadata-rich abstractions to enable workflows to run seamlessly across high-throughput, cloud, and HPC platforms.</span>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end col -->
+          <!-- Column 2 -->
+          <div class="col-md-6">
+            <div class="testimonial">
+              <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: blue"></i>
+                    <i class="fa fa-server fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Accessible –</b> Embeds forensic data analytics directly into Pegasus workflows, ensuring transparent documentation, open practices, and reproducibility services available to the community.</span>
+                </div>
+              </div>
+             <div class="media wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="pull-left" style="margin-right: 10px">
+                  <span class="fa-stack fa-1x">
+                    <i class="fa fa-square fa-stack-2x" style="color: green"></i>
+                    <i class="fa fa-recycle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                <div class="media-body">
+                  <span style="font-size: 18px"> <b>Reusable –</b> Delivers validated, provenance-tracked artifacts and open documentation that can be reliably reapplied across domains, enhancing long-term scientific trust and collaboration.</span>
+                </div>
+              </div>
+            </div> <!-- testimonial -->
+          </div> <!-- end col -->
+        </div> <!--/#row-->
+        <div
+            class=""
+            style="
+              font-size: 22px;
+              font-weight: 600;
+              margin-bottom: 30px;
+              text-align: center;
+            "
+          >
+            Power up your projects! Tap into our software, datasets, and detailed docs now:          
+        </div>
+          <div style="display: flex; justify-content: center">
+            <a
+              href="https://github.com/TauferLab/ContainerizedEnv"
+              target="_blank"
+              class="cta-link"
+            >
+              <img
+                src="images/logos/output.png"
+                alt="SAFARI Logo"
+                class="cta-logo logo-hover"
+              />
+            </a>
+          </div>
+        </div>
+      </div><!--/#testimonial-container-->
+    </div> <!--/#container-->
+  </section>
+
+  <section id="publications">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 padding-top wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h1 class="bold title text-center">Publications</h1>
+
+        <div class="row" style="padding-top: 20px">
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Raul Sirvent, Rocio Carratala-Saez, Amal Gueroudji, Tanzima Islam, Line Pouchard, and Michela Taufer.
+              <b>Reproducibility for hpc and distributed environments: Committees, nondeterminism, performance and workflows.</b>
+              <i>In Proceedings of the 3rd ACM Conference on Reproducibility and Replicability (ACM REP), Vancouver, Canada, July 2025. ACM.</i> 
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @inproceedings{sirvent2025reproducibility, <br>
+                author = {Raul Sirvent and Rocio Carratala-Saez and Amal Gueroudji and Tanzima Islam and Line Pouchard and Michela Taufer}, <br>
+                title = {Reproducibility for HPC and Distributed Environments: Committees, Nondeterminism, Performance and Workflows}, <br>
+                booktitle = {Proceedings of the 3rd ACM Conference on Reproducibility and Replicability (ACM REP)}, <br>
+                year = {2025}, <br>
+                address = {Vancouver, Canada}, <br>
+                month = {July}, <br>
+                publisher = {ACM} <br>
+                URL = Missing <br>
+                DOI = Missing <br>
+                }
+                </p>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Nigel Tan, Kevin Assogba, Jay Asworth, Befikir Bogale, M. Mustafa Rafique, Franck Cappello, Michela Taufer, and Bogdan Nicolae.
+              <b>Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results.</b>
+              <i>In Proceedings of the 25th ACM/IFIP International Middleware Conference (Middleware), Hong Kong, China, December Page 26 of 82 2024. ACM.</i>
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @inproceedings{tan2024affordable, <br>
+                Author = {Nigel Tan and Kevin Assogba and Jay Asworth and Befikir Bogale and M. Mustafa Rafique and Franck Cappello and Michela Taufer and Bogdan Nicolae}, <br>
+                title = {Towards Affordable Reproducibility Using Scalable Capture and Comparison of Intermediate Multi-Run Results}, <br>
+                booktitle = {Proceedings of the 25th ACM/IFIP International Middleware Conference (Middleware)}, <br>
+                year = {2024}, <br>
+                address = {Hong Kong, China}, <br>
+                month = {December}, <br>
+                publisher = {ACM} <br>
+                URL = Missing <br>
+                DOI = Missing <br>
+                }
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        <div class="row" style="padding-top: 20px">
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Paula Olaya, Dominic Kennedy, Ricardo Llamas, Leobardo Valera, Rodrigo Vargas, Jay Lofstead, and Michela Taufer. 
+              <b>Building Trust in Earth Science Findings through Data Traceability and Results Explainability.</b>
+              <i> IEEE Trans. Parallel Distributed Syst. (TPDS), 34(2):704–717, 2023. 10.1109/TPDS.2022.3220539.</i> 
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @article{olaya2023trust, <br>
+                author = {Paula Olaya and Dominic Kennedy and Ricardo Llamas and Leobardo Valera and Rodrigo Vargas and Jay Lofstead and Michela Taufer}, <br>
+                title = {Building Trust in Earth Science Findings through Data Traceability and Results Explainability},   <br>
+                journal = {IEEE Transactions on Parallel and Distributed Systems (TPDS)}, <br>
+                volume = {34}, <br>
+                number = {2}, <br>
+                pages = {704--717}, <br>
+                year = {2023}, <br>
+                URL = Missing <br>
+                doi = {10.1109/TPDS.2022.3220539} <br>
+                </p>
+              </div>            
+            </div>
+
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Dominic Kennedy, Paula Olaya, Jay Lofstead, Rodrigo Vargas, and Michela Taufer.
+              <b>Augmenting Singularity to Generate Fine-grained Workflows, Record Trails, and Data Provenance.</b>
+              <i>In Proceedings of the 18th IEEE International Conference on e-Science (eScience), pages 1–2, Salt Lake City, Utah, USA, October 2022. IEEE Computer Society. (Short paper).</i>
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @inproceedings{kennedy2022augmenting, <br>
+                author = {Dominic Kennedy and Paula Olaya and Jay Lofstead and Rodrigo Vargas and Michela Taufer}, <br>
+                title = {Augmenting Singularity to Generate Fine-grained Workflows, Record Trails, and Data Provenance}, <br>
+                booktitle = {Proceedings of the 18th IEEE International Conference on e-Science (eScience)}, <br>
+                pages = {1--2}, <br>
+                year = {2022}, <br>
+                address = {Salt Lake City, Utah, USA}, <br>
+                month = {October}, <br>
+                publisher = {IEEE Computer Society}, <br>
+                URL = Missing <br>
+                DOI = Missing <br>
+                }
+                </p>
+              </div>
+            </div>
+          </div>
+
+        <div class="row" style="padding-top: 20px">
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Michela Taufer, Ewa Deelman, Rafael Ferreira da Silva, Trilce Estrada, Mary Hall, and Miron Livny. 
+              <b>A Roadmap to Robust Science for High-throughput Applications: The Developers’ Perspective.</b>
+              <i>In Proceedings of the IEEE Cluster Conference (CLUSTER), pages 1–2, Portland, Oregon, September 2021. IEEE Computer Society. (Short paper)</i> 
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @inproceedings{taufer2021robust_developers, <br>
+                author = {Michela Taufer and Ewa Deelman and Rafael Ferreira da Silva and Trilce Estrada and Mary Hall and Miron Livny} <br>
+                title = {A Roadmap to Robust Science for High-throughput Applications: The Developers’ Perspective}, <br>
+                booktitle = {Proceedings of the IEEE Cluster Conference (CLUSTER)}, <br>
+                pages = {1--2}, <br>
+                year = {2021}, <br>
+                address = {Portland, Oregon}, <br>
+                month = {September}, <br>
+                publisher = {IEEE Computer Society}, <br>
+                URL = Missing <br>
+                DOI = Missing <br>
+                }
+                </p>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Michela Taufer, Ewa Deelman, Rafael Ferreira da Silva, Trilce Estrada, and Mary Hall.
+              <b>Roadmap to Robust Science for High-throughput Applications: The Scientists’ Perspective.</b>
+              <i>In Proceedings of the 20th IEEE International Conference on eScience, pages 1–2, Innsbruck, Austria, September 2021. IEEE Computer Society. (Short paper).</i>
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @inproceedings{taufer2021robust_scientists, <br>
+                author = {Michela Taufer and Ewa Deelman and Rafael Ferreira da Silva and Trilce Estrada and Mary Hall}, <br>
+                title = {A Roadmap to Robust Science for High-throughput Applications: The Scientists’ Perspective}, <br>
+                booktitle = {Proceedings of the 20th IEEE International Conference on eScience}, <br>
+                pages = {1--2}, <br>
+                year = {2021}, <br>
+                address = {Innsbruck, Austria}, <br>
+                month = {September}  <br>
+                publisher = {IEEE Computer Society}, <br>
+                URL = Missing <br>
+                DOI = Missing <br>
+                }
+                </p>
+              </div>
+            </div>
+          </div>
+
+        <div class="row" style="padding-top: 20px">
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Xin, Yufeng and Fu, Shih-Wen and Mandal, Anirban and Tanaka, Ryan and Rynge, Mats and Vahi, Karan and Deelman, Ewa.
+              <b>Data Integrity Error Localization in Networked Systems with Missing Data.</b>
+              <i>In Proc. ICC 2022 - IEEE International Conference on Communications, Seoul, Korea, 2022, pp. 341–346, doi: 10.1109/ICC45855.2022.9838996.</i>
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @inproceedings{xin-icc-2022, <br>
+                author = {Xin, Yufeng and Fu, Shih-Wen and Mandal, Anirban and Tanaka, Ryan and Rynge, Mats and Vahi, Karan and Deelman, Ewa}, <br>
+                booktitle = {ICC 2022 - IEEE International Conference on Communications}, <br>
+                title = {Data Integrity Error Localization in Networked Systems with Missing Data}, <br>
+                year = {2022}, <br>
+                volume = {}, <br>
+                number = {}, <br>
+                pages = {341-346}, <br>
+                doi = {10.1109/ICC45855.2022.9838996}, <br>
+                note = {Funding Acknowledgments: NSF 1839900} <br>
+                }
+                </p>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Burkat, Krzysztof and Pawlik, Maciej and Balis, Bartosz and Malawski, Maciej and Vahi, Karan and Rynge, Mats and da Silva, Rafael Ferreira and Deelman, Ewa.
+              <b>Serverless Containers – Rising Viable Approach to Scientific Workflows.</b>
+              <i>In Proc. 2021 IEEE 17th International Conference on eScience (eScience), Innsbruck, Austria, 2021, pp. 40–49, doi: 10.1109/eScience51609.2021.00014.</i> 
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+              <p>
+                @inproceedings{burkat-escience-2021, <br>
+                author = {Burkat, Krzysztof and Pawlik, Maciej and Balis, Bartosz and Malawski, Maciej and Vahi, Karan and Rynge, Mats and da Silva, Rafael Ferreira and Deelman, Ewa}, <br>
+                booktitle = {2021 IEEE 17th International Conference on eScience (eScience)}, <br>
+                title = {Serverless Containers – Rising Viable Approach to Scientific Workflows}, <br>
+                year = {2021}, <br>
+                volume = {}, <br>
+                number = {}, <br>
+                pages = {40-49}, <br>
+                doi = {10.1109/eScience51609.2021.00014} <br>
+                }
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="padding-top: 20px">
+            <div class="col-xs-12 col-sm-6 publication">
+              <i class="fa fa-file-text-o"></i>
+              Xin, Yufeng and Fu, Shih-Wen and Mandal, Anirban and Baldin, Ilya and Tanaka, Ryan and Rynge, Mats and Vahi, Karan and Deelman, Ewa and Abhinit, Ishan and Von, Welch.
+              <b>Root Cause Analysis of Data Integrity Errors in Networked Systems with Incomplete Information.</b>
+              <i>In Proc. 2021 International Conference on Information and Communication Technology Convergence (ICTC), Jeju Island, Korea (South), 2021, pp. 735–740, doi: 10.1109/ICTC52510.2021.9621124.</i>
+              <br>
+              <button class="accordion">[Bibtex]</button>
+              <div class="panel">
+                <p>
+                @inproceedings{xin-ictc-2021, <br>
+                author = {Xin, Yufeng and Fu, Shih-Wen and Mandal, Anirban and Baldin, Ilya and Tanaka, Ryan and Rynge, Mats and Vahi, Karan and Deelman, Ewa and Abhinit, Ishan and Von, Welch}, <br>
+                booktitle = {2021 International Conference on Information and Communication Technology Convergence (ICTC)}, <br>
+                title = {Root Cause Analysis of Data Integrity Errors in Networked Systems with Incomplete Information}, <br>
+                year = {2021}, <br>
+                volume = {}, <br>
+                number = {}, <br>
+                pages = {735-740}, <br>
+                doi = {10.1109/ICTC52510.2021.9621124} <br>
+                }
+                </p>
+              </div>
+             </div>
+            </div>
+
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <div id="team-carousel" class="carousel slide wow fadeIn" data-ride="carousel" data-wow-duration="400ms"
+        data-wow-delay="400ms">
+        <div class="row padding-top">
+          <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">Meet the Team </h1>
+          <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms"></p>
+
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/michela.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li><a href="mailto:mtaufer@utk.edu"><i class="fa fa-envelope"></i></a></li>
+                    <li>
+                      <a href="https://www.eecs.utk.edu/people/faculty/dr-michela-taufer/" target="_blank">
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <div class="person-info" style="text-align: center;">
+                <h2>Michela Taufer</h2>
+                 <p style="font-weight: 600;">Principal Investigator</p>
+                 <p>U. Tennessee, Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/ewa_deelman.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:deelman@isi.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://deelman.isi.edu/"
+                        target="_blank">
+                        <i class="fa fa-link"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info" style="text-align: center;">
+                <h2>Ewa Deelman</h2>
+                 <p style="font-weight: 600;">Co-Principal Investigator</p>
+                 <p>U. of Southern California </p>
+              </div>
+            </div>
+          </div>
+
+        <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/tanderson.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:tander78@vols.utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info" style="text-align: center;">
+                <h2>Ty Anderson</h2>
+                 <p style="font-weight: 600;">Student</p>
+                 <p>U. Tennessee, Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+        <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/jay_lofstead.png" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info" style="text-align: center;">
+                <h2>Jay Lofstead</h2>
+                <p style="font-weight: 600;">Collaborator</p>
+                <p>Sandia National Laboratory</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/rajiv.png" class="img-responsive" alt="">
+                </div>
+              </div>
+              <div class="person-info" style="text-align: center;">
+                <h2>Rajiv Mayani</h2>
+                <p style="font-weight: 600;">Scientist</p>
+                <p>U. of Southern California </p>
+              </div>
+            </div>
+          </div>
+
+        <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/jack.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:jmarque4@utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info" style="text-align: center;">
+                <h2>Jack Marquez</h2>
+                 <p style="font-weight: 600;">Senior Personnel</p>
+                 <p>U. Tennessee, Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+        <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/kin.png" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:kng2@utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info" style="text-align:center;">
+                <h2>Kin Wai NG</h2>
+                 <p style="font-weight: 600;">Scientist</p>
+                 <p>U. Tennessee, Knoxville</p>
+              </div>
+            </div>
+          </div>
+
+         
+    </div>
+  </section>
+  <!--/#team-->
+
+  <section id="former">
+    <div class="container">
+      <div id="team-carousel" class="carousel slide wow fadeIn" data-ride="carousel" data-wow-duration="400ms"
+        data-wow-delay="400ms">
+        <div class="row padding-top">
+          <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">
+            Former Members
+          </h1>
+          <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms"></p>
+
+        <div class="clearfix visible-xs"></div>
+          <div class="col-sm-2 col-xs-6">
+            <div class="team-single-wrapper">
+              <div class="team-single">
+                <div class="person-thumb">
+                  <img src="images/about/paula.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="social-profile">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="mailto:polaya@vols.utk.edu"><i class="fa fa-envelope"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="person-info" style="text-align: center;">
+                <h2>Paula Olaya</h2>
+                 <p style="font-weight: 600;">Scientist</p>
+                 <p>NVIDIA</p>              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/#former-->
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-text text-center">
+            <p>&copy; <a href="https://globalcomputing.group/" target="_blank">2025 Global Computing Laboratory</a></p>
+            <p>
+
+              SAFARI is funded by the National Science Foundation (NSF) under grant numbers
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2530461&HistoricalAwards=false"
+                target="_blank">#2530461</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/#footer-->
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
