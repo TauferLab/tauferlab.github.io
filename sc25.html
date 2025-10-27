@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<!--
+                                   _       _   
+								  | |     | |    
+  Designed and Coded By           | | __ _| |__  
+ / _ \ \ /\ / /\ \ /\ / /\ \ /\ / / |/ _` | '_ \ 
+| (_) \ V  V /  \ V  V /  \ V  V /| | (_| | |_) |
+ \___/ \_/\_/    \_/\_/    \_/\_/ |_|\__,_|_.__/ 
+
+http://themeforest.net/user/owwwlab/
+                                          
+-->
+<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
+<!-- #####Begin head-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- globalise scripting and styling content language-->
+  <meta name="Content-Type-Script" content="text/javascript">
+  <meta name="Content-Type-Style" content="text/css">
+  <!-- author of this doc-->
+  <meta name="author" content="owwwlab.com">
+  <!-- ################################-->
+  <!-- #### add SEO metadata here-->
+  <!-- ################################-->
+  <!-- #####Begin styles-->
+  <!-- stylesheets	-->
+  <link href="assets/css/vendors/vendors.css" rel="stylesheet" type="text/css">
+  <!-- Load extra page specific css-->
+  <!-- Overwrite vendors-->
+  <link href="assets/css/vendors/vendors-overwrites.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/demo5.css" rel="stylesheet" type="text/css">
+  <!-- #####End styles-->
+  <!-- #####Begin JS-->
+  <!-- add your scripts to the end of the page for sake of page load speed-->
+  <!-- scripts that need to be at head section-->
+  <script src="assets/js/vendors/jquery.min.js"></script>
+  <!-- #####End JS-->
+  <!-- #####Begin load google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=latin,greek,cyrillic" rel="stylesheet"
+    type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Sintony:400,700&amp;subset=latin,greek,cyrillic" rel="stylesheet"
+    type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic&amp;subset=latin,greek,cyrillic"
+    rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Exo+2:400,200,300,400italic,500,700,900&amp;subset=latin,greek,cyrillic"
+    rel="stylesheet" type="text/css">
+  <!-- #####End load google fonts-->
+  <title>GCLab @ SC25</title>
+
+  <style>
+    .accordion {
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: white;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      outline: 2px solid;
+      font-family: sans-serif
+    }
+
+    </style>
+
+
+</head>
+<!-- #####End head-->
+
+<body class="fullwidth bg-pattern-4 sticky-header"> <!--bg-gray-->
+  <div id="wrapper" class="boxed-layout">
+    <!-- #####Begin Header-->
+    <header id="header" class="bg-pattern-4"> <!--light sticky-->
+      <div class="head-main">
+        <div class="container">
+          <!-- logo-->
+          <!-- #####Begin logo wrapper-->
+          <div class="logo-wrapper">
+            <!-- standard Logo--><a href="index.html"><img src="assets/img/logo/logo-gclab.png" alt="GCLab"
+                class="logo-light ol-retina"><img src="assets/img/logo/logo-gclab.png" alt="GCLab"
+                class="logo-dark ol-retina"></a>
+          </div>
+          <!-- #####End logo wrapper-->
+          <!-- primary navigation-->
+          <ul id="primary-menu">
+            <li><a href="index.html" title="Home"><span>Home</span></a>
+            </li>
+            <li><a href="about.html" title="Dr. Michela Taufer"><span>Dr. Michela Taufer</span></a>
+            </li>
+            <li><a href="people.html" title="People"><span>People</span></a>
+            </li>
+            <li><a href="research.html" title="Research"><span>Research</span></a>
+            </li>
+            <li><a href="publications.html" title="Publications"><span>Publications</span></a>
+            </li>
+            <li><a href="https://github.com/TauferLab/" target="_blank" title="Software"><span>Software</span></a>
+            </li>
+            <li><a href="news.html" title="News"><span>News</span></a>
+            </li>
+            <li><a href="gallery.html" title="Gallery"><span>Gallery</span></a>
+            </li>
+            <li><a href="contact.html" title="Contact"><span>Contact</span></a>
+            </li>
+            <li><a href="positions.html" title="Positions"><span>Positions</span></a>
+            </li>
+          </ul>
+          <div class="header-icons"></div>
+          <!-- #####Begin trigger for search-->
+          <!--<div class="search ol-search-trigger simple"><a href="#"><i class="oli oli-search"></i></a></div>-->
+          <a href="https://www.linkedin.com/company/global-computing-laboratory/" target="_blank"><i
+              class="fa fa-linkedin"></i></a>
+          <!-- #####End trigger for search-->
+          <!-- #####Begin mobile menu trigger-->
+          <div class="ol-mobile-trigger hamburger hamburger--elastic">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+          <!-- #####End mobile menu trigger-->
+          <div class="search-area fullscreen">
+            <div data-img-src="assets/img/bg/14.jpg" class="ol-search-bg set-bg ov-dark-alpha-50"></div>
+            <div class="inner-wrapper"><a href="#" class="close-btn"><i class="ol-css-close"></i><span>ESC</span></a>
+              <div class="search-field">
+                <input type="text" placeholder="Type and hit enter">
+              </div>
+              <div class="search-logo"><img src="assets/img/logo/logo-gclab.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- #####End Header-->
+    <!-- #####Begin contents-->
+    <section id="contents">
+      <!-- #####Begin page head-->
+      <div class="page-head h-250 center-it parallax-layer dark ov-grad1-alpha-30" data-img-src="assets/img/stlouis.png"
+        data-parallax-mode="mode-title">
+        <div class="container">
+          <div class="tb-vcenter-wrapper">
+            <div class="title-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+              <!--<h4 class="head">Current</h4>-->
+              <!--<h4><font face="Courier New" color="white">Current</font></h4>-->
+              <h1 class="title">GCLab @ SC25</h1>
+              <!-- <h2 class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum is simply dummy text.</h2> -->
+            </div>
+            <div class="breadcrumb-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+              <ul class="breadcrumb">
+                <li><a href="#"><i class="oli oli-home"></i></a></li>
+                <li><a href="#">publication</a></li>
+                <li><a href="#">publication type</a></li>
+                <li>learning environment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #####End page head
+        -->
+      <section class="page-contents">
+        <!-- #####Begin main area-->
+        <section id="main-area">
+          <section class="section slim-container">
+            <div class="container">
+
+            <div class="sc-p-1">
+            We at the <b>Global Computing Lab (GCLab)</b> are thrilled to participate in SC25!
+            Join us throughout the week as we present our research, engage in discussions, and contribute to panels, workshops, and student showcases.
+            We look forward to meeting you—come say hello!              
+            </div>
+              <div class="sp-blank-30"></div>
+
+              <!-- Attendees -->
+              <div>
+                <h3 align="center">Meet the Team and Collaborators at SC25</h3>
+
+               <div class="col-xs-12">
+                <div class="col-xs-4" align="center"><img src="assets/img/people/michela.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                    <font face="Courier New" size="3"><b>Michela Taufer</b></font> <br>
+                    (GCLab Director)</font>
+                  </div>
+                </div>
+  
+                <div class="col-xs-4" align="center"><img src="assets/img/people/sanjukta.png" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Sanjukta Bhowmick</b></font> <br>
+                  (Collaborator at UNT)</font>
+                  </div>
+                </div>
+  
+                <div class="col-xs-4" align="center"><img src="assets/img/people/jay.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Jay Ashworth</b></font><br>
+                  (PhD Student and SC25 Lead Volunteer)</font>
+                  </div>
+                </div>
+              </div>
+  
+                
+             <div class="col-xs-12">
+              <div class="col-xs-4" align="center"><img src="assets/img/people/befikir.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Befikir Bogale</b></font><br>
+                  (PhD Student and SC25 Lead Volunteer)</font>
+                  </div>
+                </div>
+
+                <div class="col-xs-4" align="center"><img src="assets/img/people/connor.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Connor Browne</b></font><br>
+                  (PhD Student and SC25 Student Volunteer)</font>
+                  </div>
+                </div>
+
+                <div class="col-xs-4" align="center"><img src="assets/img/people/gore.png" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b> Rajasi Gore</b></font><br>
+                  (GCLab/Epic Postdoctoral Researcher)</font>
+                  </div>
+                </div>
+               </div>
+  
+                  
+
+               <div class="col-xs-12">
+                <div class="col-xs-4" align="center"><img src="assets/img/people/khan.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b> Ali Khan</b></font><br>
+                  (PhD Student at UNT and SC25 Lead Volunteer)</font>
+                  </div>
+                </div>
+  
+                <div class="col-xs-4" align="center"><img src="assets/img/people/ian.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Ian Lumsden</b></font><br>
+                  (PhD Student and SC25 Lead Volunteer)</font> 
+                  </div>
+                </div>
+                
+                <div class="col-xs-4" align="center"><img src="assets/img/people/nigel.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Nigel Tan</b></font><br>
+                  (GCLab Alumni and LANL Postdoctoral Researcher)</font> 
+                  </div>
+                </div>
+                </div>
+               
+                
+              <div class="sp-line-80"></div>
+
+              <h3 align="center">Project Showcase</h3>
+              <p> At SC25, GCLab showcases the power of collaboration across computing, data, and science. Browse our projects that reflect our commitment to open, reproducible, and inclusive research—uniting students, faculty, and national lab collaborators to shape the future of HPC and AI. </p>
+              <iframe src="https://docs.google.com/presentation/d/1wQ8oj01R_ofZ95pNXxU5hPnF29N4MluC/embed?start=true&loop=true&delayms=5000" frameborder="0" width="100%" height="500" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+              <div class="sp-line-80"></div>
+
+              <h3 align="center">Schedule of GCLab Activities at SC25 </h3>
+
+              <!-- ======================= -->
+              <!-- SUNDAY NOV 16 -->
+              <!-- ======================= -->
+
+              <h5 class="m-bottom-30">Sunday, Nov 16th</h5>
+              <div class="row">
+
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>4:25pm – 5:10pm CST</dt>
+                    <dd><b>Panel: </b>Dynamic Graphs<dd></dd>
+                    <dd><b> Moderator</b>: TBD</dd> 
+                    <dd><b>Panelist</b>: TBD</dd> 
+                    <dd><b>Workshop</b>: <a href="https://hpc.pnl.gov/IA3/" target="_blank">Workshop: IA³: Irregular Applications, Architectures, and Algorithms Workshop</a></dd> 
+                    <dd style="width: 100%;"><b>Location: </b> 232</dd> <!-- Full width style retained -->
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/sanjukta.png" height="45" width="45" alt="Sanjukta Bhowmick"></div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45" alt="Michela Taufer"></div>
+                 
+              </div>
+
+              <!-- ======================= -->
+              <!-- MONDAY NOV 17 -->
+              <!-- ======================= -->
+
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Monday, Nov 17th</h5>
+              <div class="row">
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>9:00am – 5:30pm CST</dt>
+                    <dd><b>Paper:</b> <a href="https://sc25.conference-program.com/presentation/?id=ws_p3hpc108&sess=sess207" target="_blank">Bridging Performance, Portability, and Scalability for Plasma Simulations on Heterogeneous Systems</a></dd>
+                    <dd><b>Authors</b>: <b> Nigel Tan (LANL) </b>, Scott V. Luedtke (LANL), <b> Michela Taufer (UTK) </b>, Brian Albright (LANL)</dd>
+                    <dd><b>Workshop</b>: <a href="https://sc25.conference-program.com/session/?sess=sess207" target="_blank">2025 International Workshop on Performance, Portability, and Productivity in HPC (P3HPC)</a></dd>
+                    <dd><b>Location</b>: 231</dd>
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/nigel.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+
+                <div class="col-sm-12 sc-poster-div">
+                  <div class="col-sm-12 sc-poster-subdiv">
+                  <div class="col-sm-4 poster-link">
+                      <a href="papers/Paper_2025_P3HPC_LANL_UTK.pdf" target="_blank">
+                        <img src="assets/img/sc25/paper_tan_cover.png" height="200" class="set-me">
+                      </a>
+                    </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                      <b>Nigel Tan</b>, Scott V. Luedtke, <b>Michela Taufer</b>, Brian Albright. Bridging Performance, Portability, and Scalability for Plasma Simulations on Heterogeneous Systems. In Proceedings of the 2025 IA³: Irregular Applications, Architectures, and Algorithms Workshop at The International Conference on High Performance Computing, Network, Storage, and Analysis (SC25), St. Louis, MO, USA, November 2025. IEEE Computer Society. 
+                      </p>
+                     <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                      <p>
+                    @inproceedings{tan2025bridging, <br>
+                    author    = {Nigel Tan and Scott V. Luedtke and Michela Taufer and Brian Albright}, <br>
+                    title     = {Bridging Performance, Portability, and Scalability for Plasma Simulations on Heterogeneous Systems}, <br>
+                    booktitle = {Proceedings of the 2025 IA\textsuperscript{3}: Irregular Applications, Architectures, and Algorithms Workshop at The International Conference on High Performance Computing, Network, Storage, and Analysis (SC25)}, <br>
+                    year      = {2025}, <br>
+                    address   = {St. Louis, MO, USA}, <br>
+                    month     = nov, <br>
+                    publisher = {IEEE Computer Society} <br>
+                    }
+                    </p>
+                    </div>
+                    </div>
+                  </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>1:30pm – 5:30pm CST</dt>
+                    <dd><b>Panel:</b> <a href="https://sc25.conference-program.com/presentation/?id=miscp112&sess=sess202" target="_blank">Storage Architectures and I/O Optimizations for AI Applications</a></dd>
+                    <dd><b>Moderator</b>: Nikoli Joseph Dryden (LLNL)</dd>
+                    <dd><b>Panelists</b>: Quincey Coziol (NVIDIA), Hariharan Devarajan (LLNL), Glenn Lockwood (VAST Data, Inc.), Bogdan Nicolae (ANL), <b>Michela Taufer (UTK)</b></dd>
+                    <dd><b>Workshop</b>: <a href="https://sc25.conference-program.com/session/?sess=sess202" target="_blank">PDSW'25: The 10th International Parallel Data Systems Workshop</a></dd>
+                    <dd><b>Location</b>: 230</dd>
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+
+
+              </div>
+
+              <!-- ======================= -->
+              <!-- TUESDAY NOV 18 -->
+              <!-- ======================= -->
+
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Tuesday, Nov 18th</h5>
+              <div class="row">
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>12:15pm - 1:15pm CST</dt>
+                    <dd><b>Birds of a Feather: </b> <a href="https://sc25.conference-program.com/presentation/?id=bof112&sess=sess593" target="_blank">
+                      SIGHPC Annual Member Meeting</a></dd>
+                    <dd> </dd>
+                    <dd><b>Location: </b> 145</dd>
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt> 3:30pm – 5:00pm CST </dt>
+                    <dd><b>Panel: </b><a href="https://sc25.conference-program.com/presentation/?id=pan107&sess=sess349">Rethink Computing: Pioneering Next-Level Architectures for Sustainable AI and HPC</a><dd></dd>
+                    <dd><b> Moderator</b>: Bob Sorensen (Hyperion Research)</dd> 
+                    <dd><b>Panelists</b>: Michael Förtsch (Q.ANT GmbH), Dieter Kranzlmüller (Leibniz Supercomputing Centre),  Rick L. Stevens (ANL),<b> Michela Taufer (UTK)</b></dd> 
+                    <dd><b>Workshop</b>: <a href="https://hpc.pnl.gov/IA3/" target="_blank">Workshop: IA³: Irregular Applications, Architectures, and Algorithms Workshop</a></dd> 
+                    <dd style="width: 100%;"><b>Location: </b> 232</dd> <!-- Full width style retained -->
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>5:15pm – 7:00pm CST</dt>
+                    <dd> <b> Poster Sessions & Receptions: </b> <a href="https://sc25.conference-program.com/session/?sess=sess532" target="_blank">
+                      Student Research Competitions </a>
+                    </dd>
+                    <dd> </dd>
+                    <dd><b>Location: </b> Second Floor Atrium</dd>
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/befikir.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/sanjukta.png" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/khan.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/ian.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+
+                                
+                <div class="col-sm-12"></div>
+                <div class="sp-blank-30"></div>
+
+                <div class="col-sm-12 sc-poster-div">
+                  <div class="col-sm-12 sc-poster-subdiv">
+                  <div class="col-sm-4 poster-link">
+                      <a href="posters/Bogale_sc25_poster.pdf" target="_blank">
+                        <img src="assets/img/sc25/befikir_sc25_poster.png" height="140" width="220" class="set-me">
+                      </a>
+                    </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                      <a href="https://sc25.conference-program.com/presentation/?id=post172&sess=sess531" target="_blank"><b>Befikir Bogale</b>, <b>Michela Taufer</b>, Stephanie Brink, Olga Pearce, Tom Scogland, Jason Burmark, Ignacio Laguna, <b>Ian Lumsden</b>, David Boehme. “An Approach for Correlating Compiler Optimizations with Runtime Performance.” Presented at the ACM Student Research Competition at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25), St. Louis, MO, USA, November 2025. IEEE Computer Society.</a>
+                      </p>
+                      <div style="padding-bottom: 4px;">
+                       <b>Poster Type:</b> <a href="https://sc25.conference-program.com/session/?sess=sess527">ACM Student Research Competition (SRC)</a>
+                      </div>
+                     <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                      <p>
+                        @inproceedings{bogale2025approach, <br>
+                        author    = {Befikir Bogale and Michela Taufer and Stephanie Brink and Olga Pearce and Tom Scogland and Jason Burmark and Ignacio Laguna and Ian Lumsden and David Boehme}, <br>
+                        title     = {An Approach for Correlating Compiler Optimizations with Runtime Performance}, <br>
+                        booktitle = {ACM Student Research Competition at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25)}, <br>
+                        year      = {2025}, <br>
+                        address   = {St. Louis, MO, USA}, <br>
+                        month     = nov, <br>
+                        publisher = {IEEE Computer Society} <br>
+                        }
+                    </p>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 sc-poster-subdiv">
+                    <div class="col-sm-4 poster-link">
+                      <a href="posters/Dhroov_sc25_poster.jpg" target="_blank">
+                        <img src="assets/img/sc25/dhroov_sc25_poster.jpg" height="140" width="220" class="set-me">
+                      </a>
+                    </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                      <a href="https://sc25.conference-program.com/presentation/?id=post269&sess=sess527" target="_blank"><b>Dhroov Pandey</b>, Jack Marquez, <b>Sanjukta Bhowmick</b>, <b>Michela Taufer</b>, “Novel Graph Alignment Algorithms for Identifying Non-Determinism in Large-Scale Simulations.” Presented at the ACM Student Research Competition at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25), St. Louis, MO, USA, November 2025. IEEE Computer Society.</a>
+                      </p>
+                      <div style="padding-bottom: 4px;">
+                       <b>Poster Type:</b> <a href="https://sc25.conference-program.com/session/?sess=sess527">ACM Student Research Competition (SRC)</a>
+                      </div>
+                     <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                      <p>
+                        @inproceedings{pandey2025novel, <br>
+                        author    = {Dhroov Pandey and Jack Marquez and Sanjukta Bhowmick and Michela Taufer}, <br>
+                        title     = {Novel Graph Alignment Algorithms for Identifying Non-Determinism in Large-Scale Simulations}, <br>
+                        booktitle = {Proceedings of the ACM Student Research Competition at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25)}, <br>
+                        year      = {2025}, <br>
+                        month     = nov, <br>
+                        address   = {St. Louis, MO, USA}, <br>
+                        publisher = {IEEE Computer Society}, <br>
+                        note      = {Presented at the ACM Student Research Competition}, <br>
+                        }
+                      </p>
+                    </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-12 sc-poster-subdiv">
+                    <div class="col-sm-4 poster-link">
+                      <a href="posters/Lumsden_sc25_poster.pdf" target="_blank">
+                        <img src="assets/img/sc25/ian_sc25_poster.jpeg" height="140" width="220" class="set-me">
+                      </a>
+                    </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                      <a href="https://sc25.conference-program.com/presentation/?id=drs112&sess=sess537" target="_blank"><b>Ian Lumsden</b>, <b>Michela Taufer</b>, Stephanie Brink, Olga Pearce, Hariharan Devarajan, Jae-Seung Yeom, Tom Scogland. “Analytics4X: General-Purpose Framework for Analysis and Optimization of HPC Data Movement.” Presented at the ACM Doctoral Showcase Competition at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25), St. Louis, MO, USA, November 2025. IEEE Computer Society.</a>
+                      </p>
+                      <div style="padding-bottom: 4px;">
+                       <b>Poster Type:</b> <a href="https://sc25.conference-program.com/session/?sess=sess537">Doctoral Showcase</a>
+                      </div>
+                     <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                        <p>
+                            @inproceedings{lumsden2025analytics4x, <br>
+                            author    = {Ian Lumsden and Michela Taufer and Stephanie Brink and Olga Pearce and Hariharan Devarajan and Jae-Seung Yeom and Tom Scogland}, <br>
+                            title     = {Analytics4X: General-Purpose Framework for Analysis and Optimization of HPC Data Movement}, <br>
+                            booktitle = {Doctoral Showcase at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25)}, <br>
+                            year      = {2025}, <br>
+                            address   = {St. Louis, MO, USA}, <br>
+                            month     = nov, <br>
+                            publisher = {IEEE Computer Society} <br>
+                            }
+                        </p>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 sc-poster-subdiv">
+                    <div class="col-sm-4 poster-link">
+                      <a href="posters/Khan_sc25_poster.jpg" target="_blank">
+                        <img src="assets/img/sc25/khan_sc25_poster.jpg" height="140" width="220" class="set-me">
+                      </a>
+                    </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                      <a href="https://sc25.conference-program.com/presentation/?id=post308&sess=sess527" target="_blank"><b>Ali Khan</b>, <b>Sanjukta Bhowmick</b>, <b>Michela Taufer</b>, “Parallel Local Motif Counting on Large-Scale Dynamic Graphs.” Presented at the ACM Student Research Competition at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25), St. Louis, MO, USA, November 2025. IEEE Computer Society.</a>
+                      </p>
+                      <div style="padding-bottom: 4px;">
+                       <b>Poster Type:</b> <a href="https://sc25.supercomputing.org/program/posters/research-posters/">Research Poster</a>
+                      </div>
+                    <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                      <p>
+                        @inproceedings{khan2025parallel, <br>
+                        author    = {Ali Khan and Sanjukta Bhowmick and Michela Taufer}, <br>
+                        title     = {Parallel Local Motif Counting on Large-Scale Dynamic Graphs}, <br>
+                        booktitle = {ACM Student Research Competition at the International Conference on High Performance Computing, Network, Storage, and Analysis (SC25)}, <br>
+                        year      = {2025}, <br>
+                        address   = {St. Louis, MO, USA}, <br>
+                        month     = nov, <br>
+                        publisher = {IEEE Computer Society} <br>
+                        }
+                     </p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ======================= -->
+              <!-- WEDNESDAY NOV 19 -->
+              <!-- ======================= -->
+
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Wednesday, Nov 19th</h5>
+              <div class="row">
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>12:15pm - 1:15pm CST</dt>
+                    <dd><b>Birds of a Feather: </b> <a href="https://sc25.conference-program.com/presentation/?id=bof213&sess=sess450" target="_blank"> Autonomous Science Network: Interconnected Autonomous Science Labs Empowered by HPC and Intelligent Agents</a></dd>
+                    <dd><b>Session Leader:</b> Rafael Ferreira da Silva (ORNL)</dd>
+                    <dd><b>Panelists:</b> Ian Foster (ANL), Thomas Gibbs (NVIDIA), Noah Paulson (ANL), <b>Michela Taufer (UTK)</b></dd>
+                    <dd><b>Location: </b> 131</dd>
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+                                
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>3:30pm – 5:00pm CST </dt>
+                    <dd> <b>Best Poster Presentation: </b> <a href="https://sc25.conference-program.com/session/?sess=sess527" target="_blank">Graduate ACM Student Research Competition</a></dd>
+                    <dd><b>Location: </b> 230</dd>
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/befikir.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/ian.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/khan.jpg" height="45" width="45"></div>
+
+
+              </div>
+
+              <!-- ======================= -->
+              <!-- THURSDAY NOV 20 -->
+              <!-- ======================= -->
+
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Thursday, Nov 20th</h5>
+              <div class="row">
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>9:30am – 5:00pm CST </dt>
+                    <dd><b>Doctoral Showcase</b></dd>
+                    <dd><b>Student:</b> Ian Lumsden (UTK) </dd>
+                    <dd><b>Title:</b> Analytics4X: General-Purpose Framework for Analysis and Optimization of HPC Data Movement </dd>
+                    <dd><b>Mentor:</b> Michela Taufer (UTK)</dd>
+                    <dd><b>Location:</b> TBD</dd>               
+                </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/ian.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                  <div class="dl-horizontal text-left tight m-bottom-30">
+                    <dt>12:45pm – 1:30pm CST</dt>
+                    <dd><b>SC25 Awards Ceremony</b></dd>
+                    <dd><b>Location: </b> America’s Ballroom</dd>
+                  </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/michela.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/sanjukta.png" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/ian.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/nigel.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/befikir.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/jay.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/connor.jpg" height="45" width="45"></div>
+                <div class="col-sm-1"><img src="assets/img/people/khan.jpg" height="45" width="45"></div>
+
+              </div>
+
+              <!-- ======================= -->
+              <!-- OTHER GCL ACTIVITIES -->
+              <!-- ======================= -->
+
+              <h3>Other GCL Activities</h3>
+
+              <div class="sp-blank-30"></div>
+              <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                  <dd><b>SC25 Student Lead Volunteers:</b></dd>
+                  <dd>We have four graduate students serving as lead volunteers: Jay Ashworth (UTK), Befikir Bogale (UTK), Ali Khan (UNT), Ian Lumsden (UTK)</dd>
+                  <dd></dd>
+                </div>
+              </div>
+              <div class="col-sm-1"><img src="assets/img/people/jay.jpg" height="45" width="45"></div>
+              <div class="col-sm-1"><img src="assets/img/people/befikir.jpg" height="45" width="45"></div>
+              <div class="col-sm-1"><img src="assets/img/people/khan.jpg" height="45" width="45"></div>
+              <div class="col-sm-1"><img src="assets/img/people/ian.jpg" height="45" width="45"></div>
+
+              <div class="sp-blank-30"></div>
+              <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                  <!-- <dt>10:30am - 12:00pm EST</dt> -->
+                  <dd><b>SC25 Student Volunteer: </b></dd>
+                  <dd><a href="https://sc25.supercomputing.org/students/student-volunteers/" target="_blank"> We have one graduate student volunteer: Connor Browne (UTK) </a></dd>
+                  <dd> </dd>
+                  <!-- <dd><b>Location: </b> B310</dd> -->
+                </div>
+              </div>
+              <div class="col-sm-1"><img src="assets/img/people/connor.jpg" height="45" width="45"></div>
+
+              <div class="sp-blank-30"></div>
+              <div class="sp-line-80"></div>
+              <center>
+                <h5 class="title">
+                  <font face="Courier New" color="red"><a href="sc24.html" target="_blank"> Visit GCLab work
+                      presented at SC24 - Nov 17-22, 2024</a></font>
+                </h5>
+              </center>
+              <div class="clearfix"></div>
+          </section>
+
+          <!-- #####End main area-->
+          <div class="clearfix"></div>
+        </section>
+      </section>
+      <!-- #####End contents-->
+      <footer id="footer">
+        <div id="footer-main" class="bg-pattern-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5"><a href="index.html" class="img"><img src="assets/img/logo/logo-gclab.png"
+                    alt="GCLab"></a>
+                <div class="sp-blank-30"></div>
+                <p>Global Computing Laboratory</p>
+                <ul class="social-icons shape-circle">
+                  <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                  <li><a href="https://www.linkedin.com/company/global-computing-laboratory/" target="_blank"><i
+                        class="fa fa-linkedin"></i></a></li>
+                  <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>-->
+                </ul>
+              </div>
+              <div class="col-md-3 col-md-offset-1 col-sm-6">
+                <div class="widget">
+                  <div class="links">
+                    <ul>
+                      <li><a href="about.html" title="Dr. Michela Taufer"><span>Dr. Michela Taufer</span></a></li>
+                      <li><a href="people.html" title="People"><span>People</span></a></li>
+                      <li><a href="research.html" title="Research"><span>Research</span></a></li>
+                      <li><a href="publications.html" title="Publications"><span>Publications</span></a></li>
+                    </ul>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                  <div class="links">
+                    <ul>
+                      <li><a href="https://github.com/TauferLab/" target="_blank"
+                          title="Software"><span>Software</span></a></li>
+                      <li><a href="news.html" title="News"><span>News</span></a></li>
+                      <li><a href="gallery.html" title="Home"><span>Gallery</span></a></li>
+                      <li><a href="contact.html" title="Contact"><span>Contact</span></a></li>
+                      <li><a href="assets/pdf/sc19/SC19_flier_gclab_open_positions.pdf"
+                          title="JoinUs"><span>Positions</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+  <!-- #####Begin scripts-->
+  <script src="assets/js/vendors/vendors.js"></script>
+  <!-- Local Revolution tools-->
+  <!-- Only for local and can be removed on server-->
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script type="text/javascript"
+    src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <!-- #####End scripts-->
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+</body>
+
+</html>
