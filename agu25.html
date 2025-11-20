@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--
+                                   _       _   
+								  | |     | |    
+  Designed and Coded By           | | __ _| |__  
+ / _ \ \ /\ / /\ \ /\ / /\ \ /\ / / |/ _` | '_ \ 
+| (_) \ V  V /  \ V  V /  \ V  V /| | (_| | |_) |
+ \___/ \_/\_/    \_/\_/    \_/\_/ |_|\__,_|_.__/ 
+
+http://themeforest.net/user/owwwlab/
+                                          
+-->
+<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
+<!-- #####Begin head-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- globalise scripting and styling content language-->
+  <meta name="Content-Type-Script" content="text/javascript">
+  <meta name="Content-Type-Style" content="text/css">
+  <!-- author of this doc-->
+  <meta name="author" content="owwwlab.com">
+  <!-- ################################-->
+  <!-- #### add SEO metadata here-->
+  <!-- ################################-->
+  <!-- #####Begin styles-->
+  <!-- stylesheets	-->
+  <link href="assets/css/vendors/vendors.css" rel="stylesheet" type="text/css">
+  <!-- Load extra page specific css-->
+  <!-- Overwrite vendors-->
+  <link href="assets/css/vendors/vendors-overwrites.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/demo5.css" rel="stylesheet" type="text/css">
+  <!-- #####End styles-->
+  <!-- #####Begin JS-->
+  <!-- add your scripts to the end of the page for sake of page load speed-->
+  <!-- scripts that need to be at head section-->
+  <script src="assets/js/vendors/jquery.min.js"></script>
+  <!-- #####End JS-->
+  <!-- #####Begin load google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=latin,greek,cyrillic" rel="stylesheet"
+    type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Sintony:400,700&amp;subset=latin,greek,cyrillic" rel="stylesheet"
+    type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic&amp;subset=latin,greek,cyrillic"
+    rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Exo+2:400,200,300,400italic,500,700,900&amp;subset=latin,greek,cyrillic"
+    rel="stylesheet" type="text/css">
+  <!-- #####End load google fonts-->
+  <title>GCLab @ AGU25</title>
+
+  <style>
+    .accordion {
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: white;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      outline: 2px solid;
+      font-family: sans-serif
+    }
+
+    </style>
+
+
+</head>
+<!-- #####End head-->
+
+<body class="fullwidth bg-pattern-4 sticky-header"> <!--bg-gray-->
+  <div id="wrapper" class="boxed-layout">
+    <!-- #####Begin Header-->
+    <header id="header" class="bg-pattern-4"> <!--light sticky-->
+      <div class="head-main">
+        <div class="container">
+          <!-- logo-->
+          <!-- #####Begin logo wrapper-->
+          <div class="logo-wrapper">
+            <!-- standard Logo--><a href="index.html"><img src="assets/img/logo/logo-gclab.png" alt="GCLab"
+                class="logo-light ol-retina"><img src="assets/img/logo/logo-gclab.png" alt="GCLab"
+                class="logo-dark ol-retina"></a>
+          </div>
+          <!-- #####End logo wrapper-->
+          <!-- primary navigation-->
+          <ul id="primary-menu">
+            <li><a href="index.html" title="Home"><span>Home</span></a>
+            </li>
+            <li><a href="about.html" title="Dr. Michela Taufer"><span>Dr. Michela Taufer</span></a>
+            </li>
+            <li><a href="people.html" title="People"><span>People</span></a>
+            </li>
+            <li><a href="research.html" title="Research"><span>Research</span></a>
+            </li>
+            <li><a href="publications.html" title="Publications"><span>Publications</span></a>
+            </li>
+            <li><a href="https://github.com/TauferLab/" target="_blank" title="Software"><span>Software</span></a>
+            </li>
+            <li><a href="news.html" title="News"><span>News</span></a>
+            </li>
+            <li><a href="gallery.html" title="Gallery"><span>Gallery</span></a>
+            </li>
+            <li><a href="contact.html" title="Contact"><span>Contact</span></a>
+            </li>
+            <li><a href="positions.html" title="Positions"><span>Positions</span></a>
+            </li>
+          </ul>
+          <div class="header-icons"></div>
+          <!-- #####Begin trigger for search-->
+          <!--<div class="search ol-search-trigger simple"><a href="#"><i class="oli oli-search"></i></a></div>-->
+          <a href="https://www.linkedin.com/company/global-computing-laboratory/" target="_blank"><i
+              class="fa fa-linkedin"></i></a>
+          <!-- #####End trigger for search-->
+          <!-- #####Begin mobile menu trigger-->
+          <div class="ol-mobile-trigger hamburger hamburger--elastic">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+          <!-- #####End mobile menu trigger-->
+          <div class="search-area fullscreen">
+            <div data-img-src="assets/img/bg/14.jpg" class="ol-search-bg set-bg ov-dark-alpha-50"></div>
+            <div class="inner-wrapper"><a href="#" class="close-btn"><i class="ol-css-close"></i><span>ESC</span></a>
+              <div class="search-field">
+                <input type="text" placeholder="Type and hit enter">
+              </div>
+              <div class="search-logo"><img src="assets/img/logo/logo-gclab.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- #####End Header-->
+    <!-- #####Begin contents-->
+    <section id="contents">
+      <!-- #####Begin page head-->
+      <div class="page-head h-250 center-it parallax-layer dark ov-grad1-alpha-30" data-img-src="assets/img/neworl.jpg"
+        data-parallax-mode="mode-title">
+        <div class="container">
+          <div class="tb-vcenter-wrapper">
+            <div class="title-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+              <!--<h4 class="head">Current</h4>-->
+              <!--<h4><font face="Courier New" color="white">Current</font></h4>-->
+              <h1 class="title">GCLab @ AGU25</h1>
+              <!-- <h2 class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum is simply dummy text.</h2> -->
+            </div>
+            <div class="breadcrumb-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+              <ul class="breadcrumb">
+                <li><a href="#"><i class="oli oli-home"></i></a></li>
+                <li><a href="#">publication</a></li>
+                <li><a href="#">publication type</a></li>
+                <li>learning environment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #####End page head
+        -->
+      <section class="page-contents">
+        <!-- #####Begin main area-->
+        <section id="main-area">
+          <section class="section slim-container">
+            <div class="container">
+
+            <div class="sc-p-1">
+            We at the <b>Global Computing Lab (GCLab)</b> are thrilled to participate in AGU25!
+            Join us throughout the week as we present our research, engage in discussions, and contribute to panels, workshops, and student showcases.
+            We look forward to meeting you—come say hello!              
+            </div>
+              <div class="sp-blank-30"></div>
+
+              <!-- Attendees -->
+              <div>
+                <h3 align="center">Meet the Team and Collaborators at AGU25</h3>
+
+               <div class="col-xs-12">
+                <div class="col-xs-4" align="center"><img src="assets/img/people/michela.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                    <font face="Courier New" size="3"><b>Dr. Michela Taufer</b></font> <br>
+                    (GCLab Director)</font>
+                  </div>
+                </div>
+  
+                <div class="col-xs-4" align="center"><img src="assets/img/people/jack.png" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Dr. Jack Marquez</b></font> <br>
+                  (GCLab Research Assistant Professor)</font>
+                  </div>
+                </div>
+  
+                <div class="col-xs-4" align="center"><img src="assets/img/people/kin.png" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Dr. Kin Wai NG</b></font><br>
+                  (GCLab Research Assistant Professor)</font>
+                  </div>
+                </div>
+              </div>
+  
+                
+             <div class="col-xs-12">
+              <div class="col-xs-4" align="center"><img src="assets/img/people/kyle_davis.png" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Dr. Kyle Davis</b></font><br>
+                  (Collaborator at the U. of Delaware)</font>
+                  </div>
+                </div>
+
+                <div class="col-xs-4" align="center"><img src="assets/img/people/holly_michael.png" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Dr. Holly Michael</b></font><br>
+                  (Collaborator at the U. of Delaware)</font>
+                  </div>
+                </div>
+
+                <div class="col-xs-4" align="center"><img src="assets/img/people/rodrigo_vargas.jpg" class="set-me" height="100" width="100">
+                  <div class="contents" align="center">
+                  <font face="Courier New" size="3"><b>Dr. Rodrigo Vargas</b></font><br>
+                  (Collaborator at the U. of Arizona)</font>
+                  </div>
+                </div>
+               </div>
+                
+              <div class="sp-line-40"></div>
+                <section>
+                  <h4><strong>Researchers attending from our collaborators at Global Food Futures Lab</strong> </h4>
+                  <ul>
+                    <li>Aarti Arora, UD PhD Student</li>
+                    <li>Endalkachew Kebede, UD PhD Student</li>
+                    <li>Bhoktear Khan, UD PhD Student</li>
+                    <li>Afia Sarwar, UD PhD Student</li>
+                    <li>John Uponi, UD PhD Student</li>
+                    <li>Amaja Mack, UD PhD Student</li>
+                    <li>Hanan Abou Ali, UD PhD Student</li>
+                  </ul>
+                </section>
+              <div class="sp-line-40"></div>
+                <section>
+                  <h4><strong>Researchers attending from our collaborators at Holly Michael’s Research Group</strong></h4>
+                  <ul>
+                    <li>Dannielle Pratt, UD Postdoctoral Researcher</li>
+                    <li>Cindy Chen, UD Postdoctoral Researcher</li>
+                    <li>Claudia Zoccorato, UD Visiting Researcher</li>
+                    <li>Romana Ibrahim, UD PhD Student</li>
+                    <li>Abigail McGraw, UD MS Student</li>
+                    <li>Tahmidur Junayed, UD PhD Student</li>
+                  </ul>
+                </section>
+
+              <div class="sp-line-80"></div>
+
+              <h3 align="center">Project Showcase</h3>
+              <p> At AGU25, GCLab showcases how we support scientists tackling complex data and computing challenges. Our projects reflect a dedication to open, reproducible, and inclusive research that advances the frontiers of HPC and AI.</p>
+              <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTdVLwz8N-7btGJDBtxzdm4Kd0jxIofa293smu_S_j1WuRjlAwFNt8oVTaykydqdQ/pubembed?start=true&loop=true&delayms=1500" frameborder="0" width="100%" height="500" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+              <div class="sp-line-80"></div>
+
+              <h3 align="center">Schedule of GCLab Activities at AGU25</h3>
+              <h5 class="m-bottom-30">Monday, December 15 - Friday, December 19, 2025</h5>
+
+                <section>
+                  <h3><strong>GCLab Booth Information</strong></h3>
+                  <p><b>Time:</b></p>
+                  <ul>
+                    <li><b>Monday, 15 December — 15:00–18:00 CST</b></li>
+                    <li><b>Tuesday, 16 December — 10:00–18:00 CST</b></li>
+                    <li><b>Wednesday, 17 December — 10:00–18:00 CST</b></li>
+                    <li><b>Thursday, 18 December — 10:00–13:00 CST</b></li>
+                  </ul>
+                  <p><strong>Location:</strong> Booth #928 in the Ernest N. Morial Convention Center (Halls B2–C)</p>
+
+                  <div style="text-align: center; margin-top: 15px;">
+                  <img src="assets/img/agu25/gclab_booth_location.png" alt="GCLab Booth Image" style="max-width: 100%; height: auto; margin-top: 15px;">
+                  </div>
+                </section>
+
+              <!-- ======================= -->
+              <!-- MONDAY DEC 15 -->
+              <!-- ======================= -->
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Monday, December 15th</h5>
+
+              <div class="row">
+              <div class="sp-blank-30"></div>
+
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>10:30 – 12:00 CST</dt>
+                <dd><b>Oral Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Session/265904" target="_blank">Advancing Sustainable and Resilient Agriculture and Irrigation through AI and Remote Sensing I</a></dd>
+                <dd><b>Primary Convener</b>: <b>Kyle Davis (UD)</b></dd>
+                <dd><b>Co-Conveners</b>: Piyush Mehta (Environmental Systems Research Institute), <b>Endalkachew Abebe Kebede (UD)</b>, Marta Tuninetti (Politecnico di Torino), <b>Bhoktear Khan (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 206 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>14:15 – 15:45 CST</dt>
+                <dd><b>Oral Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Session/265913" target="_blank">Advancing Sustainable and Resilient Agriculture and Irrigation through AI and Remote Sensing II</a></dd>
+                <dd><b>Chair</b>: <b>Kyle Davis (UD)</b></dd>
+                <dd><b>Co-Conveners</b>: Piyush Mehta (Environmental Systems Research Institute), <b>Endalkachew Abebe Kebede (UD)</b>, Marta Tuninetti (Politecnico di Torino), <b>Bhoktear Khan (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 206 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>14:15 – 17:45 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1971632" target="_blank">Diurnality of Carbon and Energy Fluxes from Global Eddy Covariance Networks Reveals Ecosystem-Specific Interactions with Climate</a></dd>
+                <dd><b>Authors</b>: Taejin Park (NASA Ames Research Center), Hirofumi Hashimoto (NASA Ames Research Center), Weile Wang (NASA/AMES Research Center), Xiangming Xiao (University of Oklahoma), <b>Rodrigo Vargas (University of Delaware)</b>, Ian G Brosnan (NASA Ames Research Center)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/rodrigo_vargas.jpg" height="45" width="45" alt="Rodrigo Vargas">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>16:15 – 17:45 CST</dt>
+                <dd><b>Oral Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Session/265922" target="_blank">Advancing Sustainable and Resilient Agriculture and Irrigation through AI and Remote Sensing III</a></dd>
+                <dd><b>Chair</b>: <b>Kyle Davis (UD)</b></dd>
+                <dd><b>Co-Conveners</b>: <b>Kyle Davis (UD)</b>, Piyush Mehta (Environmental Systems Research Institute), <b>Endalkachew Abebe Kebede (UD)</b>, Marta Tuninetti (Politecnico di Torino), <b>Bhoktear Khan (UD)</b>, Landon Marston (Virginia Tech), Carole Dalin (Ecole Normale Supérieure)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 206 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+                 
+              </div>
+              <!-- ======================= -->
+              <!-- TUESDAY DEC 16 -->
+              <!-- ======================= -->
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Tuesday, December 16th</h5>
+              <div class="row">
+              <div class="sp-blank-30"></div>
+                
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>08:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Session/263207" target="_blank">Advancing Sustainable and Resilient Agriculture and Irrigation through AI and Remote Sensing IV</a></dd>
+                <dd><b>Primary Convener</b>: <b>Kyle Davis (UD)</b></dd>
+                <dd><b>Co-Conveners</b>: Piyush Mehta (Environmental Systems Research Institute), <b>Endalkachew Abebe Kebede (UD)</b>, Marta Tuninetti (Politecnico di Torino), <b>Bhoktear Khan (UD)</b>, <b>John Uponi (UD)</b>, Landon Marston (Virginia Tech)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+                    
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>08:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1972333" target="_blank">Assessing Transitions Between Smallholder and Commercial Agriculture in Nigeria through Automated Field Boundary Segmentation</a></dd>
+                <dd><b>Authors</b>: <b>Kyle Davis (UD)</b>, Rahebe Abedi (Clark University), <b>Hanan Abou Ali (UD)</b>, Oluwaseun Adeluyi (National Space Research & Development Agency), Tunrayo Alabi (International Institute for Tropical Agriculture), Tanmoy Chakraborty (Clark University), Lyndon D Estes (Clark University), <b>Bhoktear Khan (UD)</b>, Olawale Olayide (University of Ibadan), <b>John Uponi (UD)</b>, Aleksandra Wasik (Kent State University), He Yin (Kent State University)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>08:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1933869" target="_blank">The Hidden Role of Groundwater in the Functioning and Migration of Saltmarshes</a></dd>
+                <dd><b>Authors</b>: <b>Holly Michael (UD)</b>, Julia Guimond (Woods Hole Oceanographic Institution), <b>Dannielle Pratt (UD)</b>, Emilio Grande (California State University East Bay)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>09:10 – 09:20 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1953333" target="_blank">High-Resolution Global Mapping of Irrigated Areas Using Remote Sensing and Machine Learning</a></dd>
+                <dd><b>Authors</b>: <b>Endalkachew Abebe Kebede (UD)</b>, Gabriel Laboy (UTK), Paula Olaya (UTK), <b>Michela Taufer (UTK)</b>, <b>Holly Michael (UD)</b>, Kevin Bhimani (UD), <b>Kyle Davis (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 206 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1"> <img src="assets/img/people/michela.jpg" height="45" width="45" alt="Michela Taufer"> </div>
+                <div class="col-sm-1"> <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael"> </div>
+                <div class="col-sm-1"> <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis"> </div>
+                
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-12 sc-poster-div">
+                  <div class="col-sm-12 sc-poster-subdiv">
+                  <div class="col-sm-2 poster-link">
+                  </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                      <a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1953333" target="_blank"><b>Endalkachew Abebe Kebede</b>, Gabriel Laboy, Paula Olaya, <b>Michela Taufer</b>, <b>Holly Michael</b>, Kevin Bhimani, <b>Kyle Davis</b>, High-Resolution Global Mapping of Irrigated Areas Using Remote Sensing and Machine Learning, in Proceedings of the American Geophysical Union Fall Meeting, New Orleans, LA, December 14-19, 2025.</a>
+                      </p>
+                     <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                      <p>
+                        @inproceedings{kebede2025agu1,<br>
+                        author    = {Endalkachew Abebe Kebede and Gabriel Laboy and Paula Olaya and Michela Taufer and Holly Michael and Kevin Bhimani and Kyle Davis},<br>
+                        title     = {{High-Resolution Global Mapping of Irrigated Areas Using Remote Sensing and Machine Learning}},<br>
+                        booktitle = {Proceedings of the American Geophysical Union Fall Meeting},<br>
+                        address   = {New Orleans, LA},<br>
+                        month     = {December 14-19},<br>
+                        year      = {2025},<br>
+                        }
+                    </p>
+                    </div>
+                   </div>
+                  </div>
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>09:40 – 09:50 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1954699" target="_blank">Assessing Economic Water Scarcity and Sustainable Irrigation Potential in Nigeria</a></dd>
+                <dd><b>Authors</b>: <b>Bhoktear Khan (UD)</b>, <b>John Uponi (UD)</b>, <b>Hanan Abou Ali (UD)</b>, Oluwaseun Adeluyi (National Space Research & Development Agency), Tunrayo Alabi (International Institute for Tropical Agriculture), Olawale Olayide (University of Ibadan), <b>Kyle Davis (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 206 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>10:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1966705" target="_blank">Harnessing High-Resolution Multispectral and LiDAR Data for Accurate Urban Tree Cover Mapping and Informed Sustainable Planning</a></dd>
+                <dd><b>Authors</b>: Akash Awasthi (University of Houston), Kyle Kristian Kabasares (Bay Area Environmental Research Institute), Hien Van Nguyen (University of Houston), <b>Rodrigo Vargas (University of Delaware)</b>, Ramakrishna R Nemani (NASA Ames Research Center), Ian G Brosnan (NASA Ames Research Center), Taejin Park (NASA Ames Research Center/Bay Area Environmental Research Institute)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 351 (Convention Center)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/rodrigo_vargas.jpg" height="45" width="45" alt="Rodrigo Vargas">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>11:00 – 11:10 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1970245" target="_blank">The Role of Climate in Shaping U.S. Cropland Shifting and Crop Switching</a></dd>
+                <dd><b>Authors</b>: <b>Afia Sarwar (UD)</b>, <b>Kyle Davis (UD)</b>, <b>Bhoktear Khan (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 206 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>11:10 – 11:20 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1937541" target="_blank">Global and Local Risks of Rising Water Scarcity to Food Production and Supply</a></dd>
+                <dd><b>Authors</b>: <b>Endalkachew Abebe Kebede (UD)</b>, Tariq Ali (Jiangxi Agricultural University), Davide Danilo Chiarelli (Politecnico di Milano), Sarah Hartman (University of California Berkeley, CSIRO), Matti Kummu (Aalto University), Piyush Mehta (Environmental Systems Research Institute), Brian D Richter (Sustainable Waters), Maria C. Rulli (Politecnico di Milano), Marta Tuninetti (Politecnico di Torino), Kate A Brauman (University of Alabama), Qinyu Deng (Beijing Normal University), Jonas Jägermeyr (Columbia University of New York), Landon Marston (Virginia Tech), Mesfin Mergia Mekonnen (University of Alabama), Deepak K Ray (University of Minnesota), Lorenzo Rosa (Carnegie Institution for Science Stanford), Stefan Siebert (University of Göttingen), Wei Xie (Peking University), <b>Kyle Davis (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 206 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>11:15 – 11:20 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1868031" target="_blank">Overlooked Potential for Energy Transition Mineral Resources and Research in Above‑Ground Sources</a></dd>
+                <dd><b>Authors</b>: <b>John Uponi (UD)</b>, Julie Klinger (University of Wisconsin – Madison), Gwendolyn Murphy (University of Wisconsin – Madison), <b>Kyle Davis (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room E-2 (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col‑sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>11:30 – 11:40 CST</dt>
+                <dd><b>Oral Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1967751" target="_blank">MidFlux: Integrating Ground-to-Airborne Eddy Covariance Measurements and Airborne-to-Satellite Remote Sensing to Assess Regional Ch4 Dynamics across Diverse Mid-Atlantic Wetlands</a></dd>
+                <dd><b>Authors</b>: Lisa Haber (Virginia Commonwealth University), Maricar M Aguilos (Hokkaido University), Brandon Alveshere (University of Connecticut), K. Dana Chadwick (NASA Jet Propulsion Laboratory), Bruce Cook (NASA Goddard Space Flight Center), Erin Delaria (NASA Goddard Space Flight Center), John S King (North Carolina State University), Noel Gurwick (SERC), Reem Hannun (NASA Ames Research Center), Douglas C Morton (NASA Goddard Space Flight Center), Thomas L O'Halloran (Virginia Tech), Ryan Pavlick (NASA Headquarters), Benjamin Poulter (Spark Climate Solutions), Mindy Priddy (Virginia Commonwealth University), Camilo Rey-Sanchez (North Carolina State University), Todd M Scanlon (University of Virginia), Shawn Serbin (Brookhaven National Laboratory), <b>Rodrigo Vargas (University of Delaware)</b>, Eric Ward (NASA GSFC/UMD ESSIC), Glenn Wolfe (NASA Goddard Space Flight Center), Qing Ying (NASA GSFC/UMD ESSIC), Christopher Michael Gough (Virginia Commonwealth University)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/rodrigo_vargas.jpg" height="45" width="45" alt="Rodrigo Vargas">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>13:00 – 14:30 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1932969" target="_blank">Spatial Representativeness of MexFlux as a Regional FLUXNET Network</a></dd>
+                <dd><b>Authors</b>: Van Huong Le (University of Delaware), <b>Rodrigo Vargas (Arizona State University)</b>, Samuel Villarreal (Centro de Investigación en Materiales Avanzados S.C.), M. Susana Alvarado-Barrientos (Red de Ecología Funcional, Instituto de Ecología, A.C.), Alejandro Cueva (El Colegio de la Frontera Sur), Josue Delgado-Balbuena (Centro Nacional de Investigación Disciplinaria Agricultura Familiar, INIFAP), Dulce Flores (SECIHTI-Center for Research and Advanced Studies of the IPN Saltillo Unit), Cesar Hinojo (University of Sonora), Mónica Cervantes-Jiménez (Universidad Autónoma de Querétaro), Eli R Perez-Ruiz (Autonomous University of Ciudad Juarez), Zulia Sanchez-Mejia (Instituto Tecnológico de Sonora), Tonantzin Tarin (Universidad Nacional Autonoma de Mexico), Stephen H. Bullock (CICESE), Alejandro E Castellanos (University of Sonora), Bernardo Figueroa (Universidad Nacional Autónoma de México, Sisal), Jaime Garatuza-Payán (Instituto Tecnológico de Sonora), Friso Holwerda (Universidad Nacional Autónoma de México), Julio Cesar Rodriguez (Universidad de Sonora), Jorge Uuh-Sonda (Instituto Tecnologico de Sonora), Erik Velasco (Molina Center for Energy and the Environment), Enrico A. Yépez (Instituto Tecnológico de Sonora)</dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/rodrigo_vargas.jpg" height="45" width="45" alt="Rodrigo Vargas">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>14:15 – 17:45 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1911296" target="_blank">Untangling Dynamic Drivers of Salt Marsh Migration</a></dd>
+                <dd><b>Authors</b>: <b>Dannielle Pratt (UD)</b>, Julia Guimond (Woods Hole Oceanographic Institution), Tyler Messerschmidt (Virginia Institute of Marine Science), Justus Grant Dalton Jobe (George Washington University), Matthew L. Kirwan (William & Mary), Keryn Gedan (George Washington University), Sergio Fagherazzi (Boston University), <b>Holly Michael (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>14:15 – 17:45 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1980498" target="_blank">Designing a Saltwater Intrusion Monitoring Network in Coastal Delaware: Identifying Vulnerable Areas and Addressing Critical Monitoring Gaps</a></dd>
+                <dd><b>Authors</b>: <b>Romana Ibrahim (UD)</b>, Rachel W. McQuiggan (UD), <b>Katherine Buell‑Fleming (UD)</b>, Bob Scarborough (State of Delaware), Matthew Grabowski (State of Delaware), Lyndsay B. Ball (U.S. Geological Survey), Burke J. Minsley (U.S. Geological Survey), Kevin Brinson (UD), <b>Holly Michael (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>14:15 – 17:45 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1972707" target="_blank">Salinity Dominates Moisture Content in Soil Water Potential at Marsh‑Forest Boundaries</a></dd>
+                <dd><b>Authors</b>: <b>Tahmidur Rahman Junayed (UD)</b>, <b>Dannielle Pratt (UD)</b>, Riley Leff (George Washington University), Keryn Gedan (George Washington University), <b>Holly Michael (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>15:00 – 16:30</dt>
+                <dd><b>Oral Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Session/253275" target="_blank">The William S. and Carelyn Y. Reeburgh Lecture: Recognizing Significant Contributions to the Fields of Global Biogeochemistry Presented by Markus Kleber</a></dd>
+                <dd><b>Primary Convener</b>: Emily S. Bernhardt (Duke University)</dd>
+                <dd><b>Secondary Convener</b>: <b>Rodrigo Vargas (University of Delaware)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Room 351 (Convention Center)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/rodrigo_vargas.jpg" height="45" width="45" alt="Rodrigo Vargas">
+                </div>
+
+              </div>
+              <!-- ======================= -->
+              <!-- WEDNESDAY DEC 17 -->
+              <!-- ======================= -->
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Wednesday, December 17th</h5>
+              <div class="row">
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>08:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1932377" target="_blank">Linkages Between Climate Extremes, Cropland Expansion, and Deforestation in Sub‑Saharan Africa</a></dd>
+                <dd><b>Authors</b>: <b>Amaja Mack (UD)</b>, <b>Kyle Davis (UD)</b>, <b>Bhoktear Khan (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>08:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1895230" target="_blank">The Role of Resilient Crops in Influencing Climate‑Driven Deforestation in Nigeria</a></dd>
+                <dd><b>Authors</b>: <b>John Uponi (UD)</b>, <b>Bhoktear Khan (UD)</b>, <b>Hanan Abou Ali (UD)</b>, Tunrayo Alabi (International Institute for Tropical Agriculture), Oluwaseun Adeluyi (National Space Research & Development Agency), Olawale Olayide (University of Ibadan), <b>Kyle Davis (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>14:55 – 15:05 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1868997" target="_blank">Controlling Drivers of Wave‑Driven Ripple on Interfacial Fluid and Solute Exchange in Coastal Hyporheic Zone</a></dd>
+                <dd><b>Authors</b>: <b>Chieh‑Ying Chen (UD)</b>, <b>Jiaye Zhang (UD)</b>, <b>Holly Michael (UD)</b>, <b>Tian‑Jian Hsu (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>231‑232 (New Orleans Convention Center)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael"></div>
+                
+              </div>
+
+              <!-- ======================= -->
+              <!-- THURSDAY DEC 18 -->
+              <!-- ======================= -->
+
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Thursday, December 18th</h5>
+              <div class="row">
+              <div class="sp-blank-30"></div>
+
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>08:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1956331" target="_blank">Scalable and Optimized Terrain Parameter Computation with the GEOtiled-SG Framework</a></dd>
+                <dd><b>Authors</b>: <b>Jack Marquez (UTK)</b>, <b>Kin NG (UTK)</b>, <b>Gabriel Laboy (UTK)</b>, <b>Paula Olaya (UTK)</b>, <b>Rodrigo Vargas (ASU & UD)</b>, <b>Michela Taufer (UTK)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall) (MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/michela.jpg" height="45" width="45" alt="Kyle Davis">
+                </div>                
+                <div class="col-sm-1">
+                <img src="assets/img/people/jack.png" height="45" width="45" alt="Jack Marquez">
+                </div>                
+                <div class="col-sm-1">
+                <img src="assets/img/people/kin.png" height="45" width="45" alt="Kin Wai NG">
+                </div>                
+                <div class="col-sm-1">
+                <img src="assets/img/people/rodrigo_vargas.jpg" height="45" width="45" alt="Rodrigo Vargas">
+                </div>                
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-12 sc-poster-div">
+                  <div class="col-sm-12 sc-poster-subdiv">
+                  <div class="col-sm-4 poster-link">
+                      <a href="agu25.html">
+                        <img src="assets/img/agu25/agu_logo.png" height="140" width="220" class="set-me">
+                      </a>
+                    </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                        <a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1956331" target="_blank"><b>Jack Marquez</b>, <b>Kin W. NG</b>, Gabriel Laboy, Paula Olaya, Rodrigo Vargas, and <b>Michela Taufer</b>. Scalable and Optimized Terrain Parameter Computation with the GEOtiled-SG Framework, in Proceedings of the American Geophysical Union Fall Meeting. New Orleans, USA, 2025.</a>
+                      </p>
+                     <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                      <p>
+                      @inproceedings{marquez2025agu,<br>
+                      author    = {Jack Marquez and Kin W. NG and Gabriel Laboy and Paula Olaya and Rodrigo Vargas and Michela Taufer},<br>
+                      title     = {{Scalable and Optimized Terrain Parameter Computation with the GEOtiled-SG Framework}},<br>
+                      booktitle = {Proceedings of the American Geophysical Union Fall Meeting},<br>
+                      address   = {New Orleans, USA},<br>
+                      year      = {2025},<br>
+                      }
+                    </p>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>11:17 – 11:31 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1868966" target="_blank">Influence of Microtopography and Soil Heterogeneity on Salinization in Changing Coastal Environments</a></dd>
+                <dd><b>Authors</b>: <b>Chieh‑Ying Chen (UD)</b>, Anner Paldor (UD), <b>Dannielle Pratt (UD)</b>, <b>Holly Michael (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>231‑232 (New Orleans Convention Center)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael">
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>14:35 – 14:45 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1898161" target="_blank">Rural Labor Out‑Migration’s Impact on Agriculture and the Environment in the Global South</a></dd>
+                <dd><b>Authors</b>: <b>Aarti Arora (UD)</b>, Pinki Mondal (UD), Ruth DeFries (Columbia University), Sonali Shukla McDermid (New York University), <b>Kyle Davis (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Rooms 203–205 (New Orleans Convention Center)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+              </div>
+
+              <!-- ======================= -->
+              <!-- FRIDAY DEC 19 -->
+              <!-- ======================= -->
+
+              <div class="sp-line-80"></div>
+              <h5 class="m-bottom-30">Friday, Dec 19th</h5>
+              <div class="row">
+
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>8:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1964082" target="_blank">An Interface for Data Curation and Mapping of Irrigated Areas Using Active Learning</a></dd>
+                <dd><b>Authors</b>: <b>Kin NG (UTK)</b>, <b>Jack Marquez (UTK)</b>, <b>Gabriel Laboy (UTK)</b>, <b>Endalkachew Abebe Kebede (UD)</b>, <b>Holly Michael (UD)</b>, <b>Kyle Davis (UD)</b>, <b>Michela Taufer (UTK)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/michela.jpg" height="45" width="45" alt="Michela Taufer">
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kin.png" height="45" width="45" alt="Kin NG">
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/jack.png" height="45" width="45" alt="Jack Marquez">
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael">
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/kyle_davis.png" height="45" width="45" alt="Kyle Davis">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-12 sc-poster-div">
+                  <div class="col-sm-12 sc-poster-subdiv">
+                  <div class="col-sm-4 poster-link">
+                      <a href="agu25.html">
+                        <img src="assets/img/agu25/agu_logo.png" height="140" width="220" class="set-me">
+                      </a>
+                    </div>
+                    <div class="col-sm-8 citation-container">
+                      <p class="citation-text">
+                       <a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1964082" target="_blank"><b>Kin Wai Ng</b>, <b>Jack Marquez</b>, Gabriel Laboy, Endalkachew Kebede, <b>Holly Michael</b>, <b>Kyle Frankel Davis</b>, and <b>Michela Taufer</b>, An interface for data curation and mapping of irrigated areas using active learning,” in Proceedings of the American Geophysical Union Fall Meeting, New Orleans, USA, Dec. 2025.</a>
+                      </p>
+                     <button class="accordion">[Bibtex]</button>
+                     <div class="panel">
+                      <p>
+                    @inproceedings{ng2025agu,<br>
+                    author = {Kin Wai NG and Jack Marquez and Gabriel Laboy and Endalkachew Kebede and Holly Michael and Kyle Frankel Davis and  Michela Taufer },<br>
+                    title = {{An Interface for Data Curation and Mapping of Irrigated Areas Using Active Learning}},<br>
+                    booktitle = {Proceedings of the American Geophysical Union Fall Meeting},<br>
+                    address = {New Orleans, USA},<br>
+                    month = {December},<br>
+                    year = {2025},<br>
+                    }
+                    </p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>08:30 – 12:00 CST</dt>
+                <dd><b>Poster Session: </b><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1898684" target="_blank">Hydrogeologic Controls on the Position of the Marsh‑Forest Boundary in the Mid‑Atlantic</a></dd>
+                <dd><b>Authors</b>: <b>Abigail McGraw (UD)</b>, <b>Dannielle Pratt (UD)</b>, <b>Holly Michael (UD)</b></dd>
+                <dd style="width: 100%;"><b>Location: </b>Hall EFG (Poster Hall, MCCNO)</dd>
+                </div>
+                </div>
+                <div class="col-sm-1">
+                <img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael">
+                </div>
+
+
+                <div class="sp-blank-30"></div>
+                <div class="col-sm-8">
+                <div class="dl-horizontal text-left tight m-bottom-30">
+                <dt>11:36 – 11:46 CST</dt>
+                <dd>
+                <b>Poster Session: </b>
+                <a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1944431" target="_blank">
+                The Biophysical Foundations of Tidal Marshes: A Focus on Soil-Root Interactions
+                </a>
+                </dd>
+                <dd><b>Authors</b>: Claudia Zoccarato (University of Padua), <b>Holly Michael (UD)</b>, Anna Roat (UD), Christopher L. Meehan (UD), Pietro Teatini (University of Padova), Christian Schwarz (KU Leuven), Siamak Yoosefi Sigari (UD) </dd>
+                <dd style="width: 100%;"> <b>Location: </b>245 (New Orleans Convention Center) </dd>
+                </div>
+                </div>
+                <div class="col-sm-1"><img src="assets/img/people/holly_michael.png" height="45" width="45" alt="Holly Michael"> </div>
+
+              </div>
+        </section>
+      </section>
+      <!-- #####End contents-->
+      <footer id="footer">
+        <div id="footer-main" class="bg-pattern-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5"><a href="index.html" class="img"><img src="assets/img/logo/logo-gclab.png"
+                    alt="GCLab"></a>
+                <div class="sp-blank-30"></div>
+                <p>Global Computing Laboratory</p>
+                <ul class="social-icons shape-circle">
+                  <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                  <li><a href="https://www.linkedin.com/company/global-computing-laboratory/" target="_blank"><i
+                        class="fa fa-linkedin"></i></a></li>
+                  <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>-->
+                </ul>
+              </div>
+              <div class="col-md-3 col-md-offset-1 col-sm-6">
+                <div class="widget">
+                  <div class="links">
+                    <ul>
+                      <li><a href="about.html" title="Dr. Michela Taufer"><span>Dr. Michela Taufer</span></a></li>
+                      <li><a href="people.html" title="People"><span>People</span></a></li>
+                      <li><a href="research.html" title="Research"><span>Research</span></a></li>
+                      <li><a href="publications.html" title="Publications"><span>Publications</span></a></li>
+                    </ul>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                  <div class="links">
+                    <ul>
+                      <li><a href="https://github.com/TauferLab/" target="_blank"
+                          title="Software"><span>Software</span></a></li>
+                      <li><a href="news.html" title="News"><span>News</span></a></li>
+                      <li><a href="gallery.html" title="Home"><span>Gallery</span></a></li>
+                      <li><a href="contact.html" title="Contact"><span>Contact</span></a></li>
+                      <li><a href="assets/pdf/sc19/SC19_flier_gclab_open_positions.pdf"
+                          title="JoinUs"><span>Positions</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+  <!-- #####Begin scripts-->
+  <script src="assets/js/vendors/vendors.js"></script>
+  <!-- Local Revolution tools-->
+  <!-- Only for local and can be removed on server-->
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script type="text/javascript"
+    src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <!-- #####End scripts-->
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+</body>
+
+</html>
