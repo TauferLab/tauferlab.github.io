@@ -1631,6 +1631,24 @@ a.catalog-header:hover {
   line-height: 1.5;
   color: #071a3a;
 }
+.publications-list {
+  list-style: decimal;
+  padding-left: 24px;
+}
+.publications-list li {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8edf3;
+}
+.publications-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.publications-list a {
+  color: #075ce8;
+  word-break: break-all;
+}
 .detail-contacts {
   background: #f5f7fa;
   border: 1px solid #e0e5ec;
@@ -1744,6 +1762,12 @@ a.catalog-header:hover {
   color: #075ce8;
   border-color: #8caee8;
   background: #fff;
+}
+.btn-data-outline span {
+  transition: transform 0.15s ease-in-out;
+}
+.btn-data-outline:hover span {
+  transform: translateX(3px);
 }
 .data-hero-art {
   position: relative;
@@ -2954,6 +2978,15 @@ a.catalog-header:hover {
 .section-link {
   color: #075ce8;
   font-weight: 800;
+}
+.split-content a span,
+.cta-panel a span {
+  display: inline-block;
+  transition: transform 0.15s ease-in-out;
+}
+.split-content a:hover span,
+.cta-panel a:hover span {
+  transform: translateX(4px);
 }
 .link-card-grid {
   display: grid;
