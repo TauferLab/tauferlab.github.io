@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description"
-        content="High-performance analytics and AI connect large climate collections with scalable scientific workflows." />
+        content="SOMOSPIE combines satellite measurements with terrain, climate, and environmental data to generate fine-resolution soil moisture predictions through NSDF." />
     <meta name="theme-color" content="#00172f" />
     <link rel="icon" href="/assets/nsdf/nsdf-mark.png" />
-    <title>Enabling Large-Scale Climate Analytics | NSDF</title>
+    <title>SOMOSPIE: AI-Powered Fine-Resolution Soil Moisture | NSDF</title>
     <link rel="stylesheet" href="../../astro/index.DdXuWuRM.css" />
 </head>
 
@@ -47,65 +47,72 @@
             <header class="detail-hero">
                 <div class="detail-hero-content">
                     <p class="eyebrow light">
-                        Earth &amp; Climate <span>•</span> NASA
+                        Earth &amp; Climate <span>•</span> SOMOSPIE
                     </p>
-                    <h1>Climate science: scaling petabyte-scale climate analytics without sacrificing
-                                    scientific fidelity</h1>
+                    <h1>SOMOSPIE: transforming coarse Earth observations into fine-resolution soil moisture
+                        intelligence through AI</h1>
                 </div>
             </header>
             <section class="detail-content">
-                <img src="/assets/nsdf/use_cases/climate.png" alt="OpenVisus Nasa Dashboard"
+                <img src="/assets/nsdf/use_cases/somospie.png" alt="SOMOSPIE soil moisture prediction workflow"
                     class="detail-article-image" />
                 <p>
-                    Modern climate science relies on petabytes of simulation and observational data, but analyzing these
-                    datasets at full resolution is often prohibitively expensive. NSDF enables scientists to work at the
-                    fidelity required for their analysis—reducing storage, data movement, and computation by orders of
-                    magnitude while preserving the scientific accuracy needed for climate research.
+                    Soil moisture shapes crop health, wildfire risk, water availability, and ecosystem behavior,
+                    yet satellite observations are often too coarse or incomplete for local decision-making.
+                    SOMOSPIE combines satellite measurements with terrain, climate, and environmental data to
+                    generate fine-resolution soil moisture predictions. Through NSDF, these distributed datasets
+                    and machine-learning workflows become easier to access, execute, visualize, and reuse across
+                    computing environments.
                 </p>
                 <div>
                     <h2>The Scientific Challenge</h2>
                     <p>
-                        Climate datasets such as NASA's <b>2.8 PB ECCO ocean simulation</b> contain decades of
-                        high-resolution observations essential for understanding Earth's climate. Processing these
-                        datasets at full resolution requires enormous storage, bandwidth, and computational resources,
-                        making large-scale analyses expensive and inaccessible to many researchers. Traditional
-                        compression reduces cost but often sacrifices scientific fidelity.
+                        Soil moisture varies significantly over short distances because of elevation, slope,
+                        sunlight, drainage, vegetation, and local climate. Satellite products provide broad
+                        coverage, but their coarse resolution cannot capture these local patterns directly.
+                        Researchers must integrate heterogeneous observations and terrain variables, fill spatial
+                        gaps, and transform coarse measurements into predictions detailed enough to support
+                        regional and local analysis.
                     </p>
                 </div>
                 <div>
                     <h2>How NSDF Helps</h2>
                     <p>
-                        NSDF organizes climate data into a hierarchical multiresolution representation, allowing
-                        scientists to analyze lower-resolution data first and retrieve higher-resolution information
-                        only when needed. Machine learning reconstructs fine details from reduced datasets, while
-                        adaptive fidelity enables users to balance computational cost against scientific accuracy for
-                        each analysis.
+                        NSDF connects SOMOSPIE with public environmental datasets, scalable computing, persistent
+                        storage, workflow automation, and interactive visualization. The workflow gathers soil
+                        moisture observations, generates terrain features with GEOtiled, trains prediction models,
+                        and publishes fine-resolution outputs for further analysis. Reusable containers,
+                        notebooks, and Pegasus workflows make the process portable and reproducible across cloud
+                        and high-performance computing resources.
                     </p>
                 </div>
                 <div>
                     <h2>Scientific Impact</h2>
                     <p>
-                        Using the 2.8 PB NASA ECCO climate dataset, NSDF reduced data usage by <b>99%</b>, lowering
-                        storage, transfer, and computational costs from <b>more than $100,000 to approximately $24</b>,
-                        while maintaining an RMS error of only <b>1.46°C</b>. This enables researchers to perform
-                        large-scale climate analyses much more efficiently without losing the essential scientific
-                        information needed for decision making
+                        SOMOSPIE transforms coarse environmental observations into high-resolution soil moisture
+                        information that is more useful for precision agriculture, hydrology, environmental
+                        monitoring, and wildfire preparedness. By combining machine learning with scalable data
+                        and workflow services, researchers can investigate soil-water patterns across larger
+                        regions and at finer spatial scales than satellite observations alone permit.
                     </p>
                 </div>
                 <div>
                     <h2>Key Outcomes</h2>
                     <ul>
-                        <li><b>99% reduction in data volume</b></li>
-                        <li><b>$100K → $24</b> computational and storage cost</li>
-                        <li><b>2.8 PB NASA ECCO dataset analyzed efficiently</b></li>
-                        <li><b>Adaptive fidelity balances scientific accuracy with computational efficiency</b></li>
-                        <li><b>Machine learning reconstruction</b> preserves critical climate features while minimizing
-                            data movement</li>
+                        <li><b>Fine-Resolution Predictions</b> — Converts coarse satellite observations into
+                            detailed soil moisture maps for regional and local analysis.</li>
+                        <li><b>AI-Powered Integration</b> — Combines soil moisture, terrain, climate, weather,
+                            and field observations within a unified prediction workflow.</li>
+                        <li><b>Reproducible Modeling</b> — Packages data generation, transformation, and
+                            prediction as reusable notebooks, containers, and Pegasus workflows.</li>
+                        <li><b>Environmental Decisions</b> — Supports applications in agriculture, hydrology,
+                            wildfire preparedness, and ecosystem management.</li>
                     </ul>
                 </div>
                 <div>
                     <h2>Relevant Links</h2>
                     <ul>
+                        <li><a href="https://github.com/TauferLab/SOMOSPIE" target="_blank" rel="noopener noreferrer">SOMOSPIE Project</a></li>
                     </ul>
                 </div>
                 <a class="btn btn-primary" href="../index.html">Back to all use cases <span>→</span></a>
@@ -171,7 +178,7 @@
     <a class="ask-nsdf-float" href="../../contact/index.html" aria-label="Contact NSDF">
         <span class="ask-icon" aria-hidden="true">✉</span>
         <span class="ask-copy">
-            <strong>Ask NSDF</strong> <small>We’d love to hear from you.</small>
+            <strong>Ask NSDF</strong> <small>We'd love to hear from you.</small>
         </span>
         <span class="ask-arrow" aria-hidden="true">→</span>
     </a>

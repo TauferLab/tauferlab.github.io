@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description"
-        content="High-performance analytics and AI connect large climate collections with scalable scientific workflows." />
+        content="GEOtiled enables high-resolution terrain parameter production at continental scale through parallel tile processing and progressive data access." />
     <meta name="theme-color" content="#00172f" />
     <link rel="icon" href="/assets/nsdf/nsdf-mark.png" />
-    <title>Enabling Large-Scale Climate Analytics | NSDF</title>
+    <title>GEOtiled: Scalable High-Resolution Terrain Data | NSDF</title>
     <link rel="stylesheet" href="../../astro/index.DdXuWuRM.css" />
 </head>
 
@@ -47,65 +47,71 @@
             <header class="detail-hero">
                 <div class="detail-hero-content">
                     <p class="eyebrow light">
-                        Earth &amp; Climate <span>•</span> NASA
+                        Earth &amp; Climate <span>•</span> Terrain Analytics
                     </p>
-                    <h1>Climate science: scaling petabyte-scale climate analytics without sacrificing
-                                    scientific fidelity</h1>
+                    <h1>GEOtiled: making high-resolution terrain data practical, scalable, and reusable across
+                        continental regions</h1>
                 </div>
             </header>
             <section class="detail-content">
-                <img src="/assets/nsdf/use_cases/climate.png" alt="OpenVisus Nasa Dashboard"
+                <img src="/assets/nsdf/use_cases/geotiled.png" alt="GEOtiled terrain parameter visualization"
                     class="detail-article-image" />
                 <p>
-                    Modern climate science relies on petabytes of simulation and observational data, but analyzing these
-                    datasets at full resolution is often prohibitively expensive. NSDF enables scientists to work at the
-                    fidelity required for their analysis—reducing storage, data movement, and computation by orders of
-                    magnitude while preserving the scientific accuracy needed for climate research.
+                    High-resolution terrain information is essential for studying water movement, agriculture,
+                    forests, hazards, and ecosystems, but producing it across large geographic regions is
+                    computationally expensive. GEOtiled divides massive Digital Elevation Models into manageable
+                    tiles and processes them in parallel, enabling researchers to generate, store, visualize, and
+                    reuse detailed terrain parameters at regional and continental scales while preserving
+                    scientific accuracy.
                 </p>
                 <div>
                     <h2>The Scientific Challenge</h2>
                     <p>
-                        Climate datasets such as NASA's <b>2.8 PB ECCO ocean simulation</b> contain decades of
-                        high-resolution observations essential for understanding Earth's climate. Processing these
-                        datasets at full resolution requires enormous storage, bandwidth, and computational resources,
-                        making large-scale analyses expensive and inaccessible to many researchers. Traditional
-                        compression reduces cost but often sacrifices scientific fidelity.
+                        Terrain parameters such as elevation, slope, aspect, hillshading, wetness, and drainage
+                        describe how the land surface influences water, sunlight, erosion, and ecological processes.
+                        Generating these products at high resolution requires processing enormous elevation
+                        datasets and can exceed the capacity of conventional desktop tools. The computational
+                        expense often prevents researchers from producing consistent terrain information across
+                        large regions.
                     </p>
                 </div>
                 <div>
                     <h2>How NSDF Helps</h2>
                     <p>
-                        NSDF organizes climate data into a hierarchical multiresolution representation, allowing
-                        scientists to analyze lower-resolution data first and retrieve higher-resolution information
-                        only when needed. Machine learning reconstructs fine details from reduced datasets, while
-                        adaptive fidelity enables users to balance computational cost against scientific accuracy for
-                        each analysis.
+                        NSDF supports an end-to-end GEOtiled workflow that collects elevation data, generates
+                        terrain parameters through tiled parallel processing, converts outputs into analysis-ready
+                        multiresolution formats, and stores them in public or private repositories. Interactive
+                        dashboards let researchers explore large maps progressively, select regions of interest,
+                        and retrieve only the data needed for analysis instead of downloading entire datasets.
                     </p>
                 </div>
                 <div>
                     <h2>Scientific Impact</h2>
                     <p>
-                        Using the 2.8 PB NASA ECCO climate dataset, NSDF reduced data usage by <b>99%</b>, lowering
-                        storage, transfer, and computational costs from <b>more than $100,000 to approximately $24</b>,
-                        while maintaining an RMS error of only <b>1.46°C</b>. This enables researchers to perform
-                        large-scale climate analyses much more efficiently without losing the essential scientific
-                        information needed for decision making
+                        GEOtiled makes high-resolution terrain products practical at continental scale. Researchers
+                        can access consistent elevation, slope, aspect, hillshading, and other derived parameters
+                        for the contiguous United States at 10-meter and 30-meter resolution, supporting reusable
+                        analyses in hydrology, agriculture, forestry, environmental monitoring, and Earth-system
+                        modeling.
                     </p>
                 </div>
                 <div>
                     <h2>Key Outcomes</h2>
                     <ul>
-                        <li><b>99% reduction in data volume</b></li>
-                        <li><b>$100K → $24</b> computational and storage cost</li>
-                        <li><b>2.8 PB NASA ECCO dataset analyzed efficiently</b></li>
-                        <li><b>Adaptive fidelity balances scientific accuracy with computational efficiency</b></li>
-                        <li><b>Machine learning reconstruction</b> preserves critical climate features while minimizing
-                            data movement</li>
+                        <li><b>Continental-Scale Production</b> — Generates high-resolution terrain parameters
+                            across very large geographic regions.</li>
+                        <li><b>Parallel Tile Processing</b> — Divides elevation data into tiles to accelerate
+                            computation while preserving accuracy.</li>
+                        <li><b>Progressive Data Access</b> — Lets researchers visualize broad regions first and
+                            retrieve detailed subregions only when required.</li>
+                        <li><b>Reusable Earth Data</b> — Produces publicly available 10-meter and 30-meter CONUS
+                            datasets containing more than 15 terrain parameters.</li>
                     </ul>
                 </div>
                 <div>
                     <h2>Relevant Links</h2>
                     <ul>
+                        <li><a href="https://github.com/TauferLab/GEOtiled" target="_blank" rel="noopener noreferrer">GEOtiled Library</a></li>
                     </ul>
                 </div>
                 <a class="btn btn-primary" href="../index.html">Back to all use cases <span>→</span></a>
@@ -171,7 +177,7 @@
     <a class="ask-nsdf-float" href="../../contact/index.html" aria-label="Contact NSDF">
         <span class="ask-icon" aria-hidden="true">✉</span>
         <span class="ask-copy">
-            <strong>Ask NSDF</strong> <small>We’d love to hear from you.</small>
+            <strong>Ask NSDF</strong> <small>We'd love to hear from you.</small>
         </span>
         <span class="ask-arrow" aria-hidden="true">→</span>
     </a>
