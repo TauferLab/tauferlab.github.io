@@ -2468,8 +2468,8 @@ a.catalog-header:hover {
 }
 .community-hero-image img {
   width: 100%;
-  min-height: 330px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 20px;
   box-shadow: 0 18px 40px rgba(22, 61, 116, 0.17);
 }
@@ -3034,11 +3034,15 @@ a.catalog-header:hover {
   font-weight: 600;
   color: #071a3a;
   line-height: 1.2;
+  display: block;
+  width: 100%;
 }
 .contributor-affiliation {
   font-size: 11px;
   color: #5a6a7e;
   margin-top: 2px;
+  display: block;
+  width: 100%;
 }
 .logo-carousel {
   overflow: hidden;
