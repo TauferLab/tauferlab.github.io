@@ -46,8 +46,8 @@
           ><a href="../about/index.html">About</a>
         </nav>
 
-        <a class="catalog-header" href="../data-services/index.html#catalog">
-          Explore the Data Catalog <span aria-hidden="true">→</span>
+        <a class="catalog-header" href="../contact/index.html">
+          Join NSDF
         </a>
 
         <button
@@ -104,6 +104,38 @@
             join the community.
           </p>
         </div>
+        <div
+          id="formkeep-embed"
+          data-formkeep-url="https://formkeep.com/p/d4d039cb57e77ffd14cf31e3617a804b?embedded=1"
+        ></div>
+
+        <script
+          type="text/javascript"
+          src="https://pym.nprapps.org/pym.v1.min.js"
+        ></script>
+        <script
+          type="text/javascript"
+          src="https://cdn.formkeep.com/formkeep-embed.js"
+        ></script>
+
+        <!-- Get notified when the form is submitted, add your own code below: -->
+        <script>
+          const formkeepEmbed = document.querySelector("#formkeep-embed");
+
+          formkeepEmbed.addEventListener(
+            "formkeep-embed:submitting",
+            (_event) => {
+              console.log("Submitting form...");
+            },
+          );
+
+          formkeepEmbed.addEventListener(
+            "formkeep-embed:submitted",
+            (_event) => {
+              console.log("Submitted form...");
+            },
+          );
+        </script>
       </section>
     </main>
     <footer class="site-footer" id="resources">
@@ -124,7 +156,7 @@
               >in</a
             >
             <a
-              href="mailto:contact@nationalsciencedatafabric.org"
+              href="../contact/index.html"
               aria-label="Email"
               >✉</a
             >
@@ -142,7 +174,7 @@
           <a href="../technology/index.html#architecture">Architecture</a>
           <a href="../technology/index.html#software">Software</a>
           <a href="../technology/index.html#developers">Developers</a>
-          <a href="../technology/index.html#developers">APIs</a>
+          <a href="../technology/index.html#entry-points">Entry Points</a>
         </div>
         <div class="footer-column">
           <h2>Community</h2>
@@ -162,7 +194,7 @@
           <a href="../about/index.html#mission">Mission</a>
           <a href="../about/index.html#leadership">Leadership</a>
           <a href="../about/index.html#partners">Partners</a>
-          <a href="mailto:contact@nationalsciencedatafabric.org">Contact</a>
+          <a href="../contact/index.html">Contact</a>
         </div>
         <div class="nsf-support">
           <img
@@ -170,10 +202,7 @@
             alt="National Science Foundation"
           />
           <p>
-            NSF is the proud supporter of NSDF.<br /><strong
-              >NSF Award #2609465</strong
-            >
-          </p>
+            NSF is the proud supporter of NSDF.<br /><strong>NSF Awards</strong> <a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2609465" target="_blank" rel="noopener noreferrer">#2609465</a>, <a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2138811" target="_blank" rel="noopener noreferrer">#2138811</a></p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -189,7 +218,7 @@
       <a href="../data-services/index.html#catalog"
         ><span>◫</span>Data Catalog</a
       >
-      <a href="mailto:contact@nationalsciencedatafabric.org"
+      <a href="../contact/index.html"
         ><span>⌂</span>Ask NSDF</a
       >
       <a href="../community/index.html"><span>♧</span>Community</a>
