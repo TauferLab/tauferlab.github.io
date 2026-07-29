@@ -1578,6 +1578,38 @@ a.catalog-header:hover {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+.detail-content blockquote {
+  margin: 8px 0;
+  padding: 16px 24px;
+  background: #f0f4ff;
+  border-left: 4px solid #075ce8;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #071a3a;
+  position: relative;
+}
+.detail-content blockquote::before {
+  content: "\201c";
+  font-size: 2.5rem;
+  color: #075ce8;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+.detail-content blockquote p {
+  margin: 0 0 0 20px;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+.detail-content blockquote footer {
+  margin: 8px 0 0 20px;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: normal;
+}
 .detail-content a:not(.btn) {
   color: #075ce8;
   text-decoration: underline;
